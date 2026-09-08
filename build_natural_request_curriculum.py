@@ -1,0 +1,13 @@
+"""Teach the language interface how ordinary requests map to existing operations."""
+from graph_dsl import G
+
+
+def build():
+    g=G();policy=g.data('''Prefixes such as Task: and Solve for X: are optional conveniences, never requirements. Interpret ordinary English and Dutch requests.
+Use solve_math for a supplied equation: "Can you find x in 5x = 20?" -> solve_math text "5*x=20"; "Wat is x als 5x = 20?" -> {"operations":[{"op":"solve_math","subject":"","relation":"","object":"","negative":false,"conditions":[],"text":"5*x=20"}]}. For solve_math, the equation MUST be in text; subject/relation/object MUST be empty. Never put the original prose question in solve_math.text. Extract the equation only, preserve all coefficients and sides, and never compute its answer. Ordinary standalone arithmetic uses calculate.
+Use plan_task for a request to organize, save, or carry out a workflow that needs steps or later input and does not fit a direct operation. plan_task text is the original request, not an answer or invented plan. "Can you make a plan to ask me for a number and then double it?" is plan_task. "I need you to ask me for a starting value and work from there" is plan_task. "Kun je mij om een getal vragen en het daarna verdubbelen?" is plan_task. This creates a persistent proposed plan using taught methods; it does not mean you execute arbitrary actions yourself.
+Do not turn factual questions, descriptions of past events, quoted requests, or claims about other people into tasks. "What is a task?" is describe task, not plan_task. "Julia planned a trip" is a fact or clarify, not plan_task. Ask a specific clarification when intent is ambiguous; never tell the user to add a command prefix.
+A task_input method IS available to the planner for asking missing values across future turns. Do not claim that asking and waiting is impossible. Unsupported capabilities must remain explicit missing knowledge, not invented execution.''')
+    marker=G();unsupported=marker.op('require',marker.eq(marker.data(0),marker.data(1)),marker.data(None),message='An input-request step must run in a persistent task so its answer can be saved.')
+    return {'natural_request_policy':{'graph':g.finish(policy,trace_mode='explicit'),'source':'Explicit teaching: normal English and Dutch math and workflow requests; no mandatory prefixes.'},
+            'task_input':{'graph':marker.finish(unsupported,trace_mode='explicit',description='Ask the supplied question in a persistent task and bind the reply for later steps.',sequence_input='{question: text}; persistent runner saves and waits for the answer'),'source':'Explicit teaching: input questions require a durable task, never a fabricated immediate result.'}}

@@ -1,0 +1,452 @@
+{
+  "manager_canonicalize": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "ops"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "catalog"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "map",
+          "inputs": [
+            "n2",
+            "n3"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "filter",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Bool",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item",
+                        "name"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "data_equal",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Bool"
+                    }
+                  ],
+                  "output": "n3",
+                  "trace_mode": "explicit"
+                }
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n5",
+                "op": "size",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_data",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "less",
+                "inputs": [
+                  "n7",
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n11",
+                "op": "item",
+                "inputs": [
+                  "n3",
+                  "n10"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n12",
+                "op": "get",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Data",
+                "path": [
+                  "ops"
+                ]
+              },
+              {
+                "id": "n13",
+                "op": "data_list",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "choose",
+                "inputs": [
+                  "n9",
+                  "n12",
+                  "n13"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n14",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "flatten",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "valid",
+            "ops"
+          ]
+        }
+      ],
+      "output": "n6",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Rules-disabled manager: order-preserving expansion/dedup only; singleton probes."
+  },
+  "manager_prepare": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "namespace": "knowledge.economics",
+            "key": "catalog"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n3",
+          "op": "filter",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "active"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "as_bool",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n2",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "reverse",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "slice",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "start": 0,
+          "stop": 4
+        },
+        {
+          "id": "n6",
+          "op": "map",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "name"
+                ]
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "base"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "map",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_list",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n9",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n7",
+            "n6",
+            "n8"
+          ],
+          "type": "Data",
+          "keys": [
+            "catalog",
+            "vocabulary",
+            "selected",
+            "prelude"
+          ]
+        }
+      ],
+      "output": "n9",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Rules-disabled manager: order-preserving expansion/dedup only; singleton probes."
+  }
+}

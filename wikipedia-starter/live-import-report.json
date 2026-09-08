@@ -1,0 +1,11 @@
+{
+  "live_database": "/Users/kaan/Documents/ChatGPT/Idk/preview-memory.graph.sqlite3",
+  "backup": "/Users/kaan/Documents/ChatGPT/Idk/wikipedia-starter/live-before-wikipedia-20260907T142121Z.sqlite3",
+  "article_records": 49,
+  "full_article_content_verified": true,
+  "curated_facts_verified": 68,
+  "preexisting_assertions_preserved": 22,
+  "existing_matching_assertions": 1,
+  "finished_at": "2026-09-07T14:24:00.646599+00:00",
+  "limitation": "Full text is source memory, not automatic extraction of every fact."
+}

@@ -1,0 +1,379 @@
+task,family,arm,budget,repeat,status,found,candidates_evaluated,search_depth,graph_steps,cpu_seconds,wall_seconds,hidden_checked,hidden_failures,success
+numbers/selected_sum,selected_sum,baseline,150000,0,step_budget,,14,2,150000,0.5430489999999999,0.5439935,0,0,False
+numbers/selected_sum,selected_sum,reuse_a,150000,0,found,['bench_learned_selected_sum'],7,1,59805,0.23208499999999965,0.23292212499999998,40,0,True
+numbers/selected_sum,selected_sum,reuse_ab,150000,0,found,['bench_learned_selected_sum'],7,1,88982,0.2817970000000001,0.2841384160000002,40,0,True
+numbers/selected_sum,selected_sum,reuse_ab,150000,1,found,['bench_learned_selected_sum'],7,1,88982,0.28484200000000026,0.28812620899999963,40,0,True
+numbers/selected_sum,selected_sum,reuse_a,150000,1,found,['bench_learned_selected_sum'],7,1,59805,0.2513540000000001,0.2537041249999996,40,0,True
+numbers/selected_sum,selected_sum,baseline,150000,1,step_budget,,14,2,150000,0.5487630000000001,0.551603375,0,0,False
+numbers/selected_sum,selected_sum,baseline,450000,0,found,"['synth_select', 'synth_sum']",25,2,299431,0.9795259999999999,0.984295165999999,40,0,True
+numbers/selected_sum,selected_sum,reuse_a,450000,0,found,['bench_learned_selected_sum'],7,1,59805,0.24648000000000003,0.24764625000000073,40,0,True
+numbers/selected_sum,selected_sum,reuse_ab,450000,0,found,['bench_learned_selected_sum'],7,1,88982,0.27368599999999965,0.27775416699999944,40,0,True
+numbers/selected_sum,selected_sum,reuse_ab,450000,1,found,['bench_learned_selected_sum'],7,1,88982,0.2876890000000003,0.2907452500000005,40,0,True
+numbers/selected_sum,selected_sum,reuse_a,450000,1,found,['bench_learned_selected_sum'],7,1,59805,0.2537149999999997,0.2561010409999991,40,0,True
+numbers/selected_sum,selected_sum,baseline,450000,1,found,"['synth_select', 'synth_sum']",25,2,299431,0.9830330000000007,0.9884690000000003,40,0,True
+numbers/selected_sum,selected_sum,baseline,1350000,0,found,"['synth_select', 'synth_sum']",25,2,299431,1.024235000000001,1.0365098750000001,40,0,True
+numbers/selected_sum,selected_sum,reuse_a,1350000,0,found,['bench_learned_selected_sum'],7,1,59805,0.24648199999999854,0.24747654100000105,40,0,True
+numbers/selected_sum,selected_sum,reuse_ab,1350000,0,found,['bench_learned_selected_sum'],7,1,88982,0.27539100000000083,0.2764175840000007,40,0,True
+numbers/selected_sum,selected_sum,reuse_ab,1350000,1,found,['bench_learned_selected_sum'],7,1,88982,0.2669270000000008,0.2678672500000001,40,0,True
+numbers/selected_sum,selected_sum,reuse_a,1350000,1,found,['bench_learned_selected_sum'],7,1,59805,0.2435469999999995,0.24440804199999988,40,0,True
+numbers/selected_sum,selected_sum,baseline,1350000,1,found,"['synth_select', 'synth_sum']",25,2,299431,0.9918589999999998,0.9974298340000001,40,0,True
+numbers/selected_double_sum,selected_double_sum,reuse_a,150000,0,step_budget,,13,2,150000,0.5352049999999995,0.5391408339999995,0,0,False
+numbers/selected_double_sum,selected_double_sum,reuse_ab,150000,0,found,['bench_learned_doubled_selected_sum'],8,1,106647,0.3337310000000002,0.3357372089999995,40,0,True
+numbers/selected_double_sum,selected_double_sum,baseline,150000,0,step_budget,,14,2,150000,0.5840639999999979,0.5912934169999993,0,0,False
+numbers/selected_double_sum,selected_double_sum,baseline,150000,1,step_budget,,14,2,150000,0.5646190000000004,0.5695114169999975,0,0,False
+numbers/selected_double_sum,selected_double_sum,reuse_ab,150000,1,found,['bench_learned_doubled_selected_sum'],8,1,106647,0.3334399999999995,0.33607800000000054,40,0,True
+numbers/selected_double_sum,selected_double_sum,reuse_a,150000,1,step_budget,,13,2,150000,0.5682309999999973,0.5746544579999977,0,0,False
+numbers/selected_double_sum,selected_double_sum,reuse_a,450000,0,step_budget,,36,2,450000,1.5722800000000028,1.596998124999999,0,0,False
+numbers/selected_double_sum,selected_double_sum,reuse_ab,450000,0,found,['bench_learned_doubled_selected_sum'],8,1,106647,0.3374449999999989,0.34140383299999755,40,0,True
+numbers/selected_double_sum,selected_double_sum,baseline,450000,0,step_budget,,34,2,450000,1.4696870000000004,1.4864307920000002,0,0,False
+numbers/selected_double_sum,selected_double_sum,baseline,450000,1,step_budget,,34,2,450000,1.4902280000000019,1.5075934160000024,0,0,False
+numbers/selected_double_sum,selected_double_sum,reuse_ab,450000,1,found,['bench_learned_doubled_selected_sum'],8,1,106647,0.35056399999999854,0.3568286669999985,40,0,True
+numbers/selected_double_sum,selected_double_sum,reuse_a,450000,1,step_budget,,36,2,450000,1.5860230000000008,1.6165964590000002,0,0,False
+numbers/selected_double_sum,selected_double_sum,reuse_a,1350000,0,found,"['bench_learned_selected_sum', 'bench_double']",54,2,708646,2.31278,2.342354750000002,40,0,True
+numbers/selected_double_sum,selected_double_sum,reuse_ab,1350000,0,found,['bench_learned_doubled_selected_sum'],8,1,106647,0.357603000000001,0.3655460000000019,40,0,True
+numbers/selected_double_sum,selected_double_sum,baseline,1350000,0,step_budget,,88,3,1350000,4.104831000000001,4.150277292000002,0,0,False
+numbers/selected_double_sum,selected_double_sum,baseline,1350000,1,step_budget,,88,3,1350000,4.0701389999999975,4.109048625000007,0,0,False
+numbers/selected_double_sum,selected_double_sum,reuse_ab,1350000,1,found,['bench_learned_doubled_selected_sum'],8,1,106647,0.3510220000000004,0.3596978340000021,40,0,True
+numbers/selected_double_sum,selected_double_sum,reuse_a,1350000,1,found,"['bench_learned_selected_sum', 'bench_double']",54,2,708646,2.310871000000006,2.337549958000004,40,0,True
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,150000,0,step_budget,,10,2,150000,0.4920219999999986,0.4997720830000034,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,baseline,150000,0,step_budget,,14,2,150000,0.5664820000000006,0.5707468750000046,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_a,150000,0,step_budget,,13,2,150000,0.5590249999999983,0.564068541999994,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_a,150000,1,step_budget,,13,2,150000,0.5623170000000002,0.5705422920000061,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,baseline,150000,1,step_budget,,14,2,150000,0.6108960000000039,0.6265586670000047,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,150000,1,step_budget,,10,2,150000,0.45119500000000556,0.45409737499999636,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,450000,0,step_budget,,25,2,450000,1.238790999999999,1.2507866250000035,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,baseline,450000,0,step_budget,,34,2,450000,1.4668890000000019,1.4809586659999994,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_a,450000,0,step_budget,,36,2,450000,1.4875669999999985,1.4978872920000015,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_a,450000,1,step_budget,,36,2,450000,1.5012700000000052,1.5136625830000057,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,baseline,450000,1,step_budget,,34,2,450000,1.4580920000000006,1.4726812919999972,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,450000,1,step_budget,,25,2,450000,1.2264259999999965,1.2344568750000064,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,1350000,0,step_budget,,60,2,1350000,3.288439000000004,3.3191367089999986,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,baseline,1350000,0,step_budget,,88,3,1350000,3.966653000000001,3.983797416999998,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_a,1350000,0,step_budget,,93,3,1350000,4.116414000000006,4.1376191250000005,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_a,1350000,1,step_budget,,93,3,1350000,4.1066220000000015,4.126975625,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,baseline,1350000,1,step_budget,,88,3,1350000,3.9922960000000103,4.014572166000008,0,0,False
+numbers/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,1350000,1,step_budget,,60,2,1350000,3.227989000000008,3.2439262500000012,0,0,False
+numbers/plain_sum,plain_sum,baseline,150000,0,found,['synth_sum'],1,1,9579,0.035814999999999486,0.03621879199999967,40,0,True
+numbers/plain_sum,plain_sum,reuse_a,150000,0,found,['synth_sum'],1,1,9574,0.03479600000000005,0.03491416699999661,40,0,True
+numbers/plain_sum,plain_sum,reuse_ab,150000,0,found,['synth_sum'],1,1,9720,0.044923999999994635,0.04513033299998881,40,0,True
+numbers/plain_sum,plain_sum,reuse_ab,150000,1,found,['synth_sum'],1,1,9720,0.03516100000000222,0.03533149999999807,40,0,True
+numbers/plain_sum,plain_sum,reuse_a,150000,1,found,['synth_sum'],1,1,9574,0.034726999999989516,0.034831291999992686,40,0,True
+numbers/plain_sum,plain_sum,baseline,150000,1,found,['synth_sum'],1,1,9579,0.034902999999999906,0.035011834000002295,40,0,True
+numbers/plain_sum,plain_sum,baseline,450000,0,found,['synth_sum'],1,1,9579,0.04457600000000639,0.044812417000002824,40,0,True
+numbers/plain_sum,plain_sum,reuse_a,450000,0,found,['synth_sum'],1,1,9574,0.0352670000000046,0.03543195800000376,40,0,True
+numbers/plain_sum,plain_sum,reuse_ab,450000,0,found,['synth_sum'],1,1,9720,0.03438299999999117,0.034413833000002114,40,0,True
+numbers/plain_sum,plain_sum,reuse_ab,450000,1,found,['synth_sum'],1,1,9720,0.03521899999999789,0.03558337500000164,40,0,True
+numbers/plain_sum,plain_sum,reuse_a,450000,1,found,['synth_sum'],1,1,9574,0.034506000000007475,0.034670665999996686,40,0,True
+numbers/plain_sum,plain_sum,baseline,450000,1,found,['synth_sum'],1,1,9579,0.045623000000006186,0.04575762500000735,40,0,True
+numbers/plain_sum,plain_sum,baseline,1350000,0,found,['synth_sum'],1,1,9579,0.03498399999999435,0.03513120899999933,40,0,True
+numbers/plain_sum,plain_sum,reuse_a,1350000,0,found,['synth_sum'],1,1,9574,0.03468300000000113,0.034704875000002744,40,0,True
+numbers/plain_sum,plain_sum,reuse_ab,1350000,0,found,['synth_sum'],1,1,9720,0.03518000000001109,0.035320084000005636,40,0,True
+numbers/plain_sum,plain_sum,reuse_ab,1350000,1,found,['synth_sum'],1,1,9720,0.04572899999999436,0.04596529199999111,40,0,True
+numbers/plain_sum,plain_sum,reuse_a,1350000,1,found,['synth_sum'],1,1,9574,0.03640200000000959,0.03689654100000439,40,0,True
+numbers/plain_sum,plain_sum,baseline,1350000,1,found,['synth_sum'],1,1,9579,0.036126000000010094,0.03659058300000595,40,0,True
+numbers/selected_count,selected_count,reuse_a,150000,0,step_budget,,13,2,150000,0.5541670000000067,0.5607617499999975,0,0,False
+numbers/selected_count,selected_count,reuse_ab,150000,0,step_budget,,10,2,150000,0.4704550000000012,0.4752602080000088,0,0,False
+numbers/selected_count,selected_count,baseline,150000,0,step_budget,,14,2,150000,0.587838000000005,0.5965460419999999,0,0,False
+numbers/selected_count,selected_count,baseline,150000,1,step_budget,,14,2,150000,0.5730450000000076,0.580662916999998,0,0,False
+numbers/selected_count,selected_count,reuse_ab,150000,1,step_budget,,10,2,150000,0.4675309999999939,0.47190187500000036,0,0,False
+numbers/selected_count,selected_count,reuse_a,150000,1,step_budget,,13,2,150000,0.5572630000000061,0.5647957079999912,0,0,False
+numbers/selected_count,selected_count,reuse_a,450000,0,found,"['synth_select', 'synth_count']",30,2,361307,1.2497499999999917,1.2653103330000022,40,0,True
+numbers/selected_count,selected_count,reuse_ab,450000,0,step_budget,,25,2,450000,1.2218859999999978,1.2278449169999988,0,0,False
+numbers/selected_count,selected_count,baseline,450000,0,found,"['synth_select', 'synth_count']",26,2,315495,1.044111000000001,1.0482884580000018,40,0,True
+numbers/selected_count,selected_count,baseline,450000,1,found,"['synth_select', 'synth_count']",26,2,315495,1.0512859999999904,1.057342250000005,40,0,True
+numbers/selected_count,selected_count,reuse_ab,450000,1,step_budget,,25,2,450000,1.22269,1.231867667000003,0,0,False
+numbers/selected_count,selected_count,reuse_a,450000,1,found,"['synth_select', 'synth_count']",30,2,361307,1.1934240000000074,1.1972423330000055,40,0,True
+numbers/selected_count,selected_count,reuse_a,1350000,0,found,"['synth_select', 'synth_count']",30,2,361307,1.206836999999993,1.211631208,40,0,True
+numbers/selected_count,selected_count,reuse_ab,1350000,0,found,"['synth_select', 'synth_count']",34,2,648701,1.7324530000000067,1.7544067919999975,40,0,True
+numbers/selected_count,selected_count,baseline,1350000,0,found,"['synth_select', 'synth_count']",26,2,315495,1.0565129999999954,1.0614580409999945,40,0,True
+numbers/selected_count,selected_count,baseline,1350000,1,found,"['synth_select', 'synth_count']",26,2,315495,1.0424349999999976,1.0466013329999981,40,0,True
+numbers/selected_count,selected_count,reuse_ab,1350000,1,found,"['synth_select', 'synth_count']",34,2,648701,1.6632709999999946,1.6700394169999981,40,0,True
+numbers/selected_count,selected_count,reuse_a,1350000,1,found,"['synth_select', 'synth_count']",30,2,361307,1.2281619999999975,1.2371500839999925,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_ab,150000,0,step_budget,,10,2,150000,0.4721969999999942,0.47671216600001287,0,0,False
+numbers/plain_double_sum,plain_double_sum,baseline,150000,0,found,"['synth_sum', 'bench_double']",11,2,113499,0.4103409999999883,0.4116621659999993,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_a,150000,0,found,"['synth_sum', 'bench_double']",12,2,126496,0.4648260000000022,0.46775179099999775,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_a,150000,1,found,"['synth_sum', 'bench_double']",12,2,126496,0.46011500000000183,0.4620594999999952,40,0,True
+numbers/plain_double_sum,plain_double_sum,baseline,150000,1,found,"['synth_sum', 'bench_double']",11,2,113499,0.42549499999999796,0.42925062499999456,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_ab,150000,1,step_budget,,10,2,150000,0.46577800000000025,0.46888679199999217,0,0,False
+numbers/plain_double_sum,plain_double_sum,reuse_ab,450000,0,found,"['synth_sum', 'bench_double']",13,2,189782,0.5748660000000001,0.5787973330000113,40,0,True
+numbers/plain_double_sum,plain_double_sum,baseline,450000,0,found,"['synth_sum', 'bench_double']",11,2,113499,0.40710599999999886,0.40844966599999566,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_a,450000,0,found,"['synth_sum', 'bench_double']",12,2,126496,0.4609869999999887,0.4630264590000053,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_a,450000,1,found,"['synth_sum', 'bench_double']",12,2,126496,0.45557599999999354,0.4568807500000105,40,0,True
+numbers/plain_double_sum,plain_double_sum,baseline,450000,1,found,"['synth_sum', 'bench_double']",11,2,113499,0.4208679999999987,0.4227092920000075,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_ab,450000,1,found,"['synth_sum', 'bench_double']",13,2,189782,0.5538100000000128,0.5556543339999962,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_ab,1350000,0,found,"['synth_sum', 'bench_double']",13,2,189782,0.5845309999999984,0.5931067920000004,40,0,True
+numbers/plain_double_sum,plain_double_sum,baseline,1350000,0,found,"['synth_sum', 'bench_double']",11,2,113499,0.41432899999999506,0.4171437910000009,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_a,1350000,0,found,"['synth_sum', 'bench_double']",12,2,126496,0.46131400000000156,0.46371770899999376,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_a,1350000,1,found,"['synth_sum', 'bench_double']",12,2,126496,0.4760930000000059,0.48245487500000195,40,0,True
+numbers/plain_double_sum,plain_double_sum,baseline,1350000,1,found,"['synth_sum', 'bench_double']",11,2,113499,0.5043999999999897,0.5435737920000037,40,0,True
+numbers/plain_double_sum,plain_double_sum,reuse_ab,1350000,1,found,"['synth_sum', 'bench_double']",13,2,189782,0.5807020000000023,0.5869665000000026,40,0,True
+numbers/maximum_control,maximum_control,baseline,150000,0,step_budget,,14,2,150000,0.567270999999991,0.5700536660000068,0,0,False
+numbers/maximum_control,maximum_control,reuse_a,150000,0,step_budget,,13,2,150000,0.537949999999995,0.540418583999994,0,0,False
+numbers/maximum_control,maximum_control,reuse_ab,150000,0,step_budget,,10,2,150000,0.46277800000000013,0.4646084580000007,0,0,False
+numbers/maximum_control,maximum_control,reuse_ab,150000,1,step_budget,,10,2,150000,0.47724700000000553,0.4800945839999997,0,0,False
+numbers/maximum_control,maximum_control,reuse_a,150000,1,step_budget,,13,2,150000,0.5346920000000068,0.5369453330000056,0,0,False
+numbers/maximum_control,maximum_control,baseline,150000,1,step_budget,,14,2,150000,0.5651960000000003,0.567286375000009,0,0,False
+numbers/maximum_control,maximum_control,baseline,450000,0,step_budget,,34,2,450000,1.468814000000009,1.4803523750000096,0,0,False
+numbers/maximum_control,maximum_control,reuse_a,450000,0,step_budget,,36,2,450000,1.490313999999998,1.4966684999999984,0,0,False
+numbers/maximum_control,maximum_control,reuse_ab,450000,0,step_budget,,25,2,450000,1.2321179999999998,1.2373932920000072,0,0,False
+numbers/maximum_control,maximum_control,reuse_ab,450000,1,step_budget,,25,2,450000,1.2256919999999951,1.2317485420000054,0,0,False
+numbers/maximum_control,maximum_control,reuse_a,450000,1,step_budget,,36,2,450000,1.5163550000000043,1.5280964170000004,0,0,False
+numbers/maximum_control,maximum_control,baseline,450000,1,step_budget,,34,2,450000,1.4447350000000085,1.4519026659999952,0,0,False
+numbers/maximum_control,maximum_control,baseline,1350000,0,step_budget,,88,3,1350000,4.034807000000001,4.060740624999994,0,0,False
+numbers/maximum_control,maximum_control,reuse_a,1350000,0,step_budget,,93,3,1350000,4.141764999999992,4.162824916000005,0,0,False
+numbers/maximum_control,maximum_control,reuse_ab,1350000,0,step_budget,,60,2,1350000,3.3350140000000152,3.377706250000003,0,0,False
+numbers/maximum_control,maximum_control,reuse_ab,1350000,1,step_budget,,60,2,1350000,3.2505350000000135,3.2687941249999994,0,0,False
+numbers/maximum_control,maximum_control,reuse_a,1350000,1,step_budget,,93,3,1350000,4.288920999999988,4.348563958,0,0,False
+numbers/maximum_control,maximum_control,baseline,1350000,1,step_budget,,88,3,1350000,4.08728499999998,4.121052625000004,0,0,False
+products/selected_sum,selected_sum,reuse_a,150000,0,found,['bench_learned_selected_sum'],7,1,58846,0.23952500000001464,0.24033908299998075,40,0,True
+products/selected_sum,selected_sum,reuse_ab,150000,0,found,['bench_learned_selected_sum'],7,1,87678,0.2811100000000124,0.2820134999999766,40,0,True
+products/selected_sum,selected_sum,baseline,150000,0,step_budget,,14,2,150000,0.5603190000000211,0.5622560000000192,0,0,False
+products/selected_sum,selected_sum,baseline,150000,1,step_budget,,14,2,150000,0.5616920000000221,0.5655610000000024,0,0,False
+products/selected_sum,selected_sum,reuse_ab,150000,1,found,['bench_learned_selected_sum'],7,1,87678,0.28708299999999554,0.28874504199998796,40,0,True
+products/selected_sum,selected_sum,reuse_a,150000,1,found,['bench_learned_selected_sum'],7,1,58846,0.24734700000001908,0.24823691699998562,40,0,True
+products/selected_sum,selected_sum,reuse_a,450000,0,found,['bench_learned_selected_sum'],7,1,58846,0.23935900000000743,0.24091237499999352,40,0,True
+products/selected_sum,selected_sum,reuse_ab,450000,0,found,['bench_learned_selected_sum'],7,1,87678,0.2891559999999913,0.2911782500000015,40,0,True
+products/selected_sum,selected_sum,baseline,450000,0,found,"['synth_select', 'synth_sum']",25,2,297140,1.0304870000000221,1.0391617500000052,40,0,True
+products/selected_sum,selected_sum,baseline,450000,1,found,"['synth_select', 'synth_sum']",25,2,297140,1.0244959999999992,1.0328572919999885,40,0,True
+products/selected_sum,selected_sum,reuse_ab,450000,1,found,['bench_learned_selected_sum'],7,1,87678,0.29547900000000027,0.29935037499998884,40,0,True
+products/selected_sum,selected_sum,reuse_a,450000,1,found,['bench_learned_selected_sum'],7,1,58846,0.2510189999999852,0.25292320799999857,40,0,True
+products/selected_sum,selected_sum,reuse_a,1350000,0,found,['bench_learned_selected_sum'],7,1,58846,0.2412649999999985,0.24252304199998775,40,0,True
+products/selected_sum,selected_sum,reuse_ab,1350000,0,found,['bench_learned_selected_sum'],7,1,87678,0.2846190000000206,0.2862618750000081,40,0,True
+products/selected_sum,selected_sum,baseline,1350000,0,found,"['synth_select', 'synth_sum']",25,2,297140,1.1275830000000155,1.1822439579999866,40,0,True
+products/selected_sum,selected_sum,baseline,1350000,1,found,"['synth_select', 'synth_sum']",25,2,297140,1.0682540000000245,1.084625625000001,40,0,True
+products/selected_sum,selected_sum,reuse_ab,1350000,1,found,['bench_learned_selected_sum'],7,1,87678,0.29444599999999355,0.29764712499999746,40,0,True
+products/selected_sum,selected_sum,reuse_a,1350000,1,found,['bench_learned_selected_sum'],7,1,58846,0.2581830000000025,0.261507249999994,40,0,True
+products/selected_double_sum,selected_double_sum,reuse_ab,150000,0,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3707600000000184,0.38488962499999957,40,0,True
+products/selected_double_sum,selected_double_sum,baseline,150000,0,step_budget,,14,2,150000,0.5738639999999862,0.5803765830000032,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_a,150000,0,step_budget,,13,2,150000,0.586385000000007,0.5955158330000074,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_a,150000,1,step_budget,,13,2,150000,0.5971770000000163,0.6099009589999866,0,0,False
+products/selected_double_sum,selected_double_sum,baseline,150000,1,step_budget,,14,2,150000,0.5969849999999894,0.6068071659999816,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_ab,150000,1,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3497989999999902,0.35569379200001094,40,0,True
+products/selected_double_sum,selected_double_sum,reuse_ab,450000,0,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.35536899999999605,0.36034916700000963,40,0,True
+products/selected_double_sum,selected_double_sum,baseline,450000,0,step_budget,,35,2,450000,1.5441230000000132,1.569102541999996,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_a,450000,0,step_budget,,36,2,450000,1.5646150000000034,1.5958151250000014,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_a,450000,1,step_budget,,36,2,450000,1.5489200000000096,1.5671414170000162,0,0,False
+products/selected_double_sum,selected_double_sum,baseline,450000,1,step_budget,,35,2,450000,1.4835620000000063,1.5000887500000033,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_ab,450000,1,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3426120000000026,0.34746050000001105,40,0,True
+products/selected_double_sum,selected_double_sum,reuse_ab,1350000,0,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3360139999999774,0.3390896670000245,40,0,True
+products/selected_double_sum,selected_double_sum,baseline,1350000,0,step_budget,,88,3,1350000,4.107970999999992,4.156878791999986,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_a,1350000,0,found,"['bench_learned_selected_sum', 'bench_double']",54,2,704286,2.2871540000000152,2.306386666999998,40,0,True
+products/selected_double_sum,selected_double_sum,reuse_a,1350000,1,found,"['bench_learned_selected_sum', 'bench_double']",54,2,704286,2.305878000000007,2.3330524160000152,40,0,True
+products/selected_double_sum,selected_double_sum,baseline,1350000,1,step_budget,,88,3,1350000,4.045010999999988,4.080275499999999,0,0,False
+products/selected_double_sum,selected_double_sum,reuse_ab,1350000,1,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3445090000000164,0.3491277079999975,40,0,True
+products/selected_negative_double_sum,selected_negative_double_sum,baseline,150000,0,step_budget,,14,2,150000,0.5902109999999823,0.5981979999999965,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_a,150000,0,step_budget,,13,2,150000,0.5449909999999818,0.5494921250000004,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,150000,0,step_budget,,10,2,150000,0.4715810000000147,0.47586037500002476,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,150000,1,step_budget,,10,2,150000,0.48103399999999397,0.4861940830000151,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_a,150000,1,step_budget,,13,2,150000,0.5617829999999913,0.5674897499999929,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,baseline,150000,1,step_budget,,14,2,150000,0.561963999999989,0.5661433750000242,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,baseline,450000,0,step_budget,,35,2,450000,1.4969490000000008,1.5122521250000034,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_a,450000,0,step_budget,,36,2,450000,1.5578250000000082,1.5750724170000012,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,450000,0,step_budget,,25,2,450000,1.316551000000004,1.3462915420000172,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,450000,1,step_budget,,25,2,450000,1.3413960000000031,1.3862012499999992,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_a,450000,1,step_budget,,36,2,450000,1.622005999999999,1.6545296250000092,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,baseline,450000,1,step_budget,,35,2,450000,1.5251949999999965,1.5417053750000207,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,baseline,1350000,0,step_budget,,88,3,1350000,4.113641999999999,4.156424541999996,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_a,1350000,0,step_budget,,93,3,1350000,4.277109999999993,4.324679416999999,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,1350000,0,step_budget,,60,2,1350000,3.3440289999999777,3.3902199590000066,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,1350000,1,step_budget,,60,2,1350000,3.2967909999999847,3.332455167000006,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,reuse_a,1350000,1,step_budget,,93,3,1350000,4.359679999999997,4.446396541000013,0,0,False
+products/selected_negative_double_sum,selected_negative_double_sum,baseline,1350000,1,step_budget,,88,3,1350000,4.286849999999987,4.37225991599999,0,0,False
+products/plain_sum,plain_sum,reuse_a,150000,0,found,['synth_sum'],1,1,9585,0.03599900000000389,0.03642400000001089,40,0,True
+products/plain_sum,plain_sum,reuse_ab,150000,0,found,['synth_sum'],1,1,9731,0.03652500000001169,0.03695791699999518,40,0,True
+products/plain_sum,plain_sum,baseline,150000,0,found,['synth_sum'],1,1,9590,0.03623300000000995,0.03677849999999694,40,0,True
+products/plain_sum,plain_sum,baseline,150000,1,found,['synth_sum'],1,1,9590,0.03568799999999328,0.03592866599998956,40,0,True
+products/plain_sum,plain_sum,reuse_ab,150000,1,found,['synth_sum'],1,1,9731,0.03519499999998743,0.03547412500000746,40,0,True
+products/plain_sum,plain_sum,reuse_a,150000,1,found,['synth_sum'],1,1,9585,0.046040000000004966,0.046454750000009426,40,0,True
+products/plain_sum,plain_sum,reuse_a,450000,0,found,['synth_sum'],1,1,9585,0.034609999999986485,0.034782833000008395,40,0,True
+products/plain_sum,plain_sum,reuse_ab,450000,0,found,['synth_sum'],1,1,9731,0.052993999999984,0.07543729199997529,40,0,True
+products/plain_sum,plain_sum,baseline,450000,0,found,['synth_sum'],1,1,9590,0.04518500000000358,0.055197458999998616,40,0,True
+products/plain_sum,plain_sum,baseline,450000,1,found,['synth_sum'],1,1,9590,0.050600000000002865,0.052055625000008376,40,0,True
+products/plain_sum,plain_sum,reuse_ab,450000,1,found,['synth_sum'],1,1,9731,0.044908999999989874,0.048797457999995686,40,0,True
+products/plain_sum,plain_sum,reuse_a,450000,1,found,['synth_sum'],1,1,9585,0.038191000000011854,0.038881708000019444,40,0,True
+products/plain_sum,plain_sum,reuse_a,1350000,0,found,['synth_sum'],1,1,9585,0.035644000000019105,0.0360136250000096,40,0,True
+products/plain_sum,plain_sum,reuse_ab,1350000,0,found,['synth_sum'],1,1,9731,0.047054000000002816,0.04742362499999331,40,0,True
+products/plain_sum,plain_sum,baseline,1350000,0,found,['synth_sum'],1,1,9590,0.03563399999998751,0.03599366599999598,40,0,True
+products/plain_sum,plain_sum,baseline,1350000,1,found,['synth_sum'],1,1,9590,0.03613699999999653,0.03639704100001495,40,0,True
+products/plain_sum,plain_sum,reuse_ab,1350000,1,found,['synth_sum'],1,1,9731,0.03582099999999855,0.03621504100001971,40,0,True
+products/plain_sum,plain_sum,reuse_a,1350000,1,found,['synth_sum'],1,1,9585,0.03768600000000788,0.03845170799999664,40,0,True
+products/selected_count,selected_count,reuse_ab,150000,0,step_budget,,10,2,150000,0.4807749999999942,0.4861505829999828,0,0,False
+products/selected_count,selected_count,baseline,150000,0,step_budget,,14,2,150000,0.5796140000000207,0.5843187090000015,0,0,False
+products/selected_count,selected_count,reuse_a,150000,0,step_budget,,13,2,150000,0.5472070000000144,0.5512184579999939,0,0,False
+products/selected_count,selected_count,reuse_a,150000,1,step_budget,,13,2,150000,0.5560060000000249,0.5602899170000057,0,0,False
+products/selected_count,selected_count,baseline,150000,1,step_budget,,14,2,150000,0.5678269999999941,0.5764205409999761,0,0,False
+products/selected_count,selected_count,reuse_ab,150000,1,step_budget,,10,2,150000,0.4758980000000008,0.4807213329999911,0,0,False
+products/selected_count,selected_count,reuse_ab,450000,0,step_budget,,25,2,450000,1.2811469999999758,1.2969006250000064,0,0,False
+products/selected_count,selected_count,baseline,450000,0,found,"['synth_select', 'synth_count']",26,2,311843,1.050280999999984,1.0575068750000014,40,0,True
+products/selected_count,selected_count,reuse_a,450000,0,found,"['synth_select', 'synth_count']",30,2,359101,1.2151629999999898,1.2243582090000018,40,0,True
+products/selected_count,selected_count,reuse_a,450000,1,found,"['synth_select', 'synth_count']",30,2,359101,1.2504410000000235,1.264740125000003,40,0,True
+products/selected_count,selected_count,baseline,450000,1,found,"['synth_select', 'synth_count']",26,2,311843,1.0630789999999877,1.071814666999984,40,0,True
+products/selected_count,selected_count,reuse_ab,450000,1,step_budget,,25,2,450000,1.2382320000000107,1.2472779999999943,0,0,False
+products/selected_count,selected_count,reuse_ab,1350000,0,found,"['synth_select', 'synth_count']",34,2,646640,1.7030229999999733,1.7158479580000119,40,0,True
+products/selected_count,selected_count,baseline,1350000,0,found,"['synth_select', 'synth_count']",26,2,311843,1.091399999999993,1.102837916999988,40,0,True
+products/selected_count,selected_count,reuse_a,1350000,0,found,"['synth_select', 'synth_count']",30,2,359101,1.2228880000000117,1.2322738749999758,40,0,True
+products/selected_count,selected_count,reuse_a,1350000,1,found,"['synth_select', 'synth_count']",30,2,359101,1.2330220000000054,1.2416830000000232,40,0,True
+products/selected_count,selected_count,baseline,1350000,1,found,"['synth_select', 'synth_count']",26,2,311843,1.0660299999999836,1.0735682909999866,40,0,True
+products/selected_count,selected_count,reuse_ab,1350000,1,found,"['synth_select', 'synth_count']",34,2,646640,1.7350119999999833,1.7529819580000208,40,0,True
+products/plain_double_sum,plain_double_sum,baseline,150000,0,found,"['synth_sum', 'bench_double']",11,2,112118,0.42395799999999895,0.4279132919999995,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_a,150000,0,found,"['synth_sum', 'bench_double']",12,2,125592,0.4773449999999855,0.4815962920000061,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_ab,150000,0,step_budget,,10,2,150000,0.4794920000000218,0.4836122080000109,0,0,False
+products/plain_double_sum,plain_double_sum,reuse_ab,150000,1,step_budget,,10,2,150000,0.4710719999999924,0.4742097080000178,0,0,False
+products/plain_double_sum,plain_double_sum,reuse_a,150000,1,found,"['synth_sum', 'bench_double']",12,2,125592,0.4785540000000026,0.4831131249999885,40,0,True
+products/plain_double_sum,plain_double_sum,baseline,150000,1,found,"['synth_sum', 'bench_double']",11,2,112118,0.42448300000000927,0.4287586250000004,40,0,True
+products/plain_double_sum,plain_double_sum,baseline,450000,0,found,"['synth_sum', 'bench_double']",11,2,112118,0.43310100000002194,0.4379474159999859,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_a,450000,0,found,"['synth_sum', 'bench_double']",12,2,125592,0.4762180000000171,0.48123816599999714,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_ab,450000,0,found,"['synth_sum', 'bench_double']",13,2,189385,0.5680030000000045,0.5721352500000023,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_ab,450000,1,found,"['synth_sum', 'bench_double']",13,2,189385,0.5790760000000148,0.5832864170000107,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_a,450000,1,found,"['synth_sum', 'bench_double']",12,2,125592,0.47149100000001454,0.4748426669999901,40,0,True
+products/plain_double_sum,plain_double_sum,baseline,450000,1,found,"['synth_sum', 'bench_double']",11,2,112118,0.4163470000000018,0.4192300830000022,40,0,True
+products/plain_double_sum,plain_double_sum,baseline,1350000,0,found,"['synth_sum', 'bench_double']",11,2,112118,0.42503499999997985,0.42815345799999704,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_a,1350000,0,found,"['synth_sum', 'bench_double']",12,2,125592,0.47991700000000037,0.48437779200000364,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_ab,1350000,0,found,"['synth_sum', 'bench_double']",13,2,189385,0.5673529999999971,0.5714509579999856,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_ab,1350000,1,found,"['synth_sum', 'bench_double']",13,2,189385,0.5888379999999813,0.5946472919999906,40,0,True
+products/plain_double_sum,plain_double_sum,reuse_a,1350000,1,found,"['synth_sum', 'bench_double']",12,2,125592,0.481396999999987,0.4863049589999946,40,0,True
+products/plain_double_sum,plain_double_sum,baseline,1350000,1,found,"['synth_sum', 'bench_double']",11,2,112118,0.42019600000000423,0.4244184159999804,40,0,True
+products/maximum_control,maximum_control,reuse_a,150000,0,step_budget,,13,2,150000,0.5630460000000141,0.5677902909999943,0,0,False
+products/maximum_control,maximum_control,reuse_ab,150000,0,step_budget,,10,2,150000,0.4679100000000176,0.4710910830000046,0,0,False
+products/maximum_control,maximum_control,baseline,150000,0,step_budget,,14,2,150000,0.5620720000000006,0.5660432079999964,0,0,False
+products/maximum_control,maximum_control,baseline,150000,1,step_budget,,14,2,150000,0.575398999999976,0.5811941669999783,0,0,False
+products/maximum_control,maximum_control,reuse_ab,150000,1,step_budget,,10,2,150000,0.4738389999999981,0.4771493340000177,0,0,False
+products/maximum_control,maximum_control,reuse_a,150000,1,step_budget,,13,2,150000,0.5551090000000158,0.5598349159999998,0,0,False
+products/maximum_control,maximum_control,reuse_a,450000,0,step_budget,,36,2,450000,1.533567000000005,1.5483813750000195,0,0,False
+products/maximum_control,maximum_control,reuse_ab,450000,0,step_budget,,25,2,450000,1.2390859999999861,1.2481406660000118,0,0,False
+products/maximum_control,maximum_control,baseline,450000,0,step_budget,,35,2,450000,1.49842000000001,1.5109361660000218,0,0,False
+products/maximum_control,maximum_control,baseline,450000,1,step_budget,,35,2,450000,1.4911960000000022,1.5034710410000116,0,0,False
+products/maximum_control,maximum_control,reuse_ab,450000,1,step_budget,,25,2,450000,1.2529740000000231,1.264142124999978,0,0,False
+products/maximum_control,maximum_control,reuse_a,450000,1,step_budget,,36,2,450000,1.5173839999999927,1.5292460829999754,0,0,False
+products/maximum_control,maximum_control,reuse_a,1350000,0,step_budget,,93,3,1350000,4.226268000000005,4.261914249999961,0,0,False
+products/maximum_control,maximum_control,reuse_ab,1350000,0,step_budget,,60,2,1350000,3.341028999999992,3.3724272920000544,0,0,False
+products/maximum_control,maximum_control,baseline,1350000,0,step_budget,,88,3,1350000,4.057248999999956,4.081873083000005,0,0,False
+products/maximum_control,maximum_control,baseline,1350000,1,step_budget,,88,3,1350000,4.0526610000000005,4.074644541999987,0,0,False
+products/maximum_control,maximum_control,reuse_ab,1350000,1,step_budget,,60,2,1350000,3.3011789999999905,3.324420250000003,0,0,False
+products/maximum_control,maximum_control,reuse_a,1350000,1,step_budget,,93,3,1350000,4.196582000000035,4.228079500000035,0,0,False
+readings/selected_sum,selected_sum,reuse_ab,150000,0,found,['bench_learned_selected_sum'],7,1,87678,0.27285100000000284,0.2739912909999589,40,0,True
+readings/selected_sum,selected_sum,baseline,150000,0,step_budget,,14,2,150000,0.5598130000000197,0.5618434589999879,0,0,False
+readings/selected_sum,selected_sum,reuse_a,150000,0,found,['bench_learned_selected_sum'],7,1,58846,0.24002500000000282,0.24092229199999338,40,0,True
+readings/selected_sum,selected_sum,reuse_a,150000,1,found,['bench_learned_selected_sum'],7,1,58846,0.2508699999999635,0.25179833300001064,40,0,True
+readings/selected_sum,selected_sum,baseline,150000,1,step_budget,,14,2,150000,0.5633080000000064,0.5657193750000147,0,0,False
+readings/selected_sum,selected_sum,reuse_ab,150000,1,found,['bench_learned_selected_sum'],7,1,87678,0.28668799999996963,0.28797795799999903,40,0,True
+readings/selected_sum,selected_sum,reuse_ab,450000,0,found,['bench_learned_selected_sum'],7,1,87678,0.2991810000000328,0.3017605000000003,40,0,True
+readings/selected_sum,selected_sum,baseline,450000,0,found,"['synth_select', 'synth_sum']",25,2,297140,1.01849100000004,1.0256025829999658,40,0,True
+readings/selected_sum,selected_sum,reuse_a,450000,0,found,['bench_learned_selected_sum'],7,1,58846,0.2509729999999877,0.25182704200000217,40,0,True
+readings/selected_sum,selected_sum,reuse_a,450000,1,found,['bench_learned_selected_sum'],7,1,58846,0.24005399999998644,0.24102383399997507,40,0,True
+readings/selected_sum,selected_sum,baseline,450000,1,found,"['synth_select', 'synth_sum']",25,2,297140,1.0102870000000053,1.0136899160000326,40,0,True
+readings/selected_sum,selected_sum,reuse_ab,450000,1,found,['bench_learned_selected_sum'],7,1,87678,0.31888600000002043,0.3443532499999833,40,0,True
+readings/selected_sum,selected_sum,reuse_ab,1350000,0,found,['bench_learned_selected_sum'],7,1,87678,0.2911950000000161,0.2945258749999766,40,0,True
+readings/selected_sum,selected_sum,baseline,1350000,0,found,"['synth_select', 'synth_sum']",25,2,297140,1.0554390000000353,1.0682716250000226,40,0,True
+readings/selected_sum,selected_sum,reuse_a,1350000,0,found,['bench_learned_selected_sum'],7,1,58846,0.24889799999999696,0.2521391669999957,40,0,True
+readings/selected_sum,selected_sum,reuse_a,1350000,1,found,['bench_learned_selected_sum'],7,1,58846,0.253071000000034,0.2565332919999719,40,0,True
+readings/selected_sum,selected_sum,baseline,1350000,1,found,"['synth_select', 'synth_sum']",25,2,297140,1.0673219999999901,1.0804577920000042,40,0,True
+readings/selected_sum,selected_sum,reuse_ab,1350000,1,found,['bench_learned_selected_sum'],7,1,87678,0.35741100000001325,0.37366270799998347,40,0,True
+readings/selected_double_sum,selected_double_sum,baseline,150000,0,step_budget,,14,2,150000,0.6229090000000497,0.642032625000013,0,0,False
+readings/selected_double_sum,selected_double_sum,reuse_a,150000,0,step_budget,,13,2,150000,0.5594869999999901,0.5661857499999883,0,0,False
+readings/selected_double_sum,selected_double_sum,reuse_ab,150000,0,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3402479999999741,0.3443547499999795,40,0,True
+readings/selected_double_sum,selected_double_sum,reuse_ab,150000,1,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.39898799999997436,0.42747537500002863,40,0,True
+readings/selected_double_sum,selected_double_sum,reuse_a,150000,1,step_budget,,13,2,150000,0.5810569999999871,0.5909736250000037,0,0,False
+readings/selected_double_sum,selected_double_sum,baseline,150000,1,step_budget,,14,2,150000,0.5968669999999747,0.6046467079999616,0,0,False
+readings/selected_double_sum,selected_double_sum,baseline,450000,0,step_budget,,35,2,450000,1.5050549999999703,1.521237417000009,0,0,False
+readings/selected_double_sum,selected_double_sum,reuse_a,450000,0,step_budget,,36,2,450000,1.5258360000000266,1.539113499999985,0,0,False
+readings/selected_double_sum,selected_double_sum,reuse_ab,450000,0,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3358470000000011,0.33925908399999116,40,0,True
+readings/selected_double_sum,selected_double_sum,reuse_ab,450000,1,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.339238000000023,0.34271716699998933,40,0,True
+readings/selected_double_sum,selected_double_sum,reuse_a,450000,1,step_budget,,36,2,450000,1.550198000000023,1.5660250840000458,0,0,False
+readings/selected_double_sum,selected_double_sum,baseline,450000,1,step_budget,,35,2,450000,1.4935739999999669,1.5069769579999956,0,0,False
+readings/selected_double_sum,selected_double_sum,baseline,1350000,0,step_budget,,88,3,1350000,4.187153000000023,4.239713125000037,0,0,False
+readings/selected_double_sum,selected_double_sum,reuse_a,1350000,0,found,"['bench_learned_selected_sum', 'bench_double']",54,2,704286,2.3820859999999584,2.421244917000024,40,0,True
+readings/selected_double_sum,selected_double_sum,reuse_ab,1350000,0,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.35205700000000206,0.35729195799996205,40,0,True
+readings/selected_double_sum,selected_double_sum,reuse_ab,1350000,1,found,['bench_learned_doubled_selected_sum'],8,1,106195,0.3386310000000208,0.3423697080000352,40,0,True
+readings/selected_double_sum,selected_double_sum,reuse_a,1350000,1,found,"['bench_learned_selected_sum', 'bench_double']",54,2,704286,2.3346270000000118,2.3574112920000516,40,0,True
+readings/selected_double_sum,selected_double_sum,baseline,1350000,1,step_budget,,88,3,1350000,4.172325999999998,4.223092417000032,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_a,150000,0,step_budget,,13,2,150000,0.5470770000000016,0.5513075829999821,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,150000,0,step_budget,,10,2,150000,0.5033779999999979,0.5144965410000282,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,baseline,150000,0,step_budget,,14,2,150000,0.623284999999953,0.6351637920000144,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,baseline,150000,1,step_budget,,14,2,150000,0.595973000000015,0.6058050419999859,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,150000,1,step_budget,,10,2,150000,0.482928999999956,0.48826875000003156,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_a,150000,1,step_budget,,13,2,150000,0.5456980000000158,0.55068666599999,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_a,450000,0,step_budget,,36,2,450000,1.5702939999999899,1.5939980839999635,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,450000,0,step_budget,,25,2,450000,1.2527959999999894,1.265357750000021,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,baseline,450000,0,step_budget,,35,2,450000,1.5243340000000103,1.5447517079999784,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,baseline,450000,1,step_budget,,35,2,450000,1.4866910000000075,1.4988512919999835,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,450000,1,step_budget,,25,2,450000,1.2641160000000013,1.2788128750000283,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_a,450000,1,step_budget,,36,2,450000,1.5357979999999998,1.550094333000004,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_a,1350000,0,step_budget,,93,3,1350000,4.200905000000034,4.233068582999977,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,1350000,0,step_budget,,60,2,1350000,3.320374999999956,3.35120062499999,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,baseline,1350000,0,step_budget,,88,3,1350000,4.127022000000011,4.170623708999983,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,baseline,1350000,1,step_budget,,88,3,1350000,4.081589000000008,4.118413375000046,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_ab,1350000,1,step_budget,,60,2,1350000,3.282118999999966,3.3080183749999605,0,0,False
+readings/selected_negative_double_sum,selected_negative_double_sum,reuse_a,1350000,1,step_budget,,93,3,1350000,4.211867999999981,4.251794416999985,0,0,False
+readings/plain_sum,plain_sum,reuse_ab,150000,0,found,['synth_sum'],1,1,9731,0.03601299999996854,0.036540415999979814,40,0,True
+readings/plain_sum,plain_sum,baseline,150000,0,found,['synth_sum'],1,1,9590,0.04828000000003385,0.0488631670000359,40,0,True
+readings/plain_sum,plain_sum,reuse_a,150000,0,found,['synth_sum'],1,1,9585,0.03559500000000071,0.03611120800002254,40,0,True
+readings/plain_sum,plain_sum,reuse_a,150000,1,found,['synth_sum'],1,1,9585,0.0352980000000116,0.03563029200000756,40,0,True
+readings/plain_sum,plain_sum,baseline,150000,1,found,['synth_sum'],1,1,9590,0.036522999999988315,0.036954749999949854,40,0,True
+readings/plain_sum,plain_sum,reuse_ab,150000,1,found,['synth_sum'],1,1,9731,0.04801500000002079,0.04851520800002618,40,0,True
+readings/plain_sum,plain_sum,reuse_ab,450000,0,found,['synth_sum'],1,1,9731,0.0362100000000396,0.03652829199995722,40,0,True
+readings/plain_sum,plain_sum,baseline,450000,0,found,['synth_sum'],1,1,9590,0.035707000000002154,0.03595116600001802,40,0,True
+readings/plain_sum,plain_sum,reuse_a,450000,0,found,['synth_sum'],1,1,9585,0.03717899999998053,0.03768833400005178,40,0,True
+readings/plain_sum,plain_sum,reuse_a,450000,1,found,['synth_sum'],1,1,9585,0.03591000000000122,0.036269208000021536,40,0,True
+readings/plain_sum,plain_sum,baseline,450000,1,found,['synth_sum'],1,1,9590,0.0484119999999848,0.04901320900000883,40,0,True
+readings/plain_sum,plain_sum,reuse_ab,450000,1,found,['synth_sum'],1,1,9731,0.03584799999998722,0.03617245800001001,40,0,True
+readings/plain_sum,plain_sum,reuse_ab,1350000,0,found,['synth_sum'],1,1,9731,0.03596700000002784,0.036312750000035976,40,0,True
+readings/plain_sum,plain_sum,baseline,1350000,0,found,['synth_sum'],1,1,9590,0.035944999999969696,0.03634875000000193,40,0,True
+readings/plain_sum,plain_sum,reuse_a,1350000,0,found,['synth_sum'],1,1,9585,0.04778899999996611,0.04829987499999788,40,0,True
+readings/plain_sum,plain_sum,reuse_a,1350000,1,found,['synth_sum'],1,1,9585,0.036734000000024025,0.03714550000000827,40,0,True
+readings/plain_sum,plain_sum,baseline,1350000,1,found,['synth_sum'],1,1,9590,0.036404000000004544,0.036845084000049155,40,0,True
+readings/plain_sum,plain_sum,reuse_ab,1350000,1,found,['synth_sum'],1,1,9731,0.03583600000001752,0.036236250000001746,40,0,True
+readings/selected_count,selected_count,baseline,150000,0,step_budget,,14,2,150000,0.5803789999999935,0.5857982919999927,0,0,False
+readings/selected_count,selected_count,reuse_a,150000,0,step_budget,,13,2,150000,0.5493109999999888,0.55459350000001,0,0,False
+readings/selected_count,selected_count,reuse_ab,150000,0,step_budget,,10,2,150000,0.47305799999998044,0.47639108300001,0,0,False
+readings/selected_count,selected_count,reuse_ab,150000,1,step_budget,,10,2,150000,0.4718379999999911,0.4755681670000058,0,0,False
+readings/selected_count,selected_count,reuse_a,150000,1,step_budget,,13,2,150000,0.5436500000000137,0.5477632500000027,0,0,False
+readings/selected_count,selected_count,baseline,150000,1,step_budget,,14,2,150000,0.5898660000000291,0.5971165000000269,0,0,False
+readings/selected_count,selected_count,baseline,450000,0,found,"['synth_select', 'synth_count']",26,2,311843,1.0609479999999962,1.0699577920000252,40,0,True
+readings/selected_count,selected_count,reuse_a,450000,0,found,"['synth_select', 'synth_count']",30,2,359101,1.2312069999999835,1.2405232500000238,40,0,True
+readings/selected_count,selected_count,reuse_ab,450000,0,step_budget,,25,2,450000,1.2516799999999648,1.2616670839999529,0,0,False
+readings/selected_count,selected_count,reuse_ab,450000,1,step_budget,,25,2,450000,1.243852000000004,1.2539120829999888,0,0,False
+readings/selected_count,selected_count,reuse_a,450000,1,found,"['synth_select', 'synth_count']",30,2,359101,1.2511749999999893,1.2670009169999616,40,0,True
+readings/selected_count,selected_count,baseline,450000,1,found,"['synth_select', 'synth_count']",26,2,311843,1.0635159999999928,1.0704915830000346,40,0,True
+readings/selected_count,selected_count,baseline,1350000,0,found,"['synth_select', 'synth_count']",26,2,311843,1.0757839999999987,1.0884344999999485,40,0,True
+readings/selected_count,selected_count,reuse_a,1350000,0,found,"['synth_select', 'synth_count']",30,2,359101,1.2397459999999683,1.2518008330000043,40,0,True
+readings/selected_count,selected_count,reuse_ab,1350000,0,found,"['synth_select', 'synth_count']",34,2,646640,1.7233650000000011,1.7403102079999826,40,0,True
+readings/selected_count,selected_count,reuse_ab,1350000,1,found,"['synth_select', 'synth_count']",34,2,646640,1.716745000000003,1.7299174160000348,40,0,True
+readings/selected_count,selected_count,reuse_a,1350000,1,found,"['synth_select', 'synth_count']",30,2,359101,1.233613000000048,1.2432227919999832,40,0,True
+readings/selected_count,selected_count,baseline,1350000,1,found,"['synth_select', 'synth_count']",26,2,311843,1.062927000000002,1.0724214999999617,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_a,150000,0,found,"['synth_sum', 'bench_double']",12,2,125592,0.47617700000000696,0.4809014589999947,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_ab,150000,0,step_budget,,10,2,150000,0.4698229999999626,0.4729184170000167,0,0,False
+readings/plain_double_sum,plain_double_sum,baseline,150000,0,found,"['synth_sum', 'bench_double']",11,2,112118,0.4414990000000216,0.4459355829999936,40,0,True
+readings/plain_double_sum,plain_double_sum,baseline,150000,1,found,"['synth_sum', 'bench_double']",11,2,112118,0.41879500000004555,0.4218139170000086,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_ab,150000,1,step_budget,,10,2,150000,0.4681700000000433,0.4717879169999719,0,0,False
+readings/plain_double_sum,plain_double_sum,reuse_a,150000,1,found,"['synth_sum', 'bench_double']",12,2,125592,0.46816599999999653,0.471491125,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_a,450000,0,found,"['synth_sum', 'bench_double']",12,2,125592,0.46930299999996805,0.47320120900002394,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_ab,450000,0,found,"['synth_sum', 'bench_double']",13,2,189385,0.5877770000000169,0.5942481250000355,40,0,True
+readings/plain_double_sum,plain_double_sum,baseline,450000,0,found,"['synth_sum', 'bench_double']",11,2,112118,0.42432600000000775,0.4288017079999804,40,0,True
+readings/plain_double_sum,plain_double_sum,baseline,450000,1,found,"['synth_sum', 'bench_double']",11,2,112118,0.43374399999999014,0.4372485420000203,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_ab,450000,1,found,"['synth_sum', 'bench_double']",13,2,189385,0.5706759999999917,0.5750065419999828,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_a,450000,1,found,"['synth_sum', 'bench_double']",12,2,125592,0.46954099999999244,0.47300295799999503,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_a,1350000,0,found,"['synth_sum', 'bench_double']",12,2,125592,0.48063700000000154,0.48565733399999544,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_ab,1350000,0,found,"['synth_sum', 'bench_double']",13,2,189385,0.5792319999999904,0.5836197500000253,40,0,True
+readings/plain_double_sum,plain_double_sum,baseline,1350000,0,found,"['synth_sum', 'bench_double']",11,2,112118,0.4159679999999639,0.418959583000003,40,0,True
+readings/plain_double_sum,plain_double_sum,baseline,1350000,1,found,"['synth_sum', 'bench_double']",11,2,112118,0.4267690000000357,0.4297076249999918,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_ab,1350000,1,found,"['synth_sum', 'bench_double']",13,2,189385,0.5839730000000145,0.588892541000007,40,0,True
+readings/plain_double_sum,plain_double_sum,reuse_a,1350000,1,found,"['synth_sum', 'bench_double']",12,2,125592,0.46134399999999687,0.4659327910000002,40,0,True
+readings/maximum_control,maximum_control,reuse_ab,150000,0,step_budget,,10,2,150000,0.48117299999995566,0.48628441699997893,0,0,False
+readings/maximum_control,maximum_control,baseline,150000,0,step_budget,,14,2,150000,0.5813860000000091,0.5865788339999654,0,0,False
+readings/maximum_control,maximum_control,reuse_a,150000,0,step_budget,,13,2,150000,0.5478870000000029,0.552297249999981,0,0,False
+readings/maximum_control,maximum_control,reuse_a,150000,1,step_budget,,13,2,150000,0.5636749999999893,0.5688521669999886,0,0,False
+readings/maximum_control,maximum_control,baseline,150000,1,step_budget,,14,2,150000,0.5741100000000188,0.5781879999999546,0,0,False
+readings/maximum_control,maximum_control,reuse_ab,150000,1,step_budget,,10,2,150000,0.47052999999999656,0.47377054099996485,0,0,False
+readings/maximum_control,maximum_control,reuse_ab,450000,0,step_budget,,25,2,450000,1.242176000000029,1.2515276660000154,0,0,False
+readings/maximum_control,maximum_control,baseline,450000,0,step_budget,,35,2,450000,1.528381999999965,1.5501036669999735,0,0,False
+readings/maximum_control,maximum_control,reuse_a,450000,0,step_budget,,36,2,450000,1.5142179999999712,1.526695000000018,0,0,False
+readings/maximum_control,maximum_control,reuse_a,450000,1,step_budget,,36,2,450000,1.526446999999962,1.5376757500000053,0,0,False
+readings/maximum_control,maximum_control,baseline,450000,1,step_budget,,35,2,450000,1.5093330000000265,1.5234607909999909,0,0,False
+readings/maximum_control,maximum_control,reuse_ab,450000,1,step_budget,,25,2,450000,1.2502130000000307,1.2604401250000024,0,0,False
+readings/maximum_control,maximum_control,reuse_ab,1350000,0,step_budget,,60,2,1350000,3.2986190000000306,3.3273314159999927,0,0,False
+readings/maximum_control,maximum_control,baseline,1350000,0,step_budget,,88,3,1350000,4.048363999999992,4.077830125000048,0,0,False
+readings/maximum_control,maximum_control,reuse_a,1350000,0,step_budget,,93,3,1350000,4.318669999999997,4.376224499999978,0,0,False
+readings/maximum_control,maximum_control,reuse_a,1350000,1,step_budget,,93,3,1350000,4.242440000000045,4.2822999589999995,0,0,False
+readings/maximum_control,maximum_control,baseline,1350000,1,step_budget,,88,3,1350000,4.070478000000037,4.105696832999968,0,0,False
+readings/maximum_control,maximum_control,reuse_ab,1350000,1,step_budget,,60,2,1350000,3.308719999999994,3.3353962079999633,0,0,False

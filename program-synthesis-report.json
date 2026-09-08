@@ -1,0 +1,96 @@
+{
+  "name": "learned_synth_positive_total",
+  "database": "/Users/kaan/Documents/ChatGPT/Idk/experiments/program-synthesis.graph.sqlite3",
+  "model_calls": 0,
+  "search_seconds": 0.22550079099999998,
+  "searched_operations": [
+    "synth_select",
+    "synth_sum"
+  ],
+  "candidates_evaluated": 17,
+  "training_cases": 4,
+  "hidden_cases": 100,
+  "hidden_failures": [],
+  "transfer_training_accepted": true,
+  "reuse_candidates_evaluated": 1,
+  "fresh_transfer_candidates_evaluated": 17,
+  "transfer_hidden_cases": 100,
+  "transfer_hidden_failures": [],
+  "learner_received_hidden_cases": false,
+  "hidden_inputs_unique_and_disjoint_from_training": true,
+  "learned_graph": {
+    "input_type": "Data",
+    "output_type": "Data",
+    "nodes": [
+      {
+        "id": "n0",
+        "op": "input",
+        "inputs": [],
+        "type": "Data"
+      },
+      {
+        "id": "n1",
+        "op": "call",
+        "inputs": [
+          "n0"
+        ],
+        "type": "Data",
+        "name": "synth_init"
+      },
+      {
+        "id": "n2",
+        "op": "call",
+        "inputs": [
+          "n1"
+        ],
+        "type": "Data",
+        "name": "synth_select"
+      },
+      {
+        "id": "n3",
+        "op": "call",
+        "inputs": [
+          "n2"
+        ],
+        "type": "Data",
+        "name": "synth_sum"
+      },
+      {
+        "id": "n4",
+        "op": "call",
+        "inputs": [
+          "n3"
+        ],
+        "type": "Data",
+        "name": "synth_finish"
+      }
+    ],
+    "output": "n4",
+    "trace_mode": "explicit"
+  },
+  "limits": [
+    "Finite search over four supplied operations up to depth three.",
+    "Predicates, projection adapters, search algorithm and arithmetic were supplied.",
+    "Transfer is parameterized reuse with supplied adapters, not autonomous concept discovery.",
+    "Candidate counts measure this search ordering; they are not a general efficiency claim.",
+    "Held-out cases support only the tested data domain, not general intelligence."
+  ],
+  "live": {
+    "learned_procedure": "learned_synth_positive_total",
+    "candidates_evaluated": 17,
+    "checks": [
+      {
+        "case": "unseen numbers",
+        "actual": 10,
+        "expected": 10
+      },
+      {
+        "case": "unseen products",
+        "actual": 5,
+        "expected": 5
+      }
+    ],
+    "elapsed_seconds": 11.846735249999998
+  },
+  "regression_tests_passed": 4
+}

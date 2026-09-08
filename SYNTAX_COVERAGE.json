@@ -1,0 +1,42 @@
+{
+  "target": "ECMAScript 2026 Script and Module grammar, static early errors, plus JSX",
+  "references": [
+    "https://tc39.es/ecma262/2026/multipage/notational-conventions.html",
+    "https://github.com/tc39/test262"
+  ],
+  "full_syntax_support": false,
+  "test262_run": false,
+  "graph_only_source_pipeline": true,
+  "executable_additions": [
+    "assignment",
+    "compound assignment",
+    "increment and decrement statements",
+    "if/else",
+    "while",
+    "for (traditional form)",
+    "do/while",
+    "inline array callback blocks containing exactly one return statement"
+  ],
+  "known_gaps": [
+    "modules/import/export beyond default entry function",
+    "general function declarations and calls, closures",
+    "classes and private names",
+    "async/await and generators",
+    "template literals and regular expressions",
+    "full numeric and Unicode lexical grammar",
+    "automatic semicolon insertion and all early errors",
+    "destructuring/rest/default parameters",
+    "switch/try/catch/throw",
+    "for-in/for-of and break/continue",
+    "full lexical scoping",
+    "JSX component calls and full entity handling",
+    "React hook execution"
+  ],
+  "learning_scope": "Graph-owned finite candidate generation/selection and evidence storage; no automatic production grammar replacement",
+  "next_work": [
+    "Expand conformance fixtures with positive and early-error negatives",
+    "Add lexical scopes and function-call frames",
+    "Add remaining lexical grammar and module contexts",
+    "Evaluate syntax trees and execution before accepting learned production rules"
+  ]
+}

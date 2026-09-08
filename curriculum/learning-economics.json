@@ -1,0 +1,940 @@
+{
+  "economy_init": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "knowledge.economics"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "catalog"
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n3",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n4"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        }
+      ],
+      "output": "n5",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Supplied online retention and bounded-recency retrieval policy."
+  },
+  "economy_prepare": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "namespace": "knowledge.economics",
+            "key": "catalog"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n3",
+          "op": "map",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "name"
+                ]
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "reverse",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "slice",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "start": 0,
+          "stop": 4
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "base"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "map",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "map",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "data_list",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n3",
+                  "trace_mode": "explicit"
+                }
+              },
+              {
+                "id": "n4",
+                "op": "data_list",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "data_list",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "concat",
+                "inputs": [
+                  "n5",
+                  "n3"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n6",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n8",
+          "op": "flatten",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "base"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "concat",
+          "inputs": [
+            "n9",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n10",
+            "n8",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "catalog",
+            "vocabulary",
+            "prelude",
+            "selected"
+          ]
+        }
+      ],
+      "output": "n11",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Supplied online retention and bounded-recency retrieval policy."
+  },
+  "economy_validate": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "ops"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n3",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n6",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "accepted",
+            "cases"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "synth_evaluate_candidate"
+        },
+        {
+          "id": "n8",
+          "op": "choose",
+          "inputs": [
+            "n3",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n8",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Supplied online retention and bounded-recency retrieval policy."
+  },
+  "economy_refine": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "examples"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "validation"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "concat",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n3",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Supplied online retention and bounded-recency retrieval policy."
+  },
+  "economy_retain": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "namespace": "knowledge.economics",
+            "key": "catalog"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "ops"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "map",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "ops"
+                ]
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n6",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n9",
+          "op": "size",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "less",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "contains",
+          "inputs": [
+            "n4",
+            "n3"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "not",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "and",
+          "inputs": [
+            "n13",
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "bool_data",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "choose",
+          "inputs": [
+            "n6",
+            "n7",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "retain"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "as_bool",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "validated"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "as_bool",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n23",
+          "op": "as_bool",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n24",
+          "op": "and",
+          "inputs": [
+            "n22",
+            "n23"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "and",
+          "inputs": [
+            "n20",
+            "n24"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n26",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n27",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "vocabulary"
+          ]
+        },
+        {
+          "id": "n28",
+          "op": "record",
+          "inputs": [
+            "n26",
+            "n3",
+            "n27"
+          ],
+          "type": "Data",
+          "keys": [
+            "name",
+            "ops",
+            "vocabulary"
+          ]
+        },
+        {
+          "id": "n29",
+          "op": "call",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Data",
+          "name": "bench_promote"
+        },
+        {
+          "id": "n30",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "validation"
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "record",
+          "inputs": [
+            "n30",
+            "n3",
+            "n31"
+          ],
+          "type": "Data",
+          "keys": [
+            "name",
+            "ops",
+            "validation"
+          ]
+        },
+        {
+          "id": "n33",
+          "op": "data_list",
+          "inputs": [
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "concat",
+          "inputs": [
+            "n2",
+            "n33"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "knowledge.economics"
+        },
+        {
+          "id": "n36",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "catalog"
+        },
+        {
+          "id": "n37",
+          "op": "record",
+          "inputs": [
+            "n35",
+            "n36",
+            "n34"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n38",
+          "op": "act",
+          "inputs": [
+            "n29",
+            "n37"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n39",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n40",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n41",
+          "op": "record",
+          "inputs": [
+            "n39",
+            "n38",
+            "n40"
+          ],
+          "type": "Data",
+          "keys": [
+            "retained",
+            "saved",
+            "name"
+          ]
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n43",
+          "op": "record",
+          "inputs": [
+            "n42"
+          ],
+          "type": "Data",
+          "keys": [
+            "retained"
+          ]
+        },
+        {
+          "id": "n44",
+          "op": "choose",
+          "inputs": [
+            "n25",
+            "n41",
+            "n43"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n44",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Supplied online retention and bounded-recency retrieval policy."
+  }
+}

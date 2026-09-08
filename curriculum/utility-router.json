@@ -1,0 +1,3414 @@
+{
+  "router_zero": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "weights": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "updates": 0
+          }
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic online fixed-point linear contextual utility model."
+  },
+  "router_features": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "state"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "entry"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "probe",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "examples"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "size",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_data",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "examples"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "map",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "features"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "size",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n3",
+                "op": "as_data",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n3",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n9",
+          "op": "call",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data",
+          "name": "priority_sum"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n11",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "matches"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "multiply",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_data",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "as_number",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "divide",
+          "inputs": [
+            "n17",
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_data",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "floor",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "as_data",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n25",
+          "op": "as_number",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n26",
+          "op": "as_number",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n27",
+          "op": "less",
+          "inputs": [
+            "n25",
+            "n26"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n29",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n30",
+          "op": "as_number",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "as_number",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n32",
+          "op": "less",
+          "inputs": [
+            "n30",
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n34",
+          "op": "choose",
+          "inputs": [
+            "n32",
+            "n33",
+            "n23"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n35",
+          "op": "choose",
+          "inputs": [
+            "n27",
+            "n28",
+            "n34"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "progress"
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n38",
+          "op": "as_number",
+          "inputs": [
+            "n36"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n39",
+          "op": "as_number",
+          "inputs": [
+            "n37"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n40",
+          "op": "multiply",
+          "inputs": [
+            "n38",
+            "n39"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n41",
+          "op": "as_data",
+          "inputs": [
+            "n40"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "as_number",
+          "inputs": [
+            "n41"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n43",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n44",
+          "op": "divide",
+          "inputs": [
+            "n42",
+            "n43"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n45",
+          "op": "as_data",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n46",
+          "op": "as_number",
+          "inputs": [
+            "n45"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n47",
+          "op": "floor",
+          "inputs": [
+            "n46"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n48",
+          "op": "as_data",
+          "inputs": [
+            "n47"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n49",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n50",
+          "op": "as_number",
+          "inputs": [
+            "n48"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n51",
+          "op": "as_number",
+          "inputs": [
+            "n49"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n52",
+          "op": "less",
+          "inputs": [
+            "n50",
+            "n51"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n53",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n54",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n55",
+          "op": "as_number",
+          "inputs": [
+            "n54"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n56",
+          "op": "as_number",
+          "inputs": [
+            "n48"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n57",
+          "op": "less",
+          "inputs": [
+            "n55",
+            "n56"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n58",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n59",
+          "op": "choose",
+          "inputs": [
+            "n57",
+            "n58",
+            "n48"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n60",
+          "op": "choose",
+          "inputs": [
+            "n52",
+            "n53",
+            "n59"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n61",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "ops"
+          ]
+        },
+        {
+          "id": "n62",
+          "op": "size",
+          "inputs": [
+            "n61"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n63",
+          "op": "as_data",
+          "inputs": [
+            "n62"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n64",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 5
+        },
+        {
+          "id": "n65",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n66",
+          "op": "as_number",
+          "inputs": [
+            "n63"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n67",
+          "op": "as_number",
+          "inputs": [
+            "n65"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n68",
+          "op": "multiply",
+          "inputs": [
+            "n66",
+            "n67"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n69",
+          "op": "as_data",
+          "inputs": [
+            "n68"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n70",
+          "op": "as_number",
+          "inputs": [
+            "n69"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n71",
+          "op": "as_number",
+          "inputs": [
+            "n64"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n72",
+          "op": "divide",
+          "inputs": [
+            "n70",
+            "n71"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n73",
+          "op": "as_data",
+          "inputs": [
+            "n72"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n74",
+          "op": "as_number",
+          "inputs": [
+            "n73"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n75",
+          "op": "floor",
+          "inputs": [
+            "n74"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n76",
+          "op": "as_data",
+          "inputs": [
+            "n75"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n77",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n78",
+          "op": "as_number",
+          "inputs": [
+            "n76"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n79",
+          "op": "as_number",
+          "inputs": [
+            "n77"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n80",
+          "op": "less",
+          "inputs": [
+            "n78",
+            "n79"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n81",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n82",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n83",
+          "op": "as_number",
+          "inputs": [
+            "n82"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n84",
+          "op": "as_number",
+          "inputs": [
+            "n76"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n85",
+          "op": "less",
+          "inputs": [
+            "n83",
+            "n84"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n86",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n87",
+          "op": "choose",
+          "inputs": [
+            "n85",
+            "n86",
+            "n76"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n88",
+          "op": "choose",
+          "inputs": [
+            "n80",
+            "n81",
+            "n87"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n89",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 32
+        },
+        {
+          "id": "n90",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n91",
+          "op": "as_number",
+          "inputs": [
+            "n89"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n92",
+          "op": "multiply",
+          "inputs": [
+            "n90",
+            "n91"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n93",
+          "op": "as_data",
+          "inputs": [
+            "n92"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n94",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n95",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n96",
+          "op": "as_number",
+          "inputs": [
+            "n94"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n97",
+          "op": "multiply",
+          "inputs": [
+            "n95",
+            "n96"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n98",
+          "op": "as_data",
+          "inputs": [
+            "n97"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n99",
+          "op": "as_number",
+          "inputs": [
+            "n98"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n100",
+          "op": "as_number",
+          "inputs": [
+            "n93"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n101",
+          "op": "divide",
+          "inputs": [
+            "n99",
+            "n100"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n102",
+          "op": "as_data",
+          "inputs": [
+            "n101"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n103",
+          "op": "as_number",
+          "inputs": [
+            "n102"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n104",
+          "op": "floor",
+          "inputs": [
+            "n103"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n105",
+          "op": "as_data",
+          "inputs": [
+            "n104"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n106",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n107",
+          "op": "as_number",
+          "inputs": [
+            "n105"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n108",
+          "op": "as_number",
+          "inputs": [
+            "n106"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n109",
+          "op": "less",
+          "inputs": [
+            "n107",
+            "n108"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n110",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n111",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n112",
+          "op": "as_number",
+          "inputs": [
+            "n111"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n113",
+          "op": "as_number",
+          "inputs": [
+            "n105"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n114",
+          "op": "less",
+          "inputs": [
+            "n112",
+            "n113"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n115",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n116",
+          "op": "choose",
+          "inputs": [
+            "n114",
+            "n115",
+            "n105"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n117",
+          "op": "choose",
+          "inputs": [
+            "n109",
+            "n110",
+            "n116"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n118",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "wins"
+          ]
+        },
+        {
+          "id": "n119",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "wins"
+          ]
+        },
+        {
+          "id": "n120",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "misses"
+          ]
+        },
+        {
+          "id": "n121",
+          "op": "as_number",
+          "inputs": [
+            "n119"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n122",
+          "op": "as_number",
+          "inputs": [
+            "n120"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n123",
+          "op": "add",
+          "inputs": [
+            "n121",
+            "n122"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n124",
+          "op": "as_data",
+          "inputs": [
+            "n123"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n125",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n126",
+          "op": "as_number",
+          "inputs": [
+            "n124"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n127",
+          "op": "as_number",
+          "inputs": [
+            "n125"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n128",
+          "op": "add",
+          "inputs": [
+            "n126",
+            "n127"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n129",
+          "op": "as_data",
+          "inputs": [
+            "n128"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n130",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n131",
+          "op": "as_number",
+          "inputs": [
+            "n118"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n132",
+          "op": "as_number",
+          "inputs": [
+            "n130"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n133",
+          "op": "multiply",
+          "inputs": [
+            "n131",
+            "n132"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n134",
+          "op": "as_data",
+          "inputs": [
+            "n133"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n135",
+          "op": "as_number",
+          "inputs": [
+            "n134"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n136",
+          "op": "as_number",
+          "inputs": [
+            "n129"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n137",
+          "op": "divide",
+          "inputs": [
+            "n135",
+            "n136"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n138",
+          "op": "as_data",
+          "inputs": [
+            "n137"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n139",
+          "op": "as_number",
+          "inputs": [
+            "n138"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n140",
+          "op": "floor",
+          "inputs": [
+            "n139"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n141",
+          "op": "as_data",
+          "inputs": [
+            "n140"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n142",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n143",
+          "op": "as_number",
+          "inputs": [
+            "n141"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n144",
+          "op": "as_number",
+          "inputs": [
+            "n142"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n145",
+          "op": "less",
+          "inputs": [
+            "n143",
+            "n144"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n146",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n147",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n148",
+          "op": "as_number",
+          "inputs": [
+            "n147"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n149",
+          "op": "as_number",
+          "inputs": [
+            "n141"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n150",
+          "op": "less",
+          "inputs": [
+            "n148",
+            "n149"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n151",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n152",
+          "op": "choose",
+          "inputs": [
+            "n150",
+            "n151",
+            "n141"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n153",
+          "op": "choose",
+          "inputs": [
+            "n145",
+            "n146",
+            "n152"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n154",
+          "op": "data_list",
+          "inputs": [
+            "n10",
+            "n35",
+            "n60",
+            "n88",
+            "n117",
+            "n153"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n154",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic online fixed-point linear contextual utility model."
+  },
+  "router_score": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "x"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "indices",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "map",
+          "inputs": [
+            "n2",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context",
+                  "x"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context",
+                  "model",
+                  "weights"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "item",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "multiply",
+                "inputs": [
+                  "n7",
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "as_data",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n10",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "priority_sum"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "divide",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_data",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "floor",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "as_data",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n12",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic online fixed-point linear contextual utility model."
+  },
+  "router_decide": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "score"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "updates"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 5
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "less",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "not",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 100
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "less",
+          "inputs": [
+            "n9",
+            "n10"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "and",
+          "inputs": [
+            "n7",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "ordinal"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 20
+        },
+        {
+          "id": "n15",
+          "op": "as_number",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "divide",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "as_data",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "as_number",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "floor",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_data",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 20
+        },
+        {
+          "id": "n23",
+          "op": "as_number",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n24",
+          "op": "as_number",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n25",
+          "op": "multiply",
+          "inputs": [
+            "n23",
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n26",
+          "op": "as_data",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "ordinal"
+          ]
+        },
+        {
+          "id": "n28",
+          "op": "data_equal",
+          "inputs": [
+            "n26",
+            "n27"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n29",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -100
+        },
+        {
+          "id": "n30",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "as_number",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n32",
+          "op": "less",
+          "inputs": [
+            "n30",
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "not",
+          "inputs": [
+            "n32"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 100
+        },
+        {
+          "id": "n35",
+          "op": "as_number",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n36",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n37",
+          "op": "less",
+          "inputs": [
+            "n35",
+            "n36"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n38",
+          "op": "not",
+          "inputs": [
+            "n37"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n39",
+          "op": "and",
+          "inputs": [
+            "n33",
+            "n38"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n40",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "explore"
+          ]
+        },
+        {
+          "id": "n41",
+          "op": "as_bool",
+          "inputs": [
+            "n40"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n43",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "ordinal"
+          ]
+        },
+        {
+          "id": "n44",
+          "op": "as_number",
+          "inputs": [
+            "n42"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n45",
+          "op": "as_number",
+          "inputs": [
+            "n43"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n46",
+          "op": "less",
+          "inputs": [
+            "n44",
+            "n45"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n47",
+          "op": "and",
+          "inputs": [
+            "n46",
+            "n28"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n48",
+          "op": "and",
+          "inputs": [
+            "n39",
+            "n47"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n49",
+          "op": "and",
+          "inputs": [
+            "n41",
+            "n48"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n50",
+          "op": "or",
+          "inputs": [
+            "n12",
+            "n49"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n51",
+          "op": "bool_data",
+          "inputs": [
+            "n50"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n52",
+          "op": "not",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n53",
+          "op": "and",
+          "inputs": [
+            "n52",
+            "n49"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n54",
+          "op": "bool_data",
+          "inputs": [
+            "n53"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n55",
+          "op": "record",
+          "inputs": [
+            "n51",
+            "n54"
+          ],
+          "type": "Data",
+          "keys": [
+            "activate",
+            "exploration"
+          ]
+        }
+      ],
+      "output": "n55",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic online fixed-point linear contextual utility model."
+  },
+  "router_utility": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "actual"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "baseline"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "cost"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "cost"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "subtract",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_data",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "multiply",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "as_data",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 450000
+        },
+        {
+          "id": "n15",
+          "op": "as_number",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "divide",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "as_data",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "as_number",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "floor",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_data",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1000
+        },
+        {
+          "id": "n23",
+          "op": "as_number",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n24",
+          "op": "as_number",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n25",
+          "op": "less",
+          "inputs": [
+            "n23",
+            "n24"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1000
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n28",
+          "op": "as_number",
+          "inputs": [
+            "n27"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "as_number",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n30",
+          "op": "less",
+          "inputs": [
+            "n28",
+            "n29"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n32",
+          "op": "choose",
+          "inputs": [
+            "n30",
+            "n31",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n33",
+          "op": "choose",
+          "inputs": [
+            "n25",
+            "n26",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n35",
+          "op": "data_equal",
+          "inputs": [
+            "n33",
+            "n34"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "cost"
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "cost"
+          ]
+        },
+        {
+          "id": "n38",
+          "op": "as_number",
+          "inputs": [
+            "n36"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n39",
+          "op": "as_number",
+          "inputs": [
+            "n37"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n40",
+          "op": "less",
+          "inputs": [
+            "n38",
+            "n39"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n41",
+          "op": "and",
+          "inputs": [
+            "n35",
+            "n40"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n43",
+          "op": "choose",
+          "inputs": [
+            "n41",
+            "n42",
+            "n33"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n44",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "success"
+          ]
+        },
+        {
+          "id": "n45",
+          "op": "as_bool",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n46",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "success"
+          ]
+        },
+        {
+          "id": "n47",
+          "op": "as_bool",
+          "inputs": [
+            "n46"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n48",
+          "op": "and",
+          "inputs": [
+            "n45",
+            "n47"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n49",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "success"
+          ]
+        },
+        {
+          "id": "n50",
+          "op": "as_bool",
+          "inputs": [
+            "n49"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n51",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "success"
+          ]
+        },
+        {
+          "id": "n52",
+          "op": "as_bool",
+          "inputs": [
+            "n51"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n53",
+          "op": "not",
+          "inputs": [
+            "n52"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n54",
+          "op": "and",
+          "inputs": [
+            "n50",
+            "n53"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n55",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "success"
+          ]
+        },
+        {
+          "id": "n56",
+          "op": "as_bool",
+          "inputs": [
+            "n55"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n57",
+          "op": "not",
+          "inputs": [
+            "n56"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n58",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "success"
+          ]
+        },
+        {
+          "id": "n59",
+          "op": "as_bool",
+          "inputs": [
+            "n58"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n60",
+          "op": "and",
+          "inputs": [
+            "n57",
+            "n59"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n61",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -2000
+        },
+        {
+          "id": "n62",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n63",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n64",
+          "op": "as_number",
+          "inputs": [
+            "n43"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n65",
+          "op": "as_number",
+          "inputs": [
+            "n63"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n66",
+          "op": "less",
+          "inputs": [
+            "n64",
+            "n65"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n67",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n68",
+          "op": "choose",
+          "inputs": [
+            "n66",
+            "n43",
+            "n67"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n69",
+          "op": "choose",
+          "inputs": [
+            "n48",
+            "n43",
+            "n68"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n70",
+          "op": "choose",
+          "inputs": [
+            "n54",
+            "n62",
+            "n69"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n71",
+          "op": "choose",
+          "inputs": [
+            "n60",
+            "n61",
+            "n70"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n71",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic online fixed-point linear contextual utility model."
+  },
+  "router_update": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "router_score"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "utility"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "subtract",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_data",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -2000
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "less",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -2000
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2000
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "less",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2000
+        },
+        {
+          "id": "n17",
+          "op": "choose",
+          "inputs": [
+            "n15",
+            "n16",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "choose",
+          "inputs": [
+            "n10",
+            "n11",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "x"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "model",
+            "weights"
+          ]
+        },
+        {
+          "id": "n21",
+          "op": "record",
+          "inputs": [
+            "n19",
+            "n20",
+            "n18"
+          ],
+          "type": "Data",
+          "keys": [
+            "x",
+            "weights",
+            "error"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "x"
+          ]
+        },
+        {
+          "id": "n23",
+          "op": "indices",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "map",
+          "inputs": [
+            "n23",
+            "n21"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context",
+                  "error"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context",
+                  "x"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "multiply",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "as_data",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 5000
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_number",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "divide",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n13",
+                "op": "as_data",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "as_number",
+                "inputs": [
+                  "n13"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n15",
+                "op": "floor",
+                "inputs": [
+                  "n14"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n16",
+                "op": "as_data",
+                "inputs": [
+                  "n15"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n17",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context",
+                  "weights"
+                ]
+              },
+              {
+                "id": "n18",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n19",
+                "op": "item",
+                "inputs": [
+                  "n17",
+                  "n18"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n20",
+                "op": "as_number",
+                "inputs": [
+                  "n19"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n21",
+                "op": "as_number",
+                "inputs": [
+                  "n16"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n22",
+                "op": "add",
+                "inputs": [
+                  "n20",
+                  "n21"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n23",
+                "op": "as_data",
+                "inputs": [
+                  "n22"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n24",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -4000
+              },
+              {
+                "id": "n25",
+                "op": "as_number",
+                "inputs": [
+                  "n23"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n26",
+                "op": "as_number",
+                "inputs": [
+                  "n24"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n27",
+                "op": "less",
+                "inputs": [
+                  "n25",
+                  "n26"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n28",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -4000
+              },
+              {
+                "id": "n29",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 4000
+              },
+              {
+                "id": "n30",
+                "op": "as_number",
+                "inputs": [
+                  "n29"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n31",
+                "op": "as_number",
+                "inputs": [
+                  "n23"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n32",
+                "op": "less",
+                "inputs": [
+                  "n30",
+                  "n31"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n33",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 4000
+              },
+              {
+                "id": "n34",
+                "op": "choose",
+                "inputs": [
+                  "n32",
+                  "n33",
+                  "n23"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n35",
+                "op": "choose",
+                "inputs": [
+                  "n27",
+                  "n28",
+                  "n34"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n35",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n25",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "model",
+            "updates"
+          ]
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n27",
+          "op": "as_number",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "as_number",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "add",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n30",
+          "op": "as_data",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n31",
+          "op": "record",
+          "inputs": [
+            "n24",
+            "n30"
+          ],
+          "type": "Data",
+          "keys": [
+            "weights",
+            "updates"
+          ]
+        }
+      ],
+      "output": "n31",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic online fixed-point linear contextual utility model."
+  },
+  "router_persist": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "knowledge.router"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "state"
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2",
+            "n0"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n3"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        }
+      ],
+      "output": "n4",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic online fixed-point linear contextual utility model."
+  }
+}

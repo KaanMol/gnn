@@ -1,0 +1,21 @@
+{
+  "live": true,
+  "targeted_tests_passed": 21,
+  "checks": [
+    {
+      "case": "write",
+      "seconds": 3.005617375,
+      "answer": "Passed supplied examples; this is not a proof for all inputs. Tests passed: 2\n```javascript\nfunction transform(xs) { return xs.filter(x => (x.active)).map(x => (x.price * x.quantity)).reduce((total, x) => total + x, 0); }\n```"
+    },
+    {
+      "case": "explain",
+      "seconds": 1.70087,
+      "answer": "{\n  \"name\": \"count\",\n  \"parameter\": \"xs\",\n  \"requires_input\": true,\n  \"statements\": [\n    {\n      \"operation\": \"uninitialize\",\n      \"meaning\": \"Introduce or end a binding before a value can be read.\",\n      \"binding\": \"n\",\n      \"target\": null,\n      \"expression\": [],\n      \"console_arguments\": []\n    },\n    {\n      \"operation\": \"assign\",\n      \"meaning\": \"Evaluate an expression and initialize a binding.\",\n      \"binding\": \"n\",\n      \"target\": null,\n      \"expression\": [\n        {\n          \"kind\": \"variable\",\n          \"name\": \"xs\"\n        },\n        {\n          \"kind\": \"property\",\n          \"key\": \"length\"\n        }\n      ],\n      \"console_arguments\": []\n    },\n    {\n      \"operation\": \"return\",\n      \"meaning\": \"Return the expression value and finish this function.\",\n      \"binding\": null,\n      \"target\": null,\n      \"expression\": [\n        {\n          \"kind\": \"variable\",\n          \"name\": \"n\"\n        }\n      ],\n      \"console_arguments\": []\n    },\n    {\n      \"operation\": \"return\",\n      \"meaning\": \"Return the expression value and finish this function.\",\n      \"binding\": null,\n      \"target\": null,\n      \"expression\": [\n        {\n          \"kind\": \"constant\",\n          \"value\": {\n            \"__js_type\": \"undefined\"\n          }\n        }\n      ],\n      \"console_arguments\": []\n    }\n  ],\n  \"scope\": \"Static explanation of the supported source subset; expressions are shown as graph instruction data. No source execution is needed.\"\n}"
+    },
+    {
+      "case": "callback",
+      "seconds": 2.0471637080000002,
+      "answer": "JavaScript subset result: 10\nExecuted steps:\n1: return \u2192 {\"xs\": [2, 3]}"
+    }
+  ]
+}

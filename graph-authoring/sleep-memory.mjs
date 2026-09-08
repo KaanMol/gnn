@@ -1,0 +1,47 @@
+import fs from 'node:fs';import {G} from './graph.mjs';
+const suite={};const save=(n,g,x)=>suite[n]={graph:{...g.finish(x),execution_budget:10000000},source:'Sleep-only tabular downstream utility; cheap structural wake index.'};
+const call=(g,n,x)=>g.op('call',[x],{name:n});
+const read=(g,key)=>g.op('act',[g.input,g.data({namespace:'knowledge.sleep',key})],{surface:'workspace',action:'read'});
+const write=(g,key,v)=>g.op('act',[g.input,g.rec({namespace:g.data('knowledge.sleep'),key:g.data(key),value:v})],{surface:'workspace',action:'write'});
+let g=new G();save('sleep_init',g,write(g,'state',g.data({model:[],table:{},boundary:-1})));
+// Only kinds of changed scalar leaves, not paths, scalar values or operation names.
+const kind=new G();g=new G();const first=g.item(g.get(g.input,'examples'),g.data(0));
+const tokens=g.concat(g.list(g.op('kind_of',[g.get(first,'input')]),g.op('kind_of',[g.get(first,'expected')])),g.op('map',[g.get(first,'features')],{body:kind.finish(kind.op('kind_of',[kind.get(kind.input,'value')]))}));
+save('sleep_context',g,g.op('join_text',[tokens,g.data('|')]));
+g=new G();const context=call(g,'sleep_context',g.input),memory=read(g,'state');const table=g.get(memory,'table');
+save('sleep_route',g,g.rec({context,boundary:g.get(memory,'boundary'),selected:g.choose(g.op('has_key',[table,context],{},'Bool'),g.item(table,context),g.data(null))}));
+g=new G();const s=g.get(g.input,'state'),e=g.get(g.input,'entry');
+const allowed=g.not(g.lt(g.data(5),g.len(g.get(e,'ops'))));
+const ev=g.choose(allowed,call(g,'priority_evaluate',g.rec({ops:g.list(g.get(e,'name')),examples:g.get(s,'examples'),predicate:g.get(s,'predicate'),projector:g.get(s,'projector')})),g.data({accepted:false,executable:false,progress:0,matches:0}));
+save('sleep_execute_admitted',g,g.rec({evaluation:ev,eligible:g.datum(g.and(allowed,g.bool(g.get(ev,'executable'))))}));
+// Exact expanded-sequence metadata dedup; no global method deletion.
+let guard=new G(),body=new G();g=new G();const entry=body.item(body.get(body.input,'todo'),body.data(0));
+const fresh=body.not(body.contains(body.get(body.input,'seen'),body.get(entry,'ops')));
+const next=body.rec({todo:body.op('slice',[body.get(body.input,'todo')],{start:1}),seen:body.choose(fresh,body.push(body.get(body.input,'seen'),body.get(entry,'ops')),body.get(body.input,'seen')),entries:body.choose(fresh,body.push(body.get(body.input,'entries'),entry),body.get(body.input,'entries'))});
+const dedup=g.op('while',[g.rec({todo:g.input,seen:g.data([]),entries:g.data([])})],{guard:guard.finish(guard.lt(guard.data(0),guard.len(guard.get(guard.input,'todo'))),'Bool'),body:body.finish(next)});save('sleep_dedup',g,g.get(dedup,'entries'));
+const match=new G();const same=match.and(match.eq(match.get(match.input,'item','context'),match.get(match.input,'context','context')),match.eq(match.get(match.input,'item','name'),match.get(match.input,'context','name')));
+const pair=new G(),p=pair.get(pair.input,'item'),c=pair.get(pair.input,'context');
+const found=pair.op('filter',[pair.get(c,'model'),pair.rec({context:pair.get(c,'experience','context'),name:pair.get(p,'name')})],{body:match.finish(same,'Bool')});
+const onePair=pair.rec({task:pair.get(c,'experience','task'),context:pair.get(c,'experience','context'),entry:p,seen:pair.choose(pair.lt(pair.data(0),pair.len(found)),pair.get(pair.item(found,pair.data(0)),'count'),pair.data(0))});
+const each=new G();g=new G();const methods=g.op('slice',[call(g,'sleep_dedup',g.get(g.input,'catalog'))],{start:-3});
+const recent=g.op('slice',[g.op('reverse',[g.get(g.input,'experiences')])],{start:0,stop:6});
+const pairs=g.op('flatten',[g.op('map',[recent,g.rec({methods,model:g.get(g.input,'model')})],{body:each.finish(each.op('map',[each.get(each.input,'context','methods'),each.rec({experience:each.get(each.input,'item'),model:each.get(each.input,'context','model')})],{body:pair.finish(onePair)}))})]);
+save('sleep_pairs',g,g.op('slice',[g.op('sort',[pairs],{key:'seen'})],{start:0,stop:6}));
+// Update sufficient statistics only from completed downstream interventions.
+g=new G();const matches=g.op('filter',[g.get(g.input,'model'),g.input],{body:match.finish(same,'Bool')});
+const old=g.choose(g.lt(g.data(0),g.len(matches)),g.item(matches,g.data(0)),g.rec({context:g.get(g.input,'context'),name:g.get(g.input,'name'),count:g.data(0),total:g.data(0),positive:g.data(0),lost:g.data(0),irrelevant:g.data(0)}));
+const u=g.get(g.input,'utility');const updated=g.rec({context:g.get(old,'context'),name:g.get(old,'name'),count:g.calc('add',g.get(old,'count'),g.data(1)),total:g.calc('add',g.get(old,'total'),u),positive:g.calc('add',g.get(old,'positive'),g.choose(g.lt(g.data(0),u),g.data(1),g.data(0))),lost:g.calc('add',g.get(old,'lost'),g.choose(g.eq(u,g.data(-2000)),g.data(1),g.data(0))),irrelevant:g.calc('add',g.get(old,'irrelevant'),g.choose(g.eq(u,g.data(0)),g.data(1),g.data(0)))});
+const different=new G();const diff=different.not(different.and(different.eq(different.get(different.input,'item','context'),different.get(different.input,'context','context')),different.eq(different.get(different.input,'item','name'),different.get(different.input,'context','name'))));
+save('sleep_update',g,g.push(g.op('filter',[g.get(g.input,'model'),g.input],{body:different.finish(diff,'Bool')}),updated));
+const qualify=new G();const q=qualify.input;
+const confident=qualify.and(qualify.not(qualify.lt(qualify.get(q,'positive'),qualify.data(2))),qualify.and(qualify.eq(qualify.get(q,'lost'),qualify.data(0)),qualify.lt(qualify.calc('multiply',qualify.get(q,'count'),qualify.data(50)),qualify.get(q,'total'))));
+const score=new G();const scored=score.op('set_item',[score.input,score.data('priority'),score.calc('subtract',score.data(0),score.op('as_data',[score.op('floor',[score.num(score.calc('divide',score.get(score.input,'total'),score.get(score.input,'count')))],{},'Number')]))]);
+const nameMatch=new G();guard=new G();body=new G();g=new G();
+const eligible=g.op('filter',[g.get(g.input,'model')],{body:qualify.finish(confident,'Bool')});const ordered=g.op('sort',[g.op('map',[eligible],{body:score.finish(scored)})],{key:'priority'});
+const row=body.item(body.get(body.input,'todo'),body.data(0));const entries=body.op('filter',[body.get(body.input,'catalog'),body.get(row,'name')],{body:nameMatch.finish(nameMatch.eq(nameMatch.get(nameMatch.input,'item','name'),nameMatch.get(nameMatch.input,'context')),'Bool')});
+const insert=body.and(body.not(body.op('has_key',[body.get(body.input,'table'),body.get(row,'context')],{},'Bool')),body.lt(body.data(0),body.len(entries)));
+const step=body.rec({todo:body.op('slice',[body.get(body.input,'todo')],{start:1}),catalog:body.get(body.input,'catalog'),table:body.choose(insert,body.op('set_item',[body.get(body.input,'table'),body.get(row,'context'),body.item(entries,body.data(0))]),body.get(body.input,'table'))});
+const built=g.op('while',[g.rec({todo:ordered,catalog:g.get(g.input,'catalog'),table:g.data({})})],{guard:guard.finish(guard.lt(guard.data(0),guard.len(guard.get(guard.input,'todo'))),'Bool'),body:body.finish(step)});
+save('sleep_publish',g,write(g,'state',g.rec({model:g.get(g.input,'model'),table:g.get(built,'table'),boundary:g.get(g.input,'boundary')})));
+g=new G();save('sleep_log',g,g.op('act',[g.input,g.rec({namespace:g.data('knowledge.sleep.experiences'),key:g.get(g.input,'key'),value:g.get(g.input,'value')})],{surface:'workspace',action:'write'}));
+fs.writeFileSync(new URL('../curriculum/sleep-memory.json',import.meta.url),JSON.stringify(suite,null,2)+'\n');

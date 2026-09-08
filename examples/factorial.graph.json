@@ -1,0 +1,213 @@
+{
+  "nodes": [
+    {
+      "id": "x",
+      "op": "input",
+      "inputs": [],
+      "type": "Number"
+    },
+    {
+      "id": "zero",
+      "op": "literal",
+      "inputs": [],
+      "type": "Number",
+      "value": "0"
+    },
+    {
+      "id": "one",
+      "op": "literal",
+      "inputs": [],
+      "type": "Number",
+      "value": "1"
+    },
+    {
+      "id": "integer",
+      "op": "is_integer",
+      "inputs": [
+        "x"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "negative",
+      "op": "less",
+      "inputs": [
+        "x",
+        "zero"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "nonnegative",
+      "op": "not",
+      "inputs": [
+        "negative"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "valid",
+      "op": "and",
+      "inputs": [
+        "integer",
+        "nonnegative"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "checked",
+      "op": "require",
+      "inputs": [
+        "valid",
+        "x"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "state",
+      "op": "list",
+      "inputs": [
+        "checked",
+        "one"
+      ],
+      "type": "List[Number]"
+    },
+    {
+      "id": "loop",
+      "op": "while",
+      "inputs": [
+        "state"
+      ],
+      "type": "List[Number]",
+      "guard": {
+        "nodes": [
+          {
+            "id": "s",
+            "op": "input",
+            "inputs": [],
+            "type": "List[Number]"
+          },
+          {
+            "id": "zero",
+            "op": "literal",
+            "inputs": [],
+            "type": "Number",
+            "value": "0"
+          },
+          {
+            "id": "one",
+            "op": "literal",
+            "inputs": [],
+            "type": "Number",
+            "value": "1"
+          },
+          {
+            "id": "remaining",
+            "op": "at",
+            "inputs": [
+              "s",
+              "zero"
+            ],
+            "type": "Number"
+          },
+          {
+            "id": "test",
+            "op": "less",
+            "inputs": [
+              "one",
+              "remaining"
+            ],
+            "type": "Bool"
+          }
+        ],
+        "output": "test",
+        "input_type": "List[Number]",
+        "output_type": "Bool"
+      },
+      "body": {
+        "nodes": [
+          {
+            "id": "s",
+            "op": "input",
+            "inputs": [],
+            "type": "List[Number]"
+          },
+          {
+            "id": "zero",
+            "op": "literal",
+            "inputs": [],
+            "type": "Number",
+            "value": "0"
+          },
+          {
+            "id": "one",
+            "op": "literal",
+            "inputs": [],
+            "type": "Number",
+            "value": "1"
+          },
+          {
+            "id": "remaining",
+            "op": "at",
+            "inputs": [
+              "s",
+              "zero"
+            ],
+            "type": "Number"
+          },
+          {
+            "id": "acc",
+            "op": "at",
+            "inputs": [
+              "s",
+              "one"
+            ],
+            "type": "Number"
+          },
+          {
+            "id": "next",
+            "op": "subtract",
+            "inputs": [
+              "remaining",
+              "one"
+            ],
+            "type": "Number"
+          },
+          {
+            "id": "product",
+            "op": "multiply",
+            "inputs": [
+              "acc",
+              "remaining"
+            ],
+            "type": "Number"
+          },
+          {
+            "id": "updated",
+            "op": "list",
+            "inputs": [
+              "next",
+              "product"
+            ],
+            "type": "List[Number]"
+          }
+        ],
+        "output": "updated",
+        "input_type": "List[Number]",
+        "output_type": "List[Number]"
+      }
+    },
+    {
+      "id": "result",
+      "op": "at",
+      "inputs": [
+        "loop",
+        "one"
+      ],
+      "type": "Number"
+    }
+  ],
+  "output": "result",
+  "input_type": "Number",
+  "output_type": "Number"
+}

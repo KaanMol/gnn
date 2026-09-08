@@ -1,0 +1,7 @@
+{
+  "source": "experiments/diagnose_router_losses.py",
+  "source_sha256": "b009f10c01640f31258cf3ad28d3adff95adee8e893ad6c91f5b9c88b3f753e1",
+  "result_sha256": "b95f75520aae6f8a12507e44f542f519a85f2e48bfcd2c1734c0034418dbe670",
+  "timing": "Supplemental diagnostic requested while frozen evaluation was running; no changes to policy, fitting, evaluation, or frozen auditor.",
+  "independent_arithmetic_replay": "All 34 SGD updates and predictions additionally replayed with Python integer arithmetic; weights match."
+}

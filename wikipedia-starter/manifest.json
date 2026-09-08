@@ -1,0 +1,9 @@
+{
+  "source_file": "Wikipedia-20260907140904.xml",
+  "source_sha256": "0a103e28e8d7f383749deb191dcda05686cd5fc48026ceed696ce74394650baf",
+  "articles": 49,
+  "text_characters": 1894606,
+  "unique_link_targets": 8296,
+  "empty_articles": [],
+  "parser": "mwparserfromhell 0.7.2"
+}

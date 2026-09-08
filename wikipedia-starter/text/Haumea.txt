@@ -1,0 +1,145 @@
+Haumea
+
+[template omitted: Short description]
+[template omitted: About]
+[template omitted: Featured article]
+[template omitted: Infobox planet]
+Haumea (minor-planet number 136108) is a dwarf planet located beyond Neptune's orbit. It was discovered in 2004 by a team headed by Mike Brown of Caltech at the Palomar Observatory, and formally announced in 2005 by a team headed by José Luis Ortiz Moreno at the Sierra Nevada Observatory in Spain, who had discovered it that year in precovery images taken by the team in 2003. From that announcement, it received the provisional designation [template omitted: mp].
+
+On 17 September 2008, it was named after Haumea, the Hawaiian goddess of childbirth and fertility, under the expectation by the International Astronomical Union (IAU) that it would prove to be a dwarf planet. Nominal estimates make it the third-largest known trans-Neptunian object, after Eris and Pluto, and approximately the size of Uranus's moon Titania. Precovery images of Haumea have been identified back to 22 March 1955.
+
+Haumea's mass is about one-third that of Pluto and 1/1400 that of Earth. Although its shape has not been directly observed, calculations from its light curve are consistent with it being a Jacobi ellipsoid (the shape it would be if it were a dwarf planet), with its major axis twice as long as its minor. In October 2017, astronomers announced the discovery of a ring system around Haumea, representing the first ring system discovered for a trans-Neptunian object and a dwarf planet.
+
+Haumea's gravity was until recently thought to be sufficient for it to have relaxed into hydrostatic equilibrium, though that is now unclear. Haumea's elongated shape, together with its rapid rotation, rings, and high albedo (from a surface of crystalline water ice), is thought to be the consequences of a giant collision, which left Haumea the largest member of a collisional family (the Haumea family) that includes several large trans-Neptunian objects and Haumea's two known moons, Hiiaka and Namaka.
+
+History
+Discovery
+[template omitted: main]
+
+Two teams claim credit for the discovery of Haumea. A team consisting of Mike Brown of Caltech, David Rabinowitz of Yale University, and Chad Trujillo of Gemini Observatory in Hawaii discovered Haumea on 28 December 2004, on images they had taken on 6 May 2004. On 20 July 2005, they published an online abstract of a report intended to announce the discovery at a conference in September 2005.
+
+At around this time, José Luis Ortiz Moreno and his team at the Instituto de Astrofísica de Andalucía at Sierra Nevada Observatory in Spain found Haumea on images taken on 7–10 March 2003. Ortiz emailed the Minor Planet Center with their discovery on the night of 27 July 2005.
+
+Brown initially conceded discovery credit to Ortiz, but came to suspect the Spanish team of fraud upon learning that the Spanish observatory had accessed Brown's observation logs the day before the discovery announcement, a fact that they did not disclose in the announcement as would be customary. Those logs included enough information to allow the Ortiz team to precover Haumea in their 2003 images, and they were accessed again just before Ortiz scheduled telescope time to obtain confirmation images for a second announcement to the MPC on 29 July. Ortiz later admitted he had accessed the Caltech observation logs but denied any wrongdoing, stating he was merely verifying whether they had discovered a new object.
+
+IAU protocol is that discovery credit for a minor planet goes to whoever first submits a report to the MPC (Minor Planet Center) with enough positional data for a decent determination of its orbit, and that the credited discoverer has priority in choosing a name. However, the IAU announcement on 17 September 2008, that Haumea had been named by a dual committee established for bodies expected to be dwarf planets, did not mention a discoverer. The location of discovery was listed as the Sierra Nevada Observatory of the Spanish team, but the chosen name, Haumea, was the Caltech proposal. Ortiz's team had proposed "Ataecina", the ancient Iberian goddess of spring; as a chthonic deity, it would have been appropriate for a plutino, which Haumea was not.
+
+Name and symbol
+Until it was given a permanent name, the Caltech discovery team used the nickname "Santa" among themselves, because they had discovered Haumea on 28 December 2004, just after Christmas. The Spanish team were the first to file a claim for discovery to the Minor Planet Center, in July 2005. On 29 July 2005, Haumea was given the provisional designation 2003 EL61, based on the date of the Spanish discovery image. On 7 September 2006, it was numbered and admitted into the official minor planet catalog as (136108) 2003 EL61.
+
+Following guidelines established at the time by the IAU that classical Kuiper belt objects be given names of mythological beings associated with creation, in September 2006 the Caltech team submitted formal names from Hawaiian mythology to the IAU for both (136108) 2003 EL61 and its moons, in order "to pay homage to the place where the satellites were discovered". The names were proposed by David Rabinowitz of the Caltech team. Haumea is the matron goddess of the island of Hawaii, where Gemini and W. M. Keck Observatory are located on Mauna Kea. In addition, she is identified with Papa, the goddess of the earth and wife of Wākea (space), which, at the time, seemed appropriate because Haumea was thought to be composed almost entirely of solid rock, without the thick ice mantle over a small rocky core typical of other known Kuiper belt objects. Lastly, Haumea is the goddess of fertility and childbirth, with many children who sprang from different parts of her body; this corresponds to the swarm of icy bodies thought to have broken off the main body during an ancient collision. The two known moons, also believed to have formed in this manner, are thus named after two of Haumea's daughters, Hiiaka and Nāmaka.
+
+In 2008, the IAU announced the name of the dwarf planet to be Haumea, instead of Ataecina, the proposal by the Ortiz team. The current guidelines state that underworld deities' names (such as Ataecina) are instead used for plutinos. Plutinos are in a 3:2 resonance with Neptune, whereas Haumea is in a weak 7:12 resonance.
+
+A planetary symbol for Haumea, [template omitted: angbr], is included in Unicode at U+1F77B. Planetary symbols are no longer much used in astronomy, and 🝻 is mostly used by astrologers, but has also been used by NASA. The symbol was designed by Denis Moskowitz, a software engineer in Massachusetts; it combines and simplifies Hawaiian petroglyphs meaning 'woman' and 'childbirth'.
+
+Orbit
+
+Haumea has an orbital period of 284–285 Earth years, a perihelion of 35 AU, and an orbital inclination of 28°. It passed aphelion in early 1992, and is currently more than 50 AU from the Sun. It will come to perihelion in 2133. Haumea's orbit has a slightly greater eccentricity than that of the other members of its collisional family. This is thought to be due to Haumea's weak 7:12 orbital resonance with Neptune gradually modifying its initial orbit over the course of a billion years, through the Kozai effect, which allows the exchange of an orbit's inclination for increased eccentricity.
+
+With a visual magnitude of 17.3, Haumea is the third-brightest object in the Kuiper belt after Pluto and [template omitted: dp], and easily observable with a large amateur telescope. However, because the planets and most small Solar System bodies share a common orbital alignment from their formation in the primordial disk of the Solar System, most early surveys for distant objects focused on the projection on the sky of this common plane, called the ecliptic. As the region of sky close to the ecliptic became well explored, later sky surveys began looking for objects that had been dynamically excited into orbits with higher inclinations, as well as more distant objects, with slower mean motions across the sky. These surveys eventually covered the location of Haumea, with its high orbital inclination and current position far from the ecliptic.
+
+Haumea's future orbit is unlikely to be stable over the course of the Solar System. A study which simulated the future orbits of 34 trans-Neptunian objects showed Haumea was the most statistically likely to be ejected out of its orbit into interstellar space or the inner Solar System over the next billion years.
+
+Possible resonance with Neptune
+[template omitted: multiple image]
+
+Haumea is thought to be in an intermittent 7:12 orbital resonance with Neptune. Its ascending node Ω precesses with a period of about 4.6 million years, and the resonance is broken twice per precession cycle, or every 2.3 million years, only to return a hundred thousand years or so later. As this is not a stable resonance, Marc Buie qualifies it as non-resonant.
+[template omitted: clear]
+
+Rotation
+Haumea displays large fluctuations in brightness over a period of 3.9 hours, which can only be explained by a rotational period of this length. This is faster than any other known equilibrium body in the Solar System, and was indeed faster than any other known body larger than 100 km in diameter in 2006. While most rotating bodies in equilibrium are flattened into oblate spheroids, Haumea rotates so quickly that it is distorted into a triaxial ellipsoid. If Haumea were to rotate much more rapidly, it would distort itself into a dumbbell shape and split in two. This rapid rotation is thought to have been caused by the impact that created its satellites and collisional family.
+
+The plane of Haumea's equator is oriented nearly edge-on from Earth at present and is also slightly offset to the orbital planes of its ring and its outermost moon Hiiaka. Although initially assumed to be coplanar to Hi[template omitted: okina]iaka's orbital plane by Ragozzine and Brown in 2009, their models of the collisional formation of Haumea's satellites consistently suggested Haumea's equatorial plane to be at least aligned with Hi[template omitted: okina]iaka's orbital plane by approximately 1°. This was supported with observations of a stellar occultation by Haumea in 2017, which revealed the presence of a ring approximately coincident with the plane of Hi[template omitted: okina]iaka's orbit and Haumea's equator. A mathematical analysis of the occultation data by Kondratyev and Kornoukhov in 2018 placed constraints on the relative inclination angles of Haumea's equator to the orbital planes of its ring and Hi[template omitted: okina]iaka, which were found to be inclined [template omitted: val] and [template omitted: val] relative to Haumea's equator, respectively.
+
+Physical characteristics
+Size, shape, and composition
+The size of a Solar System object can be deduced from its optical magnitude, its distance, and its albedo. Objects appear bright to Earth observers either because they are large or because they are highly reflective. If their reflectivity (albedo) can be ascertained, then a rough estimate can be made of their size. For most distant objects, the albedo is unknown, but Haumea is large and bright enough for its thermal emission to be measured, which has given an approximate value for its albedo and thus its size. However, the calculation of its dimensions is complicated by its rapid rotation. The rotational physics of deformable bodies predicts that over as little as a hundred days, a body rotating as rapidly as Haumea will have been distorted into the equilibrium form of a triaxial ellipsoid. It is thought that most of the fluctuation in Haumea's brightness is caused not by local differences in albedo but by the alternation of the side view and ends view as seen from Earth.
+
+The rotation and amplitude of Haumea's light curve were argued to place strong constraints on its composition. If Haumea were in hydrostatic equilibrium and had a low density like Pluto, with a thick mantle of ice over a small rocky core, its rapid rotation would have elongated it to a greater extent than the fluctuations in its brightness allow. Such considerations constrained its density to a range of 2.6–3.3 g/cm3. By comparison, the Moon, which is rocky, has a density of 3.3 g/cm3, whereas Pluto, which is typical of icy objects in the Kuiper belt, has a density of 1.86 g/cm3. Haumea's possible high density covered the values for silicate minerals such as olivine and pyroxene, which make up many of the rocky objects in the Solar System. This also suggested that the bulk of Haumea was rock covered with a relatively thin layer of ice. A thick ice mantle more typical of Kuiper belt objects may have been blasted off during the impact that formed the Haumean collisional family.
+
+Because Haumea has moons, the mass of the system can be calculated from their orbits using Kepler's third law. The result is [template omitted: Val], 28% the mass of the Plutonian system and 6% that of the Moon. Nearly all of this mass is in Haumea.
+Several ellipsoid-model calculations of Haumea's dimensions have been made. The first model produced after Haumea's discovery was calculated from ground-based observations of Haumea's light curve at optical wavelengths: it provided a total length of 1,960 to 2,500 km and a visual albedo (pv) greater than 0.6. The most likely shape is a triaxial ellipsoid with approximate dimensions of 2,000 × 1,500 × 1,000 km, with an albedo of 0.71. Observations by the Spitzer Space Telescope gave a diameter of [template omitted: val] and an albedo of [template omitted: val], from photometry at infrared wavelengths of 70 μm. Subsequent light-curve analyses have suggested an equivalent circular diameter of 1,450 km. In 2010 an analysis of measurements taken by Herschel Space Telescope together with the older Spitzer Telescope measurements yielded a new estimate of the equivalent diameter of Haumea—about 1300 km. These independent size estimates overlap at an average geometric mean diameter of roughly 1,400 km. In 2013 the Herschel Space Telescope measured Haumea's equivalent circular diameter to be roughly [template omitted: val].
+
+[template omitted: multiple image]
+
+However the observations of a stellar occultation in January 2017 cast a doubt on all those conclusions. The measured shape of Haumea, while elongated as presumed before, appeared to have significantly larger dimensions[template omitted: Snd] according to the data obtained from the occultation Haumea is approximately the diameter of Pluto along its longest axis and about half that at its poles. The resulting density calculated from the observed shape of Haumea was about [template omitted: val][template omitted: Snd] more in line with densities of other large TNOs. This resulting shape appeared to be inconsistent with a homogenous body in hydrostatic equilibrium, though Haumea appears to be one of the largest trans-Neptunian objects discovered nonetheless, smaller than [template omitted: dp], [template omitted: dp], similar to [template omitted: dp], and possibly [template omitted: dp], and larger than [template omitted: dp], [template omitted: dp], and [template omitted: dp].
+
+A 2019 study attempted to resolve the conflicting measurements of Haumea's shape and density using numerical modeling of Haumea as a differentiated body. It found that dimensions of ≈ 2,100 × 1,680 × 1,074 km (modeling the long axis at intervals of 25 km) were a best-fit match to the observed shape of Haumea during the 2017 occultation, while also being consistent with both surface and core scalene ellipsoid shapes in hydrostatic equilibrium. The revised solution for Haumea's shape implies that it has a core of approximately 1,626 × 1,446 × 940 km, with a relatively high density of ≈ [template omitted: val], indicative of a composition largely of hydrated silicates such as kaolinite. The core is surrounded by an icy mantle that ranges in thickness from about 70 km at the poles to 170 km along its longest axis, comprising up to 17% of Haumea's mass. Haumea's mean density is estimated at ≈ [template omitted: val], with an albedo of ≈ 0.66.
+
+Surface
+In 2005, the Gemini and Keck telescopes obtained spectra of Haumea which showed strong crystalline water ice features similar to the surface of Pluto's moon Charon. This is peculiar, because crystalline ice forms at temperatures above 110 K, whereas Haumea's surface temperature is below 50 K, a temperature at which amorphous ice is formed. In addition, the structure of crystalline ice is unstable under the constant rain of cosmic rays and energetic particles from the Sun that strike trans-Neptunian objects. The timescale for the crystalline ice to revert to amorphous ice under this bombardment is on the order of ten million years, yet trans-Neptunian objects have been in their present cold-temperature locations for timescales of billions of years.
+
+Radiation damage should also redden and darken the surface of trans-Neptunian objects where the common surface materials of organic ices and tholin-like compounds are present, as is the case with Pluto. Therefore, the spectra and colour suggest Haumea and its family members have undergone recent resurfacing that produced fresh ice. However, no plausible resurfacing mechanism has been suggested.
+
+Haumea is as bright as snow, with an albedo in the range of 0.6–0.8, consistent with crystalline ice. Other large TNOs such as [template omitted: dp] appear to have albedos as high or higher. Best-fit modeling of the surface spectra suggested that 66% to 80% of the Haumean surface appears to be pure crystalline water ice, with one contributor to the high albedo possibly hydrogen cyanide or phyllosilicate clays. Inorganic cyanide salts such as copper potassium cyanide may also be present.
+
+However, further studies of the visible and near infrared spectra suggest a homogeneous surface covered by an intimate 1:1 mixture of amorphous and crystalline ice, together with no more than 8% organics. The absence of ammonia hydrate excludes cryovolcanism and the observations confirm that the collisional event must have happened more than 100 million years ago, in agreement with the dynamic studies.
+The absence of measurable methane in the spectra of Haumea is consistent with a warm collisional history that would have removed such volatiles, in contrast to [template omitted: dp].
+
+In addition to the large fluctuations in Haumea's light curve due to the body's shape, which affect all colours equally, smaller independent colour variations seen in both visible and near-infrared wavelengths show a region on the surface that differs both in colour and in albedo. More specifically, a large dark red area on Haumea's bright white surface was seen in September 2009, possibly an impact feature, which indicates an area rich in minerals and organic (carbon-rich) compounds, or possibly a higher proportion of crystalline ice. Thus Haumea may have a mottled surface reminiscent of Pluto, if not as extreme.
+
+Ring
+
+A stellar occultation, observed on 21 January 2017 and described in an October 2017 Nature article, indicated the presence of a ring around Haumea. This represents the first ring system discovered for a TNO. The ring has a radius of about 2,287 km, a width of ~70 km and an opacity of 0.5. It is well within Haumea's Roche limit, which would be at a radius of about 4,400 km if it were spherical (being nonspherical pushes the limit out farther).
+
+The ring plane is inclined [template omitted: val] with respect to Haumea's equatorial plane and approximately coincides with the orbital plane of its larger, outer moon Hi[template omitted: okina]iaka. The ring is also close to the 1:3 orbit-spin resonance with Haumea's rotation (which is at a radius of 2,285 ± 8 km from Haumea's center). The ring is estimated to contribute 2.5% to the total brightness of Haumea.
+
+In a study about the dynamics of ring particles published in 2019, Othon Cabo Winter and colleagues have shown that the 1:3 resonance with Haumea's rotation is dynamically unstable, but that there is a stable region in the phase space consistent with the location of Haumea's ring. This indicates that the ring particles originate on circular, periodic orbits that are close to, but not inside, the resonance.
+
+Satellites
+[template omitted: update section]
+[template omitted: main]
+
+Two small satellites have been discovered orbiting Haumea, (136108) Haumea I, named Hiiaka, and (136108) Haumea II, named Namaka. Darin Ragozzine and Michael Brown discovered both in 2005, through observations of Haumea using the W. M. Keck Observatory.
+
+Hi[template omitted: okina]iaka, at first nicknamed "Rudolph" by the Caltech team, was discovered 26 January 2005. It is the outer and, at roughly 310 km in diameter, the larger and brighter of the two, and orbits Haumea in a nearly circular path every 49 days. Strong absorption features at 1.5 and 2 micrometres in the infrared spectrum are consistent with nearly pure crystalline water ice covering much of the surface. The unusual spectrum, along with similar absorption lines on Haumea, led Brown and colleagues to conclude that capture was an unlikely model for the system's formation, and that the Haumean moons must be fragments of Haumea itself.
+
+Namaka, the smaller, inner satellite of Haumea, was discovered on 30 June 2005, and nicknamed "Blitzen". It is a tenth the mass of Hi[template omitted: okina]iaka, orbits Haumea in 18 days in a highly elliptical, non-Keplerian orbit, and [template omitted: as of] is inclined 13° from the larger moon, which perturbs its orbit.
+The relatively large eccentricities together with the mutual inclination of the orbits of the satellites are unexpected as they should have been damped by the tidal effects. A relatively recent passage by a 3:1 resonance with Hi[template omitted: okina]iaka might explain the current excited orbits of the Haumean moons.
+
+From around 2008 to 2011, the orbits of the Haumean moons appeared almost exactly edge-on from Earth, with Namaka periodically occulting Haumea. Observation of such transits would have provided precise information on the size and shape of Haumea and its moons, as happened in the late 1980s with Pluto and Charon. The tiny change in brightness of the system during these occultations would have required at least a medium-aperture professional telescope for detection. Hi[template omitted: okina]iaka last occulted Haumea in 1999, a few years before discovery, and will not do so again for some 130 years. However, in a situation unique among regular satellites, Namaka's orbit was being greatly torqued by Hi[template omitted: okina]iaka, which preserved the viewing angle of Namaka–Haumea transits for several more years. One occultation event was observed on 19 June 2009, from the Pico dos Dias Observatory in Brazil.
+
+Collisional family
+[template omitted: main]
+
+Haumea is the largest member of its collisional family, a group of astronomical objects with similar physical and orbital characteristics thought to have formed when a larger progenitor was shattered by an impact. This family is the first to be identified among TNOs and includes—beside Haumea and its moons—[template omitted: mpl] (≈364 km), [template omitted: mpl] (≈174 km), [template omitted: mpl] (≈200 km), [template omitted: mpl] (≈230 km), and [template omitted: mpl] (≈252 km). Brown and colleagues proposed that the family were a direct product of the impact that removed Haumea's ice mantle, but a second proposal suggests a more complicated origin: that the material ejected in the initial collision instead coalesced into a large moon of Haumea, which was later shattered in a second collision, dispersing its shards outwards. This second scenario appears to produce a dispersion of velocities for the fragments that is more closely matched to the measured velocity dispersion of the family members.
+
+The presence of the collisional family could imply that Haumea and its "offspring" might have originated in the scattered disc. In today's sparsely populated Kuiper belt, the chance of such a collision occurring over the age of the Solar System is less than 0.1 percent. The family could not have formed in the denser primordial Kuiper belt because such a close-knit group would have been disrupted by Neptune's migration into the belt—the believed cause of the belt's current low density. Therefore, it appears likely that the dynamic scattered disc region, in which the possibility of such a collision is far higher, is the place of origin for the object that generated Haumea and its kin.
+
+Because it would have taken at least a billion years for the group to have diffused as far as it has, the collision which created the Haumea family is believed to have occurred at least that long ago.
+
+Exploration
+
+Haumea was observed from afar by the New Horizons spacecraft in October 2007, January 2017, and May 2020, from distances of 49 AU, 59 AU, and 63 AU, respectively. The spacecraft's outbound trajectory permitted observations of Haumea at high phase angles that are otherwise unobtainable from Earth, enabling the determination of the light scattering properties and phase curve behavior of Haumea's surface.
+
+A flyby mission could reach Haumea in 16.45 years if it was launched on 1 November 2026, 23 September 2037, or 29 October 2038.
+Haumea could become a target for an exploration mission, and an example of this work is a preliminary study on a probe to Haumea and its moons (at 35–51 AU). Probe mass, power source, and propulsion systems are key technology areas for this type of mission.
+
+See also
+20000 Varuna – a large, rapidly-rotating trans-Neptunian object with an elongated ellipsoid shape
+208996 Achlys – another large, rapidly-rotating trans-Neptunian object with an elongated ellipsoid shape similar to Haumea
+Astronomical naming conventions
+How I Killed Pluto and Why It Had It Coming – A 2010 memoir by Mike Brown
+List of Solar System objects by size
+
+Notes
+[template omitted: reflist]
+
+References
+[template omitted: reflist]
+
+External links
+[template omitted: commons category]
+[template omitted: Wikinews]
+(136108) Haumea, Hiiaka, and Namaka at Johnston's Archive.com (updated 21 September 2014)
+International Year of Astronomy 2009 podcast: Dwarf Planet Haumea (Darin Ragozzine)
+Haumea as seen on June 10, 2011 by Mike Brown using the 4.20 m in WHT / ~0:30–3:30 dip in the brightness of Haumea+Namaka comes when Namaka crosses Haumea (Hi[template omitted: okina]iaka, the outer moon, is blended in the images, but it rotates every 4.5 hr and adds a little variation)
+Animation of Haumea's intermittent 7:12 resonance with Neptune over the next 3.5 million years
+
+[template omitted: Minor planets navigator]
+[template omitted: Haumea]
+[template omitted: Navboxes]
+
+[template omitted: Portal bar]
+[template omitted: Authority control]

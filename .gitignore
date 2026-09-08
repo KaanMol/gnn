@@ -1,0 +1,27 @@
+__pycache__/
+memory.json
+memory.json.tmp
+playground-memory.json
+playground-memory.json.tmp
+interface-memory.json
+interface-memory.json.tmp
+.env
+preview-memory.json
+preview-memory.json.tmp
+runtime.log
+
+preview-memory.before-*.json
+*.graph.sqlite3
+*.graph.sqlite3-journal
+*.graph.sqlite3.*.tmp
+react-learn-corpus/*.sqlite3
+
+# Database contents are versioned losslessly under data-snapshot/.
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+*.log
+.env.*
+!.env.example
+.DS_Store

@@ -1,0 +1,16 @@
+{
+  "model": {
+    "weights": [
+      -1345,
+      1077,
+      267,
+      -552,
+      -98,
+      0
+    ],
+    "updates": 34
+  },
+  "threshold": 100,
+  "manifest_sha256": "558af50c9b70223a290a42f2b06e72185a5d712bc4d2c096ceb0a868439ac368",
+  "training_sha256": "fec90386d225f469f1cc69a76b7e4dba6917a4f1846cbfc97d99495a467706db"
+}

@@ -1,0 +1,1178 @@
+{
+  "source_learning_character_candidates": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "0123456789",
+            "0123456789abcdefABCDEF",
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$",
+            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_$0123456789"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "map",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "characters",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n2",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "character"
+              },
+              {
+                "id": "n3",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": true
+              },
+              {
+                "id": "n4",
+                "op": "size",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_data",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n1",
+                  "n3",
+                  "n5"
+                ],
+                "type": "Data",
+                "keys": [
+                  "op",
+                  "characters",
+                  "positive",
+                  "width"
+                ]
+              }
+            ],
+            "output": "n6",
+            "trace_mode": "explicit"
+          }
+        }
+      ],
+      "output": "n2",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000,
+      "description": "Bounded grammar hypothesis selection: source_learning_character_candidates"
+    },
+    "source": "Graph-owned candidate generation and evaluation. Passing finite examples is not a proof of grammar correctness."
+  },
+  "source_learning_evaluate": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "options"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "examples"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "regressions"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "map",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "accepted"
+                ]
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n6",
+          "op": "contains",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n8",
+          "op": "contains",
+          "inputs": [
+            "n4",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "and",
+          "inputs": [
+            "n6",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n11",
+          "op": "size",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "as_data",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "less",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "and",
+          "inputs": [
+            "n9",
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "require",
+          "inputs": [
+            "n16",
+            "n1"
+          ],
+          "type": "Data",
+          "message": "Supply positive and negative examples plus separate regression cases."
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n19",
+          "op": "size",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_data",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "as_number",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "less",
+          "inputs": [
+            "n21",
+            "n22"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 16
+        },
+        {
+          "id": "n25",
+          "op": "size",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n26",
+          "op": "as_data",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "as_number",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "as_number",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "less",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n30",
+          "op": "not",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n31",
+          "op": "and",
+          "inputs": [
+            "n23",
+            "n30"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n32",
+          "op": "require",
+          "inputs": [
+            "n31",
+            "n17"
+          ],
+          "type": "Data",
+          "message": "Supply between one and sixteen candidate rules."
+        },
+        {
+          "id": "n33",
+          "op": "map",
+          "inputs": [
+            "n32",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "grammar"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "rule"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "set_item",
+                "inputs": [
+                  "n3",
+                  "n4",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "examples"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "regressions"
+                ]
+              },
+              {
+                "id": "n8",
+                "op": "concat",
+                "inputs": [
+                  "n6",
+                  "n7"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n9",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "root"
+                ]
+              },
+              {
+                "id": "n10",
+                "op": "record",
+                "inputs": [
+                  "n5",
+                  "n9"
+                ],
+                "type": "Data",
+                "keys": [
+                  "grammar",
+                  "root"
+                ]
+              },
+              {
+                "id": "n11",
+                "op": "map",
+                "inputs": [
+                  "n8",
+                  "n10"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "source"
+                      ]
+                    },
+                    {
+                      "id": "n4",
+                      "op": "get",
+                      "inputs": [
+                        "n2"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "grammar"
+                      ]
+                    },
+                    {
+                      "id": "n5",
+                      "op": "get",
+                      "inputs": [
+                        "n2"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "root"
+                      ]
+                    },
+                    {
+                      "id": "n6",
+                      "op": "record",
+                      "inputs": [
+                        "n3",
+                        "n4",
+                        "n5"
+                      ],
+                      "type": "Data",
+                      "keys": [
+                        "source",
+                        "grammar",
+                        "root"
+                      ]
+                    },
+                    {
+                      "id": "n7",
+                      "op": "attempt",
+                      "inputs": [
+                        "n6"
+                      ],
+                      "type": "Data",
+                      "body": {
+                        "input_type": "Data",
+                        "output_type": "Data",
+                        "nodes": [
+                          {
+                            "id": "n0",
+                            "op": "input",
+                            "inputs": [],
+                            "type": "Data"
+                          },
+                          {
+                            "id": "n1",
+                            "op": "call",
+                            "inputs": [
+                              "n0"
+                            ],
+                            "type": "Data",
+                            "name": "source_read_grammar"
+                          }
+                        ],
+                        "output": "n1",
+                        "trace_mode": "explicit"
+                      }
+                    },
+                    {
+                      "id": "n8",
+                      "op": "get",
+                      "inputs": [
+                        "n7"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "ok"
+                      ]
+                    },
+                    {
+                      "id": "n9",
+                      "op": "as_bool",
+                      "inputs": [
+                        "n8"
+                      ],
+                      "type": "Bool"
+                    },
+                    {
+                      "id": "n10",
+                      "op": "get",
+                      "inputs": [
+                        "n7"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "result"
+                      ]
+                    },
+                    {
+                      "id": "n11",
+                      "op": "get",
+                      "inputs": [
+                        "n10"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "accepted"
+                      ]
+                    },
+                    {
+                      "id": "n12",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "accepted"
+                      ]
+                    },
+                    {
+                      "id": "n13",
+                      "op": "data_equal",
+                      "inputs": [
+                        "n11",
+                        "n12"
+                      ],
+                      "type": "Bool"
+                    },
+                    {
+                      "id": "n14",
+                      "op": "bool_data",
+                      "inputs": [
+                        "n13"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n15",
+                      "op": "data_literal",
+                      "inputs": [],
+                      "type": "Data",
+                      "value": false
+                    },
+                    {
+                      "id": "n16",
+                      "op": "choose",
+                      "inputs": [
+                        "n9",
+                        "n14",
+                        "n15"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n17",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "source"
+                      ]
+                    },
+                    {
+                      "id": "n18",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "accepted"
+                      ]
+                    },
+                    {
+                      "id": "n19",
+                      "op": "record",
+                      "inputs": [
+                        "n17",
+                        "n18",
+                        "n16",
+                        "n7"
+                      ],
+                      "type": "Data",
+                      "keys": [
+                        "source",
+                        "expected",
+                        "passed",
+                        "result"
+                      ]
+                    }
+                  ],
+                  "output": "n19",
+                  "trace_mode": "explicit"
+                }
+              },
+              {
+                "id": "n12",
+                "op": "map",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "passed"
+                      ]
+                    }
+                  ],
+                  "output": "n1",
+                  "trace_mode": "explicit"
+                }
+              },
+              {
+                "id": "n13",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": false
+              },
+              {
+                "id": "n14",
+                "op": "contains",
+                "inputs": [
+                  "n12",
+                  "n13"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n15",
+                "op": "not",
+                "inputs": [
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "bool_data",
+                "inputs": [
+                  "n15"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n17",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n5",
+                  "n16",
+                  "n11"
+                ],
+                "type": "Data",
+                "keys": [
+                  "candidate",
+                  "grammar",
+                  "eligible",
+                  "cases"
+                ]
+              }
+            ],
+            "output": "n17",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n34",
+          "op": "filter",
+          "inputs": [
+            "n33"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "eligible"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "as_bool",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n2",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Candidate recognition rules validated against supplied examples and regressions. Does not validate lowering or execution, and never replaces production rules automatically."
+        },
+        {
+          "id": "n36",
+          "op": "record",
+          "inputs": [
+            "n34",
+            "n33",
+            "n35"
+          ],
+          "type": "Data",
+          "keys": [
+            "eligible",
+            "evaluations",
+            "scope"
+          ]
+        }
+      ],
+      "output": "n36",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000,
+      "description": "Bounded grammar hypothesis selection: source_learning_evaluate"
+    },
+    "source": "Graph-owned candidate generation and evaluation. Passing finite examples is not a proof of grammar correctness."
+  },
+  "source_learning_record": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "request"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "source_learning_evaluate"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "knowledge.source_learning"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "key"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n4",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n5"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n7",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n6"
+          ],
+          "type": "Data",
+          "keys": [
+            "evidence",
+            "stored"
+          ]
+        }
+      ],
+      "output": "n7",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000,
+      "description": "Bounded grammar hypothesis selection: source_learning_record"
+    },
+    "source": "Graph-owned candidate generation and evaluation. Passing finite examples is not a proof of grammar correctness."
+  },
+  "source_learning_discover": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "request"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "options"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "source_learning_character_candidates"
+        },
+        {
+          "id": "n5",
+          "op": "set_item",
+          "inputs": [
+            "n1",
+            "n2",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "call",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "name": "source_learning_evaluate"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "knowledge.source_learning"
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "key"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n8",
+            "n6"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n9"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n11",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n10"
+          ],
+          "type": "Data",
+          "keys": [
+            "evidence",
+            "stored"
+          ]
+        }
+      ],
+      "output": "n11",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000,
+      "description": "Bounded grammar hypothesis selection: source_learning_discover"
+    },
+    "source": "Graph-owned candidate generation and evaluation. Passing finite examples is not a proof of grammar correctness."
+  }
+}

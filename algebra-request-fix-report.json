@@ -1,0 +1,8 @@
+{
+  "live": true,
+  "saved_library_verified": true,
+  "root": -15,
+  "targeted_test_methods_passed": 4,
+  "equation": "3(2x - 5) - 4(x + 2) = 5x - (x - 7)",
+  "answer": "x = -15\nInterpreted equation: 3*(2*x - 5) - 4*(x + 2) = 5*x - (x - 7)\nCollected equation: -2*x - 30 = 0\nExecuted taught algebra procedures (over real numbers).\nSteps:\ndistribute and collect \u2192 [0, 2]\ncollect like terms \u2192 [-5, 2]\ndistribute and collect \u2192 [-15, 6]\ncollect like terms \u2192 [2, 1]\ndistribute and collect \u2192 [8, 4]\ncollect like terms \u2192 [-23, 2]\ndistribute and collect \u2192 [0, 5]\ncollect like terms \u2192 [-7, 1]\ncollect like terms \u2192 [7, 4]\ncollect like terms \u2192 [-30, -2]\npolynomial normal form \u2192 [-30, -2]\nisolate linear variable \u2192 {'roots': [-15], 'complete': True}\ntaught arithmetic \u2192 Executed stored arithmetic bindings"
+}

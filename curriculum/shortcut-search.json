@@ -1,0 +1,1408 @@
+{
+  "shortcut_init": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "base"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "examples"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "map",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "call",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "name": "priority_features"
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "predicate"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "projector"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 5
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 100
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "ops": [],
+            "priority": 0
+          }
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n17",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2",
+            "n3",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9",
+            "n10",
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16"
+          ],
+          "type": "Data",
+          "keys": [
+            "vocabulary",
+            "catalog",
+            "selected",
+            "examples",
+            "predicate",
+            "projector",
+            "max_depth",
+            "beam",
+            "parent",
+            "next_i",
+            "queue",
+            "seen",
+            "found",
+            "done",
+            "evaluated"
+          ]
+        }
+      ],
+      "output": "n17",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic behavioral shortcut proposals; frozen fair expansion."
+  },
+  "shortcut_retrieve": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "namespace": "knowledge.economics",
+            "key": "catalog"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n3",
+          "op": "filter",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "active"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "as_bool",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n2",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "slice",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "start": -3
+        }
+      ],
+      "output": "n4",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic behavioral shortcut proposals; frozen fair expansion."
+  },
+  "shortcut_probe": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "state"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "entry"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_list",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "examples"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "predicate"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "projector"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data",
+          "keys": [
+            "ops",
+            "examples",
+            "predicate",
+            "projector"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "call",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data",
+          "name": "priority_evaluate"
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "examples"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "map",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "input"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "expected"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "data_equal",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n5",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n6",
+                "op": "choose",
+                "inputs": [
+                  "n3",
+                  "n4",
+                  "n5"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n6",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n12",
+          "op": "call",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data",
+          "name": "priority_sum"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "path": [
+            "progress"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "as_number",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "less",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "path": [
+            "matches"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_number",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "less",
+          "inputs": [
+            "n19",
+            "n20"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n22",
+          "op": "or",
+          "inputs": [
+            "n17",
+            "n21"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n23",
+          "op": "get",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "path": [
+            "executable"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "as_bool",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 5
+        },
+        {
+          "id": "n26",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "ops"
+          ]
+        },
+        {
+          "id": "n27",
+          "op": "size",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "as_data",
+          "inputs": [
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n29",
+          "op": "as_number",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n30",
+          "op": "as_number",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "less",
+          "inputs": [
+            "n29",
+            "n30"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n32",
+          "op": "not",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "and",
+          "inputs": [
+            "n22",
+            "n32"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n34",
+          "op": "and",
+          "inputs": [
+            "n24",
+            "n33"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n35",
+          "op": "bool_data",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "record",
+          "inputs": [
+            "n9",
+            "n35"
+          ],
+          "type": "Data",
+          "keys": [
+            "evaluation",
+            "eligible"
+          ]
+        }
+      ],
+      "output": "n36",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic behavioral shortcut proposals; frozen fair expansion."
+  },
+  "shortcut_inject": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "state"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "entry"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "probe",
+            "evaluation"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "progress"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "multiply",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "floor",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "as_data",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "ops"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "size",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_data",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "matches"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1000000
+        },
+        {
+          "id": "n19",
+          "op": "as_number",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_number",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "multiply",
+          "inputs": [
+            "n19",
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "as_data",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "as_number",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n24",
+          "op": "as_number",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n25",
+          "op": "add",
+          "inputs": [
+            "n23",
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n26",
+          "op": "as_data",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "as_number",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "as_number",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "subtract",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n30",
+          "op": "as_data",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n31",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "catalog"
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "data_list",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n33",
+          "op": "concat",
+          "inputs": [
+            "n31",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "selected"
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "data_list",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "concat",
+          "inputs": [
+            "n34",
+            "n35"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n37",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "vocabulary"
+          ]
+        },
+        {
+          "id": "n38",
+          "op": "data_list",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n39",
+          "op": "concat",
+          "inputs": [
+            "n37",
+            "n38"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n40",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "queue"
+          ]
+        },
+        {
+          "id": "n41",
+          "op": "data_list",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n43",
+          "op": "record",
+          "inputs": [
+            "n41",
+            "n30",
+            "n42"
+          ],
+          "type": "Data",
+          "keys": [
+            "ops",
+            "priority",
+            "next_i"
+          ]
+        },
+        {
+          "id": "n44",
+          "op": "data_list",
+          "inputs": [
+            "n43"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n45",
+          "op": "concat",
+          "inputs": [
+            "n40",
+            "n44"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n46",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "seen"
+          ]
+        },
+        {
+          "id": "n47",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "ops"
+          ]
+        },
+        {
+          "id": "n48",
+          "op": "data_list",
+          "inputs": [
+            "n47"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n49",
+          "op": "concat",
+          "inputs": [
+            "n46",
+            "n48"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n50",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "accepted"
+          ]
+        },
+        {
+          "id": "n51",
+          "op": "as_bool",
+          "inputs": [
+            "n50"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n52",
+          "op": "data_list",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n53",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "found"
+          ]
+        },
+        {
+          "id": "n54",
+          "op": "choose",
+          "inputs": [
+            "n51",
+            "n52",
+            "n53"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n55",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "accepted"
+          ]
+        },
+        {
+          "id": "n56",
+          "op": "as_bool",
+          "inputs": [
+            "n55"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n57",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n58",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "done"
+          ]
+        },
+        {
+          "id": "n59",
+          "op": "choose",
+          "inputs": [
+            "n56",
+            "n57",
+            "n58"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n60",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "catalog"
+        },
+        {
+          "id": "n61",
+          "op": "set_item",
+          "inputs": [
+            "n1",
+            "n60",
+            "n33"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n62",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "selected"
+        },
+        {
+          "id": "n63",
+          "op": "set_item",
+          "inputs": [
+            "n61",
+            "n62",
+            "n36"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n64",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "vocabulary"
+        },
+        {
+          "id": "n65",
+          "op": "set_item",
+          "inputs": [
+            "n63",
+            "n64",
+            "n39"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n66",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "queue"
+        },
+        {
+          "id": "n67",
+          "op": "set_item",
+          "inputs": [
+            "n65",
+            "n66",
+            "n45"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n68",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "seen"
+        },
+        {
+          "id": "n69",
+          "op": "set_item",
+          "inputs": [
+            "n67",
+            "n68",
+            "n49"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n70",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "found"
+        },
+        {
+          "id": "n71",
+          "op": "set_item",
+          "inputs": [
+            "n69",
+            "n70",
+            "n54"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n72",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "done"
+        },
+        {
+          "id": "n73",
+          "op": "set_item",
+          "inputs": [
+            "n71",
+            "n72",
+            "n59"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n73",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic behavioral shortcut proposals; frozen fair expansion."
+  }
+}

@@ -1,0 +1,332 @@
+Makemake
+
+[template omitted: Short description]
+[template omitted: About]
+[template omitted: Featured article]
+[template omitted: Use mdy dates]
+[template omitted: Infobox planet]
+
+Makemake[template omitted: efn] (minor-planet number 136472) is a dwarf planet orbiting the Sun in the Kuiper belt, a disc of icy bodies beyond the orbit of Neptune. It is the fourth largest dwarf planet and trans-Neptunian object in the Solar System, having a diameter 60% that of Pluto. It was discovered on March 31, 2005, by American astronomers Michael E. Brown, Chad Trujillo, and David Rabinowitz at Palomar Observatory. As one of the largest objects found by this team, the discovery of Makemake contributed to the reclassification of Pluto as a dwarf planet in 2006.
+
+Makemake's surface is similar to that of Pluto: it is highly reflective, covered largely by frozen methane, and stained reddish-brown by tholins.[template omitted: efn] Makemake has one known moon, which has not been named. The orbit of this moon suggests that Makemake's rotation has a high axial tilt, which implies that it experiences extreme seasons. Makemake shows evidence of geochemical activity and cryovolcanism, which has led scientists to suspect that it might harbor a subsurface ocean of liquid water. Gaseous methane has been detected around Makemake, although it is unclear whether it is contained in an atmosphere or comes from temporary outgassing.
+
+No high-resolution images of Makemake's surface exist because it has not been visited up close by a space probe. Makemake is so far from Earth that it appears as a star-like point of light even when viewed through a telescope. Scientists have expressed desire to send a space probe to explore Makemake because of its geological activity and potential subsurface ocean.
+
+History
+Discovery
+Makemake was discovered in 2005 by a team of American astronomers consisting of Michael E. Brown, Chad Trujillo, and David Rabinowitz during their search for large objects beyond the orbit of Neptune.[template omitted: sfn] The team's search for trans-Neptunian objects, which began in 2001,[template omitted: sfn] involved routinely imaging the night sky using a charge-coupled device camera[template omitted: efn] attached to the 1.22 m in Samuel Oschin telescope at Palomar Observatory in California, United States.[template omitted: sfn][template omitted: sfn] The discovery images of Makemake were taken by this telescope on March 31, 2005,[template omitted: sfn][template omitted: sfn] but it was not until April 3, 2005, that Brown found the object in his inspection of the images and identified it as exceptionally bright.[template omitted: sfn]
+
+Several months before Makemake's discovery, Brown and his team had discovered the exceptionally large trans-Neptunian objects [template omitted: dp] and [template omitted: dp], which were thought to be at least the size of the then-ninth planet Pluto.[template omitted: sfn] As they were in the process of planning further observations for both objects, the team originally planned to delay the announcement of Makemake to sometime after Eris's planned announcement in October 2005.[template omitted: sfn][template omitted: sfn] However, this plan was upended when a team led by José Luis Ortiz Moreno at Sierra Nevada Observatory in Spain announced their own discovery of Haumea on July 27, 2005.[template omitted: sfn][template omitted: sfn] Brown realized that his team's observing logs containing the positions of Haumea, Eris, and Makemake were unintentionally public and had been accessed by a computer at Ortiz's institution.[template omitted: sfn][template omitted: sfn] Fearing that his team's discoveries of Eris and Makemake would be similarly scooped, Brown contacted Brian G. Marsden of the Minor Planet Center (MPC) on July 29, 2005, to announce their discovery.[template omitted: sfn][template omitted: sfn] The MPC issued the discovery announcements for Eris and Makemake on its website at noon California time, followed by the Central Bureau for Astronomical Telegrams later that evening.[template omitted: sfn][template omitted: sfn][template omitted: sfn] The announcement of these Pluto-sized objects prompted widespread debate over what should be considered a planet,[template omitted: sfn] which motivated the International Astronomical Union (IAU) to create a new definition of planet that reclassified Pluto as a dwarf planet in August 2006.[template omitted: sfn][template omitted: sfn]
+
+Name and symbol
+This dwarf planet is named after Makemake, the creator of humanity and god of fertility in the myths of the Rapa Nui people native to Easter Island.[template omitted: sfn] It has the minor planet catalog number of 136472, which was given by the MPC on September 7, 2005, after the object's orbit became well determined.[template omitted: sfn][template omitted: sfn] Before Makemake was named, it was known by its provisional designation [template omitted: mp], which was given by the MPC when its discovery was announced.[template omitted: sfn][template omitted: sfn] Makemake was also previously known by its nickname "Easterbunny"[template omitted: efn] given by Brown's team as a reference to the object's time of discovery shortly after Easter, and by the codename "K05331A" which was automatically assigned by Brown's computer software when he discovered it.[template omitted: sfn][template omitted: sfn]
+
+In his personal writings and interviews, Brown recounted having difficulty with deciding on a formal name for the dwarf planet, because its known characteristics at the time were not relatable to mythology.[template omitted: sfn][template omitted: sfn][template omitted: sfn][template omitted: sfn] Wanting to preserve the object's connection with Easter, Brown had thought about naming the object after either the Anglo-Saxon goddess Ēostre or the Anishinaabe trickster rabbit Manabozho, but found both names unusable.[template omitted: efn] Brown and his team finally settled on the name Makemake, which satisfied both the object's connection with Easter and the IAU's rule for naming classical Kuiper belt objects after creator deities.[template omitted: sfn][template omitted: sfn] The name of Makemake was approved and announced by the IAU in July 2008.[template omitted: efn]
+
+A symbol for Makemake [template omitted: angbr] was introduced to Unicode in January 2022, as U+1F77C.[template omitted: sfn] The use of planetary symbols in scientific publications is discouraged by the IAU,[template omitted: sfn] so the symbol for Makemake is mostly used by astrologers.[template omitted: sfn] However, the symbol was used once by NASA, in an infographic published in 2015.[template omitted: sfn][template omitted: sfn] The symbol for Makemake was designed by Denis Moskowitz and John T. Whelan; it represents a traditional petroglyph of Makemake's face, stylized to resemble the letter 'M'.[template omitted: sfn] Other astrologers have designed and used their own symbols for Makemake, such as [template omitted: angbr].[template omitted: sfn]
+
+Orbit and classification
+
+Makemake orbits the Sun beyond Neptune at an average distance of 45.5 astronomical units (AU; 6.81 e9km e9mi).[template omitted: efn] It completes one orbit every 307 years.[template omitted: efn] With an orbital eccentricity of 0.16, Makemake follows a moderately elliptical orbit[template omitted: sfn] that comes as close as [template omitted: val] to the Sun (perihelion) to as far as [template omitted: val] from the Sun (aphelion).[template omitted: efn] Makemake has a relatively high orbital inclination of 29° with respect to the ecliptic.[template omitted: sfn][template omitted: sfn]
+
+Makemake is currently near aphelion, the farthest point of its orbit.[template omitted: sfn] It is [template omitted: val] away from the Sun [template omitted: as of],[template omitted: sfn][template omitted: sfn] and will reach aphelion in May 2033.[template omitted: sfn] Makemake is currently positioned far above the ecliptic[template omitted: sfn][template omitted: sfn] and will remain so at aphelion, where its ecliptic latitude will be 25.9°.[template omitted: sfn] Makemake will cross the ecliptic in 2103[template omitted: sfn] and will come to perihelion –26° below the ecliptic in 2186.[template omitted: sfn] N-body simulations show that Makemake's orbit is stable on a scale of billions of years and is unlikely to change significantly over the remaining life of the Solar System.[template omitted: sfn]
+
+Makemake shares its orbital characteristics with many other small icy bodies beyond Neptune, which together belong to a region known as the Kuiper belt. Makemake specifically belongs to the "dynamically hot" population of classical Kuiper belt objects,[template omitted: efn][template omitted: sfn] whose orbits have high inclinations (i > 5°), relatively low eccentricities (e < 0.2), and are not in orbital resonance with Neptune.[template omitted: sfn][template omitted: sfn] Makemake is the largest member of the classical Kuiper belt,[template omitted: sfn] although it only constitutes a small fraction of the total mass of the belt.[template omitted: sfn][template omitted: efn] The hot classical Kuiper belt objects are believed to have been gravitationally scattered by Neptune in the Solar System's early history,[template omitted: sfn] hence astronomers have also termed Makemake a "scattered" object.[template omitted: sfn][template omitted: sfn][template omitted: sfn]
+
+The scientific consensus is that Makemake is a dwarf planet: that is, that it is massive enough for its own gravity to make its shape spherical, but not massive enough to clear other objects away from its orbit, as demonstrated by its location in the Kuiper belt.[template omitted: sfn][template omitted: sfn] It was the first object named by the IAU under new procedures for naming objects expected to be dwarf planets, and the fourth object announced as a dwarf planet (after the original [template omitted: dp], Pluto, and Eris) since that category had been established in 2006.[template omitted: efn] Makemake is more specifically a plutoid: the subcategory of dwarf planets that orbit beyond Neptune.[template omitted: sfn][template omitted: sfn]
+
+Size, shape, and mass
+
+Makemake is a nearly spherical object with an average diameter of around 1430 km mi,[template omitted: sfn] which is about 60% ([template omitted: frac]) the diameter of Pluto[template omitted: efn][template omitted: sfn] or 11% ([template omitted: frac]) the diameter of Earth.[template omitted: sfn] This makes Makemake the fourth-largest known dwarf planet and trans-Neptunian object in the Solar System, after Pluto, Eris, and Haumea.[template omitted: sfn] Observations of a stellar occultation in 2011 showed that Makemake is slightly oblate or flattened at its poles, with an upper limit in its polar diameter of around 1420 km mi[template omitted: efn] and an equatorial diameter of around 1434 km mi.[template omitted: sfn] These dimensions are consistent with Makemake having a flattened spherical shape known as a Maclaurin spheroid, which occurs when an object is in hydrostatic equilibrium (that is, the object's gravity is strong enough to compress it into a sphere) and is deformed by its rotation.[template omitted: sfn][template omitted: sfn][template omitted: sfn]
+
+Makemake has a mass of between approximately [template omitted: val] and [template omitted: val], a number determined from the orbital period and distance of its moon.[template omitted: sfn] This makes Makemake the fourth-most massive known dwarf planet and trans-Neptunian object in the Solar System, again after Eris, Pluto, and Haumea.[template omitted: sfn] Compared to other Solar System objects, Makemake is about 3.7% the mass of Earth's moon (or 0.045% the mass of Earth)[template omitted: efn] and around 20% the mass of Pluto.[template omitted: efn] Given Makemake's mass and average diameter, its average surface gravity is about [template omitted: Gr] m/s2[template omitted: efn] (about 3.6% Earth gravity)[template omitted: efn] and its surface escape velocity is about [template omitted: V2] km/s.[template omitted: efn][template omitted: sfn]
+
+Rotation
+The rotation period of Makemake is uncertain, with measurements giving either 11.4 or 22.8 h d [template omitted: as of].[template omitted: sfn] These rotation period measurements were made by monitoring changes in Makemake's brightness over time, which is plotted as a light curve.[template omitted: sfn][template omitted: sfn] Makemake exhibits very little variation in brightness (0.03 magnitudes) presumably due to small albedo variations across its surface, which makes it difficult for telescopes to measure Makemake's light curve and rotation period.[template omitted: sfn] For example, studies prior to 2019 suggested possible rotation periods of 7.77, 11.24, 11.5, and 22.48 hours.[template omitted: sfn] For measurements [template omitted: as of], it is unclear whether Makemake's brightness peaks once or twice per rotation, so it is unclear whether the rotation period is 11.4 hours or double that value at 22.8 hours.[template omitted: sfn]
+
+The axial tilt of Makemake has not been measured, although it can be reasonably assumed that its rotation axis is aligned with the pole of its moon's orbit.[template omitted: sfn][template omitted: sfn] In that case, Makemake would have a high axial tilt somewhere between [template omitted: val] with respect to its orbit around the Sun (or [template omitted: val] with respect to the ecliptic), with its equator facing toward the Sun and Earth (near equinox) at the time its moon was discovered.[template omitted: sfn] This high axial tilt together with its eccentric orbit can give rise to major seasonal changes in Makemake's surface temperature and terrain, similar to those seen on Pluto.[template omitted: sfn][template omitted: sfn] Makemake's moon was predicted to eclipse Makemake sometime during 2009–2013 or 2023–2027, so Makemake may have passed equinox during either of those year ranges if its rotation is aligned with its moon's orbit.[template omitted: sfn]
+
+Geology
+Surface composition and color
+
+Because of its great distance from the Sun, Makemake's surface has an extremely low temperature of 30 to 40 K C F 0[template omitted: sfn][template omitted: sfn]—cold enough that some volatile substances like methane can exist as solid ice.[template omitted: sfn] Astronomical spectroscopy has shown that the surface of Makemake is dominated by frozen methane, with smaller amounts of long-chain hydrocarbons including ethane, ethylene, acetylene, and various high-mass alkanes like propane.[template omitted: sfn][template omitted: sfn]
+
+In visible light, the surface of Makemake appears very bright and reflective with a geometric albedo of 82% (more reflective than Pluto),[template omitted: sfn][template omitted: sfn] suggesting that its methane is freshly deposited.[template omitted: sfn][template omitted: sfn] Makemake's methane ice is highly absorbent in near-infrared, which indicates that it either exists in the form of unusually large, centimeter-sized pellets, or more likely, thick slabs of sintered particles.[template omitted: sfn][template omitted: sfn][template omitted: sfn] Meanwhile, phase curve measurements by the New Horizons spacecraft suggest that the regolith on Makemake's surface consists of smooth grains resembling snow.[template omitted: sfn]
+
+The long-chain hydrocarbons on Makemake's surface come from the irradiation of methane by ultraviolet sunlight and cosmic rays, which break down the methane and trigger photochemical reactions.[template omitted: sfn][template omitted: sfn] These photochemical reactions can cascade: transforming methane into ethane, into ethylene, into acetylene, and so on[template omitted: sfn] until it leaves a dark, reddish mixture of complex hydrocarbons, called tholins.[template omitted: sfn][template omitted: sfn] These tholins give Makemake a reddish-brownish color,[template omitted: efn] similar to what has been seen on Pluto.[template omitted: sfn][template omitted: sfn] Makemake is less red than Pluto, but is somewhat redder than Eris;[template omitted: sfn] the difference in color may be due to differing concentrations of tholins on these dwarf planets.[template omitted: sfn] Although tholins should darken the surface of Makemake, the dwarf planet remains bright because fresh methane ice covers up its tholins.[template omitted: sfn][template omitted: sfn][template omitted: sfn]
+
+Makemake shares its high abundance of methane ice with Pluto and Eris, but unlike those two, Makemake apparently lacks both carbon monoxide and nitrogen ices.[template omitted: sfn] The James Webb Space Telescope (JWST) could not find these two ices in Makemake's surface, indicating that it contains less than 3% nitrogen and less than 1 part per million of carbon monoxide.[template omitted: sfn][template omitted: sfn] Without nitrogen and carbon monoxide to mix with, methane ice on Makemake remains pure and can grow to large thicknesses or grain sizes.[template omitted: sfn][template omitted: sfn] Makemake's lack of nitrogen is expected, because nitrogen is highly volatile and its vapor can escape from Makemake's gravity more easily than from the stronger gravities of Pluto and Eris.[template omitted: sfn][template omitted: sfn][template omitted: sfn] The reason for Makemake's apparent lack of carbon monoxide is less clear: it could have been removed via either atmospheric escape or hydrothermally-driven geochemical reactions inside Makemake, or Makemake could have somehow formed with low amounts of carbon monoxide.[template omitted: sfn][template omitted: sfn][template omitted: sfn] Water and carbon dioxide ices are also apparently absent in Makemake's surface, even though they are common refractory (non-volatile) materials in Kuiper belt objects; this may be because on Makemake, these ices are completely covered by volatile material like methane and its irradiation products.[template omitted: sfn][template omitted: sfn]
+
+Geography
+Makemake appears to have a uniform surface with only minor variations in albedo, color, and composition across its longitudes.[template omitted: sfn][template omitted: sfn][template omitted: sfn] This contrasts with the highly mottled surface of Pluto.[template omitted: sfn] Whether Makemake exhibits significant latitudinal variations remains unknown, as these can only be detected by observing the dwarf planet from different viewing angles (aspect angles[template omitted: efn]) as it progresses through its orbit around the Sun.[template omitted: sfn][template omitted: sfn] Because Makemake orbits slowly, such observations require many years.[template omitted: sfn][template omitted: sfn] Between 2006 and 2017, Makemake's aspect angle changed by about 11°, yet no corresponding changes were observed in its absolute magnitude or light curve.[template omitted: sfn] If latitudinal variations do exist, they would likely resemble bands running parallel across Makemake's equator.[template omitted: sfn]
+
+Planetary scientists William M. Grundy, Alex H. Parker, and colleagues have hypothesized that Makemake's abundant volatile methane may lead to similar geography and geology as Pluto.[template omitted: sfn][template omitted: sfn] If Makemake has seasonal volatile transport processes like Pluto, it could potentially produce a longitudinally uniform band of dark material, akin to Pluto's Belton Regio.[template omitted: sfn] Alternatively, if Makemake has a non-global atmosphere that froze onto its surface, its equator could be bright and frost-covered, whereas its poles could be darker.[template omitted: sfn] Seasonal sublimation and deposition of methane could potentially produce bladed terrain or even thick, convecting glaciers resembling Pluto's Sputnik Planitia.[template omitted: sfn] Makemake is not expected to have mountains taller than 10 km mi.[template omitted: sfn]
+
+Interior and possible geological activity
+Makemake has a bulk density of about [template omitted: val] (with an uncertainty of ±[template omitted: val]),[template omitted: sfn] similar to the trans-Neptunian dwarf planets Pluto, [template omitted: dp], and [template omitted: dp].[template omitted: sfn] Like for these dwarf planets, this density suggests that Makemake has an interior mostly made of water ice and rock.[template omitted: sfn][template omitted: sfn] Makemake is large enough that its interior is likely differentiated, having a rocky core surrounded by layers of ice.[template omitted: sfn][template omitted: sfn][template omitted: sfn] Planetary scientists suspect that Makemake's interior contains enough radionuclides and primordial heat to sustain a subsurface liquid water ocean, in the past or potentially even today.[template omitted: sfn][template omitted: sfn] A high amount of heat inside Makemake could give rise to geological phenomena such as cryovolcanism.[template omitted: sfn][template omitted: sfn]
+
+Spectroscopy by the JWST has detected heavy isotopologues of methane containing deuterium (D or 2H) and carbon-13 (13C) in Makemake's surface, for which astronomers have determined a deuterium-to-hydrogen (D/H) ratio of [template omitted: val] and a 13C/12C ratio of [template omitted: val].[template omitted: sfn] While Makemake's 13C/12C ratio matches those of other Solar System objects, Makemake's D/H ratio is different: it is much lower than the D/H ratios of methane in comets, but is similar to the D/H ratios of water in comets.[template omitted: sfn][template omitted: sfn] Planetary scientists have interpreted Makemake's low D/H ratio as evidence for Makemake having a warm interior with active hydrothermal geochemistry: Makemake's deuterium-poor methane may have inherited its hydrogen from geochemical reactions in subsurface water, which require high temperatures of 150 C F that could only be sustained by heat from Makemake's core.[template omitted: sfn][template omitted: sfn] In this scenario, Makemake's subsurface water may either exist in the form of liquid water or convecting solid ice, and internally-produced methane may have been transported to Makemake's surface via outgassing or cryovolcanic eruptions.[template omitted: sfn] However, it is still possible that Makemake's deuterium-poor methane may be primordial (originating directly from the protosolar nebula via accretion), so internal geochemical activity may not be necessary to explain its existence.[template omitted: sfn]
+
+Makemake emits an unusually high amount of mid-infrared radiation compared to far-infrared, which has received various interpretations by astronomers since its first reported detection by the Spitzer Space Telescope in 2008.[template omitted: sfn] Astronomers initially thought that Makemake's excess mid-infrared emission came from patches of dark, warm terrain mixed with bright, cold terrain (and also from its moon after it was discovered), but this hypothesis could not accurately describe Makemake's infrared emission at different wavelengths,[template omitted: sfn] nor could it explain Makemake's minuscule brightness variability.[template omitted: sfn]
+
+In 2025, Csaba Kiss and collaborators proposed that Makemake's excess mid-infrared emission could instead be caused by either a cryovolcanic hotspot reaching temperatures of about 150 K C F, or an orbiting ring consisting of tiny carbonaceous dust grains.[template omitted: sfn][template omitted: sfn] The cryovolcanic hotspot scenario is favored because the aforementioned dust ring would quickly destabilize due to solar radiation pressure, although the ring could potentially be replenished if cryovolcanic eruptions are able to eject carbonaceous dust into orbit around Makemake.[template omitted: sfn] The proposed cryovolcanic hotspot may be emitting a similar amount of heat energy as the south pole geysers of Saturn's moon Enceladus, and it could potentially erupt cryolava containing ammonia and various salts dissolved in liquid water.[template omitted: sfn][template omitted: sfn] The location of this cryovolcanic hotspot on Makemake's surface is unknown, though it is estimated to cover an area of about [template omitted: val] ([template omitted: val]; equivalent to a ~10 km mi-radius circle).[template omitted: sfn]
+
+Atmosphere or outgassing
+
+Analysis of JWST spectroscopy in 2025 revealed the presence of gaseous methane on Makemake, which fluoresces in near-infrared due to sunlight absorption.[template omitted: sfn][template omitted: sfn] Makemake is the second trans-Neptunian object confirmed to have gas, after Pluto.[template omitted: sfn][template omitted: sfn] However, it is uncertain whether Makemake's methane gas is contained in a gravitationally bound atmosphere, or is temporarily outgassing (if not escaping) from its surface due to methane ice sublimation or cryovolcanic plumes.[template omitted: sfn][template omitted: sfn] Makemake is barely massive and cold enough to theoretically hold onto an atmosphere of methane or nitrogen; JWST observations have shown that Makemake does not appear to have nitrogen gas, which indicates most of it had already been lost to atmospheric escape.[template omitted: sfn]
+
+If Makemake's detected methane gas is entirely contained in a gravitationally bound atmosphere, then the surface atmospheric pressure would be roughly 10 picobars (1 micropascal), which is 100 billion times less than Earth's atmospheric pressure and 1 million times less than Pluto's.[template omitted: sfn] Such an extremely thin atmosphere was not detected in observations of Makemake's 2011 stellar occultation, which supports the occultation finding that Makemake lacks a substantial global atmosphere greater than 4–12 nanobars (0.4–1.2 millipascals).[template omitted: sfn][template omitted: sfn][template omitted: sfn] The temperature of this putative thin atmosphere would be about 40 K C F, which is slightly above the sublimation temperature of methane at this atmosphere's surface pressure. This raises the possibility that Makemake's putative atmosphere may be sustained by the sublimation of surface methane ice.[template omitted: sfn][template omitted: sfn] As Makemake follows an eccentric orbit, its putative atmosphere may change with distance from the Sun: for example, in the warmer temperatures of perihelion, Makemake may sublimate more methane but may lose some to atmospheric escape.[template omitted: sfn]
+
+Alternatively, if the methane gas detected by JWST is coming from outgassing only, then it would suggest that Makemake is releasing roughly 266 kg lbs of methane per second from 4–30% of its entire surface area.[template omitted: sfn] It is unknown if the methane is being outgassed at speeds fast enough to escape Makemake's gravity. If methane gas is escaping, it would form a comet-like coma surrounding Makemake.[template omitted: sfn] The estimated mass loss rate would be comparable to that of Enceladus's water plumes (300 kg/s lb/s) and the limited surface area of methane emission could potentially be related to Makemake's proposed cryovolcanic hotspot.[template omitted: sfn] Cryovolcanic outgassing of methane has been hypothesized to be ubiquitous among trans-Neptunian dwarf planets like Makemake.[template omitted: sfn]
+
+Satellites and potential rings
+S/2015 (136472) 1
+[template omitted: main]
+
+Makemake has only one known natural satellite or moon, which is unnamed with the provisional designation S/2015 (136472) 1 and unofficial nickname "MK 2".[template omitted: sfn][template omitted: sfn] It was discovered by astronomers Alex H. Parker, Marc W. Buie, William M. Grundy, and Keith S. Noll in Hubble Space Telescope images taken on April 27, 2015, and was announced on April 26, 2016.[template omitted: sfn] S/2015 (136472) 1 is about 1,300 times (7.8 magnitudes) fainter than Makemake in visible light and is suspected to have a very dark surface with a diameter of 175 km mi in order to explain some of Makemake's excess mid-infrared radiation.[template omitted: sfn][template omitted: sfn] The moon follows a likely circular orbit around Makemake with an orbital period of 18 days and a semi-major axis of 22250 ± 780 km mi.[template omitted: sfn]
+
+When S/2015 (136472) 1 was discovered, its orbit was oriented nearly edge-on from the point of view of Earth-based observatories, which meant that the moon appeared to pass in front of or behind Makemake.[template omitted: sfn][template omitted: sfn] Although this edge-on configuration made it difficult for telescopes to image S/2015 (136472) 1,[template omitted: sfn] it may have allowed the moon to eclipse and occult Makemake.[template omitted: sfn][template omitted: sfn] It is predicted that the moon may have eclipsed Makemake during 2009–2013, or may be still eclipsing Makemake during 2023–2027.[template omitted: sfn] No eclipses by S/2015 (136472) 1 have been reported [template omitted: as of].[template omitted: sfn]
+
+Possibility of other satellites
+Imaging observations by the Hubble Space Telescope indicate Makemake does not have additional moons brighter than apparent magnitude 26.9 (~10 magnitudes fainter than Makemake)[template omitted: efn] at distances beyond 30000 km mi.[template omitted: sfn] Larger moons could be hidden from the view of telescopes if they orbited very close to Makemake.[template omitted: sfn] The possibility of Makemake having an additional dark moon larger than S/2015 (136472) 1 has been discussed by astronomers as a potential solution for Makemake's excess mid-infrared emission and apparently slow rotation,[template omitted: sfn] but it was disfavored because it required an unrealistically large moon size.[template omitted: sfn]
+
+Possibility of rings
+Makemake does not have any known rings. Rings around distant objects are too small and faint to be directly imaged by telescopes, so they would ideally be detected in observations of stellar occultations.[template omitted: sfn] However, rings were not detected in Makemake's stellar occultation from 2011. If rings do exist around Makemake, they would likely orbit around its equator in an edge-on configuration like S/2015 (136472) 1, which could have made them missable to astronomers during the 2011 occultation.[template omitted: sfn] The possibility of a ring around Makemake has been explored as a potential solution to Makemake's excess mid-infrared emission, but it was deemed unlikely because the hypothesis would require the ring to be made of extremely small (~[template omitted: val]) dust particles, which would make it vulnerable to destruction by solar radiation pressure within a decade.[template omitted: sfn] Nevertheless, it might be possible for Makemake to sustain such a ring if it has shepherd moons, a continuous production of dust from colliding particles and small moons, or cryovolcanic eruptions ejecting dust into orbit.[template omitted: sfn]
+
+Origin
+Like other dwarf planets in the Kuiper belt, Makemake is believed to have formed early in the Solar System's history, about 4.5 billion years ago.[template omitted: sfn][template omitted: sfn] The dwarf planets in the Kuiper belt are hypothesized to have begun as small planetesimals, which grew to their present-day sizes by accreting surrounding material and other planetesimals over a few million years.[template omitted: sfn] The temperature of Makemake's formation environment must have been cold enough for volatiles such as methane to condense into solids and subsequently accrete into the dwarf planet.[template omitted: sfn][template omitted: sfn] However, Makemake may have lost some of its primordial methane during accretion because it initially had a smaller mass and a warmer temperature due to frequent impact events and greater solar irradiance.[template omitted: sfn] It has also been hypothesized that at some point in Makemake's past, a massive collision with another body may have formed its moon S/2015 (136472) 1.[template omitted: sfn]
+
+According to a 2020 hypothesis based on Solar System formation models (an update of the Nice model from 2005 that first proposed a similar scenario), a few tens of millions of years after the Solar System's formation, gravitational interactions among the giant planets caused Neptune to abruptly migrate outward into a massive circumstellar disk between 15 and 30 AU from the Sun, gravitationally scattering many of the objects within it.[template omitted: sfn][template omitted: sfn] The model indicates that nearly all Kuiper belt objects including Makemake originally formed closer to the Sun than where they are now, in that circumstellar disk.[template omitted: sfn][template omitted: sfn] The scattering of this disk is thought to have produced the present-day resonant and "hot"[template omitted: efn] classical populations of the Kuiper belt (where Makemake now resides) as well as the scattered disk.[template omitted: sfn]
+
+Observation and exploration
+Observation
+
+In terms of visual absolute magnitude, Makemake is the third intrinsically brightest known trans-Neptunian object, after Eris and Pluto.[template omitted: sfn] Makemake owes its high intrinsic brightness to its large size and highly reflective surface.[template omitted: efn] In terms of visual apparent magnitude, on the other hand, Makemake is the second brightest trans-Neptunian object in the sky after Pluto, owing to its closer distance to the Sun than Eris.[template omitted: sfn][template omitted: sfn] Makemake reaches a peak brightness of about apparent magnitude 17 when it comes to opposition during March to April,[template omitted: sfn][template omitted: sfn] which is bright enough to be visible using a high-end amateur telescope.[template omitted: sfn] Because Makemake is very far from Earth, it appears very small with an angular diameter of about 38 milliarcseconds,[template omitted: sfn] so telescopes cannot resolve it beyond a star-like point of light.[template omitted: sfn] In the sky, Makemake is located in the northern constellation Coma Berenices and has been there since its discovery.[template omitted: sfn] In late 2028, Makemake will move to the constellation Boötes.[template omitted: sfn]
+
+Despite being one of the brightest trans-Neptunian objects, Makemake was discovered relatively late—well after the discoveries of many fainter trans-Neptunian objects.[template omitted: sfn] This is because Makemake follows a highly inclined orbit that brings it far outside the ecliptic—outside where previous sky surveys had mainly been searching.[template omitted: sfn][template omitted: sfn] Although various sky surveys have serendipitously detected Makemake several years before its discovery, these observations (known as precoveries) were not recognized until after the fact.[template omitted: sfn][template omitted: efn] The earliest known precovery of Makemake comes from a photographic plate taken at Palomar Observatory on January 29, 1955, which predates Makemake's discovery by just over 50 years (16% of Makemake's orbital period).[template omitted: sfn]
+
+While moving across the sky, Makemake may pass in front of a background star and briefly block out its light from Earth's point of view, resulting in a stellar occultation.[template omitted: sfn] Stellar occultations by Makemake can reveal details such as its shape and potential atmosphere, but are difficult to accurately predict because the dwarf planet's great distance from Earth makes it subject to large uncertainties in its position.[template omitted: sfn][template omitted: sfn] Stellar occultations by Makemake are rare because the dwarf planet is located in a region of the sky with relatively few stars.[template omitted: sfn] [template omitted: As of], only one stellar occultation by Makemake has been successfully predicted and detected by astronomers.[template omitted: sfn] The first and only observed stellar occultation by Makemake took place on April 23, 2011, which yielded 7 positive detections out of 16 participating telescopes located at sites scattered across South America.[template omitted: sfn][template omitted: sfn]
+
+Exploration
+
+Makemake has not been visited up close by a space probe, although astronomers and planetary scientists have expressed desire to send one there.[template omitted: sfn] Makemake has been recognized as an attractive exploration target because it potentially hosts a subsurface ocean with ongoing geological activity.[template omitted: sfn][template omitted: sfn] The exploration of a trans-Neptunian object like Makemake would provide insights to the formation and evolution of the Solar System.[template omitted: sfn][template omitted: sfn]
+
+A 2011 study by Ryan McGranaghan and colleagues calculated that a flyby mission to Makemake could take just over 16 years using a Jupiter gravity assist, based on a launch date of August 24, 2036. Makemake would be approximately [template omitted: val] from the Sun when the spacecraft arrives.[template omitted: sfn] A 2024 study by the University of Tennessee suggested that if a flyby mission to Makemake made use of a powered Jupiter gravity assist, it could reach Makemake within a shorter time duration of 9.6–16.4 years, depending on the spacecraft's payload mass.[template omitted: sfn] A powered Jupiter gravity assist would be most optimal for launch dates of August 22, 2036 and September 27, 2048.[template omitted: sfn]
+
+A 2019 study by Amanda Zangari and collaborators identified several possible flyby trajectories to Makemake for different gravity assists and excess launch energies. For launch dates in 2036–2039, a single Jupiter gravity assist could bring a spacecraft to Makemake in 12.8–23.6 or 11.6–19.2 years, respectively.[template omitted: sfn] A single Saturn gravity assist may provide a faster route for lower-energy launches: for launch dates in 2032–2033 or 2036–2040, a spacecraft could reach Makemake in 19.2–22.5 or 12.8–19.1 years, respectively.[template omitted: sfn] For launch dates in 2037–2049, a spacecraft could reach Makemake in 16.8–17.3 years using gravity assists from both Jupiter and Saturn.[template omitted: sfn]
+
+Makemake was observed from afar by the New Horizons spacecraft in October 2007 and January 2017, from distances of 52 AU and 70 AU, respectively.[template omitted: sfn] The spacecraft's outbound trajectory through the Kuiper belt permitted observations of Makemake at high phase angles that are otherwise unobtainable from Earth, which enabled the determination of the light scattering properties and phase curve behavior of Makemake's surface.[template omitted: sfn]
+
+See also
+[template omitted: div col]
+Astronomical naming conventions
+List of Solar System objects by size
+How I Killed Pluto and Why It Had It Coming
+Ocean worlds
+Extraterrestrial liquid water
+[template omitted: mpl], the first non-dwarf planet TNO discovered with an atmosphere
+[template omitted: div col end]
+
+Notes
+[template omitted: notelist]
+
+References
+Citations
+[template omitted: Reflist]
+
+Sources
+[template omitted: refbegin]
+[template omitted: cite journal]
+
+[template omitted: cite conference]
+
+[template omitted: cite web]
+[template omitted: cite news]
+
+[template omitted: cite arXiv]
+
+[template omitted: cite web]
+
+[template omitted: cite book]
+
+[template omitted: cite book]
+
+[template omitted: cite journal]
+[template omitted: cite news]
+
+[template omitted: cite web]
+
+[template omitted: cite web]
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+[template omitted: cite journal]
+
+[template omitted: cite web]
+
+[template omitted: cite web]
+[template omitted: cite web]
+[template omitted: cite web]
+[template omitted: cite book]
+
+[template omitted: cite web]
+[template omitted: cite journal]
+
+[template omitted: cite web]
+
+[template omitted: cite press release]
+
+[template omitted: cite news]
+
+[template omitted: cite journal]
+[template omitted: cite web]
+[template omitted: cite journal]
+
+[template omitted: cite news]
+[template omitted: cite web]
+
+[template omitted: cite journal]
+
+[template omitted: cite conference]
+
+[template omitted: cite journal]
+
+[template omitted: cite web]
+
+[template omitted: cite journal]
+
+[template omitted: cite news]
+
+[template omitted: Cite journal]
+[template omitted: cite journal]
+[template omitted: cite web]
+
+[template omitted: cite web]
+
+[template omitted: cite web] Solution using the Solar System Barycenter. Ephemeris Type: Elements and Center: @0)
+
+[template omitted: cite web] Solution using the Sun. Ephemeris Type: Elements and Center: @sun)
+
+[template omitted: cite web] (r = distance from Sun in AU, rdot = radial velocity from the Sun in km/s)
+
+[template omitted: cite web] (Aphelion occurs when radial velocity or "rdot" changes from positive to negative. "hEcl-Lat" is the heliocentric ecliptic latitude, or angular distance above the ecliptic.)
+
+[template omitted: cite web] (Ecliptic crossing occurs when heliocentric ecliptic latitude or "hEcl-Lat" changes from positive to negative.)
+
+[template omitted: cite web] (Perihelion occurs when radial velocity or "rdot" changes from negative to positive. "hEcl-Lat" is the heliocentric ecliptic latitude, or angular distance above the ecliptic.)
+
+[template omitted: cite web] Ephemeris Type: Observer and Center: 500@399 (geocentric)
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite web]
+
+[template omitted: cite web]
+
+[template omitted: cite journal]
+
+[template omitted: Cite journal]
+[template omitted: cite journal]
+
+[template omitted: cite book]
+
+[template omitted: cite journal]
+
+[template omitted: cite web]
+[template omitted: cite web]
+
+[template omitted: cite web] (smaller values of H are brighter)
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite book]
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite web]
+[template omitted: cite web]
+
+[template omitted: cite web]
+
+[template omitted: cite news]
+
+[template omitted: Cite journal]
+[template omitted: cite conference]
+
+[template omitted: cite arXiv]
+
+[template omitted: cite journal]
+[template omitted: cite journal]
+
+[template omitted: cite web]
+[template omitted: cite book]
+
+[template omitted: Cite journal]
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+[template omitted: cite book]
+[template omitted: cite news]
+
+[template omitted: cite web]
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite journal]
+
+[template omitted: cite news]
+
+[template omitted: cite news]
+
+[template omitted: cite news]
+
+[template omitted: cite news]
+
+[template omitted: cite web]
+
+[template omitted: Cite web]
+[template omitted: cite journal]
+
+[template omitted: cite web]
+
+[template omitted: cite web]
+[template omitted: cite web]
+[template omitted: cite web]
+
+[template omitted: cite journal]
+[template omitted: refend]
+
+External links
+[template omitted: Commons category]
+Geothermal activity on the icy dwarf planets Eris and Makemake – Planetary Radio podcast hosted by The Planetary Society (March 6, 2024)
+2012 Kavli Prize Laureate Lecture: Tales From the Outer Solar System by Michael E. Brown (video)
+Makemake Sky Charts and Coordinates – The Sky Live
+Precovery image with the 1.06-meter Kleť Observatory telescope on April 20, 2003
+Makemake image by the Keck 1 Telescope on February 18, 2010 (Mike Brown)
+[template omitted: AstDys]
+[template omitted: JPL small body]
+
+[template omitted: Minor planets navigator]
+[template omitted: Dwarf planets]
+[template omitted: Trans-Neptunian objects]
+[template omitted: Solar System]
+[template omitted: Moons of dwarf planets]
+[template omitted: Portal bar]
+[template omitted: Authority control]

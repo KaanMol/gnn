@@ -1,0 +1,4207 @@
+{
+  "sudoku_symbol": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "": 0,
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 5,
+            "6": 6,
+            "7": 7,
+            "8": 8,
+            "9": 9
+          }
+        },
+        {
+          "id": "n2",
+          "op": "lookup",
+          "inputs": [
+            "n1",
+            "n0"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n2"
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_symbol"
+  },
+  "sudoku_rules": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "groups": [
+              [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+              ],
+              [
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17
+              ],
+              [
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26
+              ],
+              [
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              [
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44
+              ],
+              [
+                45,
+                46,
+                47,
+                48,
+                49,
+                50,
+                51,
+                52,
+                53
+              ],
+              [
+                54,
+                55,
+                56,
+                57,
+                58,
+                59,
+                60,
+                61,
+                62
+              ],
+              [
+                63,
+                64,
+                65,
+                66,
+                67,
+                68,
+                69,
+                70,
+                71
+              ],
+              [
+                72,
+                73,
+                74,
+                75,
+                76,
+                77,
+                78,
+                79,
+                80
+              ],
+              [
+                0,
+                9,
+                18,
+                27,
+                36,
+                45,
+                54,
+                63,
+                72
+              ],
+              [
+                1,
+                10,
+                19,
+                28,
+                37,
+                46,
+                55,
+                64,
+                73
+              ],
+              [
+                2,
+                11,
+                20,
+                29,
+                38,
+                47,
+                56,
+                65,
+                74
+              ],
+              [
+                3,
+                12,
+                21,
+                30,
+                39,
+                48,
+                57,
+                66,
+                75
+              ],
+              [
+                4,
+                13,
+                22,
+                31,
+                40,
+                49,
+                58,
+                67,
+                76
+              ],
+              [
+                5,
+                14,
+                23,
+                32,
+                41,
+                50,
+                59,
+                68,
+                77
+              ],
+              [
+                6,
+                15,
+                24,
+                33,
+                42,
+                51,
+                60,
+                69,
+                78
+              ],
+              [
+                7,
+                16,
+                25,
+                34,
+                43,
+                52,
+                61,
+                70,
+                79
+              ],
+              [
+                8,
+                17,
+                26,
+                35,
+                44,
+                53,
+                62,
+                71,
+                80
+              ],
+              [
+                0,
+                1,
+                2,
+                9,
+                10,
+                11,
+                18,
+                19,
+                20
+              ],
+              [
+                3,
+                4,
+                5,
+                12,
+                13,
+                14,
+                21,
+                22,
+                23
+              ],
+              [
+                6,
+                7,
+                8,
+                15,
+                16,
+                17,
+                24,
+                25,
+                26
+              ],
+              [
+                27,
+                28,
+                29,
+                36,
+                37,
+                38,
+                45,
+                46,
+                47
+              ],
+              [
+                30,
+                31,
+                32,
+                39,
+                40,
+                41,
+                48,
+                49,
+                50
+              ],
+              [
+                33,
+                34,
+                35,
+                42,
+                43,
+                44,
+                51,
+                52,
+                53
+              ],
+              [
+                54,
+                55,
+                56,
+                63,
+                64,
+                65,
+                72,
+                73,
+                74
+              ],
+              [
+                57,
+                58,
+                59,
+                66,
+                67,
+                68,
+                75,
+                76,
+                77
+              ],
+              [
+                60,
+                61,
+                62,
+                69,
+                70,
+                71,
+                78,
+                79,
+                80
+              ]
+            ],
+            "symbols": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "empty": 0
+          }
+        }
+      ],
+      "output": "n1",
+      "description": "Nine distinct digits in every row, column, and box; blank is 0. Groups refer to marks ordered by y then x."
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_rules"
+  },
+  "sudoku_read": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "marks"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "sort",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "key": "x"
+        },
+        {
+          "id": "n3",
+          "op": "sort",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "key": "y"
+        },
+        {
+          "id": "n4",
+          "op": "size",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "81"
+        },
+        {
+          "id": "n6",
+          "op": "equal",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "require",
+          "inputs": [
+            "n6",
+            "n3"
+          ],
+          "type": "Data",
+          "message": "The taught board reader expects 81 marks."
+        },
+        {
+          "id": "n8",
+          "op": "map",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "text"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "call",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "name": "sudoku_symbol"
+              }
+            ],
+            "output": "n2"
+          }
+        }
+      ],
+      "output": "n8"
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_read"
+  },
+  "finite_valid": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Bool",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "problem"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "groups"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "empty"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "values",
+            "empty"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "map",
+          "inputs": [
+            "n3",
+            "n5"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "map",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "item",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n3"
+                }
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "empty"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "filter",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Bool",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "data_equal",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Bool"
+                    },
+                    {
+                      "id": "n4",
+                      "op": "not",
+                      "inputs": [
+                        "n3"
+                      ],
+                      "type": "Bool"
+                    }
+                  ],
+                  "output": "n4"
+                }
+              },
+              {
+                "id": "n7",
+                "op": "size",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "unique",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n9",
+                "op": "size",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "equal",
+                "inputs": [
+                  "n7",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "bool_data",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n11"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "map",
+          "inputs": [
+            "n2",
+            "n1"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "empty"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "data_equal",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "symbols"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "contains",
+                "inputs": [
+                  "n5",
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n7",
+                "op": "or",
+                "inputs": [
+                  "n4",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "bool_data",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n8"
+          }
+        },
+        {
+          "id": "n8",
+          "op": "concat",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n10",
+          "op": "contains",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "not",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Bool"
+        }
+      ],
+      "output": "n11"
+    },
+    "source": "Explicit full Sudoku curriculum: finite_valid"
+  },
+  "finite_candidates": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "problem"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "groups"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "index"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "filter",
+          "inputs": [
+            "n2",
+            "n3"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "contains",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "flatten",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "unique",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "map",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "symbols"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "difference",
+          "inputs": [
+            "n9",
+            "n8"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n10"
+    },
+    "source": "Explicit full Sudoku curriculum: finite_candidates"
+  },
+  "finite_options": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "indices",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "filter",
+          "inputs": [
+            "n2",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "problem",
+                  "empty"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "data_equal",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n6"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "map",
+          "inputs": [
+            "n3",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "problem"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "record",
+                "inputs": [
+                  "n3",
+                  "n4",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "problem",
+                  "values",
+                  "index"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "call",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data",
+                "name": "finite_candidates"
+              },
+              {
+                "id": "n7",
+                "op": "size",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "as_data",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n9",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n6",
+                  "n8"
+                ],
+                "type": "Data",
+                "keys": [
+                  "index",
+                  "options",
+                  "count"
+                ]
+              }
+            ],
+            "output": "n9"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "sort",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "key": "count"
+        }
+      ],
+      "output": "n5"
+    },
+    "source": "Explicit full Sudoku curriculum: finite_options"
+  },
+  "finite_naked_single": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n2",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "count"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n5",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "data_list",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n8",
+          "op": "choose",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n8"
+    },
+    "source": "Explicit full Sudoku curriculum: finite_naked_single"
+  },
+  "finite_hidden_single": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "problem",
+            "groups"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "map",
+          "inputs": [
+            "n1",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "problem",
+                  "symbols"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "map",
+                "inputs": [
+                  "n2",
+                  "n4"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "item",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n3"
+                }
+              },
+              {
+                "id": "n6",
+                "op": "difference",
+                "inputs": [
+                  "n3",
+                  "n5"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "size",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "size",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "equal",
+                "inputs": [
+                  "n7",
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "options"
+                ]
+              },
+              {
+                "id": "n11",
+                "op": "record",
+                "inputs": [
+                  "n10",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "options",
+                  "group"
+                ]
+              },
+              {
+                "id": "n12",
+                "op": "map",
+                "inputs": [
+                  "n6",
+                  "n11"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "options"
+                      ]
+                    },
+                    {
+                      "id": "n4",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "group"
+                      ]
+                    },
+                    {
+                      "id": "n5",
+                      "op": "record",
+                      "inputs": [
+                        "n4",
+                        "n2"
+                      ],
+                      "type": "Data",
+                      "keys": [
+                        "group",
+                        "symbol"
+                      ]
+                    },
+                    {
+                      "id": "n6",
+                      "op": "filter",
+                      "inputs": [
+                        "n3",
+                        "n5"
+                      ],
+                      "type": "Data",
+                      "body": {
+                        "input_type": "Data",
+                        "output_type": "Bool",
+                        "nodes": [
+                          {
+                            "id": "n0",
+                            "op": "input",
+                            "inputs": [],
+                            "type": "Data"
+                          },
+                          {
+                            "id": "n1",
+                            "op": "get",
+                            "inputs": [
+                              "n0"
+                            ],
+                            "type": "Data",
+                            "path": [
+                              "context"
+                            ]
+                          },
+                          {
+                            "id": "n2",
+                            "op": "get",
+                            "inputs": [
+                              "n0"
+                            ],
+                            "type": "Data",
+                            "path": [
+                              "item"
+                            ]
+                          },
+                          {
+                            "id": "n3",
+                            "op": "get",
+                            "inputs": [
+                              "n1"
+                            ],
+                            "type": "Data",
+                            "path": [
+                              "group"
+                            ]
+                          },
+                          {
+                            "id": "n4",
+                            "op": "get",
+                            "inputs": [
+                              "n2"
+                            ],
+                            "type": "Data",
+                            "path": [
+                              "index"
+                            ]
+                          },
+                          {
+                            "id": "n5",
+                            "op": "contains",
+                            "inputs": [
+                              "n3",
+                              "n4"
+                            ],
+                            "type": "Bool"
+                          },
+                          {
+                            "id": "n6",
+                            "op": "get",
+                            "inputs": [
+                              "n2"
+                            ],
+                            "type": "Data",
+                            "path": [
+                              "options"
+                            ]
+                          },
+                          {
+                            "id": "n7",
+                            "op": "get",
+                            "inputs": [
+                              "n1"
+                            ],
+                            "type": "Data",
+                            "path": [
+                              "symbol"
+                            ]
+                          },
+                          {
+                            "id": "n8",
+                            "op": "contains",
+                            "inputs": [
+                              "n6",
+                              "n7"
+                            ],
+                            "type": "Bool"
+                          },
+                          {
+                            "id": "n9",
+                            "op": "and",
+                            "inputs": [
+                              "n5",
+                              "n8"
+                            ],
+                            "type": "Bool"
+                          }
+                        ],
+                        "output": "n9"
+                      }
+                    },
+                    {
+                      "id": "n7",
+                      "op": "size",
+                      "inputs": [
+                        "n6"
+                      ],
+                      "type": "Number"
+                    },
+                    {
+                      "id": "n8",
+                      "op": "literal",
+                      "inputs": [],
+                      "type": "Number",
+                      "value": "1"
+                    },
+                    {
+                      "id": "n9",
+                      "op": "equal",
+                      "inputs": [
+                        "n7",
+                        "n8"
+                      ],
+                      "type": "Bool"
+                    },
+                    {
+                      "id": "n10",
+                      "op": "data_literal",
+                      "inputs": [],
+                      "type": "Data",
+                      "value": 0
+                    },
+                    {
+                      "id": "n11",
+                      "op": "item",
+                      "inputs": [
+                        "n6",
+                        "n10"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n12",
+                      "op": "get",
+                      "inputs": [
+                        "n11"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "index"
+                      ]
+                    },
+                    {
+                      "id": "n13",
+                      "op": "data_list",
+                      "inputs": [
+                        "n2"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n14",
+                      "op": "data_literal",
+                      "inputs": [],
+                      "type": "Data",
+                      "value": 1
+                    },
+                    {
+                      "id": "n15",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "group"
+                      ]
+                    },
+                    {
+                      "id": "n16",
+                      "op": "record",
+                      "inputs": [
+                        "n12",
+                        "n13",
+                        "n14",
+                        "n15"
+                      ],
+                      "type": "Data",
+                      "keys": [
+                        "index",
+                        "options",
+                        "count",
+                        "group"
+                      ]
+                    },
+                    {
+                      "id": "n17",
+                      "op": "data_list",
+                      "inputs": [
+                        "n16"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n18",
+                      "op": "data_literal",
+                      "inputs": [],
+                      "type": "Data",
+                      "value": []
+                    },
+                    {
+                      "id": "n19",
+                      "op": "choose",
+                      "inputs": [
+                        "n9",
+                        "n17",
+                        "n18"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n19"
+                }
+              },
+              {
+                "id": "n13",
+                "op": "flatten",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n15",
+                "op": "choose",
+                "inputs": [
+                  "n9",
+                  "n13",
+                  "n14"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n15"
+          }
+        },
+        {
+          "id": "n3",
+          "op": "flatten",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n3"
+    },
+    "source": "Explicit full Sudoku curriculum: finite_hidden_single"
+  },
+  "finite_decision": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "options"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n3",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "finite_naked_single"
+        },
+        {
+          "id": "n5",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "finite_hidden_single"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n7",
+          "op": "item",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n9",
+          "op": "size",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "less",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "emit",
+          "inputs": [
+            "n3",
+            "n3"
+          ],
+          "type": "Data",
+          "label": "naked_single"
+        },
+        {
+          "id": "n12",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n13",
+          "op": "size",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "less",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "emit",
+          "inputs": [
+            "n7",
+            "n7"
+          ],
+          "type": "Data",
+          "label": "hidden_single"
+        },
+        {
+          "id": "n16",
+          "op": "emit",
+          "inputs": [
+            "n3",
+            "n3"
+          ],
+          "type": "Data",
+          "label": "branch"
+        },
+        {
+          "id": "n17",
+          "op": "choose",
+          "inputs": [
+            "n14",
+            "n15",
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "choose",
+          "inputs": [
+            "n10",
+            "n11",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "count"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n21",
+          "op": "data_equal",
+          "inputs": [
+            "n19",
+            "n20"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n22",
+          "op": "emit",
+          "inputs": [
+            "n3",
+            "n3"
+          ],
+          "type": "Data",
+          "label": "dead_end"
+        },
+        {
+          "id": "n23",
+          "op": "choose",
+          "inputs": [
+            "n21",
+            "n22",
+            "n18"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n23"
+    },
+    "source": "Explicit full Sudoku curriculum: finite_decision"
+  },
+  "finite_search": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_list",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n2",
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "problem",
+            "pending",
+            "found",
+            "values"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "while",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "literal",
+                "inputs": [],
+                "type": "Number",
+                "value": "0"
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "less",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "found"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "as_bool",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n7",
+                "op": "not",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "and",
+                "inputs": [
+                  "n4",
+                  "n7"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n8"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "problem"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -1
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "slice",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "stop": -1
+              },
+              {
+                "id": "n6",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n4"
+                ],
+                "type": "Data",
+                "keys": [
+                  "problem",
+                  "values"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "call",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Bool",
+                "name": "finite_valid"
+              },
+              {
+                "id": "n8",
+                "op": "call",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data",
+                "name": "finite_options"
+              },
+              {
+                "id": "n9",
+                "op": "literal",
+                "inputs": [],
+                "type": "Number",
+                "value": "0"
+              },
+              {
+                "id": "n10",
+                "op": "size",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "less",
+                "inputs": [
+                  "n9",
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "not",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n13",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": true
+              },
+              {
+                "id": "n14",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n5",
+                  "n13",
+                  "n4"
+                ],
+                "type": "Data",
+                "keys": [
+                  "problem",
+                  "pending",
+                  "found",
+                  "values"
+                ]
+              },
+              {
+                "id": "n15",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n4",
+                  "n8"
+                ],
+                "type": "Data",
+                "keys": [
+                  "problem",
+                  "values",
+                  "options"
+                ]
+              },
+              {
+                "id": "n16",
+                "op": "call",
+                "inputs": [
+                  "n15"
+                ],
+                "type": "Data",
+                "name": "finite_decision"
+              },
+              {
+                "id": "n17",
+                "op": "get",
+                "inputs": [
+                  "n16"
+                ],
+                "type": "Data",
+                "path": [
+                  "options"
+                ]
+              },
+              {
+                "id": "n18",
+                "op": "get",
+                "inputs": [
+                  "n16"
+                ],
+                "type": "Data",
+                "path": [
+                  "index"
+                ]
+              },
+              {
+                "id": "n19",
+                "op": "record",
+                "inputs": [
+                  "n4",
+                  "n18"
+                ],
+                "type": "Data",
+                "keys": [
+                  "values",
+                  "index"
+                ]
+              },
+              {
+                "id": "n20",
+                "op": "map",
+                "inputs": [
+                  "n17",
+                  "n19"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "values"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "index"
+                      ]
+                    },
+                    {
+                      "id": "n4",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n5",
+                      "op": "set_item",
+                      "inputs": [
+                        "n2",
+                        "n3",
+                        "n4"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n5"
+                }
+              },
+              {
+                "id": "n21",
+                "op": "concat",
+                "inputs": [
+                  "n5",
+                  "n20"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n22",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": false
+              },
+              {
+                "id": "n23",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n21",
+                  "n22",
+                  "n4"
+                ],
+                "type": "Data",
+                "keys": [
+                  "problem",
+                  "pending",
+                  "found",
+                  "values"
+                ]
+              },
+              {
+                "id": "n24",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": false
+              },
+              {
+                "id": "n25",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n5",
+                  "n24",
+                  "n4"
+                ],
+                "type": "Data",
+                "keys": [
+                  "problem",
+                  "pending",
+                  "found",
+                  "values"
+                ]
+              },
+              {
+                "id": "n26",
+                "op": "emit",
+                "inputs": [
+                  "n23",
+                  "n16"
+                ],
+                "type": "Data",
+                "label": "expand_candidates"
+              },
+              {
+                "id": "n27",
+                "op": "emit",
+                "inputs": [
+                  "n25",
+                  "n4"
+                ],
+                "type": "Data",
+                "label": "reject_state"
+              },
+              {
+                "id": "n28",
+                "op": "emit",
+                "inputs": [
+                  "n14",
+                  "n4"
+                ],
+                "type": "Data",
+                "label": "solution"
+              },
+              {
+                "id": "n29",
+                "op": "choose",
+                "inputs": [
+                  "n12",
+                  "n28",
+                  "n26"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n30",
+                "op": "choose",
+                "inputs": [
+                  "n7",
+                  "n29",
+                  "n27"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n30"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "found"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Data",
+          "keys": [
+            "found",
+            "values"
+          ]
+        }
+      ],
+      "output": "n9",
+      "trace_mode": "explicit"
+    },
+    "source": "Explicit full Sudoku curriculum: finite_search"
+  },
+  "sudoku_problem": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "sudoku_rules"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "sudoku_read"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "groups"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "symbols"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "empty"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "values",
+            "groups",
+            "symbols",
+            "empty"
+          ]
+        }
+      ],
+      "output": "n6"
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_problem"
+  },
+  "sudoku_check": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "sudoku_problem"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "groups"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "filter",
+          "inputs": [
+            "n3",
+            "n1"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "map",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "item",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n3"
+                }
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "empty"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "filter",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Bool",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "data_equal",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Bool"
+                    },
+                    {
+                      "id": "n4",
+                      "op": "not",
+                      "inputs": [
+                        "n3"
+                      ],
+                      "type": "Bool"
+                    }
+                  ],
+                  "output": "n4"
+                }
+              },
+              {
+                "id": "n7",
+                "op": "size",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "unique",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n9",
+                "op": "size",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "equal",
+                "inputs": [
+                  "n7",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "not",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n11"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "problem",
+            "values"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "call",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Bool",
+          "name": "finite_valid"
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "empty"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "contains",
+          "inputs": [
+            "n2",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "not",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "and",
+          "inputs": [
+            "n6",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "correct"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "incomplete"
+        },
+        {
+          "id": "n13",
+          "op": "choose",
+          "inputs": [
+            "n9",
+            "n11",
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "incorrect"
+        },
+        {
+          "id": "n15",
+          "op": "choose",
+          "inputs": [
+            "n6",
+            "n13",
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "bool_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "bool_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "bool_data",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "record",
+          "inputs": [
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "verdict",
+            "valid",
+            "filled",
+            "correct",
+            "conflicts"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "emit",
+          "inputs": [
+            "n19",
+            "n19"
+          ],
+          "type": "Data",
+          "label": "check_board"
+        }
+      ],
+      "output": "n20",
+      "trace_mode": "explicit"
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_check"
+  },
+  "sudoku_solver": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "sudoku_problem"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "finite_search"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "found"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "as_bool",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "require",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "message": "The taught search found no solution for these entries. Correct or clear a value and try again."
+        }
+      ],
+      "output": "n6",
+      "trace_mode": "explicit",
+      "description": "Read taught symbols; obtain taught groups and alphabet; execute stored candidate and stack-search programs."
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_solver"
+  },
+  "sudoku_input": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "description": "Given x, y, key: move the pointer, click, press the key, then observe feedback. Coordinates are fractions of the canvas width and height.",
+      "nodes": [
+        {
+          "id": "request",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "x",
+          "op": "get",
+          "inputs": [
+            "request"
+          ],
+          "type": "Data",
+          "path": [
+            "x"
+          ]
+        },
+        {
+          "id": "y",
+          "op": "get",
+          "inputs": [
+            "request"
+          ],
+          "type": "Data",
+          "path": [
+            "y"
+          ]
+        },
+        {
+          "id": "position",
+          "op": "record",
+          "inputs": [
+            "x",
+            "y"
+          ],
+          "type": "Data",
+          "keys": [
+            "x",
+            "y"
+          ]
+        },
+        {
+          "id": "move",
+          "op": "act",
+          "inputs": [
+            "request",
+            "position"
+          ],
+          "type": "Data",
+          "surface": "canvas",
+          "action": "move"
+        },
+        {
+          "id": "empty",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {}
+        },
+        {
+          "id": "click",
+          "op": "act",
+          "inputs": [
+            "move",
+            "empty"
+          ],
+          "type": "Data",
+          "surface": "canvas",
+          "action": "click"
+        },
+        {
+          "id": "key",
+          "op": "get",
+          "inputs": [
+            "request"
+          ],
+          "type": "Data",
+          "path": [
+            "key"
+          ]
+        },
+        {
+          "id": "keystroke",
+          "op": "record",
+          "inputs": [
+            "key"
+          ],
+          "type": "Data",
+          "keys": [
+            "key"
+          ]
+        },
+        {
+          "id": "type",
+          "op": "act",
+          "inputs": [
+            "click",
+            "keystroke"
+          ],
+          "type": "Data",
+          "surface": "canvas",
+          "action": "key"
+        },
+        {
+          "id": "after",
+          "op": "observe",
+          "inputs": [
+            "type"
+          ],
+          "type": "Data",
+          "surface": "canvas"
+        },
+        {
+          "id": "feedback",
+          "op": "get",
+          "inputs": [
+            "after"
+          ],
+          "type": "Data",
+          "path": [
+            "feedback"
+          ]
+        }
+      ],
+      "output": "feedback"
+    },
+    "source": "Explicit Sudoku input lesson: move, click, type, observe feedback"
+  },
+  "sudoku_do": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "marks"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "sort",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "key": "x"
+        },
+        {
+          "id": "n3",
+          "op": "sort",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "key": "y"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "sudoku_solver"
+        },
+        {
+          "id": "n5",
+          "op": "indices",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "marks",
+            "values"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "map",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "marks"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n3",
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "item",
+                "inputs": [
+                  "n5",
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "get",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data",
+                "path": [
+                  "text"
+                ]
+              },
+              {
+                "id": "n8",
+                "op": "call",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data",
+                "name": "sudoku_symbol"
+              },
+              {
+                "id": "n9",
+                "op": "text",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n10",
+                "op": "get",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data",
+                "path": [
+                  "x"
+                ]
+              },
+              {
+                "id": "n11",
+                "op": "get",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data",
+                "path": [
+                  "y"
+                ]
+              },
+              {
+                "id": "n12",
+                "op": "record",
+                "inputs": [
+                  "n10",
+                  "n11",
+                  "n9"
+                ],
+                "type": "Data",
+                "keys": [
+                  "x",
+                  "y",
+                  "key"
+                ]
+              },
+              {
+                "id": "n13",
+                "op": "call",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data",
+                "name": "sudoku_input"
+              },
+              {
+                "id": "n14",
+                "op": "get",
+                "inputs": [
+                  "n13"
+                ],
+                "type": "Data",
+                "path": [
+                  "accepted"
+                ]
+              },
+              {
+                "id": "n15",
+                "op": "as_bool",
+                "inputs": [
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "require",
+                "inputs": [
+                  "n15",
+                  "n13"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n17",
+                "op": "data_equal",
+                "inputs": [
+                  "n8",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n18",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": {
+                  "unchanged": true
+                }
+              },
+              {
+                "id": "n19",
+                "op": "choose",
+                "inputs": [
+                  "n17",
+                  "n18",
+                  "n16"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n19"
+          }
+        }
+      ],
+      "output": "n7",
+      "trace_mode": "explicit",
+      "description": "Solve through stored programs and enter changed symbols using the taught input sequence."
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_do"
+  },
+  "sudoku_observe_check": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "canvas"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "sudoku_check"
+        }
+      ],
+      "output": "n2",
+      "trace_mode": "explicit"
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_observe_check"
+  },
+  "sudoku_observe_solve": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "canvas"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "sudoku_do"
+        },
+        {
+          "id": "n3",
+          "op": "observe",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "surface": "canvas"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "sudoku_check"
+        }
+      ],
+      "output": "n4",
+      "trace_mode": "explicit",
+      "skill": {
+        "requires": [
+          "sudoku_canvas"
+        ],
+        "provides": [
+          "filled_sudoku_canvas"
+        ]
+      },
+      "description": "Solve the visible Sudoku using taught reasoning and canvas input methods, then check the board."
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_observe_solve"
+  },
+  "sudoku_observe_read": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "canvas"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "sudoku_read"
+        }
+      ],
+      "output": "n2",
+      "trace_mode": "explicit"
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_observe_read"
+  },
+  "sudoku_query_candidates": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "canvas"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "sudoku_problem"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "row"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 9
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "multiply",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_data",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "col"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "add",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "as_data",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "empty"
+          ]
+        },
+        {
+          "id": "n16",
+          "op": "set_item",
+          "inputs": [
+            "n14",
+            "n13",
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n16",
+            "n13"
+          ],
+          "type": "Data",
+          "keys": [
+            "problem",
+            "values",
+            "index"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "call",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "name": "finite_candidates"
+        }
+      ],
+      "output": "n18",
+      "trace_mode": "explicit",
+      "description": "Read the canvas, convert a zero-based row/column to an index, temporarily clear that value, and compute allowed symbols from the taught constraints."
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_query_candidates"
+  },
+  "sudoku_goal_check": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Bool",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "canvas"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "sudoku_check"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "correct"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "as_bool",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Bool"
+        }
+      ],
+      "output": "n4",
+      "trace_mode": "explicit",
+      "description": "Observe the board again and check correctness using the taught Sudoku rules."
+    },
+    "source": "Explicit full Sudoku curriculum: sudoku_goal_check"
+  }
+}

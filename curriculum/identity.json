@@ -1,0 +1,3812 @@
+{
+  "meaning_fact_before_identity": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            2
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "meaning_policy"
+        },
+        {
+          "id": "n5",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "meaning_phrase"
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "name_heads"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "head"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "contains",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "name_suffix"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "split_text",
+          "inputs": [
+            "n2",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "slice",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data",
+          "start": 1
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n13",
+          "op": "data_equal",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "not",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n16",
+          "op": "item",
+          "inputs": [
+            "n10",
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n18",
+          "op": "data_equal",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "and",
+          "inputs": [
+            "n14",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n20",
+          "op": "data_list",
+          "inputs": [
+            "n2",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n22",
+          "op": "join_text",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "choose",
+          "inputs": [
+            "n19",
+            "n2",
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "data_list",
+          "inputs": [
+            "n1",
+            "n23",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "modifiers"
+          ]
+        },
+        {
+          "id": "n26",
+          "op": "lower",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "filter",
+          "inputs": [
+            "n25",
+            "n26"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "predicative"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "as_bool",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "word"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "data_equal",
+                "inputs": [
+                  "n5",
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n7",
+                "op": "and",
+                "inputs": [
+                  "n4",
+                  "n6"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n7"
+          }
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n29",
+          "op": "item",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "get",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data",
+          "path": [
+            "relation"
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "get",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "data_list",
+          "inputs": [
+            "n30",
+            "n2",
+            "n31"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n33",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "is"
+        },
+        {
+          "id": "n34",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n33"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n35",
+          "op": "choose",
+          "inputs": [
+            "n8",
+            "n24",
+            "n0"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "description_relation"
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n36"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n38",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n39",
+          "op": "data_equal",
+          "inputs": [
+            "n27",
+            "n38"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n40",
+          "op": "not",
+          "inputs": [
+            "n39"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n41",
+          "op": "slice",
+          "inputs": [
+            "n27"
+          ],
+          "type": "Data",
+          "start": 1
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n43",
+          "op": "data_equal",
+          "inputs": [
+            "n41",
+            "n42"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n44",
+          "op": "and",
+          "inputs": [
+            "n40",
+            "n43"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n45",
+          "op": "choose",
+          "inputs": [
+            "n44",
+            "n32",
+            "n0"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n46",
+          "op": "choose",
+          "inputs": [
+            "n37",
+            "n45",
+            "n0"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n47",
+          "op": "choose",
+          "inputs": [
+            "n34",
+            "n35",
+            "n46"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n47",
+      "trace_mode": "explicit",
+      "internal": true,
+      "memoize": true,
+      "description": "Separate a name expression from the entity bearing it, idempotently. Map explicitly taught predicate adjectives to property relations; leave other descriptions as descriptions."
+    },
+    "source": "Explicit meaning lesson: Separate a name expression from the entity bearing it, idempotently. Map explicitly taught predicate adjectives to property relations; leave other descriptions as descriptions."
+  },
+  "language_interpret_before_identity": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "language_question_policy"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "lower",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "replace"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "pending"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "while",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "literal",
+                "inputs": [],
+                "type": "Number",
+                "value": "0"
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "less",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n4"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n3",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "text"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  0
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "replace_text",
+                "inputs": [
+                  "n4",
+                  "n5",
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "slice",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Data",
+                "start": 1
+              },
+              {
+                "id": "n10",
+                "op": "record",
+                "inputs": [
+                  "n7",
+                  "n9"
+                ],
+                "type": "Data",
+                "keys": [
+                  "text",
+                  "pending"
+                ]
+              }
+            ],
+            "output": "n10"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n9",
+          "op": "split_text",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "filter",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n2",
+                "op": "data_equal",
+                "inputs": [
+                  "n0",
+                  "n1"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n3",
+                "op": "not",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n12",
+          "op": "join_text",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "templates"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "map",
+          "inputs": [
+            "n13",
+            "n12"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "prefix"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "split_text",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "size",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_data",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n8",
+                "op": "data_equal",
+                "inputs": [
+                  "n6",
+                  "n7"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n10",
+                "op": "item",
+                "inputs": [
+                  "n4",
+                  "n9"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n11",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n12",
+                "op": "data_equal",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n13",
+                "op": "and",
+                "inputs": [
+                  "n8",
+                  "n12"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n14",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n15",
+                "op": "item",
+                "inputs": [
+                  "n4",
+                  "n14"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n16",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "suffix"
+                ]
+              },
+              {
+                "id": "n17",
+                "op": "split_text",
+                "inputs": [
+                  "n15",
+                  "n16"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n18",
+                "op": "size",
+                "inputs": [
+                  "n17"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n19",
+                "op": "as_data",
+                "inputs": [
+                  "n18"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n20",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n21",
+                "op": "data_equal",
+                "inputs": [
+                  "n19",
+                  "n20"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n22",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -1
+              },
+              {
+                "id": "n23",
+                "op": "item",
+                "inputs": [
+                  "n17",
+                  "n22"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n24",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n25",
+                "op": "data_equal",
+                "inputs": [
+                  "n23",
+                  "n24"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n26",
+                "op": "and",
+                "inputs": [
+                  "n21",
+                  "n25"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n27",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n28",
+                "op": "item",
+                "inputs": [
+                  "n17",
+                  "n27"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n29",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n30",
+                "op": "data_equal",
+                "inputs": [
+                  "n28",
+                  "n29"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n31",
+                "op": "not",
+                "inputs": [
+                  "n30"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n32",
+                "op": "and",
+                "inputs": [
+                  "n26",
+                  "n31"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n33",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n34",
+                "op": "record",
+                "inputs": [
+                  "n28",
+                  "n33"
+                ],
+                "type": "Data",
+                "keys": [
+                  "subject",
+                  "relation"
+                ]
+              },
+              {
+                "id": "n35",
+                "op": "data_list",
+                "inputs": [
+                  "n34"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n36",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n37",
+                "op": "choose",
+                "inputs": [
+                  "n32",
+                  "n35",
+                  "n36"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n38",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n39",
+                "op": "choose",
+                "inputs": [
+                  "n13",
+                  "n37",
+                  "n38"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n39"
+          }
+        },
+        {
+          "id": "n15",
+          "op": "flatten",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n17",
+          "op": "item",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "subject"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "subject_aliases"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "has_key",
+          "inputs": [
+            "n19",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "item",
+          "inputs": [
+            "n19",
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "choose",
+          "inputs": [
+            "n20",
+            "n21",
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "describe"
+        },
+        {
+          "id": "n24",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "relation"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n29",
+          "op": "record",
+          "inputs": [
+            "n23",
+            "n22",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28"
+          ],
+          "type": "Data",
+          "keys": [
+            "op",
+            "subject",
+            "relation",
+            "object",
+            "negative",
+            "conditions",
+            "text"
+          ]
+        },
+        {
+          "id": "n30",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n31",
+          "op": "size",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n32",
+          "op": "less",
+          "inputs": [
+            "n30",
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "data_list",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "record",
+          "inputs": [
+            "n33"
+          ],
+          "type": "Data",
+          "keys": [
+            "operations"
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n36",
+          "op": "choose",
+          "inputs": [
+            "n32",
+            "n34",
+            "n35"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n36",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Match taught question templates in priority order, capture the subject and bind role aliases. Return a description request for the taught property, or no match so the ordinary language interface can continue."
+    },
+    "source": "Codex teacher: Match taught question templates in priority order, capture the subject and bind role aliases. Return a description request for the taught property, or no match so the ordinary language interface can continue."
+  },
+  "meaning_reference_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            {
+              "canonical": "human",
+              "forms": [
+                "human",
+                "humans"
+              ],
+              "kind": "concept word forms",
+              "source": "Explicit teaching: humans is the plural name of the human concept. A relation to this concept does not by itself assert that relation to every individual human."
+            }
+          ]
+        }
+      ],
+      "output": "n1",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Declare the labels that refer to the same concept node. This table teaches human/humans explicitly; no suffix-stripping heuristic is used."
+    },
+    "source": "Explicit dialogue teaching: Declare the labels that refer to the same concept node. This table teaches human/humans explicitly; no suffix-stripping heuristic is used."
+  },
+  "meaning_reference": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "meaning_reference_policy"
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "filter",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "forms"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "contains",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n4"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "map",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "canonical"
+                ]
+              }
+            ],
+            "output": "n1"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "unique",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "size",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n9",
+          "op": "data_equal",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n11",
+          "op": "item",
+          "inputs": [
+            "n5",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "choose",
+          "inputs": [
+            "n9",
+            "n11",
+            "n0"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n12",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Resolve only uniquely taught label forms to their shared concept. Unknown or ambiguous names remain unchanged, including Homo sapiens and unrelated proper names."
+    },
+    "source": "Explicit dialogue teaching: Resolve only uniquely taught label forms to their shared concept. Unknown or ambiguous names remain unchanged, including Homo sapiens and unrelated proper names."
+  },
+  "dialogue_reference_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "aliases": {
+              "you": "addressee",
+              "your": "addressee",
+              "yourself": "addressee",
+              "assistant": "addressee",
+              "addressee": "addressee",
+              "i": "speaker",
+              "me": "speaker",
+              "my": "speaker",
+              "myself": "speaker",
+              "speaker": "speaker"
+            },
+            "subject_operations": [
+              "assert",
+              "retract",
+              "query",
+              "describe",
+              "date_procedure"
+            ],
+            "object_operations": [
+              "assert",
+              "retract",
+              "query",
+              "find"
+            ],
+            "membership_relation": "is",
+            "self_prefix": "I am ",
+            "unknown_description": "I haven't learned that yet. You can teach me."
+          }
+        }
+      ],
+      "output": "n1",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Resolve dialogue roles from the current speaker and addressee. Names of procedures, new names and category labels are not dialogue references."
+    },
+    "source": "Explicit dialogue teaching: Resolve dialogue roles from the current speaker and addressee. Names of procedures, new names and category labels are not dialogue references."
+  },
+  "dialogue_reference": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "dialogue_reference_policy"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "lower",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "aliases"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "context"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "item",
+          "inputs": [
+            "n4",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "has_key",
+          "inputs": [
+            "n4",
+            "n3"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "item",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "choose",
+          "inputs": [
+            "n7",
+            "n8",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "speaker"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n12",
+          "op": "data_equal",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "not",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "lower",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "and",
+          "inputs": [
+            "n13",
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "choose",
+          "inputs": [
+            "n16",
+            "n10",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "addressee"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n20",
+          "op": "data_equal",
+          "inputs": [
+            "n18",
+            "n19"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "not",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n22",
+          "op": "lower",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n22"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n24",
+          "op": "and",
+          "inputs": [
+            "n21",
+            "n23"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "choose",
+          "inputs": [
+            "n24",
+            "n18",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n27",
+          "op": "data_equal",
+          "inputs": [
+            "n25",
+            "n26"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n28",
+          "op": "not",
+          "inputs": [
+            "n27"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n29",
+          "op": "require",
+          "inputs": [
+            "n28",
+            "n25"
+          ],
+          "type": "Data",
+          "message": "What name should I use for that dialogue participant?"
+        }
+      ],
+      "output": "n29",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Bind a dialogue reference to the current participant, including either participant\u2019s explicit name. Missing participants require clarification."
+    },
+    "source": "Explicit dialogue teaching: Bind a dialogue reference to the current participant, including either participant\u2019s explicit name. Missing participants require clarification."
+  },
+  "relationship_language_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            {
+              "relation": "created by",
+              "canonical": "created by",
+              "reverse": false
+            },
+            {
+              "relation": "was created by",
+              "canonical": "created by",
+              "reverse": false
+            },
+            {
+              "relation": "create",
+              "canonical": "created by",
+              "reverse": true
+            },
+            {
+              "relation": "created",
+              "canonical": "created by",
+              "reverse": true
+            },
+            {
+              "relation": "creator of",
+              "canonical": "created by",
+              "reverse": true
+            }
+          ]
+        }
+      ],
+      "output": "n1",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Teach the active/passive meanings of creation: A created B and A is creator of B mean B created by A. This supplies no creator facts."
+    },
+    "source": "Explicit dialogue teaching: Teach the active/passive meanings of creation: A created B and A is creator of B mean B created by A. This supplies no creator facts."
+  },
+  "meaning_fact": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "meaning_fact_before_identity"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "meaning_reference"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            2
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "call",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "name": "meaning_reference"
+        },
+        {
+          "id": "n7",
+          "op": "data_list",
+          "inputs": [
+            "n2",
+            "n4",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "relationship_language_policy"
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "filter",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "data_equal",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n4"
+          }
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n12",
+          "op": "item",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "path": [
+            "reverse"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "as_bool",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "get",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "path": [
+            "canonical"
+          ]
+        },
+        {
+          "id": "n16",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            2
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "choose",
+          "inputs": [
+            "n14",
+            "n16",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            2
+          ]
+        },
+        {
+          "id": "n21",
+          "op": "choose",
+          "inputs": [
+            "n14",
+            "n19",
+            "n20"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "data_list",
+          "inputs": [
+            "n15",
+            "n18",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "size",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n24",
+          "op": "as_data",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n26",
+          "op": "data_equal",
+          "inputs": [
+            "n24",
+            "n25"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n27",
+          "op": "choose",
+          "inputs": [
+            "n26",
+            "n22",
+            "n7"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n27",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Normalize only uniquely taught relationship forms after existing phrase interpretation. The same normalization applies to positive and negative assertions and queries."
+    },
+    "source": "Explicit dialogue teaching: Normalize only uniquely taught relationship forms after existing phrase interpretation. The same normalization applies to positive and negative assertions and queries."
+  },
+  "dialogue_resolve_operation": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "operation"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "context"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "dialogue_reference_policy"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "op"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "subject"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "object"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "subject_operations"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "contains",
+          "inputs": [
+            "n7",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "record",
+          "inputs": [
+            "n5",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "context"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "call",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "name": "dialogue_reference"
+        },
+        {
+          "id": "n11",
+          "op": "choose",
+          "inputs": [
+            "n8",
+            "n10",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "subject"
+        },
+        {
+          "id": "n13",
+          "op": "set_item",
+          "inputs": [
+            "n1",
+            "n12",
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "object_operations"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "contains",
+          "inputs": [
+            "n14",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "get",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "path": [
+            "relation"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "membership_relation"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "data_equal",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "not",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n20",
+          "op": "and",
+          "inputs": [
+            "n15",
+            "n19"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "context"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "call",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Data",
+          "name": "dialogue_reference"
+        },
+        {
+          "id": "n23",
+          "op": "choose",
+          "inputs": [
+            "n20",
+            "n22",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "object"
+        },
+        {
+          "id": "n25",
+          "op": "set_item",
+          "inputs": [
+            "n13",
+            "n24",
+            "n23"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n25",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Resolve subject and object references only in fields that denote participants; preserve concept filters, category values, new names and executable skill identifiers."
+    },
+    "source": "Explicit dialogue teaching: Resolve subject and object references only in fields that denote participants; preserve concept filters, category values, new names and executable skill identifiers."
+  },
+  "dialogue_self_description": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "dialogue_reference_policy"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "description"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "self_prefix"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "."
+        },
+        {
+          "id": "n6",
+          "op": "data_list",
+          "inputs": [
+            "n3",
+            "n4",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n8",
+          "op": "join_text",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "unknown_description"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\n"
+        },
+        {
+          "id": "n12",
+          "op": "data_list",
+          "inputs": [
+            "n8",
+            "n11",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n14",
+          "op": "join_text",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "choose",
+          "inputs": [
+            "n10",
+            "n8",
+            "n14"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n15",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "State the current assistant name and include its ordinary retrieved knowledge. Do not replace learned self-facts with a fixed biography."
+    },
+    "source": "Explicit dialogue teaching: State the current assistant name and include its ordinary retrieved knowledge. Do not replace learned self-facts with a fixed biography."
+  },
+  "dialogue_question_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            {
+              "prefix": "who created ",
+              "suffix": "",
+              "op": "describe",
+              "capture": "subject",
+              "subject": "",
+              "object": "",
+              "relation": "created by"
+            },
+            {
+              "prefix": "who made ",
+              "suffix": "",
+              "op": "describe",
+              "capture": "subject",
+              "subject": "",
+              "object": "",
+              "relation": "created by"
+            },
+            {
+              "prefix": "who is the creator of ",
+              "suffix": "",
+              "op": "describe",
+              "capture": "subject",
+              "subject": "",
+              "object": "",
+              "relation": "created by"
+            },
+            {
+              "prefix": "who is ",
+              "suffix": " creator",
+              "op": "describe",
+              "capture": "subject",
+              "subject": "",
+              "object": "",
+              "relation": "created by"
+            },
+            {
+              "prefix": "who did ",
+              "suffix": " create",
+              "op": "find",
+              "capture": "object",
+              "subject": "",
+              "object": "",
+              "relation": "created by"
+            },
+            {
+              "prefix": "what did ",
+              "suffix": " create",
+              "op": "find",
+              "capture": "object",
+              "subject": "",
+              "object": "",
+              "relation": "created by"
+            },
+            {
+              "prefix": "",
+              "suffix": " is your creator",
+              "op": "assert",
+              "capture": "object",
+              "subject": "assistant",
+              "object": "",
+              "relation": "created by"
+            }
+          ]
+        }
+      ],
+      "output": "n1",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Teach creation-question forms and which participant to retrieve. These templates contain no entity names or answers; add other forms by teaching this table."
+    },
+    "source": "Explicit dialogue teaching: Teach creation-question forms and which participant to retrieve. These templates contain no entity names or answers; add other forms by teaching this table."
+  },
+  "dialogue_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\u2019"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "'"
+        },
+        {
+          "id": "n5",
+          "op": "replace_text",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "?"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n8",
+          "op": "replace_text",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "!"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n11",
+          "op": "replace_text",
+          "inputs": [
+            "n8",
+            "n9",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n13",
+          "op": "split_text",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "filter",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n2",
+                "op": "data_equal",
+                "inputs": [
+                  "n0",
+                  "n1"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n3",
+                "op": "not",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n16",
+          "op": "join_text",
+          "inputs": [
+            "n14",
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "dialogue_question_policy"
+        },
+        {
+          "id": "n18",
+          "op": "map",
+          "inputs": [
+            "n17",
+            "n16"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "prefix"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "suffix"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "split_text",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n7",
+                "op": "data_equal",
+                "inputs": [
+                  "n3",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "data_equal",
+                "inputs": [
+                  "n2",
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n9",
+                "op": "size",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "as_data",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n11",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n12",
+                "op": "data_equal",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n13",
+                "op": "get",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data",
+                "path": [
+                  0
+                ]
+              },
+              {
+                "id": "n14",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n15",
+                "op": "data_equal",
+                "inputs": [
+                  "n13",
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "and",
+                "inputs": [
+                  "n12",
+                  "n15"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n17",
+                "op": "choose",
+                "inputs": [
+                  "n7",
+                  "n8",
+                  "n16"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n18",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n19",
+                "op": "data_equal",
+                "inputs": [
+                  "n3",
+                  "n18"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n20",
+                "op": "get",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "id": "n21",
+                "op": "choose",
+                "inputs": [
+                  "n19",
+                  "n2",
+                  "n20"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n22",
+                "op": "split_text",
+                "inputs": [
+                  "n21",
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n23",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n24",
+                "op": "data_equal",
+                "inputs": [
+                  "n4",
+                  "n23"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n25",
+                "op": "data_equal",
+                "inputs": [
+                  "n2",
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n26",
+                "op": "size",
+                "inputs": [
+                  "n22"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n27",
+                "op": "as_data",
+                "inputs": [
+                  "n26"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n28",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n29",
+                "op": "data_equal",
+                "inputs": [
+                  "n27",
+                  "n28"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n30",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -1
+              },
+              {
+                "id": "n31",
+                "op": "item",
+                "inputs": [
+                  "n22",
+                  "n30"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n32",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n33",
+                "op": "data_equal",
+                "inputs": [
+                  "n31",
+                  "n32"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n34",
+                "op": "and",
+                "inputs": [
+                  "n29",
+                  "n33"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n35",
+                "op": "choose",
+                "inputs": [
+                  "n24",
+                  "n25",
+                  "n34"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n36",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n37",
+                "op": "data_equal",
+                "inputs": [
+                  "n4",
+                  "n36"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n38",
+                "op": "get",
+                "inputs": [
+                  "n22"
+                ],
+                "type": "Data",
+                "path": [
+                  0
+                ]
+              },
+              {
+                "id": "n39",
+                "op": "choose",
+                "inputs": [
+                  "n37",
+                  "n21",
+                  "n38"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n40",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n41",
+                "op": "data_equal",
+                "inputs": [
+                  "n39",
+                  "n40"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n42",
+                "op": "not",
+                "inputs": [
+                  "n41"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n43",
+                "op": "and",
+                "inputs": [
+                  "n35",
+                  "n42"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n44",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "op"
+                ]
+              },
+              {
+                "id": "n45",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "subject"
+                ]
+              },
+              {
+                "id": "n46",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n47",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "object"
+                ]
+              },
+              {
+                "id": "n48",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": false
+              },
+              {
+                "id": "n49",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n50",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n51",
+                "op": "record",
+                "inputs": [
+                  "n44",
+                  "n45",
+                  "n46",
+                  "n47",
+                  "n48",
+                  "n49",
+                  "n50"
+                ],
+                "type": "Data",
+                "keys": [
+                  "op",
+                  "subject",
+                  "relation",
+                  "object",
+                  "negative",
+                  "conditions",
+                  "text"
+                ]
+              },
+              {
+                "id": "n52",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "capture"
+                ]
+              },
+              {
+                "id": "n53",
+                "op": "set_item",
+                "inputs": [
+                  "n51",
+                  "n52",
+                  "n39"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n54",
+                "op": "data_list",
+                "inputs": [
+                  "n53"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n55",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n56",
+                "op": "choose",
+                "inputs": [
+                  "n43",
+                  "n54",
+                  "n55"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n57",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n58",
+                "op": "choose",
+                "inputs": [
+                  "n17",
+                  "n56",
+                  "n57"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n58"
+          }
+        },
+        {
+          "id": "n19",
+          "op": "flatten",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n20",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n21",
+          "op": "size",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "less",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n24",
+          "op": "item",
+          "inputs": [
+            "n19",
+            "n23"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "data_list",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n26",
+          "op": "record",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Data",
+          "keys": [
+            "operations"
+          ]
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n28",
+          "op": "choose",
+          "inputs": [
+            "n22",
+            "n26",
+            "n27"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n28",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Match taught relationship question forms, retaining the known participant and correct lookup direction. Unmatched wording goes to the existing language interface."
+    },
+    "source": "Explicit dialogue teaching: Match taught relationship question forms, retaining the known participant and correct lookup direction. Unmatched wording goes to the existing language interface."
+  },
+  "language_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "dialogue_interpret"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n3",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "language_interpret_before_identity"
+        },
+        {
+          "id": "n5",
+          "op": "choose",
+          "inputs": [
+            "n3",
+            "n4",
+            "n1"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n5",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Try taught dialogue questions before the previously taught language methods, preserving calendar interpretation and the ordinary language fallback."
+    },
+    "source": "Explicit dialogue teaching: Try taught dialogue questions before the previously taught language methods, preserving calendar interpretation and the ordinary language fallback."
+  }
+}

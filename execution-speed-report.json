@@ -1,0 +1,45 @@
+{
+  "backup": "preview-memory.before-execution-cache-20260907T181402Z.sqlite3",
+  "tests_passed": 31,
+  "phase": "live_verified",
+  "incremental_parsing": false,
+  "compiled_subtree_reuse": true,
+  "runs": [
+    {
+      "label": "first",
+      "seconds": 12.059247125,
+      "cache": {
+        "hits": 28,
+        "misses": 79,
+        "procedures": {
+          "js_source_lower_node": 28
+        }
+      }
+    },
+    {
+      "label": "repeat",
+      "seconds": 1.3839172499999997,
+      "cache": {
+        "hits": 1,
+        "misses": 0,
+        "procedures": {
+          "javascript_compile_source": 1
+        }
+      }
+    },
+    {
+      "label": "edited",
+      "seconds": 11.957457707999998,
+      "cache": {
+        "hits": 99,
+        "misses": 8,
+        "procedures": {
+          "js_source_lower_node": 99
+        }
+      }
+    }
+  ],
+  "graph_rule_invalidation_tested": true,
+  "sensor_effects_not_cached_tested": true,
+  "resource_limits_tested": true
+}

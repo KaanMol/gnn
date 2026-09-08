@@ -1,0 +1,654 @@
+{
+  "split_init": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "fair_init"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "base"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "vocabulary"
+        },
+        {
+          "id": "n4",
+          "op": "set_item",
+          "inputs": [
+            "n1",
+            "n3",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "selected"
+        },
+        {
+          "id": "n7",
+          "op": "set_item",
+          "inputs": [
+            "n4",
+            "n6",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "vocabulary"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "base"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "data_equal",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "not",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "bool_data",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "selected"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n1",
+            "n12",
+            "n13"
+          ],
+          "type": "Data",
+          "keys": [
+            "discovery",
+            "reuse",
+            "distinct",
+            "selected"
+          ]
+        }
+      ],
+      "output": "n14",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic fixed-share discovery/reuse allocator."
+  },
+  "split_caps": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "remaining"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "percent"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "multiply",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_data",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 100
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "divide",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_data",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "floor",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "as_data",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "distinct"
+          ]
+        },
+        {
+          "id": "n16",
+          "op": "as_bool",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "as_number",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "subtract",
+          "inputs": [
+            "n17",
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_data",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "record",
+          "inputs": [
+            "n14",
+            "n20"
+          ],
+          "type": "Data",
+          "keys": [
+            "discovery",
+            "reuse"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n23",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n22"
+          ],
+          "type": "Data",
+          "keys": [
+            "discovery",
+            "reuse"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "choose",
+          "inputs": [
+            "n16",
+            "n21",
+            "n23"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n24",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic fixed-share discovery/reuse allocator."
+  },
+  "split_choose": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "discovery_active"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "as_bool",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "reuse_active"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "as_bool",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "reuse_spent"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "discovery_cap"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "multiply",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "discovery_spent"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "reuse_cap"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "multiply",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_data",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "as_number",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "less",
+          "inputs": [
+            "n17",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "reuse"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "discovery"
+        },
+        {
+          "id": "n22",
+          "op": "choose",
+          "inputs": [
+            "n19",
+            "n20",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "discovery"
+        },
+        {
+          "id": "n24",
+          "op": "choose",
+          "inputs": [
+            "n4",
+            "n22",
+            "n23"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "reuse"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n27",
+          "op": "choose",
+          "inputs": [
+            "n4",
+            "n25",
+            "n26"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n28",
+          "op": "choose",
+          "inputs": [
+            "n2",
+            "n24",
+            "n27"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n28",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Generic fixed-share discovery/reuse allocator."
+  }
+}

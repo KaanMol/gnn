@@ -1,0 +1,4407 @@
+{
+  "calendar_is_leap": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Bool",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 400
+        },
+        {
+          "id": "n2",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "call",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "name": "integer_modulo"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n5",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 4
+        },
+        {
+          "id": "n7",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n6"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "call",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "name": "integer_modulo"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n10",
+          "op": "data_equal",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 100
+        },
+        {
+          "id": "n12",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n11"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "call",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "name": "integer_modulo"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n15",
+          "op": "data_equal",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "not",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "and",
+          "inputs": [
+            "n10",
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "or",
+          "inputs": [
+            "n5",
+            "n17"
+          ],
+          "type": "Bool"
+        }
+      ],
+      "output": "n18",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "A Gregorian year is leap when divisible by 400, or divisible by 4 but not 100.",
+      "memoize": true
+    },
+    "source": "Codex teacher: A Gregorian year is leap when divisible by 400, or divisible by 4 but not 100."
+  },
+  "calendar_day_of_year": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "calendar_validate"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2",
+            "n3"
+          ],
+          "type": "Data",
+          "keys": [
+            "date",
+            "month",
+            "days"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "while",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "month"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "date",
+                  1
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "less",
+                "inputs": [
+                  "n3",
+                  "n4"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n5"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "month"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "call",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "name": "calendar_vocabulary"
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "month_lengths"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "subtract",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "as_data",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n9",
+                "op": "item",
+                "inputs": [
+                  "n3",
+                  "n8"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n10",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n11",
+                "op": "data_equal",
+                "inputs": [
+                  "n1",
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "date",
+                  0
+                ]
+              },
+              {
+                "id": "n13",
+                "op": "call",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Bool",
+                "name": "calendar_is_leap"
+              },
+              {
+                "id": "n14",
+                "op": "and",
+                "inputs": [
+                  "n11",
+                  "n13"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n15",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 29
+              },
+              {
+                "id": "n16",
+                "op": "choose",
+                "inputs": [
+                  "n14",
+                  "n15",
+                  "n9"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n17",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "date"
+                ]
+              },
+              {
+                "id": "n18",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n19",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n20",
+                "op": "as_number",
+                "inputs": [
+                  "n18"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n21",
+                "op": "add",
+                "inputs": [
+                  "n19",
+                  "n20"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n22",
+                "op": "as_data",
+                "inputs": [
+                  "n21"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n23",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "days"
+                ]
+              },
+              {
+                "id": "n24",
+                "op": "as_number",
+                "inputs": [
+                  "n23"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n25",
+                "op": "as_number",
+                "inputs": [
+                  "n16"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n26",
+                "op": "add",
+                "inputs": [
+                  "n24",
+                  "n25"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n27",
+                "op": "as_data",
+                "inputs": [
+                  "n26"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n28",
+                "op": "record",
+                "inputs": [
+                  "n17",
+                  "n22",
+                  "n27"
+                ],
+                "type": "Data",
+                "keys": [
+                  "date",
+                  "month",
+                  "days"
+                ]
+              }
+            ],
+            "output": "n28"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "days"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            2
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "add",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_data",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n11",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Add the lengths of completed months, including February\u2019s leap day, then the day within the current month.",
+      "memoize": true
+    },
+    "source": "Codex teacher: Add the lengths of completed months, including February\u2019s leap day, then the day within the current month."
+  },
+  "calendar_day_number": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "calendar_validate"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "subtract",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 365
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "multiply",
+          "inputs": [
+            "n9",
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "as_data",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 4
+        },
+        {
+          "id": "n14",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "as_number",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "divide",
+          "inputs": [
+            "n14",
+            "n15"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "as_data",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "as_number",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "floor",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_data",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "as_number",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "add",
+          "inputs": [
+            "n21",
+            "n22"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n24",
+          "op": "as_data",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 100
+        },
+        {
+          "id": "n26",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n27",
+          "op": "as_number",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "divide",
+          "inputs": [
+            "n26",
+            "n27"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "as_data",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "as_number",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "floor",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n32",
+          "op": "as_data",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n33",
+          "op": "as_number",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n34",
+          "op": "as_number",
+          "inputs": [
+            "n32"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n35",
+          "op": "subtract",
+          "inputs": [
+            "n33",
+            "n34"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n36",
+          "op": "as_data",
+          "inputs": [
+            "n35"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 400
+        },
+        {
+          "id": "n38",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n39",
+          "op": "as_number",
+          "inputs": [
+            "n37"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n40",
+          "op": "divide",
+          "inputs": [
+            "n38",
+            "n39"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n41",
+          "op": "as_data",
+          "inputs": [
+            "n40"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "as_number",
+          "inputs": [
+            "n41"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n43",
+          "op": "floor",
+          "inputs": [
+            "n42"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n44",
+          "op": "as_data",
+          "inputs": [
+            "n43"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n45",
+          "op": "as_number",
+          "inputs": [
+            "n36"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n46",
+          "op": "as_number",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n47",
+          "op": "add",
+          "inputs": [
+            "n45",
+            "n46"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n48",
+          "op": "as_data",
+          "inputs": [
+            "n47"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n49",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "calendar_day_of_year"
+        },
+        {
+          "id": "n50",
+          "op": "as_number",
+          "inputs": [
+            "n48"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n51",
+          "op": "as_number",
+          "inputs": [
+            "n49"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n52",
+          "op": "add",
+          "inputs": [
+            "n50",
+            "n51"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n53",
+          "op": "as_data",
+          "inputs": [
+            "n52"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n53",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Represent a Gregorian date by completed common-year days plus leap days plus its day of year; 0001-01-01 is day 1.",
+      "memoize": true
+    },
+    "source": "Codex teacher: Represent a Gregorian date by completed common-year days plus leap days plus its day of year; 0001-01-01 is day 1."
+  },
+  "calendar_days_between": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "start"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "calendar_day_number"
+        },
+        {
+          "id": "n3",
+          "op": "emit",
+          "inputs": [
+            "n2",
+            "n2"
+          ],
+          "type": "Data",
+          "label": "start_day_number"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "end"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "call",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "name": "calendar_day_number"
+        },
+        {
+          "id": "n6",
+          "op": "emit",
+          "inputs": [
+            "n5",
+            "n5"
+          ],
+          "type": "Data",
+          "label": "end_day_number"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "subtract",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "emit",
+          "inputs": [
+            "n10",
+            "n10"
+          ],
+          "type": "Data",
+          "label": "subtract_day_numbers"
+        }
+      ],
+      "output": "n11",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Days from start to end equals end\u2019s day number minus start\u2019s. Equal dates give zero; reversed dates give a negative result. This method is independent of birthdays."
+    },
+    "source": "Codex teacher: Days from start to end equals end\u2019s day number minus start\u2019s. Equal dates give zero; reversed dates give a negative result. This method is independent of birthdays."
+  },
+  "calendar_annual_date_exists": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Bool",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "anchor"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "year"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n5",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            2
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 29
+        },
+        {
+          "id": "n8",
+          "op": "data_equal",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "and",
+          "inputs": [
+            "n5",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "not",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "call",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Bool",
+          "name": "calendar_is_leap"
+        },
+        {
+          "id": "n12",
+          "op": "or",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        }
+      ],
+      "output": "n12",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "A validated month/day recurs every year except February 29, which exists only in leap years.",
+      "memoize": true
+    },
+    "source": "Codex teacher: A validated month/day recurs every year except February 29, which exists only in leap years."
+  },
+  "calendar_next_annual_date": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "anchor"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "calendar_validate"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "from"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "calendar_validate"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n8",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n4",
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data",
+          "keys": [
+            "anchor",
+            "from",
+            "year",
+            "found",
+            "date"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "while",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "found"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "as_bool",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n3",
+                "op": "not",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "year"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 10000
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "less",
+                "inputs": [
+                  "n6",
+                  "n7"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n9",
+                "op": "and",
+                "inputs": [
+                  "n3",
+                  "n8"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n9"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "year"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "anchor"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  2
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "data_list",
+                "inputs": [
+                  "n1",
+                  "n3",
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data",
+                "keys": [
+                  "anchor",
+                  "year"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "call",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Bool",
+                "name": "calendar_annual_date_exists"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "from"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "record",
+                "inputs": [
+                  "n5",
+                  "n8"
+                ],
+                "type": "Data",
+                "keys": [
+                  "a",
+                  "b"
+                ]
+              },
+              {
+                "id": "n10",
+                "op": "call",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Bool",
+                "name": "calendar_before"
+              },
+              {
+                "id": "n11",
+                "op": "not",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "and",
+                "inputs": [
+                  "n7",
+                  "n11"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n13",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "from"
+                ]
+              },
+              {
+                "id": "n14",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n15",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n16",
+                "op": "as_number",
+                "inputs": [
+                  "n14"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n17",
+                "op": "add",
+                "inputs": [
+                  "n15",
+                  "n16"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n18",
+                "op": "as_data",
+                "inputs": [
+                  "n17"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n19",
+                "op": "bool_data",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n20",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n13",
+                  "n18",
+                  "n19",
+                  "n5"
+                ],
+                "type": "Data",
+                "keys": [
+                  "anchor",
+                  "from",
+                  "year",
+                  "found",
+                  "date"
+                ]
+              }
+            ],
+            "output": "n20"
+          }
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "path": [
+            "found"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "as_bool",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "path": [
+            "date"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "require",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Data",
+          "message": "No next occurrence exists within the taught calendar range."
+        },
+        {
+          "id": "n14",
+          "op": "emit",
+          "inputs": [
+            "n13",
+            "n13"
+          ],
+          "type": "Data",
+          "label": "next_annual_occurrence"
+        }
+      ],
+      "output": "n14",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Find the first valid occurrence of an anchor\u2019s month/day on or after the supplied date. Today counts; February 29 skips years in which that date does not exist."
+    },
+    "source": "Codex teacher: Find the first valid occurrence of an anchor\u2019s month/day on or after the supplied date. Today counts; February 29 skips years in which that date does not exist."
+  },
+  "calendar_question_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            {
+              "relation": "days until birthday",
+              "event": "birthday",
+              "source_method": "calendar_find_birth",
+              "occurrence_method": "calendar_next_annual_date",
+              "distance_method": "calendar_days_between",
+              "source_must_not_be_future": true,
+              "invalid_annual_date": "ask",
+              "explanation": "A birthday repeats the month and day of a person\u2019s birth date each year. Count from today to its next occurrence."
+            }
+          ]
+        }
+      ],
+      "output": "n1",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "To answer days until a birthday, retrieve the birth date, find its next yearly occurrence, and apply the general days-between method. Do not substitute age in years. Ask about non-leap-year observance for a February 29 birthday."
+    },
+    "source": "Codex teacher: To answer days until a birthday, retrieve the birth date, find its next yearly occurrence, and apply the general days-between method. Do not substitute age in years. Ask about non-leap-year observance for a February 29 birthday."
+  },
+  "calendar_event_countdown": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "binding"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "subject"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "source_method"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "facts"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "map",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "fact"
+                ]
+              }
+            ],
+            "output": "n1"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "negatives"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "map",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "fact"
+                ]
+              }
+            ],
+            "output": "n1"
+          }
+        },
+        {
+          "id": "n8",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n5",
+            "n7"
+          ],
+          "type": "Data",
+          "keys": [
+            "subject",
+            "facts",
+            "negatives"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "invoke",
+          "inputs": [
+            "n3",
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "emit",
+          "inputs": [
+            "n9",
+            "n9"
+          ],
+          "type": "Data",
+          "label": "date_from_memory"
+        },
+        {
+          "id": "n11",
+          "op": "get",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data",
+          "path": [
+            "parts"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "clock_observe"
+        },
+        {
+          "id": "n13",
+          "op": "emit",
+          "inputs": [
+            "n12",
+            "n12"
+          ],
+          "type": "Data",
+          "label": "clock_observation"
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "path": [
+            "date"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "call",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data",
+          "name": "calendar_parse"
+        },
+        {
+          "id": "n16",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "source_must_not_be_future"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "as_bool",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "not",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "record",
+          "inputs": [
+            "n15",
+            "n11"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "call",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Bool",
+          "name": "calendar_before"
+        },
+        {
+          "id": "n21",
+          "op": "not",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n22",
+          "op": "or",
+          "inputs": [
+            "n18",
+            "n21"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n23",
+          "op": "require",
+          "inputs": [
+            "n22",
+            "n11"
+          ],
+          "type": "Data",
+          "message": "That source date is in the future. Please correct it before asking about its anniversary."
+        },
+        {
+          "id": "n24",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "occurrence_method"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "record",
+          "inputs": [
+            "n23",
+            "n15"
+          ],
+          "type": "Data",
+          "keys": [
+            "anchor",
+            "from"
+          ]
+        },
+        {
+          "id": "n26",
+          "op": "invoke",
+          "inputs": [
+            "n24",
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "distance_method"
+          ]
+        },
+        {
+          "id": "n28",
+          "op": "record",
+          "inputs": [
+            "n15",
+            "n26"
+          ],
+          "type": "Data",
+          "keys": [
+            "start",
+            "end"
+          ]
+        },
+        {
+          "id": "n29",
+          "op": "invoke",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "get",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "get",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "get",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data",
+          "path": [
+            2
+          ]
+        },
+        {
+          "id": "n33",
+          "op": "data_list",
+          "inputs": [
+            "n30",
+            "n31",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "record",
+          "inputs": [
+            "n33",
+            "n15"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "call",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Bool",
+          "name": "calendar_before"
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n38",
+          "op": "as_number",
+          "inputs": [
+            "n36"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n39",
+          "op": "as_number",
+          "inputs": [
+            "n37"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n40",
+          "op": "add",
+          "inputs": [
+            "n38",
+            "n39"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n41",
+          "op": "as_data",
+          "inputs": [
+            "n40"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "get",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n43",
+          "op": "choose",
+          "inputs": [
+            "n35",
+            "n41",
+            "n42"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n44",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "invalid_annual_date"
+          ]
+        },
+        {
+          "id": "n45",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "ask"
+        },
+        {
+          "id": "n46",
+          "op": "data_equal",
+          "inputs": [
+            "n44",
+            "n45"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n47",
+          "op": "record",
+          "inputs": [
+            "n23",
+            "n43"
+          ],
+          "type": "Data",
+          "keys": [
+            "anchor",
+            "year"
+          ]
+        },
+        {
+          "id": "n48",
+          "op": "call",
+          "inputs": [
+            "n47"
+          ],
+          "type": "Bool",
+          "name": "calendar_annual_date_exists"
+        },
+        {
+          "id": "n49",
+          "op": "not",
+          "inputs": [
+            "n48"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n50",
+          "op": "and",
+          "inputs": [
+            "n46",
+            "n49"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n51",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " \u2014 next "
+        },
+        {
+          "id": "n52",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "event"
+          ]
+        },
+        {
+          "id": "n53",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ": "
+        },
+        {
+          "id": "n54",
+          "op": "call",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Data",
+          "name": "calendar_format"
+        },
+        {
+          "id": "n55",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ". "
+        },
+        {
+          "id": "n56",
+          "op": "text",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n57",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n58",
+          "op": "data_equal",
+          "inputs": [
+            "n29",
+            "n57"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n59",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " day left."
+        },
+        {
+          "id": "n60",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " days left."
+        },
+        {
+          "id": "n61",
+          "op": "choose",
+          "inputs": [
+            "n58",
+            "n59",
+            "n60"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n62",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nToday: "
+        },
+        {
+          "id": "n63",
+          "op": "get",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "path": [
+            "date"
+          ]
+        },
+        {
+          "id": "n64",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " ("
+        },
+        {
+          "id": "n65",
+          "op": "get",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "path": [
+            "timezone"
+          ]
+        },
+        {
+          "id": "n66",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ", live clock).\nUsed the taught links: source date \u2192 next yearly occurrence \u2192 days between dates."
+        },
+        {
+          "id": "n67",
+          "op": "data_list",
+          "inputs": [
+            "n2",
+            "n51",
+            "n52",
+            "n53",
+            "n54",
+            "n55",
+            "n56",
+            "n61",
+            "n62",
+            "n63",
+            "n64",
+            "n65",
+            "n66"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n68",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n69",
+          "op": "join_text",
+          "inputs": [
+            "n67",
+            "n68"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n70",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "calendar_event_countdown"
+        },
+        {
+          "id": "n71",
+          "op": "record",
+          "inputs": [
+            "n69",
+            "n70",
+            "n29",
+            "n26",
+            "n10",
+            "n13",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "method",
+            "days",
+            "next_date",
+            "source",
+            "observation",
+            "binding"
+          ]
+        },
+        {
+          "id": "n72",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "This birthday falls on February 29. In a non-leap year, should I use February 28, March 1, or the next actual February 29? That observance rule still needs teaching."
+        },
+        {
+          "id": "n73",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "calendar_event_countdown"
+        },
+        {
+          "id": "n74",
+          "op": "record",
+          "inputs": [
+            "n72",
+            "n73"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "method"
+          ]
+        },
+        {
+          "id": "n75",
+          "op": "choose",
+          "inputs": [
+            "n50",
+            "n74",
+            "n71"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n75",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Follow the supplied event-to-method links, obtain a date from memory and today from the clock, select the next occurrence, and count days. Return the answer and its actual source/method evidence."
+    },
+    "source": "Codex teacher: Follow the supplied event-to-method links, obtain a date from memory and today from the clock, select the next occurrence, and count days. Return the answer and its actual source/method evidence."
+  },
+  "knowledge_describe_facts": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "facts"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "filter",
+          "inputs": [
+            "n1",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "fact"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n5",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "subject"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "data_equal",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n10",
+                "op": "data_equal",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n12",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n11"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n13",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n14",
+                "op": "data_equal",
+                "inputs": [
+                  "n12",
+                  "n13"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n15",
+                "op": "or",
+                "inputs": [
+                  "n10",
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "and",
+                "inputs": [
+                  "n7",
+                  "n15"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n16"
+          }
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "negatives"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "filter",
+          "inputs": [
+            "n3",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "fact"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n5",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "subject"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "data_equal",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n10",
+                "op": "data_equal",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n12",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n11"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n13",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n14",
+                "op": "data_equal",
+                "inputs": [
+                  "n12",
+                  "n13"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n15",
+                "op": "or",
+                "inputs": [
+                  "n10",
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "and",
+                "inputs": [
+                  "n7",
+                  "n15"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n16"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "facts",
+            "negatives"
+          ]
+        }
+      ],
+      "output": "n5",
+      "trace_mode": "explicit",
+      "description": "Select facts and negations about a subject with an optional relation filter.",
+      "internal": true
+    },
+    "source": "Explicit foundational teaching: Select facts and negations about a subject with an optional relation filter."
+  },
+  "computed_question_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            {
+              "relation": "days until birthday",
+              "method": "calendar_event_countdown"
+            }
+          ]
+        }
+      ],
+      "output": "n1",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "This requested property is answered by an executable method instead of looking for a stored scalar value."
+    },
+    "source": "Codex teacher: This requested property is answered by an executable method instead of looking for a stored scalar value."
+  },
+  "knowledge_describe": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "computed_question_policy"
+        },
+        {
+          "id": "n2",
+          "op": "filter",
+          "inputs": [
+            "n1",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item",
+                  "relation"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context",
+                  "relation"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "data_equal",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n3",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "calendar_question_policy"
+        },
+        {
+          "id": "n4",
+          "op": "filter",
+          "inputs": [
+            "n3",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item",
+                  "relation"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context",
+                  "relation"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "data_equal",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n6",
+          "op": "item",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "binding"
+        },
+        {
+          "id": "n8",
+          "op": "set_item",
+          "inputs": [
+            "n0",
+            "n7",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n10",
+          "op": "item",
+          "inputs": [
+            "n2",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "get",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data",
+          "path": [
+            "method"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "invoke",
+          "inputs": [
+            "n11",
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n14",
+          "op": "size",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "less",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "knowledge_describe_facts"
+        },
+        {
+          "id": "n17",
+          "op": "choose",
+          "inputs": [
+            "n15",
+            "n12",
+            "n16"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n17",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Look up a requested property in the taught computed-question table and invoke its method; otherwise retrieve ordinary stored facts."
+    },
+    "source": "Codex teacher: Look up a requested property in the taught computed-question table and invoke its method; otherwise retrieve ordinary stored facts."
+  },
+  "language_question_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "templates": [
+              {
+                "prefix": "in how many days is ",
+                "suffix": " his birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "in how many days is ",
+                "suffix": " her birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "in how many days is ",
+                "suffix": "'s birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "in how many days is ",
+                "suffix": " birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days until ",
+                "suffix": " his birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days until ",
+                "suffix": " her birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days until ",
+                "suffix": "'s birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days until ",
+                "suffix": " birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days till ",
+                "suffix": " his birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days till ",
+                "suffix": " her birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days till ",
+                "suffix": "'s birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days till ",
+                "suffix": " birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days are left until ",
+                "suffix": " his birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days are left until ",
+                "suffix": " her birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days are left until ",
+                "suffix": "'s birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days are left until ",
+                "suffix": " birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days left until ",
+                "suffix": " his birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days left until ",
+                "suffix": " her birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days left until ",
+                "suffix": "'s birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "how many days left until ",
+                "suffix": " birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "when is ",
+                "suffix": " his birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "when is ",
+                "suffix": " her birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "when is ",
+                "suffix": "'s birthday",
+                "relation": "days until birthday"
+              },
+              {
+                "prefix": "when is ",
+                "suffix": " birthday",
+                "relation": "days until birthday"
+              }
+            ],
+            "subject_aliases": {
+              "my": "speaker",
+              "your": "assistant"
+            },
+            "replace": [
+              [
+                "\u2019",
+                "'"
+              ],
+              [
+                "?",
+                ""
+              ],
+              [
+                "!",
+                ""
+              ]
+            ]
+          }
+        }
+      ],
+      "output": "n1",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Interpret these birthday-countdown question forms as a request for the days-until-birthday property. The relation then finds its taught calculation method; this is not a request for age."
+    },
+    "source": "Codex teacher: Interpret these birthday-countdown question forms as a request for the days-until-birthday property. The relation then finds its taught calculation method; this is not a request for age."
+  },
+  "language_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "language_question_policy"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "lower",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "replace"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "pending"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "while",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "literal",
+                "inputs": [],
+                "type": "Number",
+                "value": "0"
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "less",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n4"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n3",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "text"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  0
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  1
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "replace_text",
+                "inputs": [
+                  "n4",
+                  "n5",
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "slice",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Data",
+                "start": 1
+              },
+              {
+                "id": "n10",
+                "op": "record",
+                "inputs": [
+                  "n7",
+                  "n9"
+                ],
+                "type": "Data",
+                "keys": [
+                  "text",
+                  "pending"
+                ]
+              }
+            ],
+            "output": "n10"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n9",
+          "op": "split_text",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "filter",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n2",
+                "op": "data_equal",
+                "inputs": [
+                  "n0",
+                  "n1"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n3",
+                "op": "not",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n12",
+          "op": "join_text",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "templates"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "map",
+          "inputs": [
+            "n13",
+            "n12"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "prefix"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "split_text",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "size",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_data",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n8",
+                "op": "data_equal",
+                "inputs": [
+                  "n6",
+                  "n7"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n10",
+                "op": "item",
+                "inputs": [
+                  "n4",
+                  "n9"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n11",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n12",
+                "op": "data_equal",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n13",
+                "op": "and",
+                "inputs": [
+                  "n8",
+                  "n12"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n14",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n15",
+                "op": "item",
+                "inputs": [
+                  "n4",
+                  "n14"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n16",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "suffix"
+                ]
+              },
+              {
+                "id": "n17",
+                "op": "split_text",
+                "inputs": [
+                  "n15",
+                  "n16"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n18",
+                "op": "size",
+                "inputs": [
+                  "n17"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n19",
+                "op": "as_data",
+                "inputs": [
+                  "n18"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n20",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n21",
+                "op": "data_equal",
+                "inputs": [
+                  "n19",
+                  "n20"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n22",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -1
+              },
+              {
+                "id": "n23",
+                "op": "item",
+                "inputs": [
+                  "n17",
+                  "n22"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n24",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n25",
+                "op": "data_equal",
+                "inputs": [
+                  "n23",
+                  "n24"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n26",
+                "op": "and",
+                "inputs": [
+                  "n21",
+                  "n25"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n27",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n28",
+                "op": "item",
+                "inputs": [
+                  "n17",
+                  "n27"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n29",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n30",
+                "op": "data_equal",
+                "inputs": [
+                  "n28",
+                  "n29"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n31",
+                "op": "not",
+                "inputs": [
+                  "n30"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n32",
+                "op": "and",
+                "inputs": [
+                  "n26",
+                  "n31"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n33",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "relation"
+                ]
+              },
+              {
+                "id": "n34",
+                "op": "record",
+                "inputs": [
+                  "n28",
+                  "n33"
+                ],
+                "type": "Data",
+                "keys": [
+                  "subject",
+                  "relation"
+                ]
+              },
+              {
+                "id": "n35",
+                "op": "data_list",
+                "inputs": [
+                  "n34"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n36",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n37",
+                "op": "choose",
+                "inputs": [
+                  "n32",
+                  "n35",
+                  "n36"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n38",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n39",
+                "op": "choose",
+                "inputs": [
+                  "n13",
+                  "n37",
+                  "n38"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n39"
+          }
+        },
+        {
+          "id": "n15",
+          "op": "flatten",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n17",
+          "op": "item",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "subject"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "subject_aliases"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "has_key",
+          "inputs": [
+            "n19",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "item",
+          "inputs": [
+            "n19",
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "choose",
+          "inputs": [
+            "n20",
+            "n21",
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "describe"
+        },
+        {
+          "id": "n24",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "relation"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n29",
+          "op": "record",
+          "inputs": [
+            "n23",
+            "n22",
+            "n24",
+            "n25",
+            "n26",
+            "n27",
+            "n28"
+          ],
+          "type": "Data",
+          "keys": [
+            "op",
+            "subject",
+            "relation",
+            "object",
+            "negative",
+            "conditions",
+            "text"
+          ]
+        },
+        {
+          "id": "n30",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n31",
+          "op": "size",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n32",
+          "op": "less",
+          "inputs": [
+            "n30",
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "data_list",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "record",
+          "inputs": [
+            "n33"
+          ],
+          "type": "Data",
+          "keys": [
+            "operations"
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n36",
+          "op": "choose",
+          "inputs": [
+            "n32",
+            "n34",
+            "n35"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n36",
+      "internal": true,
+      "trace_mode": "explicit",
+      "description": "Match taught question templates in priority order, capture the subject and bind role aliases. Return a description request for the taught property, or no match so the ordinary language interface can continue."
+    },
+    "source": "Codex teacher: Match taught question templates in priority order, capture the subject and bind role aliases. Return a description request for the taught property, or no match so the ordinary language interface can continue."
+  }
+}

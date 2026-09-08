@@ -1,0 +1,3466 @@
+{
+  "language_normalize": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "lower",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n2",
+          "op": "characters",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "while",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "literal",
+                "inputs": [],
+                "type": "Number",
+                "value": "0"
+              },
+              {
+                "id": "n2",
+                "op": "size",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n3",
+                "op": "less",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": [
+                  ".",
+                  "?",
+                  "!",
+                  " ",
+                  "\t",
+                  "\n"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -1
+              },
+              {
+                "id": "n6",
+                "op": "item",
+                "inputs": [
+                  "n0",
+                  "n5"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "contains",
+                "inputs": [
+                  "n4",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": null
+              },
+              {
+                "id": "n9",
+                "op": "data_equal",
+                "inputs": [
+                  "n0",
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "choose",
+                "inputs": [
+                  "n3",
+                  "n7",
+                  "n9"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n10"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "slice",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "stop": -1
+              }
+            ],
+            "output": "n1"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n5",
+          "op": "join_text",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\u2019"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "'"
+        },
+        {
+          "id": "n8",
+          "op": "replace_text",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\n"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n11",
+          "op": "replace_text",
+          "inputs": [
+            "n8",
+            "n9",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\t"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n14",
+          "op": "replace_text",
+          "inputs": [
+            "n11",
+            "n12",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n16",
+          "op": "split_text",
+          "inputs": [
+            "n14",
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "filter",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n2",
+                "op": "data_equal",
+                "inputs": [
+                  "n0",
+                  "n1"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n3",
+                "op": "not",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n19",
+          "op": "join_text",
+          "inputs": [
+            "n17",
+            "n18"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n19",
+      "trace_mode": "explicit",
+      "description": "Normalize case and whitespace and remove terminal punctuation while preserving punctuation inside values."
+    },
+    "source": "Explicit bilingual grammar teaching: Normalize case and whitespace and remove terminal punctuation while preserving punctuation inside values."
+  },
+  "language_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "blocked_words": [
+              "forget",
+              "vergeet",
+              "says",
+              "said",
+              "thinks",
+              "zegt",
+              "zei",
+              "denkt",
+              "if",
+              "maybe",
+              "perhaps",
+              "or",
+              "and",
+              "not",
+              "never",
+              "sometimes",
+              "als",
+              "misschien",
+              "of",
+              "en",
+              "niet",
+              "nooit",
+              "soms"
+            ],
+            "type_blocked_words": [
+              "in",
+              "on",
+              "under",
+              "op",
+              "onder",
+              "with",
+              "met"
+            ],
+            "unresolved": [
+              "who",
+              "what",
+              "wie",
+              "wat",
+              "he",
+              "she",
+              "they",
+              "it",
+              "hij",
+              "zij",
+              "ze",
+              "het",
+              "die"
+            ]
+          }
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Decline clauses and unresolved third-person references that this starting grammar cannot safely represent. Ask rather than discard a condition or assume a referent."
+    },
+    "source": "Explicit bilingual grammar teaching: Decline clauses and unresolved third-person references that this starting grammar cannot safely represent. Ask rather than discard a condition or assume a referent."
+  },
+  "language_slot_valid": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "language_policy"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n4",
+          "op": "split_text",
+          "inputs": [
+            "n2",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "blocked_words"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "filter",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "contains",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "unresolved"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "contains",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n12",
+          "op": "data_equal",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "not",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n15",
+          "op": "size",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "less",
+          "inputs": [
+            "n14",
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "not",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "not",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "and",
+          "inputs": [
+            "n17",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n20",
+          "op": "and",
+          "inputs": [
+            "n13",
+            "n19"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "bool_data",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n21",
+      "trace_mode": "explicit",
+      "description": "Reject unsupported qualifiers, compound clauses, empty slots and unresolved pronouns."
+    },
+    "source": "Explicit bilingual grammar teaching: Reject unsupported qualifiers, compound clauses, empty slots and unresolved pronouns."
+  },
+  "language_match": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "rule"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "prefix"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "suffix"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "split_text",
+          "inputs": [
+            "n2",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n7",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "size",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n12",
+          "op": "data_equal",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n15",
+          "op": "data_equal",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "and",
+          "inputs": [
+            "n12",
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "choose",
+          "inputs": [
+            "n7",
+            "n8",
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n19",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n20",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n22",
+          "op": "choose",
+          "inputs": [
+            "n17",
+            "n20",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "choose",
+          "inputs": [
+            "n19",
+            "n2",
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "split_text",
+          "inputs": [
+            "n23",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n26",
+          "op": "data_equal",
+          "inputs": [
+            "n4",
+            "n25"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n27",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n28",
+          "op": "size",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "as_data",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n31",
+          "op": "data_equal",
+          "inputs": [
+            "n29",
+            "n30"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n32",
+          "op": "get",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n33",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n34",
+          "op": "data_equal",
+          "inputs": [
+            "n32",
+            "n33"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n36",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n35"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n37",
+          "op": "choose",
+          "inputs": [
+            "n31",
+            "n34",
+            "n36"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n38",
+          "op": "choose",
+          "inputs": [
+            "n26",
+            "n27",
+            "n37"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n39",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n40",
+          "op": "data_equal",
+          "inputs": [
+            "n4",
+            "n39"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n41",
+          "op": "get",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n42",
+          "op": "choose",
+          "inputs": [
+            "n40",
+            "n23",
+            "n41"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n43",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "slots"
+          ]
+        },
+        {
+          "id": "n44",
+          "op": "size",
+          "inputs": [
+            "n43"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n45",
+          "op": "as_data",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n46",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "separator"
+          ]
+        },
+        {
+          "id": "n47",
+          "op": "split_text",
+          "inputs": [
+            "n42",
+            "n46"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n48",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n49",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n48"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n50",
+          "op": "get",
+          "inputs": [
+            "n47"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n51",
+          "op": "choose",
+          "inputs": [
+            "n49",
+            "n50",
+            "n42"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n52",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n53",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n52"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n54",
+          "op": "get",
+          "inputs": [
+            "n47"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n55",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n56",
+          "op": "choose",
+          "inputs": [
+            "n53",
+            "n54",
+            "n55"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n57",
+          "op": "and",
+          "inputs": [
+            "n17",
+            "n38"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n58",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n59",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n58"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n60",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n61",
+          "op": "data_equal",
+          "inputs": [
+            "n42",
+            "n60"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n62",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n63",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n62"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n64",
+          "op": "size",
+          "inputs": [
+            "n47"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n65",
+          "op": "as_data",
+          "inputs": [
+            "n64"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n66",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n67",
+          "op": "data_equal",
+          "inputs": [
+            "n65",
+            "n66"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n68",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n69",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n68"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n70",
+          "op": "choose",
+          "inputs": [
+            "n63",
+            "n67",
+            "n69"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n71",
+          "op": "choose",
+          "inputs": [
+            "n59",
+            "n61",
+            "n70"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n72",
+          "op": "and",
+          "inputs": [
+            "n57",
+            "n71"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n73",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n74",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n73"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n75",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n76",
+          "op": "record",
+          "inputs": [
+            "n51"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        },
+        {
+          "id": "n77",
+          "op": "call",
+          "inputs": [
+            "n76"
+          ],
+          "type": "Data",
+          "name": "language_slot_valid"
+        },
+        {
+          "id": "n78",
+          "op": "as_bool",
+          "inputs": [
+            "n77"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n79",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n80",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n79"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n81",
+          "op": "record",
+          "inputs": [
+            "n56"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        },
+        {
+          "id": "n82",
+          "op": "call",
+          "inputs": [
+            "n81"
+          ],
+          "type": "Data",
+          "name": "language_slot_valid"
+        },
+        {
+          "id": "n83",
+          "op": "as_bool",
+          "inputs": [
+            "n82"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n84",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n85",
+          "op": "choose",
+          "inputs": [
+            "n80",
+            "n83",
+            "n84"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n86",
+          "op": "and",
+          "inputs": [
+            "n78",
+            "n85"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n87",
+          "op": "choose",
+          "inputs": [
+            "n74",
+            "n75",
+            "n86"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n88",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n89",
+          "op": "split_text",
+          "inputs": [
+            "n56",
+            "n88"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n90",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "language_policy"
+        },
+        {
+          "id": "n91",
+          "op": "get",
+          "inputs": [
+            "n90"
+          ],
+          "type": "Data",
+          "path": [
+            "type_blocked_words"
+          ]
+        },
+        {
+          "id": "n92",
+          "op": "filter",
+          "inputs": [
+            "n89",
+            "n91"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "contains",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n93",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "operation",
+            "relation"
+          ]
+        },
+        {
+          "id": "n94",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "is"
+        },
+        {
+          "id": "n95",
+          "op": "data_equal",
+          "inputs": [
+            "n93",
+            "n94"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n96",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n97",
+          "op": "size",
+          "inputs": [
+            "n92"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n98",
+          "op": "less",
+          "inputs": [
+            "n96",
+            "n97"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n99",
+          "op": "not",
+          "inputs": [
+            "n98"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n100",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n101",
+          "op": "choose",
+          "inputs": [
+            "n95",
+            "n99",
+            "n100"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n102",
+          "op": "and",
+          "inputs": [
+            "n87",
+            "n101"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n103",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n104",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n103"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n105",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {}
+        },
+        {
+          "id": "n106",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {}
+        },
+        {
+          "id": "n107",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "slots",
+            0
+          ]
+        },
+        {
+          "id": "n108",
+          "op": "set_item",
+          "inputs": [
+            "n106",
+            "n107",
+            "n51"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n109",
+          "op": "choose",
+          "inputs": [
+            "n104",
+            "n105",
+            "n108"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n110",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n111",
+          "op": "data_equal",
+          "inputs": [
+            "n45",
+            "n110"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n112",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "slots",
+            1
+          ]
+        },
+        {
+          "id": "n113",
+          "op": "set_item",
+          "inputs": [
+            "n109",
+            "n112",
+            "n56"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n114",
+          "op": "choose",
+          "inputs": [
+            "n111",
+            "n113",
+            "n109"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n115",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n116",
+          "op": "choose",
+          "inputs": [
+            "n102",
+            "n114",
+            "n115"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n117",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n118",
+          "op": "choose",
+          "inputs": [
+            "n72",
+            "n116",
+            "n117"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n118",
+      "trace_mode": "explicit",
+      "description": "Match a taught sentence frame and retain its variable phrases. Unsupported or partial matches yield no interpretation."
+    },
+    "source": "Explicit bilingual grammar teaching: Match a taught sentence frame and retain its variable phrases. Unsupported or partial matches yield no interpretation."
+  },
+  "language_resolve_word": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "token"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "bindings"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "{subject}"
+        },
+        {
+          "id": "n4",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n3"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "subject"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "{object}"
+        },
+        {
+          "id": "n7",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "object"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "choose",
+          "inputs": [
+            "n7",
+            "n8",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "choose",
+          "inputs": [
+            "n4",
+            "n5",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "attempt",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "skills.language_words"
+              },
+              {
+                "id": "n2",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n0"
+                ],
+                "type": "Data",
+                "keys": [
+                  "namespace",
+                  "key"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "act",
+                "inputs": [
+                  "n0",
+                  "n2"
+                ],
+                "type": "Data",
+                "surface": "workspace",
+                "action": "read"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "as_bool",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data",
+          "path": [
+            "result"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "choose",
+          "inputs": [
+            "n13",
+            "n14",
+            "n10"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n15",
+      "trace_mode": "explicit",
+      "description": "Resolve explicitly taught aliases, including Dutch concepts and dialogue roles. Unlisted words remain unchanged."
+    },
+    "source": "Explicit bilingual grammar teaching: Resolve explicitly taught aliases, including Dutch concepts and dialogue roles. Unlisted words remain unchanged."
+  },
+  "language_operation": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "rule",
+            "operation"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "bindings"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "subject"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "token",
+            "bindings"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "call",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "name": "language_resolve_word"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "subject"
+        },
+        {
+          "id": "n7",
+          "op": "set_item",
+          "inputs": [
+            "n1",
+            "n6",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "object"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "record",
+          "inputs": [
+            "n8",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "token",
+            "bindings"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "call",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "name": "language_resolve_word"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "object"
+        },
+        {
+          "id": "n12",
+          "op": "set_item",
+          "inputs": [
+            "n7",
+            "n11",
+            "n10"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n12",
+      "trace_mode": "explicit",
+      "description": "Fill the typed operation from matched phrases using the shared bilingual vocabulary."
+    },
+    "source": "Explicit bilingual grammar teaching: Fill the typed operation from matched phrases using the shared bilingual vocabulary."
+  },
+  "language_parse": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.language_patterns"
+        },
+        {
+          "id": "n2",
+          "op": "record",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n2"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "entries"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "call",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "name": "language_normalize"
+        },
+        {
+          "id": "n6",
+          "op": "map",
+          "inputs": [
+            "n3",
+            "n5"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item",
+                  "value"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "rule",
+                  "text"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "call",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "name": "language_match"
+              },
+              {
+                "id": "n5",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": null
+              },
+              {
+                "id": "n6",
+                "op": "data_equal",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n7",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": null
+              },
+              {
+                "id": "n8",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n4"
+                ],
+                "type": "Data",
+                "keys": [
+                  "rule",
+                  "bindings"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "call",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Data",
+                "name": "language_operation"
+              },
+              {
+                "id": "n10",
+                "op": "choose",
+                "inputs": [
+                  "n6",
+                  "n7",
+                  "n9"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n10"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "filter",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": null
+              },
+              {
+                "id": "n2",
+                "op": "data_equal",
+                "inputs": [
+                  "n0",
+                  "n1"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n3",
+                "op": "not",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n8",
+          "op": "unique",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "op": "clarify",
+            "subject": "",
+            "relation": "",
+            "object": "",
+            "negative": false,
+            "conditions": [],
+            "text": "I found more than one meaning in the taught grammar. Can you rephrase? / Ik vind meerdere betekenissen. Kun je het anders formuleren?"
+          }
+        },
+        {
+          "id": "n10",
+          "op": "size",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_data",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n13",
+          "op": "data_equal",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "data_list",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "choose",
+          "inputs": [
+            "n13",
+            "n8",
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "record",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "keys": [
+            "operations"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n18",
+          "op": "size",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "less",
+          "inputs": [
+            "n17",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n21",
+          "op": "choose",
+          "inputs": [
+            "n19",
+            "n16",
+            "n20"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n21",
+      "trace_mode": "explicit",
+      "description": "Run all taught frames. Equivalent meanings merge; conflicting meanings ask for clarification. No model participates in this parser."
+    },
+    "source": "Explicit bilingual grammar teaching: Run all taught frames. Equivalent meanings merge; conflicting meanings ask for clarification. No model participates in this parser."
+  },
+  "language_unknown": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "operations": [
+              {
+                "op": "clarify",
+                "subject": "",
+                "relation": "",
+                "object": "",
+                "negative": false,
+                "conditions": [],
+                "text": "I have no taught sentence pattern for that yet. Can you rephrase, or teach a pattern in Teach & inspect? / Ik ken nog geen zinspatroon hiervoor. Kun je het anders formuleren of een patroon aanleren?"
+              }
+            ]
+          }
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Ask for teaching when symbolic mode cannot parse a message; never silently invoke Gemma."
+    },
+    "source": "Explicit bilingual grammar teaching: Ask for teaching when symbolic mode cannot parse a message; never silently invoke Gemma."
+  },
+  "language_unknown_response": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "language_unknown"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "operations",
+            0,
+            "text"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        }
+      ],
+      "output": "n3",
+      "trace_mode": "explicit",
+      "description": "Explain the missing grammar pattern and ask for rephrasing or teaching in both languages."
+    },
+    "source": "Explicit bilingual grammar teaching: Explain the missing grammar pattern and ask for rephrasing or teaching in both languages."
+  },
+  "language_mode": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "mode"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "symbolic",
+            "hybrid"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "contains",
+          "inputs": [
+            "n2",
+            "n1"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "mode"
+        },
+        {
+          "id": "n5",
+          "op": "require",
+          "inputs": [
+            "n3",
+            "n1"
+          ],
+          "type": "Data",
+          "message": "Choose symbolic or hybrid language mode."
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "session.language"
+        },
+        {
+          "id": "n7",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n7"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Language mode: "
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "data_list",
+          "inputs": [
+            "n9",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n13",
+          "op": "join_text",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "record",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        }
+      ],
+      "output": "n14",
+      "trace_mode": "explicit",
+      "description": "Store the language mode. Symbolic mode disables model fallback; hybrid mode can ask the existing language model after taught patterns fail."
+    },
+    "source": "Explicit bilingual grammar teaching: Store the language mode. Symbolic mode disables model fallback; hybrid mode can ask the existing language model after taught patterns fail."
+  },
+  "language_teach_word": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "word"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "language_normalize"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "meaning"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.language_words"
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n2",
+            "n3"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n5"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Learned that word mapping."
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "entry"
+          ]
+        }
+      ],
+      "output": "n9",
+      "trace_mode": "explicit",
+      "description": "Teach an explicit surface word or phrase to its shared concept or dialogue role."
+    },
+    "source": "Explicit bilingual grammar teaching: Teach an explicit surface word or phrase to its shared concept or dialogue role."
+  },
+  "language_teach_pattern": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "id"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "rule"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.language_patterns"
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n4"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Learned that sentence pattern."
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "pattern"
+          ]
+        }
+      ],
+      "output": "n8",
+      "trace_mode": "explicit",
+      "description": "Store a sentence frame as graph data. The generic matcher reads these records on the next request."
+    },
+    "source": "Explicit bilingual grammar teaching: Store a sentence frame as graph data. The generic matcher reads these records on the next request."
+  },
+  "behavior_interpret_before_bilingual": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "dashboard_interpret"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n3",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "behavior_interpret_before_dashboard"
+        },
+        {
+          "id": "n5",
+          "op": "choose",
+          "inputs": [
+            "n3",
+            "n4",
+            "n1"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n5",
+      "trace_mode": "explicit",
+      "description": "Try taught dashboard language patterns, then preserve the previous conversation interpreter."
+    },
+    "source": "Explicit dashboard teaching: Try taught dashboard language patterns, then preserve the previous conversation interpreter."
+  },
+  "behavior_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "language_normalize"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "voeg het weer van vandaag toe"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "add today's weather"
+        },
+        {
+          "id": "n5",
+          "op": "replace_text",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "voeg weer toe"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "add weather"
+        },
+        {
+          "id": "n8",
+          "op": "replace_text",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " aan mijn dashboard"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " to my dashboard"
+        },
+        {
+          "id": "n11",
+          "op": "replace_text",
+          "inputs": [
+            "n8",
+            "n9",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " aan het dashboard"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " to the dashboard"
+        },
+        {
+          "id": "n14",
+          "op": "replace_text",
+          "inputs": [
+            "n11",
+            "n12",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "en ververs het"
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "and refresh it"
+        },
+        {
+          "id": "n17",
+          "op": "replace_text",
+          "inputs": [
+            "n14",
+            "n15",
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "ververs het"
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "refresh it"
+        },
+        {
+          "id": "n20",
+          "op": "replace_text",
+          "inputs": [
+            "n17",
+            "n18",
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "ververs het weer"
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "refresh weather"
+        },
+        {
+          "id": "n23",
+          "op": "replace_text",
+          "inputs": [
+            "n20",
+            "n21",
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " elke "
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " every "
+        },
+        {
+          "id": "n26",
+          "op": "replace_text",
+          "inputs": [
+            "n23",
+            "n24",
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " minuten"
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " minutes"
+        },
+        {
+          "id": "n29",
+          "op": "replace_text",
+          "inputs": [
+            "n26",
+            "n27",
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " minuut"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " minute"
+        },
+        {
+          "id": "n32",
+          "op": "replace_text",
+          "inputs": [
+            "n29",
+            "n30",
+            "n31"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n33",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " uren"
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " hours"
+        },
+        {
+          "id": "n35",
+          "op": "replace_text",
+          "inputs": [
+            "n32",
+            "n33",
+            "n34"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " uur"
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " hours"
+        },
+        {
+          "id": "n38",
+          "op": "replace_text",
+          "inputs": [
+            "n35",
+            "n36",
+            "n37"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n39",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " seconden"
+        },
+        {
+          "id": "n40",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " seconds"
+        },
+        {
+          "id": "n41",
+          "op": "replace_text",
+          "inputs": [
+            "n38",
+            "n39",
+            "n40"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "record",
+          "inputs": [
+            "n41"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        },
+        {
+          "id": "n43",
+          "op": "call",
+          "inputs": [
+            "n42"
+          ],
+          "type": "Data",
+          "name": "dashboard_interpret"
+        },
+        {
+          "id": "n44",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "wat is het weer",
+            "hoe is het weer",
+            "wat voor weer is het"
+          ]
+        },
+        {
+          "id": "n45",
+          "op": "contains",
+          "inputs": [
+            "n44",
+            "n41"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n46",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "graph_run"
+        },
+        {
+          "id": "n47",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "web_weather"
+        },
+        {
+          "id": "n48",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n49",
+          "op": "record",
+          "inputs": [
+            "n46",
+            "n47",
+            "n48"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "name",
+            "argument"
+          ]
+        },
+        {
+          "id": "n50",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n51",
+          "op": "data_equal",
+          "inputs": [
+            "n43",
+            "n50"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n52",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "behavior_interpret_before_bilingual"
+        },
+        {
+          "id": "n53",
+          "op": "choose",
+          "inputs": [
+            "n51",
+            "n52",
+            "n43"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n54",
+          "op": "choose",
+          "inputs": [
+            "n45",
+            "n49",
+            "n53"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n54",
+      "trace_mode": "explicit",
+      "description": "Map taught Dutch dashboard/weather commands to the same graph methods, preserving previous English behavior."
+    },
+    "source": "Explicit bilingual grammar teaching: Map taught Dutch dashboard/weather commands to the same graph methods, preserving previous English behavior."
+  }
+}

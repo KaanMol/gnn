@@ -1,0 +1,42 @@
+{
+  "live": true,
+  "tests_passed": 35,
+  "runs": [
+    {
+      "case": "first",
+      "cache": {
+        "hits": 28,
+        "misses": 79,
+        "procedures": {
+          "js_source_lower_node": 28
+        },
+        "prepared_plan_hits": 96,
+        "prepared_plan_misses": 21
+      },
+      "engine_actions": [
+        "status",
+        "prepare"
+      ],
+      "output_correct": true,
+      "seconds": 12.225092292000001
+    },
+    {
+      "case": "edited",
+      "cache": {
+        "hits": 99,
+        "misses": 8,
+        "procedures": {
+          "js_source_lower_node": 99
+        },
+        "prepared_plan_hits": 77,
+        "prepared_plan_misses": 21
+      },
+      "engine_actions": [
+        "status"
+      ],
+      "output_correct": true,
+      "seconds": 12.195967791000001
+    }
+  ],
+  "incremental_parsing": false
+}

@@ -1,0 +1,368 @@
+{
+  "temperature_convert": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "fahrenheit"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 32
+        },
+        {
+          "id": "n3",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "subtract",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_data",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 5
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "multiply",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_data",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 9
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "divide",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_data",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "record",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data",
+          "keys": [
+            "celsius"
+          ]
+        }
+      ],
+      "output": "n17",
+      "description": "Convert a Fahrenheit reading to Celsius by subtracting 32 and multiplying by 5/9.",
+      "trace_mode": "explicit",
+      "skill": {
+        "requires": [
+          "fahrenheit_reading"
+        ],
+        "provides": [
+          "celsius_reading"
+        ],
+        "deletes": [
+          "fahrenheit_reading"
+        ]
+      }
+    },
+    "source": "Example teacher: reusable temperature skills"
+  },
+  "temperature_assess": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "celsius"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 25
+        },
+        {
+          "id": "n3",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "less",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "not",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "bool_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n7"
+          ],
+          "type": "Data",
+          "keys": [
+            "celsius",
+            "warm"
+          ]
+        }
+      ],
+      "output": "n8",
+      "description": "Mark readings of at least 25 Celsius as warm.",
+      "trace_mode": "explicit",
+      "skill": {
+        "requires": [
+          "celsius_reading"
+        ],
+        "provides": [
+          "temperature_assessed"
+        ]
+      }
+    },
+    "source": "Example teacher: reusable temperature skills"
+  },
+  "temperature_check": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Bool",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "celsius"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 25
+        },
+        {
+          "id": "n3",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "less",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "not",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "bool_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "warm"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "data_equal",
+          "inputs": [
+            "n8",
+            "n7"
+          ],
+          "type": "Bool"
+        }
+      ],
+      "output": "n9",
+      "description": "Check the reported warm flag against the taught threshold. This checks the flag, not the measurement or conversion.",
+      "trace_mode": "explicit"
+    },
+    "source": "Example teacher: reusable temperature skills"
+  }
+}

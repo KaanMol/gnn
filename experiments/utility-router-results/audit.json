@@ -1,0 +1,2512 @@
+{
+  "summary": [
+    {
+      "seed": 210011,
+      "arm": "no_memory",
+      "solved": 15,
+      "steps": 8021922,
+      "cpu_seconds": 27.070789000000023,
+      "wall_seconds": 27.44441954199999,
+      "cost_per_solved": 534794.8,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 0,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 210011,
+      "arm": "fixed",
+      "solved": 10,
+      "steps": 7756835,
+      "cpu_seconds": 28.283742000000018,
+      "wall_seconds": 28.742963166,
+      "cost_per_solved": 775683.5,
+      "activations": 9,
+      "helpful_activations": 4,
+      "activation_precision": 0.4444444444444444,
+      "negative_transfer_activations": 5,
+      "mixed": 0,
+      "whole": 4,
+      "primitive_tasks_lost": 5,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 210011,
+      "arm": "router",
+      "solved": 10,
+      "steps": 9123150,
+      "cpu_seconds": 31.01575399999999,
+      "wall_seconds": 31.42588495899997,
+      "cost_per_solved": 912315.0,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 5,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 220009,
+      "arm": "no_memory",
+      "solved": 15,
+      "steps": 7960445,
+      "cpu_seconds": 28.413060999999928,
+      "wall_seconds": 28.758050670000017,
+      "cost_per_solved": 530696.3333333334,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 0,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 220009,
+      "arm": "fixed",
+      "solved": 15,
+      "steps": 6617363,
+      "cpu_seconds": 27.472715000000065,
+      "wall_seconds": 27.925174289999944,
+      "cost_per_solved": 441157.5333333333,
+      "activations": 8,
+      "helpful_activations": 8,
+      "activation_precision": 1.0,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 8,
+      "primitive_tasks_lost": 0,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 220009,
+      "arm": "router",
+      "solved": 11,
+      "steps": 9168088,
+      "cpu_seconds": 34.490511,
+      "wall_seconds": 34.896741085000016,
+      "cost_per_solved": 833462.5454545454,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 4,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 230003,
+      "arm": "no_memory",
+      "solved": 15,
+      "steps": 7973815,
+      "cpu_seconds": 29.503342999999916,
+      "wall_seconds": 29.85392799999991,
+      "cost_per_solved": 531587.6666666666,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 0,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 230003,
+      "arm": "fixed",
+      "solved": 15,
+      "steps": 6608455,
+      "cpu_seconds": 28.245549999999866,
+      "wall_seconds": 28.620457164000015,
+      "cost_per_solved": 440563.6666666667,
+      "activations": 8,
+      "helpful_activations": 8,
+      "activation_precision": 1.0,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 8,
+      "primitive_tasks_lost": 0,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 230003,
+      "arm": "router",
+      "solved": 11,
+      "steps": 9052273,
+      "cpu_seconds": 35.07835200000005,
+      "wall_seconds": 35.41090816400006,
+      "cost_per_solved": 822933.9090909091,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 4,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 240007,
+      "arm": "no_memory",
+      "solved": 15,
+      "steps": 8022327,
+      "cpu_seconds": 30.354537999999934,
+      "wall_seconds": 30.681766623999977,
+      "cost_per_solved": 534821.8,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 0,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 240007,
+      "arm": "fixed",
+      "solved": 10,
+      "steps": 7760333,
+      "cpu_seconds": 31.704260999999917,
+      "wall_seconds": 32.106208713,
+      "cost_per_solved": 776033.3,
+      "activations": 9,
+      "helpful_activations": 4,
+      "activation_precision": 0.4444444444444444,
+      "negative_transfer_activations": 5,
+      "mixed": 0,
+      "whole": 4,
+      "primitive_tasks_lost": 5,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    },
+    {
+      "seed": 240007,
+      "arm": "router",
+      "solved": 10,
+      "steps": 9121410,
+      "cpu_seconds": 34.38580499999995,
+      "wall_seconds": 34.7035229989998,
+      "cost_per_solved": 912141.0,
+      "activations": 0,
+      "helpful_activations": 0,
+      "activation_precision": null,
+      "negative_transfer_activations": 0,
+      "mixed": 0,
+      "whole": 0,
+      "primitive_tasks_lost": 5,
+      "gained": 0,
+      "audit_false_positives": 0,
+      "exploration": 0
+    }
+  ],
+  "activation_outcomes": [
+    {
+      "seed": 210011,
+      "task": 2,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 28407,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 7,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 26270,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 10,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -129569,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 12,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 37584,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 14,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -128158,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 18,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -128616,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 20,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 38002,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 25,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -129828,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 210011,
+      "task": 27,
+      "arm": "fixed",
+      "names": [
+        "allocated_1"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 30160,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 9,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -268238,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 11,
+      "arm": "fixed",
+      "names": [
+        "allocated_4"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -110937,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 14,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -261993,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 15,
+      "arm": "fixed",
+      "names": [
+        "allocated_4"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -106987,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 18,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -253898,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 23,
+      "arm": "fixed",
+      "names": [
+        "allocated_4"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -113568,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 24,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -277701,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 220009,
+      "task": 26,
+      "arm": "fixed",
+      "names": [
+        "allocated_4"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -112067,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 7,
+      "arm": "fixed",
+      "names": [
+        "allocated_5"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -109981,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 11,
+      "arm": "fixed",
+      "names": [
+        "allocated_2"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -278449,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 12,
+      "arm": "fixed",
+      "names": [
+        "allocated_5"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -108636,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 15,
+      "arm": "fixed",
+      "names": [
+        "allocated_2"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -258057,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 19,
+      "arm": "fixed",
+      "names": [
+        "allocated_2"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -270797,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 21,
+      "arm": "fixed",
+      "names": [
+        "allocated_5"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -109249,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 26,
+      "arm": "fixed",
+      "names": [
+        "allocated_2"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -279925,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 230003,
+      "task": 27,
+      "arm": "fixed",
+      "names": [
+        "allocated_5"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -105423,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 3,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 29791,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 6,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 23628,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 9,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -130665,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 15,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 50237,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 16,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -128464,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 22,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 29976,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 23,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -124990,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 25,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": false,
+      "lost_solve": true,
+      "extra_cost": 26079,
+      "credit": "task-level shared if multiple activations"
+    },
+    {
+      "seed": 240007,
+      "task": 28,
+      "arm": "fixed",
+      "names": [
+        "allocated_0"
+      ],
+      "helped": true,
+      "lost_solve": false,
+      "extra_cost": -131028,
+      "credit": "task-level shared if multiple activations"
+    }
+  ],
+  "counterfactual_outcomes": [
+    {
+      "seed": 210011,
+      "task": 2,
+      "name": "allocated_1",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 7,
+      "name": "allocated_1",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 10,
+      "name": "allocated_1",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 12,
+      "name": "allocated_1",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 14,
+      "name": "allocated_1",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 18,
+      "name": "allocated_1",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 20,
+      "name": "allocated_1",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 25,
+      "name": "allocated_1",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 210011,
+      "task": 27,
+      "name": "allocated_1",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 9,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 11,
+      "name": "allocated_4",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 14,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 15,
+      "name": "allocated_4",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 18,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 23,
+      "name": "allocated_4",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 24,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 220009,
+      "task": 26,
+      "name": "allocated_4",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 7,
+      "name": "allocated_5",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 11,
+      "name": "allocated_2",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 12,
+      "name": "allocated_5",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 15,
+      "name": "allocated_2",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 19,
+      "name": "allocated_2",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 21,
+      "name": "allocated_5",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 26,
+      "name": "allocated_2",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 230003,
+      "task": 27,
+      "name": "allocated_5",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 3,
+      "name": "allocated_0",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 6,
+      "name": "allocated_0",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 9,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 15,
+      "name": "allocated_0",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 16,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 22,
+      "name": "allocated_0",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 23,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 25,
+      "name": "allocated_0",
+      "useful_false_negative": false,
+      "would_lose_primitive_solve": true,
+      "actually_forced": true
+    },
+    {
+      "seed": 240007,
+      "task": 28,
+      "name": "allocated_0",
+      "useful_false_negative": true,
+      "would_lose_primitive_solve": false,
+      "actually_forced": true
+    }
+  ],
+  "negative_training_regression": [
+    {
+      "seed": 15053,
+      "task": 3,
+      "utility": -2000,
+      "score_before": 0,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 15053,
+      "task": 7,
+      "utility": -2000,
+      "score_before": -303,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 15053,
+      "task": 12,
+      "utility": -2000,
+      "score_before": -739,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 15053,
+      "task": 22,
+      "utility": -2000,
+      "score_before": -725,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 15053,
+      "task": 28,
+      "utility": -2000,
+      "score_before": -722,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 18089,
+      "task": 5,
+      "utility": -2000,
+      "score_before": -710,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 18089,
+      "task": 7,
+      "utility": -2000,
+      "score_before": -1041,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 18089,
+      "task": 14,
+      "utility": -2000,
+      "score_before": -1156,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 18089,
+      "task": 22,
+      "utility": -2000,
+      "score_before": -1196,
+      "frozen_score": -1487,
+      "suppressed": true
+    },
+    {
+      "seed": 18089,
+      "task": 29,
+      "utility": -2000,
+      "score_before": -1310,
+      "frozen_score": -1487,
+      "suppressed": true
+    }
+  ],
+  "unchanged_primitive_prefixes": [
+    {
+      "seed": 210011,
+      "task": 0,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 1,
+      "arm": "fixed",
+      "candidates": 8
+    },
+    {
+      "seed": 210011,
+      "task": 3,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 210011,
+      "task": 4,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 5,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 6,
+      "arm": "fixed",
+      "candidates": 25
+    },
+    {
+      "seed": 210011,
+      "task": 8,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 9,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 11,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 13,
+      "arm": "fixed",
+      "candidates": 11
+    },
+    {
+      "seed": 210011,
+      "task": 15,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 16,
+      "arm": "fixed",
+      "candidates": 25
+    },
+    {
+      "seed": 210011,
+      "task": 17,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 19,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 21,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 22,
+      "arm": "fixed",
+      "candidates": 11
+    },
+    {
+      "seed": 210011,
+      "task": 23,
+      "arm": "fixed",
+      "candidates": 27
+    },
+    {
+      "seed": 210011,
+      "task": 24,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 26,
+      "arm": "fixed",
+      "candidates": 13
+    },
+    {
+      "seed": 210011,
+      "task": 28,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 210011,
+      "task": 29,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 0,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 1,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 210011,
+      "task": 2,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 210011,
+      "task": 3,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 210011,
+      "task": 4,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 5,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 6,
+      "arm": "router",
+      "candidates": 20
+    },
+    {
+      "seed": 210011,
+      "task": 7,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 210011,
+      "task": 8,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 9,
+      "arm": "router",
+      "candidates": 10
+    },
+    {
+      "seed": 210011,
+      "task": 10,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 210011,
+      "task": 11,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 12,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 210011,
+      "task": 13,
+      "arm": "router",
+      "candidates": 11
+    },
+    {
+      "seed": 210011,
+      "task": 14,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 210011,
+      "task": 15,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 16,
+      "arm": "router",
+      "candidates": 20
+    },
+    {
+      "seed": 210011,
+      "task": 17,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 18,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 210011,
+      "task": 19,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 210011,
+      "task": 20,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 210011,
+      "task": 21,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 22,
+      "arm": "router",
+      "candidates": 11
+    },
+    {
+      "seed": 210011,
+      "task": 23,
+      "arm": "router",
+      "candidates": 22
+    },
+    {
+      "seed": 210011,
+      "task": 24,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 210011,
+      "task": 25,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 210011,
+      "task": 26,
+      "arm": "router",
+      "candidates": 9
+    },
+    {
+      "seed": 210011,
+      "task": 27,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 210011,
+      "task": 28,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 210011,
+      "task": 29,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 0,
+      "arm": "fixed",
+      "candidates": 17
+    },
+    {
+      "seed": 220009,
+      "task": 1,
+      "arm": "fixed",
+      "candidates": 13
+    },
+    {
+      "seed": 220009,
+      "task": 2,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 220009,
+      "task": 3,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 4,
+      "arm": "fixed",
+      "candidates": 8
+    },
+    {
+      "seed": 220009,
+      "task": 5,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 6,
+      "arm": "fixed",
+      "candidates": 27
+    },
+    {
+      "seed": 220009,
+      "task": 7,
+      "arm": "fixed",
+      "candidates": 11
+    },
+    {
+      "seed": 220009,
+      "task": 8,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 10,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 12,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 13,
+      "arm": "fixed",
+      "candidates": 11
+    },
+    {
+      "seed": 220009,
+      "task": 16,
+      "arm": "fixed",
+      "candidates": 25
+    },
+    {
+      "seed": 220009,
+      "task": 17,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 19,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 20,
+      "arm": "fixed",
+      "candidates": 25
+    },
+    {
+      "seed": 220009,
+      "task": 21,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 22,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 25,
+      "arm": "fixed",
+      "candidates": 11
+    },
+    {
+      "seed": 220009,
+      "task": 27,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 28,
+      "arm": "fixed",
+      "candidates": 25
+    },
+    {
+      "seed": 220009,
+      "task": 29,
+      "arm": "fixed",
+      "candidates": 13
+    },
+    {
+      "seed": 220009,
+      "task": 0,
+      "arm": "router",
+      "candidates": 17
+    },
+    {
+      "seed": 220009,
+      "task": 1,
+      "arm": "router",
+      "candidates": 13
+    },
+    {
+      "seed": 220009,
+      "task": 2,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 220009,
+      "task": 3,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 4,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 220009,
+      "task": 5,
+      "arm": "router",
+      "candidates": 9
+    },
+    {
+      "seed": 220009,
+      "task": 6,
+      "arm": "router",
+      "candidates": 22
+    },
+    {
+      "seed": 220009,
+      "task": 7,
+      "arm": "router",
+      "candidates": 11
+    },
+    {
+      "seed": 220009,
+      "task": 8,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 9,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 220009,
+      "task": 10,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 11,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 220009,
+      "task": 12,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 13,
+      "arm": "router",
+      "candidates": 11
+    },
+    {
+      "seed": 220009,
+      "task": 14,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 220009,
+      "task": 15,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 220009,
+      "task": 16,
+      "arm": "router",
+      "candidates": 20
+    },
+    {
+      "seed": 220009,
+      "task": 17,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 18,
+      "arm": "router",
+      "candidates": 15
+    },
+    {
+      "seed": 220009,
+      "task": 19,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 20,
+      "arm": "router",
+      "candidates": 20
+    },
+    {
+      "seed": 220009,
+      "task": 21,
+      "arm": "router",
+      "candidates": 10
+    },
+    {
+      "seed": 220009,
+      "task": 22,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 220009,
+      "task": 23,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 220009,
+      "task": 24,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 220009,
+      "task": 25,
+      "arm": "router",
+      "candidates": 11
+    },
+    {
+      "seed": 220009,
+      "task": 26,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 220009,
+      "task": 27,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 220009,
+      "task": 28,
+      "arm": "router",
+      "candidates": 20
+    },
+    {
+      "seed": 220009,
+      "task": 29,
+      "arm": "router",
+      "candidates": 13
+    },
+    {
+      "seed": 230003,
+      "task": 0,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 1,
+      "arm": "fixed",
+      "candidates": 30
+    },
+    {
+      "seed": 230003,
+      "task": 2,
+      "arm": "fixed",
+      "candidates": 17
+    },
+    {
+      "seed": 230003,
+      "task": 3,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 4,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 5,
+      "arm": "fixed",
+      "candidates": 8
+    },
+    {
+      "seed": 230003,
+      "task": 6,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 8,
+      "arm": "fixed",
+      "candidates": 25
+    },
+    {
+      "seed": 230003,
+      "task": 9,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 10,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 13,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 14,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 16,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 230003,
+      "task": 17,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 18,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 20,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 22,
+      "arm": "fixed",
+      "candidates": 24
+    },
+    {
+      "seed": 230003,
+      "task": 23,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 24,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 230003,
+      "task": 25,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 28,
+      "arm": "fixed",
+      "candidates": 11
+    },
+    {
+      "seed": 230003,
+      "task": 29,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 0,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 1,
+      "arm": "router",
+      "candidates": 30
+    },
+    {
+      "seed": 230003,
+      "task": 2,
+      "arm": "router",
+      "candidates": 17
+    },
+    {
+      "seed": 230003,
+      "task": 3,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 4,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 5,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 230003,
+      "task": 6,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 7,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 230003,
+      "task": 8,
+      "arm": "router",
+      "candidates": 20
+    },
+    {
+      "seed": 230003,
+      "task": 9,
+      "arm": "router",
+      "candidates": 10
+    },
+    {
+      "seed": 230003,
+      "task": 10,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 11,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 230003,
+      "task": 12,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 230003,
+      "task": 13,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 14,
+      "arm": "router",
+      "candidates": 9
+    },
+    {
+      "seed": 230003,
+      "task": 15,
+      "arm": "router",
+      "candidates": 15
+    },
+    {
+      "seed": 230003,
+      "task": 16,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 230003,
+      "task": 17,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 18,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 230003,
+      "task": 19,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 230003,
+      "task": 20,
+      "arm": "router",
+      "candidates": 9
+    },
+    {
+      "seed": 230003,
+      "task": 21,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 230003,
+      "task": 22,
+      "arm": "router",
+      "candidates": 19
+    },
+    {
+      "seed": 230003,
+      "task": 23,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 24,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 230003,
+      "task": 25,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 230003,
+      "task": 26,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 230003,
+      "task": 27,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 230003,
+      "task": 28,
+      "arm": "router",
+      "candidates": 11
+    },
+    {
+      "seed": 230003,
+      "task": 29,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 0,
+      "arm": "fixed",
+      "candidates": 8
+    },
+    {
+      "seed": 240007,
+      "task": 1,
+      "arm": "fixed",
+      "candidates": 14
+    },
+    {
+      "seed": 240007,
+      "task": 2,
+      "arm": "fixed",
+      "candidates": 13
+    },
+    {
+      "seed": 240007,
+      "task": 4,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 240007,
+      "task": 5,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 7,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 8,
+      "arm": "fixed",
+      "candidates": 28
+    },
+    {
+      "seed": 240007,
+      "task": 10,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 11,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 12,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 13,
+      "arm": "fixed",
+      "candidates": 11
+    },
+    {
+      "seed": 240007,
+      "task": 14,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 240007,
+      "task": 17,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 18,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 19,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 20,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 21,
+      "arm": "fixed",
+      "candidates": 28
+    },
+    {
+      "seed": 240007,
+      "task": 24,
+      "arm": "fixed",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 26,
+      "arm": "fixed",
+      "candidates": 26
+    },
+    {
+      "seed": 240007,
+      "task": 27,
+      "arm": "fixed",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 29,
+      "arm": "fixed",
+      "candidates": 14
+    },
+    {
+      "seed": 240007,
+      "task": 0,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 240007,
+      "task": 1,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 240007,
+      "task": 2,
+      "arm": "router",
+      "candidates": 9
+    },
+    {
+      "seed": 240007,
+      "task": 3,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 240007,
+      "task": 4,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 240007,
+      "task": 5,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 6,
+      "arm": "router",
+      "candidates": 13
+    },
+    {
+      "seed": 240007,
+      "task": 7,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 8,
+      "arm": "router",
+      "candidates": 22
+    },
+    {
+      "seed": 240007,
+      "task": 9,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 240007,
+      "task": 10,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 11,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 12,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 13,
+      "arm": "router",
+      "candidates": 11
+    },
+    {
+      "seed": 240007,
+      "task": 14,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 240007,
+      "task": 15,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 240007,
+      "task": 16,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 240007,
+      "task": 17,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 18,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 19,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 20,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 21,
+      "arm": "router",
+      "candidates": 22
+    },
+    {
+      "seed": 240007,
+      "task": 22,
+      "arm": "router",
+      "candidates": 14
+    },
+    {
+      "seed": 240007,
+      "task": 23,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 240007,
+      "task": 24,
+      "arm": "router",
+      "candidates": 12
+    },
+    {
+      "seed": 240007,
+      "task": 25,
+      "arm": "router",
+      "candidates": 13
+    },
+    {
+      "seed": 240007,
+      "task": 26,
+      "arm": "router",
+      "candidates": 21
+    },
+    {
+      "seed": 240007,
+      "task": 27,
+      "arm": "router",
+      "candidates": 5
+    },
+    {
+      "seed": 240007,
+      "task": 28,
+      "arm": "router",
+      "candidates": 8
+    },
+    {
+      "seed": 240007,
+      "task": 29,
+      "arm": "router",
+      "candidates": 9
+    }
+  ],
+  "stored_method_audit": [
+    {
+      "seed": 210011,
+      "arm": "fixed",
+      "name": "allocated_1",
+      "cases": 16
+    },
+    {
+      "seed": 210011,
+      "arm": "router",
+      "name": "allocated_1",
+      "cases": 16
+    },
+    {
+      "seed": 220009,
+      "arm": "fixed",
+      "name": "allocated_0",
+      "cases": 16
+    },
+    {
+      "seed": 220009,
+      "arm": "fixed",
+      "name": "allocated_4",
+      "cases": 16
+    },
+    {
+      "seed": 220009,
+      "arm": "router",
+      "name": "allocated_0",
+      "cases": 16
+    },
+    {
+      "seed": 220009,
+      "arm": "router",
+      "name": "allocated_4",
+      "cases": 16
+    },
+    {
+      "seed": 230003,
+      "arm": "fixed",
+      "name": "allocated_2",
+      "cases": 16
+    },
+    {
+      "seed": 230003,
+      "arm": "fixed",
+      "name": "allocated_5",
+      "cases": 16
+    },
+    {
+      "seed": 230003,
+      "arm": "router",
+      "name": "allocated_2",
+      "cases": 16
+    },
+    {
+      "seed": 230003,
+      "arm": "router",
+      "name": "allocated_5",
+      "cases": 16
+    },
+    {
+      "seed": 240007,
+      "arm": "fixed",
+      "name": "allocated_0",
+      "cases": 16
+    },
+    {
+      "seed": 240007,
+      "arm": "router",
+      "name": "allocated_0",
+      "cases": 16
+    }
+  ],
+  "paired_differences": [
+    {
+      "seed": 210011,
+      "task": 2,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 7,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 12,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 20,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 27,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 2,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 7,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 12,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 20,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 210011,
+      "task": 27,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 220009,
+      "task": 9,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 220009,
+      "task": 14,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 220009,
+      "task": 18,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 220009,
+      "task": 24,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 230003,
+      "task": 11,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 230003,
+      "task": 15,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 230003,
+      "task": 19,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 230003,
+      "task": 26,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 3,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 6,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 15,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 22,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 25,
+      "arm": "fixed",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 3,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 6,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 15,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 22,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    },
+    {
+      "seed": 240007,
+      "task": 25,
+      "arm": "router",
+      "gained": false,
+      "found": null
+    }
+  ],
+  "training_graph_steps": 9524623,
+  "counterfactual_graph_steps": 6923668,
+  "counterfactual_cpu_seconds": 24.26318200000015,
+  "counterfactual_wall_seconds": 24.34520979100023
+}

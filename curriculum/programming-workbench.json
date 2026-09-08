@@ -1,0 +1,1151 @@
+{
+  "javascript_pipeline_stage": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "operation"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "expression"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "."
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "(x => ("
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "))"
+        },
+        {
+          "id": "n6",
+          "op": "data_list",
+          "inputs": [
+            "n3",
+            "n1",
+            "n4",
+            "n2",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n8",
+          "op": "join_text",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "filter",
+            "map"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "contains",
+          "inputs": [
+            "n9",
+            "n1"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "require",
+          "inputs": [
+            "n10",
+            "n8"
+          ],
+          "type": "Data",
+          "message": "Pipeline stages currently support filter and map."
+        }
+      ],
+      "output": "n11",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Graph-owned data-processing composition and source-analysis lessons."
+  },
+  "javascript_compose_pipeline": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "pipeline"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 8
+        },
+        {
+          "id": "n3",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_data",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "less",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "not",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n12",
+          "op": "data_equal",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "not",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "and",
+          "inputs": [
+            "n8",
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "require",
+          "inputs": [
+            "n14",
+            "n1"
+          ],
+          "type": "Data",
+          "message": "Supply 1–8 pipeline stages."
+        },
+        {
+          "id": "n16",
+          "op": "map",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "call",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "name": "javascript_pipeline_stage"
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n17",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "finish"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "array": "",
+            "sum": ".reduce((total, x) => total + x, 0)",
+            "count": ".length"
+          }
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "array",
+            "sum",
+            "count"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "contains",
+          "inputs": [
+            "n19",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "lookup",
+          "inputs": [
+            "n18",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "require",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Data",
+          "message": "Finish must be array, sum, or count."
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "function transform(xs) { return xs"
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n25",
+          "op": "join_text",
+          "inputs": [
+            "n16",
+            "n24"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "; }"
+        },
+        {
+          "id": "n27",
+          "op": "data_list",
+          "inputs": [
+            "n23",
+            "n25",
+            "n22",
+            "n26"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n29",
+          "op": "join_text",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "call",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data",
+          "name": "javascript_warm_policy"
+        },
+        {
+          "id": "n31",
+          "op": "get",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Data",
+          "path": [
+            "input"
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "call",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Data",
+          "name": "javascript_compile_source"
+        },
+        {
+          "id": "n33",
+          "op": "record",
+          "inputs": [
+            "n29",
+            "n32"
+          ],
+          "type": "Data",
+          "keys": [
+            "source",
+            "program"
+          ]
+        }
+      ],
+      "output": "n33",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Graph-owned data-processing composition and source-analysis lessons."
+  },
+  "javascript_write_pipeline": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "tests"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n3",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_data",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "less",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 12
+        },
+        {
+          "id": "n9",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "less",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "not",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "and",
+          "inputs": [
+            "n7",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "require",
+          "inputs": [
+            "n15",
+            "n1"
+          ],
+          "type": "Data",
+          "message": "Supply 1–12 input/output tests."
+        },
+        {
+          "id": "n17",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "javascript_compose_pipeline"
+        },
+        {
+          "id": "n18",
+          "op": "data_list",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "record",
+          "inputs": [
+            "n18",
+            "n16"
+          ],
+          "type": "Data",
+          "keys": [
+            "candidates",
+            "tests"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "call",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Data",
+          "name": "js_choose_program"
+        },
+        {
+          "id": "n21",
+          "op": "size",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "as_data",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n24",
+          "op": "data_equal",
+          "inputs": [
+            "n22",
+            "n23"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n26",
+          "op": "item",
+          "inputs": [
+            "n20",
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "require",
+          "inputs": [
+            "n24",
+            "n26"
+          ],
+          "type": "Data",
+          "message": "The composed pipeline did not pass every supplied test."
+        },
+        {
+          "id": "n28",
+          "op": "get",
+          "inputs": [
+            "n27"
+          ],
+          "type": "Data",
+          "path": [
+            "source"
+          ]
+        },
+        {
+          "id": "n29",
+          "op": "size",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n30",
+          "op": "as_data",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Passed supplied examples; this is not a proof for all inputs."
+        },
+        {
+          "id": "n32",
+          "op": "record",
+          "inputs": [
+            "n28",
+            "n30",
+            "n31"
+          ],
+          "type": "Data",
+          "keys": [
+            "source",
+            "tests_passed",
+            "verification"
+          ]
+        }
+      ],
+      "output": "n32",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Graph-owned data-processing composition and source-analysis lessons."
+  },
+  "javascript_explain_statement": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "op"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "uninitialize": "Introduce or end a binding before a value can be read.",
+            "assign": "Evaluate an expression and initialize a binding.",
+            "update": "Evaluate an expression and update an existing mutable binding.",
+            "return": "Return the expression value and finish this function.",
+            "branch": "Evaluate a condition and jump when it is false.",
+            "jump": "Continue at another instruction; this can form a loop.",
+            "log": "Evaluate and capture console output."
+          }
+        },
+        {
+          "id": "n3",
+          "op": "lookup",
+          "inputs": [
+            "n2",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "name"
+        },
+        {
+          "id": "n5",
+          "op": "has_key",
+          "inputs": [
+            "n0",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n8",
+          "op": "choose",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "target"
+        },
+        {
+          "id": "n10",
+          "op": "has_key",
+          "inputs": [
+            "n0",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "target"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n13",
+          "op": "choose",
+          "inputs": [
+            "n10",
+            "n11",
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "expression"
+        },
+        {
+          "id": "n15",
+          "op": "has_key",
+          "inputs": [
+            "n0",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "expression"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n18",
+          "op": "choose",
+          "inputs": [
+            "n15",
+            "n16",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "expressions"
+        },
+        {
+          "id": "n20",
+          "op": "has_key",
+          "inputs": [
+            "n0",
+            "n19"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "expressions"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n23",
+          "op": "choose",
+          "inputs": [
+            "n20",
+            "n21",
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n3",
+            "n8",
+            "n13",
+            "n18",
+            "n23"
+          ],
+          "type": "Data",
+          "keys": [
+            "operation",
+            "meaning",
+            "binding",
+            "target",
+            "expression",
+            "console_arguments"
+          ]
+        }
+      ],
+      "output": "n24",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Graph-owned data-processing composition and source-analysis lessons."
+  },
+  "javascript_analyze_source": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "javascript_warm_policy"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "input"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "call",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "name": "javascript_compile_source"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "code"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "map",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "call",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "name": "javascript_explain_statement"
+              }
+            ],
+            "output": "n1",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "parameter"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "requires_input"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Static explanation of the supported source subset; expressions are shown as graph instruction data. No source execution is needed."
+        },
+        {
+          "id": "n10",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n7",
+            "n8",
+            "n5",
+            "n9"
+          ],
+          "type": "Data",
+          "keys": [
+            "name",
+            "parameter",
+            "requires_input",
+            "statements",
+            "scope"
+          ]
+        }
+      ],
+      "output": "n10",
+      "trace_mode": "explicit",
+      "execution_budget": 10000000
+    },
+    "source": "Graph-owned data-processing composition and source-analysis lessons."
+  }
+}

@@ -1,0 +1,1771 @@
+{
+  "manifest_and_sources_unchanged": true,
+  "witness_tasks": 93,
+  "witness_cases": 3162,
+  "witnesses": [
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "selected_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "selected_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "count",
+      "cases": 34,
+      "ops": [
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "count",
+      "cases": 34,
+      "ops": [
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "selected_negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "selected_negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_negative_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "double_count",
+      "cases": 34,
+      "ops": [
+        "synth_count",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "double_count",
+      "cases": 34,
+      "ops": [
+        "synth_count",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_quad_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "readings",
+      "family": "selected_quad_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "double_count",
+      "cases": 34,
+      "ops": [
+        "synth_count",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "selected_negative_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "selected_quad_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "numbers",
+      "family": "selected_quad_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 1907,
+      "domain": "products",
+      "family": "negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "count",
+      "cases": 34,
+      "ops": [
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "selected_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "selected_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "count",
+      "cases": 34,
+      "ops": [
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "double_count",
+      "cases": 34,
+      "ops": [
+        "synth_count",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "selected_negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "selected_negative_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "selected_negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "selected_quad_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "readings",
+      "family": "double_count",
+      "cases": 34,
+      "ops": [
+        "synth_count",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "selected_negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "products",
+      "family": "selected_negative_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 2909,
+      "domain": "numbers",
+      "family": "selected_quad_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "selected_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "selected_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "count",
+      "cases": 34,
+      "ops": [
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "count",
+      "cases": 34,
+      "ops": [
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "selected_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "double_count",
+      "cases": 34,
+      "ops": [
+        "synth_count",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "count",
+      "cases": 34,
+      "ops": [
+        "synth_count"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "selected_negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "selected_negative_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "selected_negative_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "selected_negative_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "double_count",
+      "cases": 34,
+      "ops": [
+        "synth_count",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "selected_negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "selected_quad_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "selected_quad_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "negative_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "numbers",
+      "family": "selected_quad_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "products",
+      "family": "selected_quad_count",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_count",
+        "bench_double",
+        "bench_double"
+      ]
+    },
+    {
+      "seed": 3911,
+      "domain": "readings",
+      "family": "selected_double_sum",
+      "cases": 34,
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ]
+    }
+  ],
+  "library_analysis": [
+    {
+      "seed": 1907,
+      "final_library_size": 12,
+      "methods": [
+        {
+          "name": "online_method_0",
+          "ops": [
+            "synth_sum",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_2",
+          "ops": [
+            "synth_sum",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_3",
+          "ops": [
+            "online_method_2",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_8",
+          "ops": [
+            "online_method_3",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_9",
+          "ops": [
+            "online_method_3",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_16",
+          "ops": [
+            "online_method_8",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_19",
+          "ops": [
+            "online_method_16",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_21",
+          "ops": [
+            "online_method_16",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_28",
+          "ops": [
+            "online_method_19",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_46",
+          "ops": [
+            "online_method_21",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_48",
+          "ops": [
+            "online_method_46",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_56",
+          "ops": [
+            "online_method_48",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        }
+      ],
+      "same_outputs_on_seven_numeric_probes": [
+        [
+          "synth_sum",
+          "online_method_3",
+          "online_method_16",
+          "online_method_28"
+        ],
+        [
+          "online_method_0",
+          "online_method_9",
+          "online_method_21",
+          "online_method_48"
+        ],
+        [
+          "online_method_2",
+          "online_method_8",
+          "online_method_19"
+        ],
+        [
+          "online_method_46",
+          "online_method_56"
+        ]
+      ],
+      "note": "Finite observational overlap only; not global equivalence or a learning signal."
+    },
+    {
+      "seed": 2909,
+      "final_library_size": 14,
+      "methods": [
+        {
+          "name": "online_method_1",
+          "ops": [
+            "synth_sum",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_2",
+          "ops": [
+            "synth_sum",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_8",
+          "ops": [
+            "online_method_1",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_9",
+          "ops": [
+            "online_method_8",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_16",
+          "ops": [
+            "online_method_8",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_17",
+          "ops": [
+            "online_method_16",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_19",
+          "ops": [
+            "online_method_17",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_20",
+          "ops": [
+            "online_method_17",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_21",
+          "ops": [
+            "online_method_19",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_24",
+          "ops": [
+            "online_method_21",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_32",
+          "ops": [
+            "online_method_21",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_33",
+          "ops": [
+            "online_method_24",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_46",
+          "ops": [
+            "online_method_32",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_49",
+          "ops": [
+            "online_method_46",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_negate",
+            "bench_negate"
+          ]
+        }
+      ],
+      "same_outputs_on_seven_numeric_probes": [
+        [
+          "synth_sum",
+          "online_method_8",
+          "online_method_17",
+          "online_method_21",
+          "online_method_33"
+        ],
+        [
+          "online_method_1",
+          "online_method_16",
+          "online_method_19",
+          "online_method_24"
+        ],
+        [
+          "online_method_2",
+          "online_method_9",
+          "online_method_20",
+          "online_method_32"
+        ]
+      ],
+      "note": "Finite observational overlap only; not global equivalence or a learning signal."
+    },
+    {
+      "seed": 3911,
+      "final_library_size": 9,
+      "methods": [
+        {
+          "name": "online_method_0",
+          "ops": [
+            "synth_select",
+            "synth_sum"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum"
+          ]
+        },
+        {
+          "name": "online_method_1",
+          "ops": [
+            "synth_sum",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_sum",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_25",
+          "ops": [
+            "online_method_0",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_28",
+          "ops": [
+            "online_method_0",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_36",
+          "ops": [
+            "online_method_28",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum",
+            "bench_negate",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_37",
+          "ops": [
+            "online_method_36",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_43",
+          "ops": [
+            "online_method_37",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_negate"
+          ]
+        },
+        {
+          "name": "online_method_44",
+          "ops": [
+            "online_method_37",
+            "bench_double"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_double"
+          ]
+        },
+        {
+          "name": "online_method_59",
+          "ops": [
+            "online_method_43",
+            "bench_negate"
+          ],
+          "expanded_ops": [
+            "synth_select",
+            "synth_sum",
+            "bench_negate",
+            "bench_negate",
+            "bench_double",
+            "bench_negate",
+            "bench_negate"
+          ]
+        }
+      ],
+      "same_outputs_on_seven_numeric_probes": [
+        [
+          "online_method_0",
+          "online_method_36"
+        ],
+        [
+          "online_method_25",
+          "online_method_37",
+          "online_method_59"
+        ]
+      ],
+      "note": "Finite observational overlap only; not global equivalence or a learning signal."
+    }
+  ],
+  "constructed_misleading_fixtures": [
+    {
+      "seed": 1907,
+      "task": 6,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 9,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 14,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 1907,
+      "task": 16,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 27,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 28,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 29,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 37,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 1907,
+      "task": 43,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 48,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 53,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 1907,
+      "task": 54,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 2909,
+      "task": 2,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 4,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 2909,
+      "task": 12,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 17,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 20,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 23,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 31,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 2909,
+      "task": 33,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 40,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 2909,
+      "task": 49,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 50,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 2909,
+      "task": 55,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 8,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 11,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 13,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 3911,
+      "task": 18,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 24,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 27,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 3911,
+      "task": 31,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 34,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 40,
+      "plausible_wrong_family": "selected_double_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 45,
+      "plausible_wrong_family": "selected_count"
+    },
+    {
+      "seed": 3911,
+      "task": 53,
+      "plausible_wrong_family": "selected_sum"
+    },
+    {
+      "seed": 3911,
+      "task": 55,
+      "plausible_wrong_family": "selected_sum"
+    }
+  ],
+  "realized_misleading_learned_candidates": [
+    {
+      "seed": 3911,
+      "task": 8,
+      "first_candidate": [
+        "online_method_0"
+      ]
+    },
+    {
+      "seed": 3911,
+      "task": 11,
+      "first_candidate": [
+        "online_method_0"
+      ]
+    },
+    {
+      "seed": 3911,
+      "task": 31,
+      "first_candidate": [
+        "online_method_28",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "task": 34,
+      "first_candidate": [
+        "online_method_28",
+        "bench_negate"
+      ]
+    },
+    {
+      "seed": 3911,
+      "task": 40,
+      "first_candidate": [
+        "online_method_37"
+      ]
+    }
+  ]
+}

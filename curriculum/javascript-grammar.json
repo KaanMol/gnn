@@ -1,0 +1,5303 @@
+{
+  "root": "Program",
+  "rules": {
+    "r0": {
+      "op": "character",
+      "characters": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "_",
+        "$",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "positive": true,
+      "width": 64
+    },
+    "r1": {
+      "op": "character",
+      "characters": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "_",
+        "$"
+      ],
+      "positive": true,
+      "width": 54
+    },
+    "r2": {
+      "op": "character",
+      "characters": [],
+      "positive": false,
+      "width": 0
+    },
+    "r3": {
+      "op": "literal",
+      "characters": [
+        "e",
+        "x",
+        "p",
+        "o",
+        "r",
+        "t"
+      ],
+      "width": 6
+    },
+    "r4": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r5": {
+      "op": "sequence",
+      "children": [
+        "r3",
+        "r4"
+      ],
+      "arity": 2
+    },
+    "r6": {
+      "op": "literal",
+      "characters": [
+        "d",
+        "e",
+        "f",
+        "a",
+        "u",
+        "l",
+        "t"
+      ],
+      "width": 7
+    },
+    "r7": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r8": {
+      "op": "sequence",
+      "children": [
+        "r6",
+        "r7"
+      ],
+      "arity": 2
+    },
+    "r9": {
+      "op": "literal",
+      "characters": [
+        "f",
+        "u",
+        "n",
+        "c",
+        "t",
+        "i",
+        "o",
+        "n"
+      ],
+      "width": 8
+    },
+    "r10": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r11": {
+      "op": "sequence",
+      "children": [
+        "r9",
+        "r10"
+      ],
+      "arity": 2
+    },
+    "r12": {
+      "op": "literal",
+      "characters": [
+        "r",
+        "e",
+        "t",
+        "u",
+        "r",
+        "n"
+      ],
+      "width": 6
+    },
+    "r13": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r14": {
+      "op": "sequence",
+      "children": [
+        "r12",
+        "r13"
+      ],
+      "arity": 2
+    },
+    "r15": {
+      "op": "literal",
+      "characters": [
+        "c",
+        "o",
+        "n",
+        "s",
+        "t"
+      ],
+      "width": 5
+    },
+    "r16": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r17": {
+      "op": "sequence",
+      "children": [
+        "r15",
+        "r16"
+      ],
+      "arity": 2
+    },
+    "r18": {
+      "op": "literal",
+      "characters": [
+        "l",
+        "e",
+        "t"
+      ],
+      "width": 3
+    },
+    "r19": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r20": {
+      "op": "sequence",
+      "children": [
+        "r18",
+        "r19"
+      ],
+      "arity": 2
+    },
+    "r21": {
+      "op": "literal",
+      "characters": [
+        "i",
+        "f"
+      ],
+      "width": 2
+    },
+    "r22": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r23": {
+      "op": "sequence",
+      "children": [
+        "r21",
+        "r22"
+      ],
+      "arity": 2
+    },
+    "r24": {
+      "op": "literal",
+      "characters": [
+        "e",
+        "l",
+        "s",
+        "e"
+      ],
+      "width": 4
+    },
+    "r25": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r26": {
+      "op": "sequence",
+      "children": [
+        "r24",
+        "r25"
+      ],
+      "arity": 2
+    },
+    "r27": {
+      "op": "literal",
+      "characters": [
+        "w",
+        "h",
+        "i",
+        "l",
+        "e"
+      ],
+      "width": 5
+    },
+    "r28": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r29": {
+      "op": "sequence",
+      "children": [
+        "r27",
+        "r28"
+      ],
+      "arity": 2
+    },
+    "r30": {
+      "op": "literal",
+      "characters": [
+        "f",
+        "o",
+        "r"
+      ],
+      "width": 3
+    },
+    "r31": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r32": {
+      "op": "sequence",
+      "children": [
+        "r30",
+        "r31"
+      ],
+      "arity": 2
+    },
+    "r33": {
+      "op": "literal",
+      "characters": [
+        "d",
+        "o"
+      ],
+      "width": 2
+    },
+    "r34": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r35": {
+      "op": "sequence",
+      "children": [
+        "r33",
+        "r34"
+      ],
+      "arity": 2
+    },
+    "r36": {
+      "op": "literal",
+      "characters": [
+        "b",
+        "r",
+        "e",
+        "a",
+        "k"
+      ],
+      "width": 5
+    },
+    "r37": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r38": {
+      "op": "sequence",
+      "children": [
+        "r36",
+        "r37"
+      ],
+      "arity": 2
+    },
+    "r39": {
+      "op": "literal",
+      "characters": [
+        "c",
+        "o",
+        "n",
+        "t",
+        "i",
+        "n",
+        "u",
+        "e"
+      ],
+      "width": 8
+    },
+    "r40": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r41": {
+      "op": "sequence",
+      "children": [
+        "r39",
+        "r40"
+      ],
+      "arity": 2
+    },
+    "r42": {
+      "op": "literal",
+      "characters": [
+        "t",
+        "r",
+        "u",
+        "e"
+      ],
+      "width": 4
+    },
+    "r43": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r44": {
+      "op": "sequence",
+      "children": [
+        "r42",
+        "r43"
+      ],
+      "arity": 2
+    },
+    "r45": {
+      "op": "literal",
+      "characters": [
+        "f",
+        "a",
+        "l",
+        "s",
+        "e"
+      ],
+      "width": 5
+    },
+    "r46": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r47": {
+      "op": "sequence",
+      "children": [
+        "r45",
+        "r46"
+      ],
+      "arity": 2
+    },
+    "r48": {
+      "op": "literal",
+      "characters": [
+        "n",
+        "u",
+        "l",
+        "l"
+      ],
+      "width": 4
+    },
+    "r49": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r50": {
+      "op": "sequence",
+      "children": [
+        "r48",
+        "r49"
+      ],
+      "arity": 2
+    },
+    "r51": {
+      "op": "literal",
+      "characters": [
+        "t",
+        "y",
+        "p",
+        "e",
+        "o",
+        "f"
+      ],
+      "width": 6
+    },
+    "r52": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r53": {
+      "op": "sequence",
+      "children": [
+        "r51",
+        "r52"
+      ],
+      "arity": 2
+    },
+    "r54": {
+      "op": "literal",
+      "characters": [
+        "v",
+        "o",
+        "i",
+        "d"
+      ],
+      "width": 4
+    },
+    "r55": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r56": {
+      "op": "sequence",
+      "children": [
+        "r54",
+        "r55"
+      ],
+      "arity": 2
+    },
+    "r57": {
+      "op": "choice",
+      "children": [
+        "r5",
+        "r8",
+        "r11",
+        "r14",
+        "r17",
+        "r20",
+        "r23",
+        "r26",
+        "r29",
+        "r32",
+        "r35",
+        "r38",
+        "r41",
+        "r44",
+        "r47",
+        "r50",
+        "r53",
+        "r56"
+      ],
+      "arity": 18
+    },
+    "r58": {
+      "op": "literal",
+      "characters": [
+        "&",
+        "#",
+        "x",
+        "2",
+        "0",
+        ";"
+      ],
+      "width": 6
+    },
+    "r59": {
+      "op": "character",
+      "characters": [
+        " ",
+        "\t",
+        "\r",
+        "\n"
+      ],
+      "positive": true,
+      "width": 4
+    },
+    "r60": {
+      "op": "literal",
+      "characters": [
+        "/",
+        "/"
+      ],
+      "width": 2
+    },
+    "r61": {
+      "op": "character",
+      "characters": [
+        "\r",
+        "\n"
+      ],
+      "positive": false,
+      "width": 2
+    },
+    "r62": {
+      "op": "repeat",
+      "child": "r61"
+    },
+    "r63": {
+      "op": "sequence",
+      "children": [
+        "r60",
+        "r62"
+      ],
+      "arity": 2
+    },
+    "r64": {
+      "op": "literal",
+      "characters": [
+        "/",
+        "*"
+      ],
+      "width": 2
+    },
+    "r65": {
+      "op": "literal",
+      "characters": [
+        "*",
+        "/"
+      ],
+      "width": 2
+    },
+    "r66": {
+      "op": "not",
+      "child": "r65"
+    },
+    "r67": {
+      "op": "sequence",
+      "children": [
+        "r66",
+        "r2"
+      ],
+      "arity": 2
+    },
+    "r68": {
+      "op": "repeat",
+      "child": "r67"
+    },
+    "r69": {
+      "op": "literal",
+      "characters": [
+        "*",
+        "/"
+      ],
+      "width": 2
+    },
+    "r70": {
+      "op": "sequence",
+      "children": [
+        "r64",
+        "r68",
+        "r69"
+      ],
+      "arity": 3
+    },
+    "r71": {
+      "op": "choice",
+      "children": [
+        "r58",
+        "r59",
+        "r63",
+        "r70"
+      ],
+      "arity": 4
+    },
+    "r72": {
+      "op": "repeat",
+      "child": "r71"
+    },
+    "r73": {
+      "op": "drop",
+      "child": "r72"
+    },
+    "Space": {
+      "op": "drop",
+      "child": "r72"
+    },
+    "r74": {
+      "op": "repeat",
+      "child": "r0"
+    },
+    "r75": {
+      "op": "sequence",
+      "children": [
+        "r1",
+        "r74"
+      ],
+      "arity": 2
+    },
+    "r76": {
+      "op": "capture",
+      "name": "Identifier",
+      "child": "r75",
+      "collapse": false
+    },
+    "r77": {
+      "op": "sequence",
+      "children": [
+        "r76",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "Identifier": {
+      "op": "sequence",
+      "children": [
+        "r76",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r78": {
+      "op": "literal",
+      "characters": [
+        "\\"
+      ],
+      "width": 1
+    },
+    "r79": {
+      "op": "character",
+      "characters": [
+        "\"",
+        "'",
+        "\\",
+        "n",
+        "r",
+        "t"
+      ],
+      "positive": true,
+      "width": 6
+    },
+    "r80": {
+      "op": "sequence",
+      "children": [
+        "r78",
+        "r79"
+      ],
+      "arity": 2
+    },
+    "r81": {
+      "op": "literal",
+      "characters": [
+        "\""
+      ],
+      "width": 1
+    },
+    "r82": {
+      "op": "character",
+      "characters": [
+        "\"",
+        "\\",
+        "\r",
+        "\n"
+      ],
+      "positive": false,
+      "width": 4
+    },
+    "r83": {
+      "op": "choice",
+      "children": [
+        "r80",
+        "r82"
+      ],
+      "arity": 2
+    },
+    "r84": {
+      "op": "repeat",
+      "child": "r83"
+    },
+    "r85": {
+      "op": "literal",
+      "characters": [
+        "\""
+      ],
+      "width": 1
+    },
+    "r86": {
+      "op": "sequence",
+      "children": [
+        "r81",
+        "r84",
+        "r85"
+      ],
+      "arity": 3
+    },
+    "r87": {
+      "op": "literal",
+      "characters": [
+        "'"
+      ],
+      "width": 1
+    },
+    "r88": {
+      "op": "character",
+      "characters": [
+        "'",
+        "\\",
+        "\r",
+        "\n"
+      ],
+      "positive": false,
+      "width": 4
+    },
+    "r89": {
+      "op": "choice",
+      "children": [
+        "r80",
+        "r88"
+      ],
+      "arity": 2
+    },
+    "r90": {
+      "op": "repeat",
+      "child": "r89"
+    },
+    "r91": {
+      "op": "literal",
+      "characters": [
+        "'"
+      ],
+      "width": 1
+    },
+    "r92": {
+      "op": "sequence",
+      "children": [
+        "r87",
+        "r90",
+        "r91"
+      ],
+      "arity": 3
+    },
+    "r93": {
+      "op": "choice",
+      "children": [
+        "r86",
+        "r92"
+      ],
+      "arity": 2
+    },
+    "r94": {
+      "op": "capture",
+      "name": "StringLiteral",
+      "child": "r93",
+      "collapse": false
+    },
+    "r95": {
+      "op": "sequence",
+      "children": [
+        "r94",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "String": {
+      "op": "sequence",
+      "children": [
+        "r94",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r96": {
+      "op": "character",
+      "characters": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "positive": true,
+      "width": 10
+    },
+    "r97": {
+      "op": "repeat",
+      "child": "r96"
+    },
+    "r98": {
+      "op": "sequence",
+      "children": [
+        "r96",
+        "r97"
+      ],
+      "arity": 2
+    },
+    "r99": {
+      "op": "capture",
+      "name": "NumberLiteral",
+      "child": "r98",
+      "collapse": false
+    },
+    "r100": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r101": {
+      "op": "sequence",
+      "children": [
+        "r99",
+        "r100",
+        "Space"
+      ],
+      "arity": 3
+    },
+    "Number": {
+      "op": "sequence",
+      "children": [
+        "r99",
+        "r100",
+        "Space"
+      ],
+      "arity": 3
+    },
+    "r102": {
+      "op": "literal",
+      "characters": [
+        "("
+      ],
+      "width": 1
+    },
+    "r103": {
+      "op": "sequence",
+      "children": [
+        "r102",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r104": {
+      "op": "drop",
+      "child": "r103"
+    },
+    "r105": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r106": {
+      "op": "sequence",
+      "children": [
+        "r105",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r107": {
+      "op": "drop",
+      "child": "r106"
+    },
+    "r108": {
+      "op": "sequence",
+      "children": [
+        "r107",
+        "Identifier"
+      ],
+      "arity": 2
+    },
+    "r109": {
+      "op": "repeat",
+      "child": "r108"
+    },
+    "r110": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r109"
+      ],
+      "arity": 2
+    },
+    "r111": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r112": {
+      "op": "choice",
+      "children": [
+        "r110",
+        "r111"
+      ],
+      "arity": 2
+    },
+    "r113": {
+      "op": "literal",
+      "characters": [
+        ")"
+      ],
+      "width": 1
+    },
+    "r114": {
+      "op": "sequence",
+      "children": [
+        "r113",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r115": {
+      "op": "drop",
+      "child": "r114"
+    },
+    "r116": {
+      "op": "sequence",
+      "children": [
+        "r104",
+        "r112",
+        "r115"
+      ],
+      "arity": 3
+    },
+    "r117": {
+      "op": "literal",
+      "characters": [
+        "e",
+        "x",
+        "p",
+        "o",
+        "r",
+        "t"
+      ],
+      "width": 6
+    },
+    "r118": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r119": {
+      "op": "sequence",
+      "children": [
+        "r117",
+        "r118"
+      ],
+      "arity": 2
+    },
+    "r120": {
+      "op": "sequence",
+      "children": [
+        "r119",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r121": {
+      "op": "drop",
+      "child": "r120"
+    },
+    "r122": {
+      "op": "literal",
+      "characters": [
+        "d",
+        "e",
+        "f",
+        "a",
+        "u",
+        "l",
+        "t"
+      ],
+      "width": 7
+    },
+    "r123": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r124": {
+      "op": "sequence",
+      "children": [
+        "r122",
+        "r123"
+      ],
+      "arity": 2
+    },
+    "r125": {
+      "op": "sequence",
+      "children": [
+        "r124",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r126": {
+      "op": "drop",
+      "child": "r125"
+    },
+    "r127": {
+      "op": "sequence",
+      "children": [
+        "r121",
+        "r126"
+      ],
+      "arity": 2
+    },
+    "r128": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r129": {
+      "op": "choice",
+      "children": [
+        "r127",
+        "r128"
+      ],
+      "arity": 2
+    },
+    "r130": {
+      "op": "literal",
+      "characters": [
+        "f",
+        "u",
+        "n",
+        "c",
+        "t",
+        "i",
+        "o",
+        "n"
+      ],
+      "width": 8
+    },
+    "r131": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r132": {
+      "op": "sequence",
+      "children": [
+        "r130",
+        "r131"
+      ],
+      "arity": 2
+    },
+    "r133": {
+      "op": "sequence",
+      "children": [
+        "r132",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r134": {
+      "op": "drop",
+      "child": "r133"
+    },
+    "r135": {
+      "op": "capture",
+      "name": "Parameters",
+      "child": "r116",
+      "collapse": false
+    },
+    "r136": {
+      "op": "sequence",
+      "children": [
+        "r129",
+        "r134",
+        "Identifier",
+        "r135",
+        "Block"
+      ],
+      "arity": 5
+    },
+    "r137": {
+      "op": "capture",
+      "name": "FunctionDeclaration",
+      "child": "r136",
+      "collapse": false
+    },
+    "Function": {
+      "op": "capture",
+      "name": "FunctionDeclaration",
+      "child": "r136",
+      "collapse": false
+    },
+    "r138": {
+      "op": "literal",
+      "characters": [
+        "{"
+      ],
+      "width": 1
+    },
+    "r139": {
+      "op": "sequence",
+      "children": [
+        "r138",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r140": {
+      "op": "drop",
+      "child": "r139"
+    },
+    "r141": {
+      "op": "repeat",
+      "child": "Statement"
+    },
+    "r142": {
+      "op": "literal",
+      "characters": [
+        "}"
+      ],
+      "width": 1
+    },
+    "r143": {
+      "op": "sequence",
+      "children": [
+        "r142",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r144": {
+      "op": "drop",
+      "child": "r143"
+    },
+    "r145": {
+      "op": "sequence",
+      "children": [
+        "r140",
+        "r141",
+        "r144"
+      ],
+      "arity": 3
+    },
+    "r146": {
+      "op": "capture",
+      "name": "Block",
+      "child": "r145",
+      "collapse": false
+    },
+    "Block": {
+      "op": "capture",
+      "name": "Block",
+      "child": "r145",
+      "collapse": false
+    },
+    "r147": {
+      "op": "literal",
+      "characters": [
+        "c",
+        "o",
+        "n",
+        "s",
+        "t"
+      ],
+      "width": 5
+    },
+    "r148": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r149": {
+      "op": "sequence",
+      "children": [
+        "r147",
+        "r148"
+      ],
+      "arity": 2
+    },
+    "r150": {
+      "op": "literal",
+      "characters": [
+        "l",
+        "e",
+        "t"
+      ],
+      "width": 3
+    },
+    "r151": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r152": {
+      "op": "sequence",
+      "children": [
+        "r150",
+        "r151"
+      ],
+      "arity": 2
+    },
+    "r153": {
+      "op": "choice",
+      "children": [
+        "r149",
+        "r152"
+      ],
+      "arity": 2
+    },
+    "r154": {
+      "op": "sequence",
+      "children": [
+        "r153",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r155": {
+      "op": "capture",
+      "name": "DeclarationKind",
+      "child": "r154",
+      "collapse": false
+    },
+    "r156": {
+      "op": "literal",
+      "characters": [
+        "="
+      ],
+      "width": 1
+    },
+    "r157": {
+      "op": "sequence",
+      "children": [
+        "r156",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r158": {
+      "op": "drop",
+      "child": "r157"
+    },
+    "r159": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r160": {
+      "op": "sequence",
+      "children": [
+        "r159",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r161": {
+      "op": "drop",
+      "child": "r160"
+    },
+    "r162": {
+      "op": "sequence",
+      "children": [
+        "r155",
+        "Pattern",
+        "r158",
+        "Expression",
+        "r161"
+      ],
+      "arity": 5
+    },
+    "r163": {
+      "op": "capture",
+      "name": "VariableDeclaration",
+      "child": "r162",
+      "collapse": false
+    },
+    "Declaration": {
+      "op": "capture",
+      "name": "VariableDeclaration",
+      "child": "r162",
+      "collapse": false
+    },
+    "r164": {
+      "op": "literal",
+      "characters": [
+        "["
+      ],
+      "width": 1
+    },
+    "r165": {
+      "op": "sequence",
+      "children": [
+        "r164",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r166": {
+      "op": "drop",
+      "child": "r165"
+    },
+    "r167": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r168": {
+      "op": "sequence",
+      "children": [
+        "r167",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r169": {
+      "op": "drop",
+      "child": "r168"
+    },
+    "r170": {
+      "op": "sequence",
+      "children": [
+        "r169",
+        "Identifier"
+      ],
+      "arity": 2
+    },
+    "r171": {
+      "op": "repeat",
+      "child": "r170"
+    },
+    "r172": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r171"
+      ],
+      "arity": 2
+    },
+    "r173": {
+      "op": "literal",
+      "characters": [
+        "]"
+      ],
+      "width": 1
+    },
+    "r174": {
+      "op": "sequence",
+      "children": [
+        "r173",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r175": {
+      "op": "drop",
+      "child": "r174"
+    },
+    "r176": {
+      "op": "sequence",
+      "children": [
+        "r166",
+        "r172",
+        "r175"
+      ],
+      "arity": 3
+    },
+    "r177": {
+      "op": "capture",
+      "name": "ArrayPattern",
+      "child": "r176",
+      "collapse": false
+    },
+    "r178": {
+      "op": "literal",
+      "characters": [
+        "{"
+      ],
+      "width": 1
+    },
+    "r179": {
+      "op": "sequence",
+      "children": [
+        "r178",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r180": {
+      "op": "drop",
+      "child": "r179"
+    },
+    "r181": {
+      "op": "literal",
+      "characters": [
+        ":"
+      ],
+      "width": 1
+    },
+    "r182": {
+      "op": "sequence",
+      "children": [
+        "r181",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r183": {
+      "op": "drop",
+      "child": "r182"
+    },
+    "r184": {
+      "op": "sequence",
+      "children": [
+        "r183",
+        "Identifier"
+      ],
+      "arity": 2
+    },
+    "r185": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r186": {
+      "op": "choice",
+      "children": [
+        "r184",
+        "r185"
+      ],
+      "arity": 2
+    },
+    "r187": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r186"
+      ],
+      "arity": 2
+    },
+    "r188": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r189": {
+      "op": "sequence",
+      "children": [
+        "r188",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r190": {
+      "op": "drop",
+      "child": "r189"
+    },
+    "r191": {
+      "op": "sequence",
+      "children": [
+        "r190",
+        "r187"
+      ],
+      "arity": 2
+    },
+    "r192": {
+      "op": "repeat",
+      "child": "r191"
+    },
+    "r193": {
+      "op": "sequence",
+      "children": [
+        "r187",
+        "r192"
+      ],
+      "arity": 2
+    },
+    "r194": {
+      "op": "literal",
+      "characters": [
+        "}"
+      ],
+      "width": 1
+    },
+    "r195": {
+      "op": "sequence",
+      "children": [
+        "r194",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r196": {
+      "op": "drop",
+      "child": "r195"
+    },
+    "r197": {
+      "op": "sequence",
+      "children": [
+        "r180",
+        "r193",
+        "r196"
+      ],
+      "arity": 3
+    },
+    "r198": {
+      "op": "capture",
+      "name": "ObjectPattern",
+      "child": "r197",
+      "collapse": false
+    },
+    "r199": {
+      "op": "choice",
+      "children": [
+        "Identifier",
+        "r177",
+        "r198"
+      ],
+      "arity": 3
+    },
+    "Pattern": {
+      "op": "choice",
+      "children": [
+        "Identifier",
+        "r177",
+        "r198"
+      ],
+      "arity": 3
+    },
+    "r200": {
+      "op": "literal",
+      "characters": [
+        "+",
+        "+"
+      ],
+      "width": 2
+    },
+    "r201": {
+      "op": "literal",
+      "characters": [
+        "-",
+        "-"
+      ],
+      "width": 2
+    },
+    "r202": {
+      "op": "choice",
+      "children": [
+        "r200",
+        "r201"
+      ],
+      "arity": 2
+    },
+    "r203": {
+      "op": "sequence",
+      "children": [
+        "r202",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r204": {
+      "op": "capture",
+      "name": "UpdateOperator",
+      "child": "r203",
+      "collapse": false
+    },
+    "r205": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r206": {
+      "op": "sequence",
+      "children": [
+        "r205",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r207": {
+      "op": "drop",
+      "child": "r206"
+    },
+    "r208": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r204",
+        "r207"
+      ],
+      "arity": 3
+    },
+    "r209": {
+      "op": "literal",
+      "characters": [
+        "+",
+        "="
+      ],
+      "width": 2
+    },
+    "r210": {
+      "op": "literal",
+      "characters": [
+        "-",
+        "="
+      ],
+      "width": 2
+    },
+    "r211": {
+      "op": "literal",
+      "characters": [
+        "*",
+        "="
+      ],
+      "width": 2
+    },
+    "r212": {
+      "op": "literal",
+      "characters": [
+        "="
+      ],
+      "width": 1
+    },
+    "r213": {
+      "op": "choice",
+      "children": [
+        "r209",
+        "r210",
+        "r211",
+        "r212"
+      ],
+      "arity": 4
+    },
+    "r214": {
+      "op": "sequence",
+      "children": [
+        "r213",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r215": {
+      "op": "capture",
+      "name": "UpdateOperator",
+      "child": "r214",
+      "collapse": false
+    },
+    "r216": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r217": {
+      "op": "sequence",
+      "children": [
+        "r216",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r218": {
+      "op": "drop",
+      "child": "r217"
+    },
+    "r219": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r215",
+        "Expression",
+        "r218"
+      ],
+      "arity": 4
+    },
+    "r220": {
+      "op": "choice",
+      "children": [
+        "r208",
+        "r219"
+      ],
+      "arity": 2
+    },
+    "r221": {
+      "op": "capture",
+      "name": "UpdateStatement",
+      "child": "r220",
+      "collapse": false
+    },
+    "UpdateStatement": {
+      "op": "capture",
+      "name": "UpdateStatement",
+      "child": "r220",
+      "collapse": false
+    },
+    "r222": {
+      "op": "literal",
+      "characters": [
+        "l",
+        "e",
+        "t"
+      ],
+      "width": 3
+    },
+    "r223": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r224": {
+      "op": "sequence",
+      "children": [
+        "r222",
+        "r223"
+      ],
+      "arity": 2
+    },
+    "r225": {
+      "op": "literal",
+      "characters": [
+        "c",
+        "o",
+        "n",
+        "s",
+        "t"
+      ],
+      "width": 5
+    },
+    "r226": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r227": {
+      "op": "sequence",
+      "children": [
+        "r225",
+        "r226"
+      ],
+      "arity": 2
+    },
+    "r228": {
+      "op": "choice",
+      "children": [
+        "r224",
+        "r227"
+      ],
+      "arity": 2
+    },
+    "r229": {
+      "op": "sequence",
+      "children": [
+        "r228",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r230": {
+      "op": "capture",
+      "name": "DeclarationKind",
+      "child": "r229",
+      "collapse": false
+    },
+    "r231": {
+      "op": "literal",
+      "characters": [
+        "="
+      ],
+      "width": 1
+    },
+    "r232": {
+      "op": "sequence",
+      "children": [
+        "r231",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r233": {
+      "op": "drop",
+      "child": "r232"
+    },
+    "r234": {
+      "op": "sequence",
+      "children": [
+        "r230",
+        "Identifier",
+        "r233",
+        "Expression"
+      ],
+      "arity": 4
+    },
+    "r235": {
+      "op": "capture",
+      "name": "VariableDeclaration",
+      "child": "r234",
+      "collapse": false
+    },
+    "r236": {
+      "op": "literal",
+      "characters": [
+        "="
+      ],
+      "width": 1
+    },
+    "r237": {
+      "op": "sequence",
+      "children": [
+        "r236",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r238": {
+      "op": "capture",
+      "name": "UpdateOperator",
+      "child": "r237",
+      "collapse": false
+    },
+    "r239": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r238",
+        "Expression"
+      ],
+      "arity": 3
+    },
+    "r240": {
+      "op": "capture",
+      "name": "UpdateStatement",
+      "child": "r239",
+      "collapse": false
+    },
+    "r241": {
+      "op": "choice",
+      "children": [
+        "r235",
+        "r240"
+      ],
+      "arity": 2
+    },
+    "r242": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r243": {
+      "op": "choice",
+      "children": [
+        "r241",
+        "r242"
+      ],
+      "arity": 2
+    },
+    "r244": {
+      "op": "capture",
+      "name": "ForInit",
+      "child": "r243",
+      "collapse": false
+    },
+    "ForInit": {
+      "op": "capture",
+      "name": "ForInit",
+      "child": "r243",
+      "collapse": false
+    },
+    "r245": {
+      "op": "literal",
+      "characters": [
+        "+",
+        "+"
+      ],
+      "width": 2
+    },
+    "r246": {
+      "op": "literal",
+      "characters": [
+        "-",
+        "-"
+      ],
+      "width": 2
+    },
+    "r247": {
+      "op": "choice",
+      "children": [
+        "r245",
+        "r246"
+      ],
+      "arity": 2
+    },
+    "r248": {
+      "op": "sequence",
+      "children": [
+        "r247",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r249": {
+      "op": "capture",
+      "name": "UpdateOperator",
+      "child": "r248",
+      "collapse": false
+    },
+    "r250": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r249"
+      ],
+      "arity": 2
+    },
+    "r251": {
+      "op": "literal",
+      "characters": [
+        "+",
+        "="
+      ],
+      "width": 2
+    },
+    "r252": {
+      "op": "literal",
+      "characters": [
+        "-",
+        "="
+      ],
+      "width": 2
+    },
+    "r253": {
+      "op": "literal",
+      "characters": [
+        "*",
+        "="
+      ],
+      "width": 2
+    },
+    "r254": {
+      "op": "literal",
+      "characters": [
+        "="
+      ],
+      "width": 1
+    },
+    "r255": {
+      "op": "choice",
+      "children": [
+        "r251",
+        "r252",
+        "r253",
+        "r254"
+      ],
+      "arity": 4
+    },
+    "r256": {
+      "op": "sequence",
+      "children": [
+        "r255",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r257": {
+      "op": "capture",
+      "name": "UpdateOperator",
+      "child": "r256",
+      "collapse": false
+    },
+    "r258": {
+      "op": "sequence",
+      "children": [
+        "Identifier",
+        "r257",
+        "Expression"
+      ],
+      "arity": 3
+    },
+    "r259": {
+      "op": "choice",
+      "children": [
+        "r250",
+        "r258"
+      ],
+      "arity": 2
+    },
+    "r260": {
+      "op": "capture",
+      "name": "UpdateStatement",
+      "child": "r259",
+      "collapse": false
+    },
+    "r261": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r262": {
+      "op": "choice",
+      "children": [
+        "r260",
+        "r261"
+      ],
+      "arity": 2
+    },
+    "r263": {
+      "op": "capture",
+      "name": "ForUpdate",
+      "child": "r262",
+      "collapse": false
+    },
+    "ForUpdate": {
+      "op": "capture",
+      "name": "ForUpdate",
+      "child": "r262",
+      "collapse": false
+    },
+    "r264": {
+      "op": "literal",
+      "characters": [
+        "f",
+        "o",
+        "r"
+      ],
+      "width": 3
+    },
+    "r265": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r266": {
+      "op": "sequence",
+      "children": [
+        "r264",
+        "r265"
+      ],
+      "arity": 2
+    },
+    "r267": {
+      "op": "sequence",
+      "children": [
+        "r266",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r268": {
+      "op": "drop",
+      "child": "r267"
+    },
+    "r269": {
+      "op": "literal",
+      "characters": [
+        "("
+      ],
+      "width": 1
+    },
+    "r270": {
+      "op": "sequence",
+      "children": [
+        "r269",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r271": {
+      "op": "drop",
+      "child": "r270"
+    },
+    "r272": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r273": {
+      "op": "sequence",
+      "children": [
+        "r272",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r274": {
+      "op": "drop",
+      "child": "r273"
+    },
+    "r275": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r276": {
+      "op": "choice",
+      "children": [
+        "Expression",
+        "r275"
+      ],
+      "arity": 2
+    },
+    "r277": {
+      "op": "capture",
+      "name": "ForTest",
+      "child": "r276",
+      "collapse": false
+    },
+    "r278": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r279": {
+      "op": "sequence",
+      "children": [
+        "r278",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r280": {
+      "op": "drop",
+      "child": "r279"
+    },
+    "r281": {
+      "op": "literal",
+      "characters": [
+        ")"
+      ],
+      "width": 1
+    },
+    "r282": {
+      "op": "sequence",
+      "children": [
+        "r281",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r283": {
+      "op": "drop",
+      "child": "r282"
+    },
+    "r284": {
+      "op": "sequence",
+      "children": [
+        "r268",
+        "r271",
+        "ForInit",
+        "r274",
+        "r277",
+        "r280",
+        "ForUpdate",
+        "r283",
+        "Block"
+      ],
+      "arity": 9
+    },
+    "r285": {
+      "op": "capture",
+      "name": "ForStatement",
+      "child": "r284",
+      "collapse": false
+    },
+    "ForStatement": {
+      "op": "capture",
+      "name": "ForStatement",
+      "child": "r284",
+      "collapse": false
+    },
+    "r286": {
+      "op": "literal",
+      "characters": [
+        "d",
+        "o"
+      ],
+      "width": 2
+    },
+    "r287": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r288": {
+      "op": "sequence",
+      "children": [
+        "r286",
+        "r287"
+      ],
+      "arity": 2
+    },
+    "r289": {
+      "op": "sequence",
+      "children": [
+        "r288",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r290": {
+      "op": "drop",
+      "child": "r289"
+    },
+    "r291": {
+      "op": "literal",
+      "characters": [
+        "w",
+        "h",
+        "i",
+        "l",
+        "e"
+      ],
+      "width": 5
+    },
+    "r292": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r293": {
+      "op": "sequence",
+      "children": [
+        "r291",
+        "r292"
+      ],
+      "arity": 2
+    },
+    "r294": {
+      "op": "sequence",
+      "children": [
+        "r293",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r295": {
+      "op": "drop",
+      "child": "r294"
+    },
+    "r296": {
+      "op": "literal",
+      "characters": [
+        "("
+      ],
+      "width": 1
+    },
+    "r297": {
+      "op": "sequence",
+      "children": [
+        "r296",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r298": {
+      "op": "drop",
+      "child": "r297"
+    },
+    "r299": {
+      "op": "literal",
+      "characters": [
+        ")"
+      ],
+      "width": 1
+    },
+    "r300": {
+      "op": "sequence",
+      "children": [
+        "r299",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r301": {
+      "op": "drop",
+      "child": "r300"
+    },
+    "r302": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r303": {
+      "op": "sequence",
+      "children": [
+        "r302",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r304": {
+      "op": "drop",
+      "child": "r303"
+    },
+    "r305": {
+      "op": "sequence",
+      "children": [
+        "r290",
+        "Block",
+        "r295",
+        "r298",
+        "Expression",
+        "r301",
+        "r304"
+      ],
+      "arity": 7
+    },
+    "r306": {
+      "op": "capture",
+      "name": "DoWhileStatement",
+      "child": "r305",
+      "collapse": false
+    },
+    "DoWhileStatement": {
+      "op": "capture",
+      "name": "DoWhileStatement",
+      "child": "r305",
+      "collapse": false
+    },
+    "r307": {
+      "op": "literal",
+      "characters": [
+        "r",
+        "e",
+        "t",
+        "u",
+        "r",
+        "n"
+      ],
+      "width": 6
+    },
+    "r308": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r309": {
+      "op": "sequence",
+      "children": [
+        "r307",
+        "r308"
+      ],
+      "arity": 2
+    },
+    "r310": {
+      "op": "character",
+      "characters": [
+        " ",
+        "\t"
+      ],
+      "positive": true,
+      "width": 2
+    },
+    "r311": {
+      "op": "repeat",
+      "child": "r310"
+    },
+    "r312": {
+      "op": "sequence",
+      "children": [
+        "r309",
+        "r311"
+      ],
+      "arity": 2
+    },
+    "r313": {
+      "op": "drop",
+      "child": "r312"
+    },
+    "r314": {
+      "op": "character",
+      "characters": [
+        "\r",
+        "\n"
+      ],
+      "positive": true,
+      "width": 2
+    },
+    "r315": {
+      "op": "not",
+      "child": "r314"
+    },
+    "r316": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r317": {
+      "op": "choice",
+      "children": [
+        "Expression",
+        "r316"
+      ],
+      "arity": 2
+    },
+    "r318": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r319": {
+      "op": "sequence",
+      "children": [
+        "r318",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r320": {
+      "op": "drop",
+      "child": "r319"
+    },
+    "r321": {
+      "op": "literal",
+      "characters": [
+        "}"
+      ],
+      "width": 1
+    },
+    "r322": {
+      "op": "not",
+      "child": "r321"
+    },
+    "r323": {
+      "op": "not",
+      "child": "r322"
+    },
+    "r324": {
+      "op": "choice",
+      "children": [
+        "r320",
+        "r323"
+      ],
+      "arity": 2
+    },
+    "r325": {
+      "op": "sequence",
+      "children": [
+        "r313",
+        "r315",
+        "r317",
+        "r324"
+      ],
+      "arity": 4
+    },
+    "r326": {
+      "op": "capture",
+      "name": "ReturnStatement",
+      "child": "r325",
+      "collapse": false
+    },
+    "r327": {
+      "op": "literal",
+      "characters": [
+        "i",
+        "f"
+      ],
+      "width": 2
+    },
+    "r328": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r329": {
+      "op": "sequence",
+      "children": [
+        "r327",
+        "r328"
+      ],
+      "arity": 2
+    },
+    "r330": {
+      "op": "sequence",
+      "children": [
+        "r329",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r331": {
+      "op": "drop",
+      "child": "r330"
+    },
+    "r332": {
+      "op": "literal",
+      "characters": [
+        "("
+      ],
+      "width": 1
+    },
+    "r333": {
+      "op": "sequence",
+      "children": [
+        "r332",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r334": {
+      "op": "drop",
+      "child": "r333"
+    },
+    "r335": {
+      "op": "literal",
+      "characters": [
+        ")"
+      ],
+      "width": 1
+    },
+    "r336": {
+      "op": "sequence",
+      "children": [
+        "r335",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r337": {
+      "op": "drop",
+      "child": "r336"
+    },
+    "r338": {
+      "op": "literal",
+      "characters": [
+        "e",
+        "l",
+        "s",
+        "e"
+      ],
+      "width": 4
+    },
+    "r339": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r340": {
+      "op": "sequence",
+      "children": [
+        "r338",
+        "r339"
+      ],
+      "arity": 2
+    },
+    "r341": {
+      "op": "sequence",
+      "children": [
+        "r340",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r342": {
+      "op": "drop",
+      "child": "r341"
+    },
+    "r343": {
+      "op": "choice",
+      "children": [
+        "Block",
+        "Statement"
+      ],
+      "arity": 2
+    },
+    "r344": {
+      "op": "sequence",
+      "children": [
+        "r342",
+        "r343"
+      ],
+      "arity": 2
+    },
+    "r345": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r346": {
+      "op": "choice",
+      "children": [
+        "r344",
+        "r345"
+      ],
+      "arity": 2
+    },
+    "r347": {
+      "op": "sequence",
+      "children": [
+        "r331",
+        "r334",
+        "Expression",
+        "r337",
+        "Block",
+        "r346"
+      ],
+      "arity": 6
+    },
+    "r348": {
+      "op": "capture",
+      "name": "IfStatement",
+      "child": "r347",
+      "collapse": false
+    },
+    "r349": {
+      "op": "literal",
+      "characters": [
+        "w",
+        "h",
+        "i",
+        "l",
+        "e"
+      ],
+      "width": 5
+    },
+    "r350": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r351": {
+      "op": "sequence",
+      "children": [
+        "r349",
+        "r350"
+      ],
+      "arity": 2
+    },
+    "r352": {
+      "op": "sequence",
+      "children": [
+        "r351",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r353": {
+      "op": "drop",
+      "child": "r352"
+    },
+    "r354": {
+      "op": "literal",
+      "characters": [
+        "("
+      ],
+      "width": 1
+    },
+    "r355": {
+      "op": "sequence",
+      "children": [
+        "r354",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r356": {
+      "op": "drop",
+      "child": "r355"
+    },
+    "r357": {
+      "op": "literal",
+      "characters": [
+        ")"
+      ],
+      "width": 1
+    },
+    "r358": {
+      "op": "sequence",
+      "children": [
+        "r357",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r359": {
+      "op": "drop",
+      "child": "r358"
+    },
+    "r360": {
+      "op": "sequence",
+      "children": [
+        "r353",
+        "r356",
+        "Expression",
+        "r359",
+        "Block"
+      ],
+      "arity": 5
+    },
+    "r361": {
+      "op": "capture",
+      "name": "WhileStatement",
+      "child": "r360",
+      "collapse": false
+    },
+    "r362": {
+      "op": "literal",
+      "characters": [
+        ";"
+      ],
+      "width": 1
+    },
+    "r363": {
+      "op": "sequence",
+      "children": [
+        "r362",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r364": {
+      "op": "drop",
+      "child": "r363"
+    },
+    "r365": {
+      "op": "sequence",
+      "children": [
+        "Expression",
+        "r364"
+      ],
+      "arity": 2
+    },
+    "r366": {
+      "op": "capture",
+      "name": "ExpressionStatement",
+      "child": "r365",
+      "collapse": false
+    },
+    "r367": {
+      "op": "choice",
+      "children": [
+        "Function",
+        "Declaration",
+        "ForStatement",
+        "DoWhileStatement",
+        "UpdateStatement",
+        "r326",
+        "r348",
+        "r361",
+        "Block",
+        "r366"
+      ],
+      "arity": 10
+    },
+    "Statement": {
+      "op": "choice",
+      "children": [
+        "Function",
+        "Declaration",
+        "ForStatement",
+        "DoWhileStatement",
+        "UpdateStatement",
+        "r326",
+        "r348",
+        "r361",
+        "Block",
+        "r366"
+      ],
+      "arity": 10
+    },
+    "r368": {
+      "op": "choice",
+      "children": [
+        "r116",
+        "Identifier"
+      ],
+      "arity": 2
+    },
+    "r369": {
+      "op": "capture",
+      "name": "Parameters",
+      "child": "r368",
+      "collapse": false
+    },
+    "r370": {
+      "op": "literal",
+      "characters": [
+        "=",
+        ">"
+      ],
+      "width": 2
+    },
+    "r371": {
+      "op": "sequence",
+      "children": [
+        "r370",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r372": {
+      "op": "drop",
+      "child": "r371"
+    },
+    "r373": {
+      "op": "choice",
+      "children": [
+        "Block",
+        "Expression"
+      ],
+      "arity": 2
+    },
+    "r374": {
+      "op": "sequence",
+      "children": [
+        "r369",
+        "r372",
+        "r373"
+      ],
+      "arity": 3
+    },
+    "r375": {
+      "op": "capture",
+      "name": "ArrowFunction",
+      "child": "r374",
+      "collapse": false
+    },
+    "r376": {
+      "op": "choice",
+      "children": [
+        "r375",
+        "Conditional"
+      ],
+      "arity": 2
+    },
+    "Expression": {
+      "op": "choice",
+      "children": [
+        "r375",
+        "Conditional"
+      ],
+      "arity": 2
+    },
+    "r377": {
+      "op": "literal",
+      "characters": [
+        "?"
+      ],
+      "width": 1
+    },
+    "r378": {
+      "op": "sequence",
+      "children": [
+        "r377",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r379": {
+      "op": "drop",
+      "child": "r378"
+    },
+    "r380": {
+      "op": "literal",
+      "characters": [
+        ":"
+      ],
+      "width": 1
+    },
+    "r381": {
+      "op": "sequence",
+      "children": [
+        "r380",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r382": {
+      "op": "drop",
+      "child": "r381"
+    },
+    "r383": {
+      "op": "sequence",
+      "children": [
+        "r379",
+        "Expression",
+        "r382",
+        "Expression"
+      ],
+      "arity": 4
+    },
+    "r384": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r385": {
+      "op": "choice",
+      "children": [
+        "r383",
+        "r384"
+      ],
+      "arity": 2
+    },
+    "r386": {
+      "op": "sequence",
+      "children": [
+        "Logical",
+        "r385"
+      ],
+      "arity": 2
+    },
+    "r387": {
+      "op": "capture",
+      "name": "ConditionalExpression",
+      "child": "r386",
+      "collapse": true
+    },
+    "Conditional": {
+      "op": "capture",
+      "name": "ConditionalExpression",
+      "child": "r386",
+      "collapse": true
+    },
+    "r388": {
+      "op": "literal",
+      "characters": [
+        "&",
+        "&"
+      ],
+      "width": 2
+    },
+    "r389": {
+      "op": "choice",
+      "children": [
+        "r388"
+      ],
+      "arity": 1
+    },
+    "r390": {
+      "op": "sequence",
+      "children": [
+        "r389",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r391": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r390",
+      "collapse": false
+    },
+    "r392": {
+      "op": "sequence",
+      "children": [
+        "r391",
+        "Equality"
+      ],
+      "arity": 2
+    },
+    "r393": {
+      "op": "repeat",
+      "child": "r392"
+    },
+    "r394": {
+      "op": "sequence",
+      "children": [
+        "Equality",
+        "r393"
+      ],
+      "arity": 2
+    },
+    "r395": {
+      "op": "capture",
+      "name": "Logical",
+      "child": "r394",
+      "collapse": true
+    },
+    "LogicalAnd": {
+      "op": "capture",
+      "name": "Logical",
+      "child": "r394",
+      "collapse": true
+    },
+    "r396": {
+      "op": "literal",
+      "characters": [
+        "|",
+        "|"
+      ],
+      "width": 2
+    },
+    "r397": {
+      "op": "choice",
+      "children": [
+        "r396"
+      ],
+      "arity": 1
+    },
+    "r398": {
+      "op": "sequence",
+      "children": [
+        "r397",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r399": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r398",
+      "collapse": false
+    },
+    "r400": {
+      "op": "sequence",
+      "children": [
+        "r399",
+        "LogicalAnd"
+      ],
+      "arity": 2
+    },
+    "r401": {
+      "op": "repeat",
+      "child": "r400"
+    },
+    "r402": {
+      "op": "sequence",
+      "children": [
+        "LogicalAnd",
+        "r401"
+      ],
+      "arity": 2
+    },
+    "r403": {
+      "op": "capture",
+      "name": "Logical",
+      "child": "r402",
+      "collapse": true
+    },
+    "LogicalOr": {
+      "op": "capture",
+      "name": "Logical",
+      "child": "r402",
+      "collapse": true
+    },
+    "r404": {
+      "op": "literal",
+      "characters": [
+        "?",
+        "?"
+      ],
+      "width": 2
+    },
+    "r405": {
+      "op": "sequence",
+      "children": [
+        "r404",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r406": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r405",
+      "collapse": false
+    },
+    "r407": {
+      "op": "sequence",
+      "children": [
+        "r406",
+        "Equality"
+      ],
+      "arity": 2
+    },
+    "r408": {
+      "op": "repeat",
+      "child": "r407"
+    },
+    "r409": {
+      "op": "sequence",
+      "children": [
+        "r407",
+        "r408"
+      ],
+      "arity": 2
+    },
+    "r410": {
+      "op": "sequence",
+      "children": [
+        "Equality",
+        "r409"
+      ],
+      "arity": 2
+    },
+    "r411": {
+      "op": "capture",
+      "name": "Logical",
+      "child": "r410",
+      "collapse": true
+    },
+    "r412": {
+      "op": "choice",
+      "children": [
+        "r411",
+        "LogicalOr"
+      ],
+      "arity": 2
+    },
+    "Logical": {
+      "op": "choice",
+      "children": [
+        "r411",
+        "LogicalOr"
+      ],
+      "arity": 2
+    },
+    "r413": {
+      "op": "literal",
+      "characters": [
+        "=",
+        "=",
+        "="
+      ],
+      "width": 3
+    },
+    "r414": {
+      "op": "literal",
+      "characters": [
+        "!",
+        "=",
+        "="
+      ],
+      "width": 3
+    },
+    "r415": {
+      "op": "choice",
+      "children": [
+        "r413",
+        "r414"
+      ],
+      "arity": 2
+    },
+    "r416": {
+      "op": "sequence",
+      "children": [
+        "r415",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r417": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r416",
+      "collapse": false
+    },
+    "r418": {
+      "op": "sequence",
+      "children": [
+        "r417",
+        "Relational"
+      ],
+      "arity": 2
+    },
+    "r419": {
+      "op": "repeat",
+      "child": "r418"
+    },
+    "r420": {
+      "op": "sequence",
+      "children": [
+        "Relational",
+        "r419"
+      ],
+      "arity": 2
+    },
+    "r421": {
+      "op": "capture",
+      "name": "Equality",
+      "child": "r420",
+      "collapse": true
+    },
+    "Equality": {
+      "op": "capture",
+      "name": "Equality",
+      "child": "r420",
+      "collapse": true
+    },
+    "r422": {
+      "op": "literal",
+      "characters": [
+        "<",
+        "="
+      ],
+      "width": 2
+    },
+    "r423": {
+      "op": "literal",
+      "characters": [
+        ">",
+        "="
+      ],
+      "width": 2
+    },
+    "r424": {
+      "op": "literal",
+      "characters": [
+        "<"
+      ],
+      "width": 1
+    },
+    "r425": {
+      "op": "literal",
+      "characters": [
+        ">"
+      ],
+      "width": 1
+    },
+    "r426": {
+      "op": "choice",
+      "children": [
+        "r422",
+        "r423",
+        "r424",
+        "r425"
+      ],
+      "arity": 4
+    },
+    "r427": {
+      "op": "sequence",
+      "children": [
+        "r426",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r428": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r427",
+      "collapse": false
+    },
+    "r429": {
+      "op": "sequence",
+      "children": [
+        "r428",
+        "Additive"
+      ],
+      "arity": 2
+    },
+    "r430": {
+      "op": "repeat",
+      "child": "r429"
+    },
+    "r431": {
+      "op": "sequence",
+      "children": [
+        "Additive",
+        "r430"
+      ],
+      "arity": 2
+    },
+    "r432": {
+      "op": "capture",
+      "name": "Relational",
+      "child": "r431",
+      "collapse": true
+    },
+    "Relational": {
+      "op": "capture",
+      "name": "Relational",
+      "child": "r431",
+      "collapse": true
+    },
+    "r433": {
+      "op": "literal",
+      "characters": [
+        "+"
+      ],
+      "width": 1
+    },
+    "r434": {
+      "op": "literal",
+      "characters": [
+        "-"
+      ],
+      "width": 1
+    },
+    "r435": {
+      "op": "choice",
+      "children": [
+        "r433",
+        "r434"
+      ],
+      "arity": 2
+    },
+    "r436": {
+      "op": "sequence",
+      "children": [
+        "r435",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r437": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r436",
+      "collapse": false
+    },
+    "r438": {
+      "op": "sequence",
+      "children": [
+        "r437",
+        "Multiplicative"
+      ],
+      "arity": 2
+    },
+    "r439": {
+      "op": "repeat",
+      "child": "r438"
+    },
+    "r440": {
+      "op": "sequence",
+      "children": [
+        "Multiplicative",
+        "r439"
+      ],
+      "arity": 2
+    },
+    "r441": {
+      "op": "capture",
+      "name": "Additive",
+      "child": "r440",
+      "collapse": true
+    },
+    "Additive": {
+      "op": "capture",
+      "name": "Additive",
+      "child": "r440",
+      "collapse": true
+    },
+    "r442": {
+      "op": "literal",
+      "characters": [
+        "*"
+      ],
+      "width": 1
+    },
+    "r443": {
+      "op": "choice",
+      "children": [
+        "r442"
+      ],
+      "arity": 1
+    },
+    "r444": {
+      "op": "sequence",
+      "children": [
+        "r443",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r445": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r444",
+      "collapse": false
+    },
+    "r446": {
+      "op": "sequence",
+      "children": [
+        "r445",
+        "Unary"
+      ],
+      "arity": 2
+    },
+    "r447": {
+      "op": "repeat",
+      "child": "r446"
+    },
+    "r448": {
+      "op": "sequence",
+      "children": [
+        "Unary",
+        "r447"
+      ],
+      "arity": 2
+    },
+    "r449": {
+      "op": "capture",
+      "name": "Multiplicative",
+      "child": "r448",
+      "collapse": true
+    },
+    "Multiplicative": {
+      "op": "capture",
+      "name": "Multiplicative",
+      "child": "r448",
+      "collapse": true
+    },
+    "r450": {
+      "op": "literal",
+      "characters": [
+        "!"
+      ],
+      "width": 1
+    },
+    "r451": {
+      "op": "literal",
+      "characters": [
+        "-"
+      ],
+      "width": 1
+    },
+    "r452": {
+      "op": "literal",
+      "characters": [
+        "t",
+        "y",
+        "p",
+        "e",
+        "o",
+        "f"
+      ],
+      "width": 6
+    },
+    "r453": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r454": {
+      "op": "sequence",
+      "children": [
+        "r452",
+        "r453"
+      ],
+      "arity": 2
+    },
+    "r455": {
+      "op": "literal",
+      "characters": [
+        "v",
+        "o",
+        "i",
+        "d"
+      ],
+      "width": 4
+    },
+    "r456": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r457": {
+      "op": "sequence",
+      "children": [
+        "r455",
+        "r456"
+      ],
+      "arity": 2
+    },
+    "r458": {
+      "op": "choice",
+      "children": [
+        "r450",
+        "r451",
+        "r454",
+        "r457"
+      ],
+      "arity": 4
+    },
+    "r459": {
+      "op": "sequence",
+      "children": [
+        "r458",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r460": {
+      "op": "capture",
+      "name": "Operator",
+      "child": "r459",
+      "collapse": false
+    },
+    "r461": {
+      "op": "sequence",
+      "children": [
+        "r460",
+        "Unary"
+      ],
+      "arity": 2
+    },
+    "r462": {
+      "op": "capture",
+      "name": "UnaryExpression",
+      "child": "r461",
+      "collapse": false
+    },
+    "r463": {
+      "op": "choice",
+      "children": [
+        "r462",
+        "Postfix"
+      ],
+      "arity": 2
+    },
+    "Unary": {
+      "op": "choice",
+      "children": [
+        "r462",
+        "Postfix"
+      ],
+      "arity": 2
+    },
+    "r464": {
+      "op": "literal",
+      "characters": [
+        "."
+      ],
+      "width": 1
+    },
+    "r465": {
+      "op": "sequence",
+      "children": [
+        "r464",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r466": {
+      "op": "drop",
+      "child": "r465"
+    },
+    "r467": {
+      "op": "sequence",
+      "children": [
+        "r466",
+        "Identifier"
+      ],
+      "arity": 2
+    },
+    "r468": {
+      "op": "capture",
+      "name": "Member",
+      "child": "r467",
+      "collapse": false
+    },
+    "r469": {
+      "op": "literal",
+      "characters": [
+        "["
+      ],
+      "width": 1
+    },
+    "r470": {
+      "op": "sequence",
+      "children": [
+        "r469",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r471": {
+      "op": "drop",
+      "child": "r470"
+    },
+    "r472": {
+      "op": "literal",
+      "characters": [
+        "]"
+      ],
+      "width": 1
+    },
+    "r473": {
+      "op": "sequence",
+      "children": [
+        "r472",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r474": {
+      "op": "drop",
+      "child": "r473"
+    },
+    "r475": {
+      "op": "sequence",
+      "children": [
+        "r471",
+        "Expression",
+        "r474"
+      ],
+      "arity": 3
+    },
+    "r476": {
+      "op": "capture",
+      "name": "Index",
+      "child": "r475",
+      "collapse": false
+    },
+    "r477": {
+      "op": "literal",
+      "characters": [
+        "("
+      ],
+      "width": 1
+    },
+    "r478": {
+      "op": "sequence",
+      "children": [
+        "r477",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r479": {
+      "op": "drop",
+      "child": "r478"
+    },
+    "r480": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r481": {
+      "op": "sequence",
+      "children": [
+        "r480",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r482": {
+      "op": "drop",
+      "child": "r481"
+    },
+    "r483": {
+      "op": "sequence",
+      "children": [
+        "r482",
+        "Expression"
+      ],
+      "arity": 2
+    },
+    "r484": {
+      "op": "repeat",
+      "child": "r483"
+    },
+    "r485": {
+      "op": "sequence",
+      "children": [
+        "Expression",
+        "r484"
+      ],
+      "arity": 2
+    },
+    "r486": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r487": {
+      "op": "choice",
+      "children": [
+        "r485",
+        "r486"
+      ],
+      "arity": 2
+    },
+    "r488": {
+      "op": "literal",
+      "characters": [
+        ")"
+      ],
+      "width": 1
+    },
+    "r489": {
+      "op": "sequence",
+      "children": [
+        "r488",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r490": {
+      "op": "drop",
+      "child": "r489"
+    },
+    "r491": {
+      "op": "sequence",
+      "children": [
+        "r479",
+        "r487",
+        "r490"
+      ],
+      "arity": 3
+    },
+    "r492": {
+      "op": "capture",
+      "name": "Call",
+      "child": "r491",
+      "collapse": false
+    },
+    "r493": {
+      "op": "choice",
+      "children": [
+        "r468",
+        "r476",
+        "r492"
+      ],
+      "arity": 3
+    },
+    "r494": {
+      "op": "repeat",
+      "child": "r493"
+    },
+    "r495": {
+      "op": "sequence",
+      "children": [
+        "Primary",
+        "r494"
+      ],
+      "arity": 2
+    },
+    "r496": {
+      "op": "capture",
+      "name": "PostfixExpression",
+      "child": "r495",
+      "collapse": true
+    },
+    "Postfix": {
+      "op": "capture",
+      "name": "PostfixExpression",
+      "child": "r495",
+      "collapse": true
+    },
+    "r497": {
+      "op": "literal",
+      "characters": [
+        "t",
+        "r",
+        "u",
+        "e"
+      ],
+      "width": 4
+    },
+    "r498": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r499": {
+      "op": "sequence",
+      "children": [
+        "r497",
+        "r498"
+      ],
+      "arity": 2
+    },
+    "r500": {
+      "op": "literal",
+      "characters": [
+        "f",
+        "a",
+        "l",
+        "s",
+        "e"
+      ],
+      "width": 5
+    },
+    "r501": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r502": {
+      "op": "sequence",
+      "children": [
+        "r500",
+        "r501"
+      ],
+      "arity": 2
+    },
+    "r503": {
+      "op": "choice",
+      "children": [
+        "r499",
+        "r502"
+      ],
+      "arity": 2
+    },
+    "r504": {
+      "op": "sequence",
+      "children": [
+        "r503",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r505": {
+      "op": "capture",
+      "name": "BooleanLiteral",
+      "child": "r504",
+      "collapse": false
+    },
+    "r506": {
+      "op": "literal",
+      "characters": [
+        "n",
+        "u",
+        "l",
+        "l"
+      ],
+      "width": 4
+    },
+    "r507": {
+      "op": "not",
+      "child": "r0"
+    },
+    "r508": {
+      "op": "sequence",
+      "children": [
+        "r506",
+        "r507"
+      ],
+      "arity": 2
+    },
+    "r509": {
+      "op": "sequence",
+      "children": [
+        "r508",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r510": {
+      "op": "capture",
+      "name": "NullLiteral",
+      "child": "r509",
+      "collapse": false
+    },
+    "r511": {
+      "op": "literal",
+      "characters": [
+        "("
+      ],
+      "width": 1
+    },
+    "r512": {
+      "op": "sequence",
+      "children": [
+        "r511",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r513": {
+      "op": "drop",
+      "child": "r512"
+    },
+    "r514": {
+      "op": "literal",
+      "characters": [
+        ")"
+      ],
+      "width": 1
+    },
+    "r515": {
+      "op": "sequence",
+      "children": [
+        "r514",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r516": {
+      "op": "drop",
+      "child": "r515"
+    },
+    "r517": {
+      "op": "sequence",
+      "children": [
+        "r513",
+        "Expression",
+        "r516"
+      ],
+      "arity": 3
+    },
+    "r518": {
+      "op": "literal",
+      "characters": [
+        "["
+      ],
+      "width": 1
+    },
+    "r519": {
+      "op": "sequence",
+      "children": [
+        "r518",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r520": {
+      "op": "drop",
+      "child": "r519"
+    },
+    "r521": {
+      "op": "literal",
+      "characters": [
+        ".",
+        ".",
+        "."
+      ],
+      "width": 3
+    },
+    "r522": {
+      "op": "sequence",
+      "children": [
+        "r521",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r523": {
+      "op": "drop",
+      "child": "r522"
+    },
+    "r524": {
+      "op": "sequence",
+      "children": [
+        "r523",
+        "Expression"
+      ],
+      "arity": 2
+    },
+    "r525": {
+      "op": "capture",
+      "name": "Spread",
+      "child": "r524",
+      "collapse": false
+    },
+    "r526": {
+      "op": "choice",
+      "children": [
+        "r525",
+        "Expression"
+      ],
+      "arity": 2
+    },
+    "r527": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r528": {
+      "op": "sequence",
+      "children": [
+        "r527",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r529": {
+      "op": "drop",
+      "child": "r528"
+    },
+    "r530": {
+      "op": "sequence",
+      "children": [
+        "r529",
+        "r526"
+      ],
+      "arity": 2
+    },
+    "r531": {
+      "op": "repeat",
+      "child": "r530"
+    },
+    "r532": {
+      "op": "sequence",
+      "children": [
+        "r526",
+        "r531"
+      ],
+      "arity": 2
+    },
+    "r533": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r534": {
+      "op": "sequence",
+      "children": [
+        "r533",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r535": {
+      "op": "drop",
+      "child": "r534"
+    },
+    "r536": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r537": {
+      "op": "choice",
+      "children": [
+        "r535",
+        "r536"
+      ],
+      "arity": 2
+    },
+    "r538": {
+      "op": "sequence",
+      "children": [
+        "r532",
+        "r537"
+      ],
+      "arity": 2
+    },
+    "r539": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r540": {
+      "op": "choice",
+      "children": [
+        "r538",
+        "r539"
+      ],
+      "arity": 2
+    },
+    "r541": {
+      "op": "literal",
+      "characters": [
+        "]"
+      ],
+      "width": 1
+    },
+    "r542": {
+      "op": "sequence",
+      "children": [
+        "r541",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r543": {
+      "op": "drop",
+      "child": "r542"
+    },
+    "r544": {
+      "op": "sequence",
+      "children": [
+        "r520",
+        "r540",
+        "r543"
+      ],
+      "arity": 3
+    },
+    "r545": {
+      "op": "capture",
+      "name": "ArrayExpression",
+      "child": "r544",
+      "collapse": false
+    },
+    "r546": {
+      "op": "literal",
+      "characters": [
+        "{"
+      ],
+      "width": 1
+    },
+    "r547": {
+      "op": "sequence",
+      "children": [
+        "r546",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r548": {
+      "op": "drop",
+      "child": "r547"
+    },
+    "r549": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r550": {
+      "op": "sequence",
+      "children": [
+        "r549",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r551": {
+      "op": "drop",
+      "child": "r550"
+    },
+    "r552": {
+      "op": "sequence",
+      "children": [
+        "r551",
+        "Property"
+      ],
+      "arity": 2
+    },
+    "r553": {
+      "op": "repeat",
+      "child": "r552"
+    },
+    "r554": {
+      "op": "sequence",
+      "children": [
+        "Property",
+        "r553"
+      ],
+      "arity": 2
+    },
+    "r555": {
+      "op": "literal",
+      "characters": [
+        ","
+      ],
+      "width": 1
+    },
+    "r556": {
+      "op": "sequence",
+      "children": [
+        "r555",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r557": {
+      "op": "drop",
+      "child": "r556"
+    },
+    "r558": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r559": {
+      "op": "choice",
+      "children": [
+        "r557",
+        "r558"
+      ],
+      "arity": 2
+    },
+    "r560": {
+      "op": "sequence",
+      "children": [
+        "r554",
+        "r559"
+      ],
+      "arity": 2
+    },
+    "r561": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r562": {
+      "op": "choice",
+      "children": [
+        "r560",
+        "r561"
+      ],
+      "arity": 2
+    },
+    "r563": {
+      "op": "literal",
+      "characters": [
+        "}"
+      ],
+      "width": 1
+    },
+    "r564": {
+      "op": "sequence",
+      "children": [
+        "r563",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r565": {
+      "op": "drop",
+      "child": "r564"
+    },
+    "r566": {
+      "op": "sequence",
+      "children": [
+        "r548",
+        "r562",
+        "r565"
+      ],
+      "arity": 3
+    },
+    "r567": {
+      "op": "capture",
+      "name": "ObjectExpression",
+      "child": "r566",
+      "collapse": false
+    },
+    "r568": {
+      "op": "choice",
+      "children": [
+        "JSX",
+        "String",
+        "Number",
+        "r505",
+        "r510",
+        "Identifier",
+        "r517",
+        "r545",
+        "r567"
+      ],
+      "arity": 9
+    },
+    "Primary": {
+      "op": "choice",
+      "children": [
+        "JSX",
+        "String",
+        "Number",
+        "r505",
+        "r510",
+        "Identifier",
+        "r517",
+        "r545",
+        "r567"
+      ],
+      "arity": 9
+    },
+    "r569": {
+      "op": "literal",
+      "characters": [
+        ".",
+        ".",
+        "."
+      ],
+      "width": 3
+    },
+    "r570": {
+      "op": "sequence",
+      "children": [
+        "r569",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r571": {
+      "op": "drop",
+      "child": "r570"
+    },
+    "r572": {
+      "op": "sequence",
+      "children": [
+        "r571",
+        "Expression"
+      ],
+      "arity": 2
+    },
+    "r573": {
+      "op": "capture",
+      "name": "Spread",
+      "child": "r572",
+      "collapse": false
+    },
+    "r574": {
+      "op": "literal",
+      "characters": [
+        "["
+      ],
+      "width": 1
+    },
+    "r575": {
+      "op": "sequence",
+      "children": [
+        "r574",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r576": {
+      "op": "drop",
+      "child": "r575"
+    },
+    "r577": {
+      "op": "literal",
+      "characters": [
+        "]"
+      ],
+      "width": 1
+    },
+    "r578": {
+      "op": "sequence",
+      "children": [
+        "r577",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r579": {
+      "op": "drop",
+      "child": "r578"
+    },
+    "r580": {
+      "op": "sequence",
+      "children": [
+        "r576",
+        "Expression",
+        "r579"
+      ],
+      "arity": 3
+    },
+    "r581": {
+      "op": "capture",
+      "name": "ComputedKey",
+      "child": "r580",
+      "collapse": false
+    },
+    "r582": {
+      "op": "choice",
+      "children": [
+        "Identifier",
+        "String",
+        "Number",
+        "r581"
+      ],
+      "arity": 4
+    },
+    "r583": {
+      "op": "literal",
+      "characters": [
+        ":"
+      ],
+      "width": 1
+    },
+    "r584": {
+      "op": "sequence",
+      "children": [
+        "r583",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r585": {
+      "op": "drop",
+      "child": "r584"
+    },
+    "r586": {
+      "op": "sequence",
+      "children": [
+        "r585",
+        "Expression"
+      ],
+      "arity": 2
+    },
+    "r587": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r588": {
+      "op": "choice",
+      "children": [
+        "r586",
+        "r587"
+      ],
+      "arity": 2
+    },
+    "r589": {
+      "op": "sequence",
+      "children": [
+        "r582",
+        "r588"
+      ],
+      "arity": 2
+    },
+    "r590": {
+      "op": "capture",
+      "name": "Property",
+      "child": "r589",
+      "collapse": false
+    },
+    "r591": {
+      "op": "choice",
+      "children": [
+        "r573",
+        "r590"
+      ],
+      "arity": 2
+    },
+    "Property": {
+      "op": "choice",
+      "children": [
+        "r573",
+        "r590"
+      ],
+      "arity": 2
+    },
+    "r592": {
+      "op": "character",
+      "characters": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "positive": true,
+      "width": 52
+    },
+    "r593": {
+      "op": "character",
+      "characters": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "_",
+        "$",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "-"
+      ],
+      "positive": true,
+      "width": 65
+    },
+    "r594": {
+      "op": "repeat",
+      "child": "r593"
+    },
+    "r595": {
+      "op": "sequence",
+      "children": [
+        "r592",
+        "r594"
+      ],
+      "arity": 2
+    },
+    "r596": {
+      "op": "capture",
+      "name": "TagName",
+      "child": "r595",
+      "collapse": false
+    },
+    "r597": {
+      "op": "character",
+      "characters": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "_",
+        "$",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "-"
+      ],
+      "positive": true,
+      "width": 65
+    },
+    "r598": {
+      "op": "repeat",
+      "child": "r597"
+    },
+    "r599": {
+      "op": "sequence",
+      "children": [
+        "r597",
+        "r598"
+      ],
+      "arity": 2
+    },
+    "r600": {
+      "op": "capture",
+      "name": "AttributeName",
+      "child": "r599",
+      "collapse": false
+    },
+    "r601": {
+      "op": "literal",
+      "characters": [
+        "\""
+      ],
+      "width": 1
+    },
+    "r602": {
+      "op": "character",
+      "characters": [
+        "\""
+      ],
+      "positive": false,
+      "width": 1
+    },
+    "r603": {
+      "op": "repeat",
+      "child": "r602"
+    },
+    "r604": {
+      "op": "literal",
+      "characters": [
+        "\""
+      ],
+      "width": 1
+    },
+    "r605": {
+      "op": "sequence",
+      "children": [
+        "r601",
+        "r603",
+        "r604"
+      ],
+      "arity": 3
+    },
+    "r606": {
+      "op": "literal",
+      "characters": [
+        "'"
+      ],
+      "width": 1
+    },
+    "r607": {
+      "op": "character",
+      "characters": [
+        "'"
+      ],
+      "positive": false,
+      "width": 1
+    },
+    "r608": {
+      "op": "repeat",
+      "child": "r607"
+    },
+    "r609": {
+      "op": "literal",
+      "characters": [
+        "'"
+      ],
+      "width": 1
+    },
+    "r610": {
+      "op": "sequence",
+      "children": [
+        "r606",
+        "r608",
+        "r609"
+      ],
+      "arity": 3
+    },
+    "r611": {
+      "op": "choice",
+      "children": [
+        "r605",
+        "r610"
+      ],
+      "arity": 2
+    },
+    "r612": {
+      "op": "literal",
+      "characters": [
+        "{"
+      ],
+      "width": 1
+    },
+    "r613": {
+      "op": "drop",
+      "child": "r612"
+    },
+    "r614": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r615": {
+      "op": "choice",
+      "children": [
+        "Expression",
+        "r614"
+      ],
+      "arity": 2
+    },
+    "r616": {
+      "op": "literal",
+      "characters": [
+        "}"
+      ],
+      "width": 1
+    },
+    "r617": {
+      "op": "drop",
+      "child": "r616"
+    },
+    "r618": {
+      "op": "sequence",
+      "children": [
+        "r613",
+        "Space",
+        "r615",
+        "r617"
+      ],
+      "arity": 4
+    },
+    "r619": {
+      "op": "capture",
+      "name": "JSXExpression",
+      "child": "r618",
+      "collapse": false
+    },
+    "JSXExpression": {
+      "op": "capture",
+      "name": "JSXExpression",
+      "child": "r618",
+      "collapse": false
+    },
+    "r620": {
+      "op": "literal",
+      "characters": [
+        "="
+      ],
+      "width": 1
+    },
+    "r621": {
+      "op": "sequence",
+      "children": [
+        "r620",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r622": {
+      "op": "drop",
+      "child": "r621"
+    },
+    "r623": {
+      "op": "capture",
+      "name": "JSXString",
+      "child": "r611",
+      "collapse": false
+    },
+    "r624": {
+      "op": "choice",
+      "children": [
+        "r623",
+        "JSXExpression"
+      ],
+      "arity": 2
+    },
+    "r625": {
+      "op": "sequence",
+      "children": [
+        "r622",
+        "r624"
+      ],
+      "arity": 2
+    },
+    "r626": {
+      "op": "sequence",
+      "children": [],
+      "arity": 0
+    },
+    "r627": {
+      "op": "choice",
+      "children": [
+        "r625",
+        "r626"
+      ],
+      "arity": 2
+    },
+    "r628": {
+      "op": "sequence",
+      "children": [
+        "r600",
+        "Space",
+        "r627",
+        "Space"
+      ],
+      "arity": 4
+    },
+    "r629": {
+      "op": "capture",
+      "name": "JSXAttribute",
+      "child": "r628",
+      "collapse": false
+    },
+    "JSXAttribute": {
+      "op": "capture",
+      "name": "JSXAttribute",
+      "child": "r628",
+      "collapse": false
+    },
+    "r630": {
+      "op": "character",
+      "characters": [
+        "<",
+        "{",
+        "\\"
+      ],
+      "positive": false,
+      "width": 3
+    },
+    "r631": {
+      "op": "repeat",
+      "child": "r630"
+    },
+    "r632": {
+      "op": "sequence",
+      "children": [
+        "r630",
+        "r631"
+      ],
+      "arity": 2
+    },
+    "r633": {
+      "op": "capture",
+      "name": "JSXText",
+      "child": "r632",
+      "collapse": false
+    },
+    "r634": {
+      "op": "choice",
+      "children": [
+        "JSXElement",
+        "JSXFragment",
+        "JSXExpression",
+        "r633"
+      ],
+      "arity": 4
+    },
+    "JSXChild": {
+      "op": "choice",
+      "children": [
+        "JSXElement",
+        "JSXFragment",
+        "JSXExpression",
+        "r633"
+      ],
+      "arity": 4
+    },
+    "r635": {
+      "op": "literal",
+      "characters": [
+        "<"
+      ],
+      "width": 1
+    },
+    "r636": {
+      "op": "literal",
+      "characters": [
+        "\\",
+        "<"
+      ],
+      "width": 2
+    },
+    "r637": {
+      "op": "choice",
+      "children": [
+        "r635",
+        "r636"
+      ],
+      "arity": 2
+    },
+    "r638": {
+      "op": "drop",
+      "child": "r637"
+    },
+    "r639": {
+      "op": "repeat",
+      "child": "JSXAttribute"
+    },
+    "r640": {
+      "op": "literal",
+      "characters": [
+        "/",
+        ">"
+      ],
+      "width": 2
+    },
+    "r641": {
+      "op": "drop",
+      "child": "r640"
+    },
+    "r642": {
+      "op": "literal",
+      "characters": [
+        ">"
+      ],
+      "width": 1
+    },
+    "r643": {
+      "op": "drop",
+      "child": "r642"
+    },
+    "r644": {
+      "op": "repeat",
+      "child": "JSXChild"
+    },
+    "r645": {
+      "op": "literal",
+      "characters": [
+        "<",
+        "/"
+      ],
+      "width": 2
+    },
+    "r646": {
+      "op": "literal",
+      "characters": [
+        "\\",
+        "<",
+        "/"
+      ],
+      "width": 3
+    },
+    "r647": {
+      "op": "choice",
+      "children": [
+        "r645",
+        "r646"
+      ],
+      "arity": 2
+    },
+    "r648": {
+      "op": "drop",
+      "child": "r647"
+    },
+    "r649": {
+      "op": "literal",
+      "characters": [
+        ">"
+      ],
+      "width": 1
+    },
+    "r650": {
+      "op": "drop",
+      "child": "r649"
+    },
+    "r651": {
+      "op": "sequence",
+      "children": [
+        "r643",
+        "r644",
+        "r648",
+        "r596",
+        "Space",
+        "r650"
+      ],
+      "arity": 6
+    },
+    "r652": {
+      "op": "choice",
+      "children": [
+        "r641",
+        "r651"
+      ],
+      "arity": 2
+    },
+    "r653": {
+      "op": "sequence",
+      "children": [
+        "r638",
+        "r596",
+        "Space",
+        "r639",
+        "r652"
+      ],
+      "arity": 5
+    },
+    "r654": {
+      "op": "capture",
+      "name": "JSXElement",
+      "child": "r653",
+      "collapse": false
+    },
+    "JSXElement": {
+      "op": "capture",
+      "name": "JSXElement",
+      "child": "r653",
+      "collapse": false
+    },
+    "r655": {
+      "op": "literal",
+      "characters": [
+        "<",
+        ">"
+      ],
+      "width": 2
+    },
+    "r656": {
+      "op": "literal",
+      "characters": [
+        "\\",
+        "<",
+        ">"
+      ],
+      "width": 3
+    },
+    "r657": {
+      "op": "choice",
+      "children": [
+        "r655",
+        "r656"
+      ],
+      "arity": 2
+    },
+    "r658": {
+      "op": "drop",
+      "child": "r657"
+    },
+    "r659": {
+      "op": "repeat",
+      "child": "JSXChild"
+    },
+    "r660": {
+      "op": "literal",
+      "characters": [
+        "<",
+        "/",
+        ">"
+      ],
+      "width": 3
+    },
+    "r661": {
+      "op": "literal",
+      "characters": [
+        "\\",
+        "<",
+        "/",
+        ">"
+      ],
+      "width": 4
+    },
+    "r662": {
+      "op": "choice",
+      "children": [
+        "r660",
+        "r661"
+      ],
+      "arity": 2
+    },
+    "r663": {
+      "op": "drop",
+      "child": "r662"
+    },
+    "r664": {
+      "op": "sequence",
+      "children": [
+        "r658",
+        "r659",
+        "r663"
+      ],
+      "arity": 3
+    },
+    "r665": {
+      "op": "capture",
+      "name": "JSXFragment",
+      "child": "r664",
+      "collapse": false
+    },
+    "JSXFragment": {
+      "op": "capture",
+      "name": "JSXFragment",
+      "child": "r664",
+      "collapse": false
+    },
+    "r666": {
+      "op": "choice",
+      "children": [
+        "JSXElement",
+        "JSXFragment"
+      ],
+      "arity": 2
+    },
+    "r667": {
+      "op": "sequence",
+      "children": [
+        "r666",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "JSX": {
+      "op": "sequence",
+      "children": [
+        "r666",
+        "Space"
+      ],
+      "arity": 2
+    },
+    "r668": {
+      "op": "repeat",
+      "child": "Statement"
+    },
+    "r669": {
+      "op": "end"
+    },
+    "r670": {
+      "op": "sequence",
+      "children": [
+        "Space",
+        "r668",
+        "r669"
+      ],
+      "arity": 3
+    },
+    "r671": {
+      "op": "capture",
+      "name": "Program",
+      "child": "r670",
+      "collapse": false
+    },
+    "Program": {
+      "op": "capture",
+      "name": "Program",
+      "child": "r670",
+      "collapse": false
+    }
+  }
+}

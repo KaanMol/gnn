@@ -1,0 +1,3309 @@
+{
+  "affect_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "initial": {
+              "curiosity": 0,
+              "uncertainty": 0,
+              "satisfaction": 0,
+              "sympathy": 0
+            },
+            "changes": {
+              "missing": {
+                "curiosity": 25,
+                "uncertainty": 30,
+                "satisfaction": -10,
+                "sympathy": 0
+              },
+              "learned": {
+                "curiosity": -10,
+                "uncertainty": -20,
+                "satisfaction": 20,
+                "sympathy": 0
+              },
+              "answered": {
+                "curiosity": -10,
+                "uncertainty": -15,
+                "satisfaction": 10,
+                "sympathy": 0
+              },
+              "difficulty_shared": {
+                "curiosity": 0,
+                "uncertainty": 0,
+                "satisfaction": 0,
+                "sympathy": 30
+              },
+              "positive_shared": {
+                "curiosity": 0,
+                "uncertainty": 0,
+                "satisfaction": 10,
+                "sympathy": -10
+              }
+            },
+            "ask_at": 25,
+            "minimum": 0,
+            "maximum": 100,
+            "learning_operations": [
+              "assert",
+              "subtype",
+              "define",
+              "redefine",
+              "symmetric",
+              "define_procedure",
+              "redefine_procedure"
+            ],
+            "answer_operations": [
+              "query",
+              "describe",
+              "calculate",
+              "count",
+              "date_procedure",
+              "run_procedure"
+            ],
+            "unknown_phrases": [
+              "I haven't learned",
+              "I don't know",
+              "Unknown:",
+              "Conflicting evidence",
+              "Clarification needed"
+            ],
+            "ignored_skills": [
+              "affect_report",
+              "affect_support",
+              "affect_initialize"
+            ],
+            "question": "Can you teach me the missing fact or explain what you mean?",
+            "note": "Functional activation levels from 0 to 100, not probabilities or evidence of subjective feelings."
+          }
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Teach state ranges, event changes and the curiosity threshold for requesting teaching. These are editable activation signals, not subjective emotions or calibrated confidence."
+    },
+    "source": "Explicit functional affect teaching: Teach state ranges, event changes and the curiosity threshold for requesting teaching. These are editable activation signals, not subjective emotions or calibrated confidence."
+  },
+  "affect_read": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "attempt",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "skills.affect"
+              },
+              {
+                "id": "n2",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "current"
+              },
+              {
+                "id": "n3",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "namespace",
+                  "key"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "act",
+                "inputs": [
+                  "n0",
+                  "n3"
+                ],
+                "type": "Data",
+                "surface": "workspace",
+                "action": "read"
+              }
+            ],
+            "output": "n4"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "affect_policy"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "initial"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n7",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n4",
+            "n5",
+            "n6"
+          ],
+          "type": "Data",
+          "keys": [
+            "values",
+            "revision",
+            "history",
+            "last"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "as_bool",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "result"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "choose",
+          "inputs": [
+            "n9",
+            "n10",
+            "n7"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n11",
+      "trace_mode": "explicit",
+      "description": "Read persistent graph state. A new notebook starts at the explicitly taught baseline; merely reading does not change it."
+    },
+    "source": "Explicit functional affect teaching: Read persistent graph state. A new notebook starts at the explicitly taught baseline; merely reading does not change it."
+  },
+  "affect_initialize": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "affect_read"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.affect"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "current"
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n4",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n5"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        }
+      ],
+      "output": "n7",
+      "trace_mode": "explicit",
+      "description": "Explicitly persist the taught initial state, preserving any state that already exists."
+    },
+    "source": "Explicit functional affect teaching: Explicitly persist the taught initial state, preserving any state that already exists."
+  },
+  "affect_update": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "affect_read"
+        },
+        {
+          "id": "n3",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "affect_policy"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "event"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "changes"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "item",
+          "inputs": [
+            "n5",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "initial"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "keys",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "minimum"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "maximum"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "record",
+          "inputs": [
+            "n9",
+            "n6",
+            "n10",
+            "n11"
+          ],
+          "type": "Data",
+          "keys": [
+            "values",
+            "delta",
+            "minimum",
+            "maximum"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "map",
+          "inputs": [
+            "n8",
+            "n12"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n3",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "delta"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "item",
+                "inputs": [
+                  "n5",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "add",
+                "inputs": [
+                  "n7",
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "as_data",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n11",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "minimum"
+                ]
+              },
+              {
+                "id": "n12",
+                "op": "get",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "path": [
+                  "maximum"
+                ]
+              },
+              {
+                "id": "n13",
+                "op": "as_number",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n14",
+                "op": "as_number",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n15",
+                "op": "less",
+                "inputs": [
+                  "n13",
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "as_number",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n17",
+                "op": "as_number",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n18",
+                "op": "less",
+                "inputs": [
+                  "n16",
+                  "n17"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n19",
+                "op": "choose",
+                "inputs": [
+                  "n18",
+                  "n12",
+                  "n10"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n20",
+                "op": "choose",
+                "inputs": [
+                  "n15",
+                  "n11",
+                  "n19"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n21",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n20"
+                ],
+                "type": "Data",
+                "keys": [
+                  "key",
+                  "value"
+                ]
+              }
+            ],
+            "output": "n21"
+          }
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {}
+        },
+        {
+          "id": "n15",
+          "op": "record",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Data",
+          "keys": [
+            "pending",
+            "values"
+          ]
+        },
+        {
+          "id": "n16",
+          "op": "while",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "literal",
+                "inputs": [],
+                "type": "Number",
+                "value": "0"
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "less",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n4"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending",
+                  0
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pending"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "slice",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data",
+                "start": 1
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "key"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "value"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "set_item",
+                "inputs": [
+                  "n4",
+                  "n5",
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "record",
+                "inputs": [
+                  "n3",
+                  "n7"
+                ],
+                "type": "Data",
+                "keys": [
+                  "pending",
+                  "values"
+                ]
+              }
+            ],
+            "output": "n8"
+          }
+        },
+        {
+          "id": "n17",
+          "op": "get",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "revision"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n20",
+          "op": "as_number",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "add",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "as_data",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n26",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n24",
+            "n25",
+            "n17",
+            "n23"
+          ],
+          "type": "Data",
+          "keys": [
+            "event",
+            "evidence",
+            "before",
+            "after",
+            "revision"
+          ]
+        },
+        {
+          "id": "n27",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "history"
+          ]
+        },
+        {
+          "id": "n28",
+          "op": "data_list",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n29",
+          "op": "concat",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "slice",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data",
+          "start": -20
+        },
+        {
+          "id": "n31",
+          "op": "record",
+          "inputs": [
+            "n17",
+            "n23",
+            "n26",
+            "n30"
+          ],
+          "type": "Data",
+          "keys": [
+            "values",
+            "revision",
+            "last",
+            "history"
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.affect"
+        },
+        {
+          "id": "n33",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "current"
+        },
+        {
+          "id": "n34",
+          "op": "record",
+          "inputs": [
+            "n32",
+            "n33",
+            "n31"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n34"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n35"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        }
+      ],
+      "output": "n36",
+      "trace_mode": "explicit",
+      "description": "Apply the taught event deltas with taught arithmetic, clamp to the taught bounds, and retain the last twenty causes. Workspace observation history retains the actual writes."
+    },
+    "source": "Explicit functional affect teaching: Apply the taught event deltas with taught arithmetic, clamp to the taught bounds, and retain the last twenty causes. Workspace observation history retains the actual writes."
+  },
+  "affect_classify": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "affect_policy"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "operations"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "map",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "op"
+                ]
+              }
+            ],
+            "output": "n1"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "unknown_phrases"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "answer"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "filter",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "split_text",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n4",
+                "op": "slice",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "start": 1
+              },
+              {
+                "id": "n5",
+                "op": "literal",
+                "inputs": [],
+                "type": "Number",
+                "value": "0"
+              },
+              {
+                "id": "n6",
+                "op": "size",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "less",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n7"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n8",
+          "op": "size",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "less",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "error"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n12",
+          "op": "data_equal",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "not",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "waiting"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "as_bool",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "or",
+          "inputs": [
+            "n15",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "or",
+          "inputs": [
+            "n13",
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "learning_operations"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "filter",
+          "inputs": [
+            "n3",
+            "n18"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "contains",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n20",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n21",
+          "op": "size",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "less",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n23",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "answer_operations"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "filter",
+          "inputs": [
+            "n3",
+            "n23"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "contains",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n25",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n26",
+          "op": "size",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n27",
+          "op": "less",
+          "inputs": [
+            "n25",
+            "n26"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "missing"
+        },
+        {
+          "id": "n29",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "learned"
+        },
+        {
+          "id": "n30",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "answered"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n32",
+          "op": "choose",
+          "inputs": [
+            "n27",
+            "n30",
+            "n31"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n33",
+          "op": "choose",
+          "inputs": [
+            "n22",
+            "n29",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "choose",
+          "inputs": [
+            "n17",
+            "n28",
+            "n33"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n35",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "ignored_skills"
+          ]
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "skill"
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "contains",
+          "inputs": [
+            "n35",
+            "n36"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n38",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n39",
+          "op": "choose",
+          "inputs": [
+            "n37",
+            "n38",
+            "n34"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n39",
+      "trace_mode": "explicit",
+      "description": "Classify actual dialogue outcomes. Unanswered or conflicting responses raise uncertainty; stored learning and successful answers reduce it. Self-reports do not reward themselves."
+    },
+    "source": "Explicit functional affect teaching: Classify actual dialogue outcomes. Unanswered or conflicting responses raise uncertainty; stored learning and successful answers reduce it. Self-reports do not reward themselves."
+  },
+  "affect_observe_turn": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "affect_classify"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "event",
+            "evidence"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "affect_update"
+        },
+        {
+          "id": "n5",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "affect_policy"
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "values",
+            "curiosity"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "ask_at"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "less",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "not",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "answer"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "?"
+        },
+        {
+          "id": "n14",
+          "op": "split_text",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "slice",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data",
+          "start": 1
+        },
+        {
+          "id": "n16",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n17",
+          "op": "size",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "less",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "missing"
+        },
+        {
+          "id": "n20",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n19"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "waiting"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "as_bool",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n23",
+          "op": "or",
+          "inputs": [
+            "n18",
+            "n22"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n24",
+          "op": "not",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "and",
+          "inputs": [
+            "n11",
+            "n24"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n26",
+          "op": "and",
+          "inputs": [
+            "n20",
+            "n25"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n27",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "question"
+          ]
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n29",
+          "op": "choose",
+          "inputs": [
+            "n26",
+            "n27",
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "ask for teaching"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "continue"
+        },
+        {
+          "id": "n32",
+          "op": "choose",
+          "inputs": [
+            "n26",
+            "n30",
+            "n31"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n33",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n29",
+            "n32"
+          ],
+          "type": "Data",
+          "keys": [
+            "state",
+            "text",
+            "decision"
+          ]
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n35",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n34"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n36",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "unchanged"
+        },
+        {
+          "id": "n38",
+          "op": "record",
+          "inputs": [
+            "n36",
+            "n37"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "decision"
+          ]
+        },
+        {
+          "id": "n39",
+          "op": "choose",
+          "inputs": [
+            "n35",
+            "n38",
+            "n33"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n39",
+      "trace_mode": "explicit",
+      "description": "Use state to choose whether to request teaching when stuck. Do not duplicate an existing question or replace an active continuation."
+    },
+    "source": "Explicit functional affect teaching: Use state to choose whether to request teaching when stuck. Do not duplicate an existing question or replace an active continuation."
+  },
+  "affect_report": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "affect_read"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "My functional state levels (0\u2013100): "
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "curiosity "
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "curiosity"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "text",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "data_list",
+          "inputs": [
+            "n4",
+            "n5",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n10",
+          "op": "join_text",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ", uncertainty "
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "uncertainty"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "text",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "data_list",
+          "inputs": [
+            "n10",
+            "n11",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n16",
+          "op": "join_text",
+          "inputs": [
+            "n14",
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ", satisfaction "
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "satisfaction"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "text",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n20",
+          "op": "data_list",
+          "inputs": [
+            "n16",
+            "n17",
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n22",
+          "op": "join_text",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ", sympathy "
+        },
+        {
+          "id": "n24",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "sympathy"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "text",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n26",
+          "op": "data_list",
+          "inputs": [
+            "n22",
+            "n23",
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n28",
+          "op": "join_text",
+          "inputs": [
+            "n26",
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n29",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "last"
+          ]
+        },
+        {
+          "id": "n30",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n31",
+          "op": "data_equal",
+          "inputs": [
+            "n29",
+            "n30"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n32",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "No events recorded yet."
+        },
+        {
+          "id": "n33",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Last cause: "
+        },
+        {
+          "id": "n34",
+          "op": "get",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data",
+          "path": [
+            "event"
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " \u2014 "
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data",
+          "path": [
+            "evidence"
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "data_list",
+          "inputs": [
+            "n33",
+            "n34",
+            "n35",
+            "n36"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n38",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n39",
+          "op": "join_text",
+          "inputs": [
+            "n37",
+            "n38"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n40",
+          "op": "choose",
+          "inputs": [
+            "n31",
+            "n32",
+            "n39"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n41",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ".\n"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nThese are taught functional states, not a claim that I experience feelings."
+        },
+        {
+          "id": "n43",
+          "op": "data_list",
+          "inputs": [
+            "n28",
+            "n41",
+            "n40",
+            "n42"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n44",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n45",
+          "op": "join_text",
+          "inputs": [
+            "n43",
+            "n44"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n46",
+          "op": "record",
+          "inputs": [
+            "n45",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "state"
+          ]
+        }
+      ],
+      "output": "n46",
+      "trace_mode": "explicit",
+      "description": "Explain current state values and their recorded cause without claiming subjective experience."
+    },
+    "source": "Explicit functional affect teaching: Explain current state values and their recorded cause without claiming subjective experience."
+  },
+  "sympathy_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            {
+              "phrases": [
+                "i feel sad",
+                "i'm sad",
+                "i am sad",
+                "i'm having a hard day",
+                "i am having a hard day",
+                "i'm upset",
+                "i feel lonely"
+              ],
+              "event": "difficulty_shared",
+              "reply": "That sounds difficult. Would you prefer to talk about it, or think through something that might help?"
+            },
+            {
+              "phrases": [
+                "i feel happy",
+                "i'm feeling better",
+                "i am feeling better"
+              ],
+              "event": "positive_shared",
+              "reply": "Good to hear. What helped?"
+            },
+            {
+              "phrases": [
+                "just listen",
+                "i just want to talk",
+                "i don't want advice",
+                "no advice"
+              ],
+              "event": "difficulty_shared",
+              "reply": "Okay. I won't jump into advice. You can tell me what happened, if you want."
+            }
+          ]
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Respond sympathetically to explicitly shared feelings using bounded taught phrases. Offer a choice, respect requests for no advice, and never infer distress from ordinary task errors."
+    },
+    "source": "Explicit functional affect teaching: Respond sympathetically to explicitly shared feelings using bounded taught phrases. Offer a choice, respect requests for no advice, and never infer distress from ordinary task errors."
+  },
+  "affect_support": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "rule"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "event"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n3"
+          ],
+          "type": "Data",
+          "keys": [
+            "event",
+            "evidence"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "call",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "name": "affect_update"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "gentle-follow-up"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "affect_followup"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 180
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n11",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n7",
+            "n8",
+            "n9",
+            "n10"
+          ],
+          "type": "Data",
+          "keys": [
+            "id",
+            "method",
+            "argument",
+            "delay_seconds",
+            "repeat_seconds"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "call",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data",
+          "name": "background_schedule"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "last",
+            "event"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "difficulty_shared"
+        },
+        {
+          "id": "n15",
+          "op": "data_equal",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "get",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "path": [
+            "job",
+            "status"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "scheduled"
+        },
+        {
+          "id": "n18",
+          "op": "data_equal",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "reply"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n21",
+          "op": "choose",
+          "inputs": [
+            "n18",
+            "n19",
+            "n20"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "reply"
+          ]
+        },
+        {
+          "id": "n23",
+          "op": "choose",
+          "inputs": [
+            "n15",
+            "n21",
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "record",
+          "inputs": [
+            "n23",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "state"
+          ]
+        }
+      ],
+      "output": "n24",
+      "trace_mode": "explicit",
+      "description": "Record concern for a user\u2019s explicitly shared difficulty, then offer the taught supportive response. Listening is offered without pressure or a claim of feeling the user\u2019s emotion."
+    },
+    "source": "Explicit functional affect teaching: Record concern for a user\u2019s explicitly shared difficulty, then offer the taught supportive response. Listening is offered without pressure or a claim of feeling the user\u2019s emotion."
+  },
+  "affect_followup": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "affect_read"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "last"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n5",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n8",
+          "op": "data_equal",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "event"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "difficulty_shared"
+        },
+        {
+          "id": "n11",
+          "op": "data_equal",
+          "inputs": [
+            "n9",
+            "n10"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "choose",
+          "inputs": [
+            "n5",
+            "n8",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Hey, would you like to talk more about what you mentioned earlier? It is fine to leave it there."
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n15",
+          "op": "choose",
+          "inputs": [
+            "n12",
+            "n13",
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "record",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        }
+      ],
+      "output": "n16",
+      "trace_mode": "explicit",
+      "description": "A single delayed offer to continue after explicit difficulty. Stay quiet if another meaningful event has superseded it. The scheduler prevents repeated delivery."
+    },
+    "source": "Explicit functional affect teaching: A single delayed offer to continue after explicit difficulty. Stay quiet if another meaningful event has superseded it. The scheduler prevents repeated delivery."
+  },
+  "affect_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "."
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n5",
+          "op": "replace_text",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "!"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n8",
+          "op": "replace_text",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "?"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n11",
+          "op": "replace_text",
+          "inputs": [
+            "n8",
+            "n9",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\u2019"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "'"
+        },
+        {
+          "id": "n14",
+          "op": "replace_text",
+          "inputs": [
+            "n11",
+            "n12",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "sympathy_policy"
+        },
+        {
+          "id": "n16",
+          "op": "filter",
+          "inputs": [
+            "n15",
+            "n14"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "phrases"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "contains",
+                "inputs": [
+                  "n2",
+                  "n3"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n4"
+          }
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "how are you feeling",
+            "how do you feel",
+            "show your feelings",
+            "show your states",
+            "what are your feelings"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "contains",
+          "inputs": [
+            "n17",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n21",
+          "op": "record",
+          "inputs": [
+            "n19",
+            "n20"
+          ],
+          "type": "Data",
+          "keys": [
+            "rule",
+            "text"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "graph_run"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "affect_support"
+        },
+        {
+          "id": "n24",
+          "op": "record",
+          "inputs": [
+            "n22",
+            "n23",
+            "n21"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "name",
+            "argument"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "graph_run"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "affect_report"
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n28",
+          "op": "record",
+          "inputs": [
+            "n25",
+            "n26",
+            "n27"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "name",
+            "argument"
+          ]
+        },
+        {
+          "id": "n29",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n30",
+          "op": "size",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "less",
+          "inputs": [
+            "n29",
+            "n30"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n32",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n33",
+          "op": "choose",
+          "inputs": [
+            "n31",
+            "n24",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "choose",
+          "inputs": [
+            "n18",
+            "n28",
+            "n33"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n34",
+      "trace_mode": "explicit",
+      "description": "Recognize taught self-report and sympathy phrases. Unrecognized wording remains with the existing language interface; this is not unrestricted emotion understanding."
+    },
+    "source": "Explicit functional affect teaching: Recognize taught self-report and sympathy phrases. Unrecognized wording remains with the existing language interface; this is not unrestricted emotion understanding."
+  }
+}

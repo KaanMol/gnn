@@ -1,0 +1,33 @@
+import fs from 'node:fs';import {G} from './graph.mjs';
+const suite={};const save=(name,g,x)=>suite[name]={graph:{...g.finish(x),execution_budget:10000000},source:'Generic online fixed-point linear contextual utility model.'};
+const call=(g,n,x)=>g.op('call',[x],{name:n});
+const floor=(g,x)=>g.op('as_data',[g.op('floor',[g.num(x)],{},'Number')]);
+const clip=(g,x,lo,hi)=>g.choose(g.lt(x,g.data(lo)),g.data(lo),g.choose(g.lt(g.data(hi),x),g.data(hi),x));
+const ratio=(g,x,y)=>clip(g,floor(g,g.calc('divide',g.calc('multiply',x,g.data(1000)),y)),0,1000);
+let g=new G();save('router_zero',g,g.data({weights:[0,0,0,0,0,0],updates:0}));
+g=new G();const s=g.get(g.input,'state'),e=g.get(g.input,'entry'),v=g.get(g.input,'probe','evaluation'),n=g.len(g.get(s,'examples'));
+const f=new G();const size=call(g,'priority_sum',g.op('map',[g.get(s,'examples')],{body:f.finish(f.len(f.get(f.input,'features')))}));
+save('router_features',g,g.list(g.data(1000),ratio(g,g.get(v,'matches'),n),ratio(g,g.get(v,'progress'),n),ratio(g,g.len(g.get(e,'ops')),g.data(5)),ratio(g,size,g.calc('multiply',n,g.data(32))),ratio(g,g.get(e,'wins'),g.calc('add',g.calc('add',g.get(e,'wins'),g.get(e,'misses')),g.data(1)))));
+const term=new G();g=new G();const terms=g.op('map',[g.op('indices',[g.get(g.input,'x')]),g.input],{body:term.finish(term.calc('multiply',term.item(term.get(term.input,'context','x'),term.get(term.input,'item')),term.item(term.get(term.input,'context','model','weights'),term.get(term.input,'item'))))});
+save('router_score',g,floor(g,g.calc('divide',call(g,'priority_sum',terms),g.data(1000))));
+g=new G();const score=g.get(g.input,'score');const exploit=g.and(g.not(g.lt(g.get(g.input,'updates'),g.data(5))),g.lt(g.data(100),score));
+// A deterministic quota of at most one uncertain proposal per twenty considered.
+const twentieth=g.eq(g.calc('multiply',floor(g,g.calc('divide',g.get(g.input,'ordinal'),g.data(20))),g.data(20)),g.get(g.input,'ordinal'));
+const uncertain=g.and(g.not(g.lt(score,g.data(-100))),g.not(g.lt(g.data(100),score)));
+const explore=g.and(g.bool(g.get(g.input,'explore')),g.and(uncertain,g.and(g.lt(g.data(0),g.get(g.input,'ordinal')),twentieth)));
+save('router_decide',g,g.rec({activate:g.datum(g.op('or',[exploit,explore],{},'Bool')),exploration:g.datum(g.and(g.not(exploit),explore))}));
+// Labels in milli-utility: lost audited solve -2000; gained solve +1000;
+// jointly solved normalized work saving; otherwise non-positive overhead.
+g=new G();const a=g.get(g.input,'actual'),b=g.get(g.input,'baseline');const roundedSaving=clip(g,floor(g,g.calc('divide',g.calc('multiply',g.calc('subtract',g.get(b,'cost'),g.get(a,'cost')),g.data(1000)),g.data(450000))),-1000,1000);
+const saving=g.choose(g.and(g.eq(roundedSaving,g.data(0)),g.lt(g.get(a,'cost'),g.get(b,'cost'))),g.data(1),roundedSaving);
+const both=g.and(g.bool(g.get(a,'success')),g.bool(g.get(b,'success')));
+const gained=g.and(g.bool(g.get(a,'success')),g.not(g.bool(g.get(b,'success'))));
+const lost=g.and(g.not(g.bool(g.get(a,'success'))),g.bool(g.get(b,'success')));
+save('router_utility',g,g.choose(lost,g.data(-2000),g.choose(gained,g.data(1000),g.choose(both,saving,g.choose(g.lt(saving,g.data(0)),saving,g.data(0))))));
+const update=new G();g=new G();const prediction=call(g,'router_score',g.input),error=clip(g,g.calc('subtract',g.get(g.input,'utility'),prediction),-2000,2000);
+const ctx=g.rec({x:g.get(g.input,'x'),weights:g.get(g.input,'model','weights'),error});
+const delta=floor(update,update.calc('divide',update.calc('multiply',update.get(update.input,'context','error'),update.item(update.get(update.input,'context','x'),update.get(update.input,'item'))),update.data(5000)));
+const weights=g.op('map',[g.op('indices',[g.get(g.input,'x')]),ctx],{body:update.finish(clip(update,update.calc('add',update.item(update.get(update.input,'context','weights'),update.get(update.input,'item')),delta),-4000,4000))});
+save('router_update',g,g.rec({weights,updates:g.calc('add',g.get(g.input,'model','updates'),g.data(1))}));
+g=new G();save('router_persist',g,g.op('act',[g.input,g.rec({namespace:g.data('knowledge.router'),key:g.data('state'),value:g.input})],{surface:'workspace',action:'write'}));
+fs.writeFileSync(new URL('../curriculum/utility-router.json',import.meta.url),JSON.stringify(suite,null,2)+'\n');

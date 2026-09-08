@@ -1,0 +1,1378 @@
+{
+  "history": [
+    {
+      "seed": 15053,
+      "task": 3,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": 0,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "updates": 0
+      },
+      "after": {
+        "weights": [
+          -400,
+          0,
+          -134,
+          -160,
+          -38,
+          0
+        ],
+        "updates": 1
+      },
+      "graph_steps": 127522,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 6,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -604,
+      "utility": 94,
+      "before": {
+        "weights": [
+          -400,
+          0,
+          -134,
+          -160,
+          -38,
+          0
+        ],
+        "updates": 1
+      },
+      "after": {
+        "weights": [
+          -261,
+          139,
+          5,
+          -105,
+          -17,
+          0
+        ],
+        "updates": 2
+      },
+      "graph_steps": 299277,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 7,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -303,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -261,
+          139,
+          5,
+          -105,
+          -17,
+          0
+        ],
+        "updates": 2
+      },
+      "after": {
+        "weights": [
+          -601,
+          139,
+          -109,
+          -241,
+          -49,
+          0
+        ],
+        "updates": 3
+      },
+      "graph_steps": 275798,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 12,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -739,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -601,
+          139,
+          -109,
+          -241,
+          -49,
+          0
+        ],
+        "updates": 3
+      },
+      "after": {
+        "weights": [
+          -854,
+          139,
+          -193,
+          -342,
+          -73,
+          0
+        ],
+        "updates": 4
+      },
+      "graph_steps": 266668,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 13,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -1057,
+      "utility": 63,
+      "before": {
+        "weights": [
+          -854,
+          139,
+          -193,
+          -342,
+          -73,
+          0
+        ],
+        "updates": 4
+      },
+      "after": {
+        "weights": [
+          -630,
+          363,
+          31,
+          -253,
+          -39,
+          0
+        ],
+        "updates": 5
+      },
+      "graph_steps": 292009,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 22,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -725,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -630,
+          363,
+          31,
+          -253,
+          -39,
+          0
+        ],
+        "updates": 5
+      },
+      "after": {
+        "weights": [
+          -885,
+          363,
+          -54,
+          -355,
+          -63,
+          0
+        ],
+        "updates": 6
+      },
+      "graph_steps": 243938,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 23,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -728,
+      "utility": 67,
+      "before": {
+        "weights": [
+          -885,
+          363,
+          -54,
+          -355,
+          -63,
+          0
+        ],
+        "updates": 6
+      },
+      "after": {
+        "weights": [
+          -726,
+          522,
+          105,
+          -292,
+          -39,
+          0
+        ],
+        "updates": 7
+      },
+      "graph_steps": 291734,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 24,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -222,
+      "utility": 82,
+      "before": {
+        "weights": [
+          -726,
+          522,
+          105,
+          -292,
+          -39,
+          0
+        ],
+        "updates": 7
+      },
+      "after": {
+        "weights": [
+          -666,
+          582,
+          165,
+          -268,
+          -30,
+          0
+        ],
+        "updates": 8
+      },
+      "graph_steps": 279154,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 15053,
+      "task": 28,
+      "name": "allocated_2",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -722,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -666,
+          582,
+          165,
+          -268,
+          -30,
+          0
+        ],
+        "updates": 8
+      },
+      "after": {
+        "weights": [
+          -922,
+          582,
+          79,
+          -371,
+          -54,
+          0
+        ],
+        "updates": 9
+      },
+      "graph_steps": 287794,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 7,
+      "name": "allocated_4",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -418,
+      "utility": 39,
+      "before": {
+        "weights": [
+          -922,
+          582,
+          79,
+          -371,
+          -54,
+          0
+        ],
+        "updates": 9
+      },
+      "after": {
+        "weights": [
+          -831,
+          673,
+          170,
+          -335,
+          -40,
+          0
+        ],
+        "updates": 10
+      },
+      "graph_steps": 297601,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 9,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": -126,
+      "utility": 358,
+      "before": {
+        "weights": [
+          -831,
+          673,
+          170,
+          -335,
+          -40,
+          0
+        ],
+        "updates": 10
+      },
+      "after": {
+        "weights": [
+          -735,
+          769,
+          266,
+          -297,
+          -31,
+          0
+        ],
+        "updates": 11
+      },
+      "graph_steps": 326684,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 14,
+      "name": "allocated_4",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": 176,
+      "utility": 37,
+      "before": {
+        "weights": [
+          -735,
+          769,
+          266,
+          -297,
+          -31,
+          0
+        ],
+        "updates": 11
+      },
+      "after": {
+        "weights": [
+          -763,
+          741,
+          238,
+          -309,
+          -36,
+          0
+        ],
+        "updates": 12
+      },
+      "graph_steps": 287844,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 15,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": 89,
+      "utility": 331,
+      "before": {
+        "weights": [
+          -763,
+          741,
+          238,
+          -309,
+          -36,
+          0
+        ],
+        "updates": 12
+      },
+      "after": {
+        "weights": [
+          -715,
+          789,
+          286,
+          -290,
+          -32,
+          0
+        ],
+        "updates": 13
+      },
+      "graph_steps": 304479,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 20,
+      "name": "allocated_4",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": 239,
+      "utility": 46,
+      "before": {
+        "weights": [
+          -715,
+          789,
+          286,
+          -290,
+          -32,
+          0
+        ],
+        "updates": 13
+      },
+      "after": {
+        "weights": [
+          -754,
+          750,
+          247,
+          -306,
+          -39,
+          0
+        ],
+        "updates": 14
+      },
+      "graph_steps": 301711,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 23,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": 116,
+      "utility": 428,
+      "before": {
+        "weights": [
+          -754,
+          750,
+          247,
+          -306,
+          -39,
+          0
+        ],
+        "updates": 14
+      },
+      "after": {
+        "weights": [
+          -692,
+          812,
+          309,
+          -282,
+          -34,
+          0
+        ],
+        "updates": 15
+      },
+      "graph_steps": 263796,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 27,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": 313,
+      "utility": 372,
+      "before": {
+        "weights": [
+          -692,
+          812,
+          309,
+          -282,
+          -34,
+          0
+        ],
+        "updates": 15
+      },
+      "after": {
+        "weights": [
+          -681,
+          823,
+          320,
+          -278,
+          -33,
+          0
+        ],
+        "updates": 16
+      },
+      "graph_steps": 272056,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 16057,
+      "task": 28,
+      "name": "allocated_4",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": 345,
+      "utility": 43,
+      "before": {
+        "weights": [
+          -681,
+          823,
+          320,
+          -278,
+          -33,
+          0
+        ],
+        "updates": 16
+      },
+      "after": {
+        "weights": [
+          -742,
+          762,
+          259,
+          -303,
+          -43,
+          0
+        ],
+        "updates": 17
+      },
+      "graph_steps": 287966,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 8,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": 153,
+      "utility": 409,
+      "before": {
+        "weights": [
+          -742,
+          762,
+          259,
+          -303,
+          -43,
+          0
+        ],
+        "updates": 17
+      },
+      "after": {
+        "weights": [
+          -691,
+          813,
+          310,
+          -283,
+          -39,
+          0
+        ],
+        "updates": 18
+      },
+      "graph_steps": 288053,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 11,
+      "name": "allocated_5",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": 312,
+      "utility": 58,
+      "before": {
+        "weights": [
+          -691,
+          813,
+          310,
+          -283,
+          -39,
+          0
+        ],
+        "updates": 18
+      },
+      "after": {
+        "weights": [
+          -742,
+          762,
+          259,
+          -304,
+          -47,
+          0
+        ],
+        "updates": 19
+      },
+      "graph_steps": 276404,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 12,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": 153,
+      "utility": 382,
+      "before": {
+        "weights": [
+          -742,
+          762,
+          259,
+          -304,
+          -47,
+          0
+        ],
+        "updates": 19
+      },
+      "after": {
+        "weights": [
+          -697,
+          807,
+          304,
+          -286,
+          -43,
+          0
+        ],
+        "updates": 20
+      },
+      "graph_steps": 293834,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 16,
+      "name": "allocated_5",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": 292,
+      "utility": 28,
+      "before": {
+        "weights": [
+          -697,
+          807,
+          304,
+          -286,
+          -43,
+          0
+        ],
+        "updates": 20
+      },
+      "after": {
+        "weights": [
+          -750,
+          754,
+          251,
+          -308,
+          -52,
+          0
+        ],
+        "updates": 21
+      },
+      "graph_steps": 307905,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 18,
+      "name": "allocated_5",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": 123,
+      "utility": 57,
+      "before": {
+        "weights": [
+          -750,
+          754,
+          251,
+          -308,
+          -52,
+          0
+        ],
+        "updates": 21
+      },
+      "after": {
+        "weights": [
+          -764,
+          740,
+          237,
+          -314,
+          -55,
+          0
+        ],
+        "updates": 22
+      },
+      "graph_steps": 273299,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 19,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": 82,
+      "utility": 406,
+      "before": {
+        "weights": [
+          -764,
+          740,
+          237,
+          -314,
+          -55,
+          0
+        ],
+        "updates": 22
+      },
+      "after": {
+        "weights": [
+          -700,
+          804,
+          301,
+          -289,
+          -49,
+          0
+        ],
+        "updates": 23
+      },
+      "graph_steps": 313404,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 27,
+      "name": "allocated_5",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": 281,
+      "utility": 45,
+      "before": {
+        "weights": [
+          -700,
+          804,
+          301,
+          -289,
+          -49,
+          0
+        ],
+        "updates": 23
+      },
+      "after": {
+        "weights": [
+          -748,
+          756,
+          253,
+          -308,
+          -57,
+          0
+        ],
+        "updates": 24
+      },
+      "graph_steps": 279551,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 17077,
+      "task": 29,
+      "name": "allocated_0",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        93,
+        0
+      ],
+      "prediction": 132,
+      "utility": 407,
+      "before": {
+        "weights": [
+          -748,
+          756,
+          253,
+          -308,
+          -57,
+          0
+        ],
+        "updates": 24
+      },
+      "after": {
+        "weights": [
+          -693,
+          811,
+          308,
+          -286,
+          -52,
+          0
+        ],
+        "updates": 25
+      },
+      "graph_steps": 213202,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 5,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -710,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -693,
+          811,
+          308,
+          -286,
+          -52,
+          0
+        ],
+        "updates": 25
+      },
+      "after": {
+        "weights": [
+          -951,
+          811,
+          222,
+          -390,
+          -76,
+          0
+        ],
+        "updates": 26
+      },
+      "graph_steps": 261684,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 7,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -1041,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -951,
+          811,
+          222,
+          -390,
+          -76,
+          0
+        ],
+        "updates": 26
+      },
+      "after": {
+        "weights": [
+          -1143,
+          811,
+          158,
+          -467,
+          -94,
+          0
+        ],
+        "updates": 27
+      },
+      "graph_steps": 282182,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 8,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -376,
+      "utility": 61,
+      "before": {
+        "weights": [
+          -1143,
+          811,
+          158,
+          -467,
+          -94,
+          0
+        ],
+        "updates": 27
+      },
+      "after": {
+        "weights": [
+          -1056,
+          898,
+          245,
+          -433,
+          -81,
+          0
+        ],
+        "updates": 28
+      },
+      "graph_steps": 313369,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 14,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -1156,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -1056,
+          898,
+          245,
+          -433,
+          -81,
+          0
+        ],
+        "updates": 28
+      },
+      "after": {
+        "weights": [
+          -1225,
+          898,
+          188,
+          -501,
+          -97,
+          0
+        ],
+        "updates": 29
+      },
+      "graph_steps": 309979,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 15,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -355,
+      "utility": 63,
+      "before": {
+        "weights": [
+          -1225,
+          898,
+          188,
+          -501,
+          -97,
+          0
+        ],
+        "updates": 29
+      },
+      "after": {
+        "weights": [
+          -1142,
+          981,
+          271,
+          -468,
+          -84,
+          0
+        ],
+        "updates": 30
+      },
+      "graph_steps": 301647,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 19,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -91,
+      "utility": 81,
+      "before": {
+        "weights": [
+          -1142,
+          981,
+          271,
+          -468,
+          -84,
+          0
+        ],
+        "updates": 30
+      },
+      "after": {
+        "weights": [
+          -1108,
+          1015,
+          305,
+          -455,
+          -79,
+          0
+        ],
+        "updates": 31
+      },
+      "graph_steps": 286379,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 22,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -1196,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -1108,
+          1015,
+          305,
+          -455,
+          -79,
+          0
+        ],
+        "updates": 31
+      },
+      "after": {
+        "weights": [
+          -1269,
+          1015,
+          251,
+          -520,
+          -94,
+          0
+        ],
+        "updates": 32
+      },
+      "graph_steps": 299066,
+      "actual_success": false,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 28,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        1000,
+        1000,
+        400,
+        156,
+        0
+      ],
+      "prediction": -226,
+      "utility": 84,
+      "before": {
+        "weights": [
+          -1269,
+          1015,
+          251,
+          -520,
+          -94,
+          0
+        ],
+        "updates": 32
+      },
+      "after": {
+        "weights": [
+          -1207,
+          1077,
+          313,
+          -496,
+          -85,
+          0
+        ],
+        "updates": 33
+      },
+      "graph_steps": 268141,
+      "actual_success": true,
+      "baseline_success": true
+    },
+    {
+      "seed": 18089,
+      "task": 29,
+      "name": "allocated_3",
+      "x": [
+        1000,
+        0,
+        333,
+        400,
+        93,
+        0
+      ],
+      "prediction": -1310,
+      "utility": -2000,
+      "before": {
+        "weights": [
+          -1207,
+          1077,
+          313,
+          -496,
+          -85,
+          0
+        ],
+        "updates": 33
+      },
+      "after": {
+        "weights": [
+          -1345,
+          1077,
+          267,
+          -552,
+          -98,
+          0
+        ],
+        "updates": 34
+      },
+      "graph_steps": 250480,
+      "actual_success": false,
+      "baseline_success": true
+    }
+  ],
+  "costs": {
+    "model_init": 1,
+    "training_context": 265982,
+    "training_features": 1452613,
+    "training_inference": 1428440,
+    "training_label": 1289833,
+    "training_update": 5087572,
+    "training_persistence": 170
+  },
+  "graph_steps": 9524623,
+  "cpu_seconds": 17.174987,
+  "wall_seconds": 17.478558375,
+  "historical_trace_generation_steps": 73603011,
+  "note": "Historical execution cost is reported separately and was not rerun. Update/persistence cost is charged to fitting totals, not retroactively to logged activation utility."
+}

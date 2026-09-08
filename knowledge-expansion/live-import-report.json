@@ -1,0 +1,53 @@
+{
+  "loaded_at": "2026-09-07T14:32:35.863107+00:00",
+  "new_assertions": 862,
+  "domain_counts": {
+    "Chemistry": 354,
+    "Geography": 428,
+    "Biology": 56,
+    "Computing": 24
+  },
+  "live_facts": 952,
+  "preserved_assertions": 89,
+  "all_sources_preserved": true,
+  "queries": [
+    {
+      "subject": "Carbon",
+      "relation": "atomic number",
+      "object": "6",
+      "result": "yes"
+    },
+    {
+      "subject": "Oxygen",
+      "relation": "chemical symbol",
+      "object": "O",
+      "result": "yes"
+    },
+    {
+      "subject": "France",
+      "relation": "world bank listed capital",
+      "object": "Paris",
+      "result": "yes"
+    },
+    {
+      "subject": "Homo sapiens",
+      "relation": "ncbi taxonomic class",
+      "object": "Mammalia",
+      "result": "yes"
+    },
+    {
+      "subject": "Python list",
+      "relation": "mutability",
+      "object": "mutable",
+      "result": "yes"
+    },
+    {
+      "subject": "Moon",
+      "relation": "orbit",
+      "object": "Earth",
+      "result": "yes"
+    }
+  ],
+  "backup": "knowledge-expansion/live-before-expansion-20260907T142944Z.sqlite3",
+  "database": "/Users/kaan/Documents/ChatGPT/Idk/preview-memory.graph.sqlite3"
+}

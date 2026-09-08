@@ -1,0 +1,85 @@
+{
+  "natural_request_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Prefixes such as Task: and Solve for X: are optional conveniences, never requirements. Interpret ordinary English and Dutch requests.\nUse solve_math for a supplied equation: \"Can you find x in 5x = 20?\" -> solve_math text \"5*x=20\"; \"Wat is x als 5x = 20?\" -> {\"operations\":[{\"op\":\"solve_math\",\"subject\":\"\",\"relation\":\"\",\"object\":\"\",\"negative\":false,\"conditions\":[],\"text\":\"5*x=20\"}]}. For solve_math, the equation MUST be in text; subject/relation/object MUST be empty. Never put the original prose question in solve_math.text. Extract the equation only, preserve all coefficients and sides, and never compute its answer. Ordinary standalone arithmetic uses calculate.\nUse plan_task for a request to organize, save, or carry out a workflow that needs steps or later input and does not fit a direct operation. plan_task text is the original request, not an answer or invented plan. \"Can you make a plan to ask me for a number and then double it?\" is plan_task. \"I need you to ask me for a starting value and work from there\" is plan_task. \"Kun je mij om een getal vragen en het daarna verdubbelen?\" is plan_task. This creates a persistent proposed plan using taught methods; it does not mean you execute arbitrary actions yourself.\nDo not turn factual questions, descriptions of past events, quoted requests, or claims about other people into tasks. \"What is a task?\" is describe task, not plan_task. \"Julia planned a trip\" is a fact or clarify, not plan_task. Ask a specific clarification when intent is ambiguous; never tell the user to add a command prefix.\nA task_input method IS available to the planner for asking missing values across future turns. Do not claim that asking and waiting is impossible. Unsupported capabilities must remain explicit missing knowledge, not invented execution."
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit"
+    },
+    "source": "Explicit teaching: normal English and Dutch math and workflow requests; no mandatory prefixes."
+  },
+  "task_input": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n3",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n5",
+          "op": "require",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "message": "An input-request step must run in a persistent task so its answer can be saved."
+        }
+      ],
+      "output": "n5",
+      "trace_mode": "explicit",
+      "description": "Ask the supplied question in a persistent task and bind the reply for later steps.",
+      "sequence_input": "{question: text}; persistent runner saves and waits for the answer"
+    },
+    "source": "Explicit teaching: input questions require a durable task, never a fabricated immediate result."
+  }
+}

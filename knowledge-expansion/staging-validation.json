@@ -1,0 +1,52 @@
+{
+  "staged_assertions": 951,
+  "staged_facts": 952,
+  "rebuild_seconds": 33.98,
+  "queries": [
+    {
+      "subject": "Carbon",
+      "relation": "atomic number",
+      "object": "6",
+      "passed": true,
+      "seconds": 0.239
+    },
+    {
+      "subject": "Oxygen",
+      "relation": "chemical symbol",
+      "object": "O",
+      "passed": true,
+      "seconds": 0.069
+    },
+    {
+      "subject": "France",
+      "relation": "world bank listed capital",
+      "object": "Paris",
+      "passed": true,
+      "seconds": 0.063
+    },
+    {
+      "subject": "Homo sapiens",
+      "relation": "ncbi taxonomic class",
+      "object": "Mammalia",
+      "passed": true,
+      "seconds": 0.064
+    },
+    {
+      "subject": "Python list",
+      "relation": "mutability",
+      "object": "mutable",
+      "passed": true,
+      "seconds": 0.073
+    },
+    {
+      "subject": "Moon",
+      "relation": "orbit",
+      "object": "Earth",
+      "passed": true,
+      "seconds": 0.064
+    }
+  ],
+  "unknown_not_invented": true,
+  "query_path": "taught knowledge_query using explicit fact labels",
+  "known_interface_limitation": "Knowledge.entity uses case-insensitive names: existing Moon and moon labels are ambiguous. Structured exact-label queries pass."
+}

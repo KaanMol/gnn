@@ -1,0 +1,237 @@
+{
+  "react_explain": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "overview": {
+              "title": "HTML \u2192 JavaScript \u2192 JSX \u2192 React",
+              "explanation": "HTML supplies semantic page structure. JavaScript supplies computation. JSX describes element trees using JavaScript expressions. React components combine those trees with props and state. These are taught reference lessons; the graph interpreter does not yet execute JSX, hooks, or React reconciliation.",
+              "example": "Start with html_structure, html_semantics, html_forms, then jsx, components, props, state and events.",
+              "source": "https://react.dev/learn/"
+            },
+            "html_structure": {
+              "title": "HTML document and element structure",
+              "explanation": "HTML describes a document tree. Elements may contain attributes, text, and child elements. A document normally separates metadata in head from visible content in body. Nesting must follow each element\u2019s content rules.",
+              "example": "<!doctype html>\n<html lang=\"en\">\n<head><title>My page</title></head>\n<body><main><h1>Hello</h1><p>A paragraph.</p></main></body>\n</html>",
+              "source": "https://html.spec.whatwg.org/multipage/semantics.html"
+            },
+            "html_semantics": {
+              "title": "Choose elements by meaning",
+              "explanation": "Use headings for hierarchy, main for primary content, nav for navigation, button for an action and a with href for navigation. A styled div does not acquire keyboard or button behavior by looking like a button.",
+              "example": "<main>\n  <h1>Tasks</h1>\n  <button type=\"button\">Add task</button>\n  <a href=\"/help\">Read help</a>\n</main>",
+              "source": "https://html.spec.whatwg.org/multipage/sections.html"
+            },
+            "html_attributes": {
+              "title": "HTML attributes",
+              "explanation": "Attributes configure elements. id identifies an element in the document; class groups elements for styling. Boolean attributes depend on presence: disabled=\"false\" still disables a native HTML control.",
+              "example": "<button disabled>Unavailable</button>\n<input id=\"email\" name=\"email\" type=\"email\" required>",
+              "source": "https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#boolean-attributes"
+            },
+            "html_forms": {
+              "title": "Forms, labels and inputs",
+              "explanation": "Associate a label with an input using for and id, or wrap the input in the label. Input type supplies native behavior; name supplies the field name when a form is submitted. Use appropriate button types.",
+              "example": "<form>\n  <label for=\"email\">Email</label>\n  <input id=\"email\" name=\"email\" type=\"email\" required>\n  <button type=\"submit\">Save</button>\n</form>",
+              "source": "https://html.spec.whatwg.org/multipage/forms.html"
+            },
+            "html_accessibility": {
+              "title": "Accessible interaction",
+              "explanation": "Prefer native controls, meaningful headings and descriptive link text. Inputs need accessible names. Images need alt text reflecting their purpose; decorative images use empty alt. Preserve visible keyboard focus. ARIA does not automatically add keyboard behavior.",
+              "example": "<img src=\"portrait.jpg\" alt=\"Portrait of the author\">\n<button type=\"button\" aria-label=\"Remove task\">\u00d7</button>",
+              "source": "https://html.spec.whatwg.org/multipage/interaction.html"
+            },
+            "html_void_elements": {
+              "title": "Void elements",
+              "explanation": "Elements such as input, img, br, hr, meta and link cannot contain children in HTML. JSX requires explicit closing syntax even for these elements.",
+              "example": "HTML: <input type=\"text\">\nJSX:  <input type=\"text\" />",
+              "source": "https://html.spec.whatwg.org/multipage/syntax.html#void-elements"
+            },
+            "html_text": {
+              "title": "Text and markup",
+              "explanation": "Text content is different from markup. Escape special characters when serializing HTML text. React normally escapes strings inserted as children; inserting raw HTML is a separate operation and requires trustworthy content.",
+              "example": "HTML text: &lt;button&gt;\nJSX text: <p>{\"<button>\"}</p>",
+              "source": "https://react.dev/learn/writing-markup-with-jsx"
+            },
+            "components": {
+              "title": "Components and composition",
+              "explanation": "A function component returns renderable content. Component names begin with a capital letter in JSX; lowercase names refer to host elements. Components can receive other content through children.",
+              "example": "function Greeting({name}) {\n  return <h1>Hello, {name}</h1>;\n}\n// Usage: <Greeting name=\"Kaan\" />",
+              "source": "https://react.dev/learn/your-first-component"
+            },
+            "jsx": {
+              "title": "JSX describes an element tree",
+              "explanation": "JSX is JavaScript syntax for constructing element descriptions. It is not an HTML string. Close tags, wrap sibling elements in a parent or fragment, and use braces for JavaScript expressions. class becomes className and label for becomes htmlFor. JSX requires a compiler transform before a browser can run it.",
+              "example": "const name = \"Kaan\";\nconst view = <section className=\"welcome\">\n  <h1>Hello, {name}</h1>\n  <input aria-label=\"Name\" />\n</section>;",
+              "source": "https://react.dev/learn/writing-markup-with-jsx"
+            },
+            "props": {
+              "title": "Props are component inputs",
+              "explanation": "A parent supplies props. Treat props as read-only. To request a change, call a callback supplied by the parent or update state owned by the component.",
+              "example": "function Action({label, onAction}) {\n  return <button onClick={onAction}>{label}</button>;\n}",
+              "source": "https://react.dev/learn/passing-props-to-a-component"
+            },
+            "state": {
+              "title": "State and updates",
+              "explanation": "useState supplies a value for this render and a setter that schedules an update. When the next state depends on the previous state, use a pure updater function. Calling a setter does not change the value already captured by the current render.",
+              "example": "const [count, setCount] = useState(0);\n<button onClick={() => setCount(previous => previous + 1)}>{count}</button>",
+              "source": "https://react.dev/learn/state-a-components-memory"
+            },
+            "events": {
+              "title": "Event handlers",
+              "explanation": "Pass an event handler function to onClick or onChange. Calling the function while rendering is different from passing it. Read input values from the event in the handler.",
+              "example": "<input value={name} onChange={event => setName(event.target.value)} />",
+              "source": "https://react.dev/learn/responding-to-events"
+            },
+            "lists": {
+              "title": "Render lists with data transformations",
+              "explanation": "Use filter to select records and map to produce elements. Each directly mapped element needs a stable key. The graph now executes a restricted data-only version of these transformations; producing JSX from callbacks remains a separate missing capability.",
+              "example": "todos.filter(todo => !todo.done).map(todo =>\n  <li key={todo.id}>{todo.title}</li>\n)",
+              "source": "https://react.dev/learn/rendering-lists"
+            },
+            "keys": {
+              "title": "Stable list keys",
+              "explanation": "A key identifies an item among its siblings across renders. Prefer stable IDs from the data. Generate IDs when creating records, not during render. Index keys can associate the wrong state with an item when a list changes order.",
+              "example": "items.map(item => <Row key={item.id} item={item} />)",
+              "source": "https://react.dev/learn/rendering-lists"
+            },
+            "forms": {
+              "title": "Controlled forms",
+              "explanation": "A controlled input receives value and updates state in onChange. Prevent the default submission when handling a form in JavaScript. Connect validation messages to their fields and preserve labels.",
+              "example": "<form onSubmit={event => { event.preventDefault(); save(values); }}>\n  <label htmlFor=\"name\">Name</label>\n  <input id=\"name\" value={name} onChange={event => setName(event.target.value)} />\n  <button type=\"submit\">Save</button>\n</form>",
+              "source": "https://react.dev/reference/react-dom/components/input"
+            },
+            "immutability": {
+              "title": "Immutable object and array updates",
+              "explanation": "Treat state objects and arrays as read-only. Construct replacements using spreads, map and filter. Spread copies only one level, so nested updates need copies along the changed path.",
+              "example": "setTodos(previous => previous.map(todo =>\n  todo.id === selectedId ? {...todo, done: !todo.done} : todo\n));",
+              "source": "https://react.dev/learn/updating-arrays-in-state"
+            },
+            "refs": {
+              "title": "Refs",
+              "explanation": "useRef retains a mutable value between renders without scheduling a render when current changes. Use state for values shown by the UI. Refs can hold DOM handles or non-rendering bookkeeping.",
+              "example": "const nextId = useRef(0);\n// In an event handler:\nconst id = nextId.current++;",
+              "source": "https://react.dev/learn/referencing-values-with-refs"
+            },
+            "effects": {
+              "title": "Effects synchronize with external systems",
+              "explanation": "Effects run after rendering to synchronize with an external system. Declare reactive dependencies and clean up subscriptions or connections. Derivable values usually belong in rendering, not an effect that copies them into state.",
+              "example": "useEffect(() => {\n  const connection = connect(roomId);\n  return () => connection.disconnect();\n}, [roomId]);",
+              "source": "https://react.dev/learn/synchronizing-with-effects"
+            },
+            "hook_rules": {
+              "title": "Rules of Hooks",
+              "explanation": "Call hooks at the top level of function components or custom hooks, never in conditions, loops or ordinary callbacks. Keep rendering pure. These are reference rules, not a claim that the graph implements hook scheduling.",
+              "example": "function Counter() {\n  const [count, setCount] = useState(0);\n  return <button onClick={() => setCount(c => c + 1)}>{count}</button>;\n}",
+              "source": "https://react.dev/reference/rules/rules-of-hooks"
+            },
+            "counter_pattern": {
+              "title": "Counter component pattern",
+              "explanation": "Teacher-authored source pattern. Requires React hooks and a Panel component; placeholders name the configuration points. This is reference code, not execution support in the graph JS subset.",
+              "example": "function __COMPONENT__() {\n  const [count, setCount] = useState(__INITIAL__);\n  return <Panel title={__TITLE__} description={__DESCRIPTION__} kind=\"counter\">\n    <output className=\"count\" aria-live=\"polite\">{count}</output>\n    <div className=\"button-row\">\n      <button aria-label={\"Decrease \" + __TITLE__} onClick={() => setCount(n => n - 1)}>\u2212</button>\n      <button className=\"primary\" aria-label={\"Increase \" + __TITLE__} onClick={() => setCount(n => n + 1)}>Add one \u2197</button>\n      <button className=\"quiet\" onClick={() => setCount(__INITIAL__)}>Reset</button>\n    </div>\n  </Panel>;\n}\n",
+              "source": "https://react.dev/learn/"
+            },
+            "todos_pattern": {
+              "title": "Todos component pattern",
+              "explanation": "Teacher-authored source pattern. Requires React hooks and a Panel component; placeholders name the configuration points. This is reference code, not execution support in the graph JS subset.",
+              "example": "function __COMPONENT__() {\n  const [items, setItems] = useState(() => __ITEMS__.map((text, id) => ({id, text, done: false})));\n  const [draft, setDraft] = useState(\"\");\n  const [filter, setFilter] = useState(\"all\");\n  const nextId = useRef(__ITEM_COUNT__);\n  const inputId = useId();\n  const remaining = items.filter(item => !item.done).length;\n  const visible = items.filter(item => filter === \"all\" || (filter === \"done\" ? item.done : !item.done));\n  function addItem(event) {\n    event.preventDefault();\n    const text = draft.trim();\n    if (!text) return;\n    const id = nextId.current++;\n    setItems(previous => [...previous, {id, text, done: false}]);\n    setDraft(\"\");\n  }\n  return <Panel title={__TITLE__} description={__DESCRIPTION__} kind=\"todos\">\n    <div className=\"list-meta\"><span aria-live=\"polite\">{remaining} left to do</span><span>{items.length} total</span></div>\n    <form className=\"add-item\" onSubmit={addItem}>\n      <label className=\"sr-only\" htmlFor={inputId}>New item</label>\n      <input id={inputId} value={draft} onChange={event => setDraft(event.target.value)} placeholder=\"Something worth doing\u2026\" maxLength={200}/>\n      <button className=\"primary\" disabled={!draft.trim()}>Add item</button>\n    </form>\n    <div className=\"filters\" aria-label=\"Filter items\">{[\"all\", \"active\", \"done\"].map(option =>\n      <button key={option} aria-pressed={filter === option} onClick={() => setFilter(option)}>{option}</button>\n    )}</div>\n    <ul className=\"items\">{visible.map(item => <li key={item.id}>\n      <label className={item.done ? \"completed\" : \"\"}>\n        <input type=\"checkbox\" checked={item.done} onChange={() => setItems(previous => previous.map(value => value.id === item.id ? {...value, done: !value.done} : value))}/>\n        <span>{item.text}</span>\n      </label>\n      <button className=\"remove\" aria-label={\"Remove \" + item.text} onClick={() => setItems(previous => previous.filter(value => value.id !== item.id))}>\u00d7</button>\n    </li>)}</ul>\n    {visible.length === 0 && <p className=\"empty\">A little breathing room. Nothing here yet.</p>}\n  </Panel>;\n}\n",
+              "source": "https://react.dev/learn/"
+            },
+            "form_pattern": {
+              "title": "Form component pattern",
+              "explanation": "Teacher-authored source pattern. Requires React hooks and a Panel component; placeholders name the configuration points. This is reference code, not execution support in the graph JS subset.",
+              "example": "function __COMPONENT__() {\n  const [values, setValues] = useState({name: \"\", email: \"\"});\n  const [errors, setErrors] = useState({});\n  const [saved, setSaved] = useState(null);\n  const id = useId();\n  function submit(event) {\n    event.preventDefault();\n    const next = {};\n    if (!values.name.trim()) next.name = \"Please enter your name.\";\n    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(values.email.trim())) next.email = \"Please enter a valid email address.\";\n    setErrors(next);\n    if (Object.keys(next).length === 0) setSaved({...values, name: values.name.trim(), email: values.email.trim()});\n    else setSaved(null);\n  }\n  return <Panel title={__TITLE__} description={__DESCRIPTION__} kind=\"form\">\n    <form noValidate onSubmit={submit}>\n      <div className=\"fields\">{[\"name\", \"email\"].map(field => <div key={field}>\n        <label htmlFor={id + field}>{field === \"name\" ? \"Your name\" : \"Email address\"}</label>\n        <input id={id + field} type={field === \"email\" ? \"email\" : \"text\"} autoComplete={field} value={values[field]} maxLength={200}\n          aria-invalid={Boolean(errors[field])} aria-describedby={errors[field] ? id + field + \"-error\" : undefined}\n          onChange={event => {setValues(previous => ({...previous, [field]: event.target.value})); setSaved(null);}}/>\n        {errors[field] && <p className=\"error\" id={id + field + \"-error\"}>{errors[field]}</p>}\n      </div>)}</div>\n      <button className=\"primary\">Save details \u2197</button>\n      <p className=\"form-status\" role=\"status\">{saved ? \"Saved for this session. Thank you, \" + saved.name + \".\" : \"Stays in this page. No data is sent.\"}</p>\n    </form>\n  </Panel>;\n}\n",
+              "source": "https://react.dev/learn/"
+            }
+          }
+        },
+        {
+          "id": "n2",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n0"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n2",
+      "trace_mode": "explicit",
+      "description": "Read an explicitly taught HTML, JSX or React lesson and its source; reference knowledge does not imply execution support."
+    },
+    "source": "Teacher-authored lessons based on WHATWG HTML and official React documentation."
+  },
+  "jsx_attribute_name": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "class": "className",
+            "for": "htmlFor",
+            "tabindex": "tabIndex",
+            "readonly": "readOnly",
+            "maxlength": "maxLength",
+            "autofocus": "autoFocus",
+            "onclick": "onClick",
+            "onchange": "onChange"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "has_key",
+          "inputs": [
+            "n1",
+            "n0"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n3",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n0"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "choose",
+          "inputs": [
+            "n2",
+            "n3",
+            "n0"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n4",
+      "trace_mode": "explicit",
+      "description": "Convert selected known HTML attribute names to JSX names. Names only: event-handler values, styles, boolean attributes and full markup require further conversion."
+    },
+    "source": "Explicit JSX attribute-name correspondence lesson; not an HTML-to-JSX parser."
+  }
+}

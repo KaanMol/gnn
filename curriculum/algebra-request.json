@@ -1,0 +1,578 @@
+{
+  "algebra_request_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ":"
+        },
+        {
+          "id": "n2",
+          "op": "split_text",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "lower",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n6",
+          "op": "split_text",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "filter",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n2",
+                "op": "data_equal",
+                "inputs": [
+                  "n0",
+                  "n1"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n3",
+                "op": "not",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n8",
+          "op": "size",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_data",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n11",
+          "op": "size",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "less",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n15",
+          "op": "choose",
+          "inputs": [
+            "n12",
+            "n13",
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n17",
+          "op": "size",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "less",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n20",
+          "op": "item",
+          "inputs": [
+            "n7",
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n22",
+          "op": "choose",
+          "inputs": [
+            "n18",
+            "n20",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "abcdefghijklmnopqrstuvwxyz"
+        },
+        {
+          "id": "n24",
+          "op": "characters",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "contains",
+          "inputs": [
+            "n24",
+            "n22"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n27",
+          "op": "data_equal",
+          "inputs": [
+            "n9",
+            "n26"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 3
+        },
+        {
+          "id": "n29",
+          "op": "data_equal",
+          "inputs": [
+            "n9",
+            "n28"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n30",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "for"
+        },
+        {
+          "id": "n32",
+          "op": "data_equal",
+          "inputs": [
+            "n30",
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n35",
+          "op": "data_equal",
+          "inputs": [
+            "n33",
+            "n34"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n36",
+          "op": "choose",
+          "inputs": [
+            "n29",
+            "n32",
+            "n35"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n37",
+          "op": "or",
+          "inputs": [
+            "n27",
+            "n36"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n38",
+          "op": "and",
+          "inputs": [
+            "n25",
+            "n37"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n39",
+          "op": "size",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n40",
+          "op": "as_data",
+          "inputs": [
+            "n39"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n41",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n42",
+          "op": "data_equal",
+          "inputs": [
+            "n40",
+            "n41"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n43",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "solve"
+        },
+        {
+          "id": "n44",
+          "op": "data_equal",
+          "inputs": [
+            "n15",
+            "n43"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n45",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n46",
+          "op": "data_equal",
+          "inputs": [
+            "n9",
+            "n45"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n47",
+          "op": "or",
+          "inputs": [
+            "n46",
+            "n38"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n48",
+          "op": "and",
+          "inputs": [
+            "n44",
+            "n47"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n49",
+          "op": "and",
+          "inputs": [
+            "n42",
+            "n48"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n50",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "solve_math"
+        },
+        {
+          "id": "n51",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n52",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n53",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n54",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n55",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n56",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n57",
+          "op": "record",
+          "inputs": [
+            "n50",
+            "n51",
+            "n52",
+            "n53",
+            "n54",
+            "n55",
+            "n56"
+          ],
+          "type": "Data",
+          "keys": [
+            "op",
+            "subject",
+            "relation",
+            "object",
+            "negative",
+            "conditions",
+            "text"
+          ]
+        },
+        {
+          "id": "n58",
+          "op": "data_list",
+          "inputs": [
+            "n57"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n59",
+          "op": "record",
+          "inputs": [
+            "n58"
+          ],
+          "type": "Data",
+          "keys": [
+            "operations"
+          ]
+        },
+        {
+          "id": "n60",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n61",
+          "op": "choose",
+          "inputs": [
+            "n49",
+            "n59",
+            "n60"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n61",
+      "internal": true,
+      "trace_mode": "explicit"
+    },
+    "source": "Taught request forms: Solve: equation, Solve x: equation, Solve for x: equation. One-letter variable labels are accepted; the algebra reader validates the equation."
+  }
+}

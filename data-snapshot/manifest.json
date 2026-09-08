@@ -1,0 +1,1106 @@
+[
+  {
+    "path": "experiments/activation-search-results/planning-15053-all_active.sqlite3",
+    "archive": "experiments/activation-search-results/planning-15053-all_active.sqlite3.gz",
+    "bytes": 12021760,
+    "sha256": "bd0d40a37b77a079522e7d194c10fb7da0920bda34b50fe10bb930511c2ad6b2"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-15053-no_memory.sqlite3",
+    "archive": "experiments/activation-search-results/planning-15053-no_memory.sqlite3.gz",
+    "bytes": 11436032,
+    "sha256": "b06c4a7fc8651b7a18ab260855bab69b3785fddda6fd56fb969f9b986c90ccf5"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-15053-top_k.sqlite3",
+    "archive": "experiments/activation-search-results/planning-15053-top_k.sqlite3.gz",
+    "bytes": 11980800,
+    "sha256": "6913f0726a9007cb5e3c8ff0755cd7426b45602cf68aa933f60501d0068c441c"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-16057-all_active.sqlite3",
+    "archive": "experiments/activation-search-results/planning-16057-all_active.sqlite3.gz",
+    "bytes": 12206080,
+    "sha256": "e920ef4fa522c715e18a77bce4738643efc2cf182d605974bcbf719e1e64bbe8"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-16057-no_memory.sqlite3",
+    "archive": "experiments/activation-search-results/planning-16057-no_memory.sqlite3.gz",
+    "bytes": 11427840,
+    "sha256": "f1f323711800dcf08639bc406ba319a30f020026ca57ec326cfbb1bccd792cf1"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-16057-top_k.sqlite3",
+    "archive": "experiments/activation-search-results/planning-16057-top_k.sqlite3.gz",
+    "bytes": 12152832,
+    "sha256": "89654c14931e42ad80a8641387926b2d3a942825f2ae6c0cbadb2fd3444bfbbd"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-17077-all_active.sqlite3",
+    "archive": "experiments/activation-search-results/planning-17077-all_active.sqlite3.gz",
+    "bytes": 12222464,
+    "sha256": "b9daeea1ad938b578a649e057aad63c19a0a5f7964d497e8e9b2e5c35b333d9c"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-17077-no_memory.sqlite3",
+    "archive": "experiments/activation-search-results/planning-17077-no_memory.sqlite3.gz",
+    "bytes": 11448320,
+    "sha256": "fcd8a8b6729da62dab7d151bc21fee41acf81f51c49568a87cd86686ba8df5b0"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-17077-top_k.sqlite3",
+    "archive": "experiments/activation-search-results/planning-17077-top_k.sqlite3.gz",
+    "bytes": 12136448,
+    "sha256": "c70f990128bf4024c1a6db6c49e33a628e420c12e7d75c713a2d2eb50ac2e186"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-18089-all_active.sqlite3",
+    "archive": "experiments/activation-search-results/planning-18089-all_active.sqlite3.gz",
+    "bytes": 12001280,
+    "sha256": "8d2a179c2e6cd7c961cb92135665151073296b28d1b42a9ce779356b6b9c084c"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-18089-no_memory.sqlite3",
+    "archive": "experiments/activation-search-results/planning-18089-no_memory.sqlite3.gz",
+    "bytes": 11423744,
+    "sha256": "1fb887127d090f33bfff2fab91113584ab7653a68efb3850abb142b05faca5c0"
+  },
+  {
+    "path": "experiments/activation-search-results/planning-18089-top_k.sqlite3",
+    "archive": "experiments/activation-search-results/planning-18089-top_k.sqlite3.gz",
+    "bytes": 12001280,
+    "sha256": "d118197a92ef489e0ed5f5e55fd4828fc60565a9d8a00217c8197f5310ab5a23"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-15053-memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-15053-memory.sqlite3.gz",
+    "bytes": 12267520,
+    "sha256": "0fc4e58e53fd0aa6bb4bf7cd98f0b9063bc9f15d08001993d2ccfc44a222177f"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-15053-no_memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-15053-no_memory.sqlite3.gz",
+    "bytes": 11710464,
+    "sha256": "b45e4b8cab200dbb3902c37ffc38e33f1d0907fe65ea8870600ceca1820806aa"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-16057-memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-16057-memory.sqlite3.gz",
+    "bytes": 12247040,
+    "sha256": "9a3543b84e435487fa5dd668d4877704492af06167e02609a5aed3f68754da03"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-16057-no_memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-16057-no_memory.sqlite3.gz",
+    "bytes": 11689984,
+    "sha256": "9797290f8edb240f792ae4ed0e6da2c19fbb1eb8db3eb6d9e23ffe167c0c2a96"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-17077-memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-17077-memory.sqlite3.gz",
+    "bytes": 12247040,
+    "sha256": "0db91a2f6e15e162d984d1577dfaa2ac9ed0d967b12c5f9f9eaa7ee4bae85f73"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-17077-no_memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-17077-no_memory.sqlite3.gz",
+    "bytes": 11698176,
+    "sha256": "132a5b1ce919c6155e433d2d05cdd0cfc148ab3a25cc8155a948c70eca890523"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-18089-memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-18089-memory.sqlite3.gz",
+    "bytes": 12242944,
+    "sha256": "ba64353ff23600b5bf488b469c147a0944de5cbd41e0f102bb7111224ecf65ab"
+  },
+  {
+    "path": "experiments/adaptive-lanes-results/planning-18089-no_memory.sqlite3",
+    "archive": "experiments/adaptive-lanes-results/planning-18089-no_memory.sqlite3.gz",
+    "bytes": 11689984,
+    "sha256": "b4277cfa2e776c89f8c01ced4b38db3cf9d97436848f01c1e8598e3b0e91a7cd"
+  },
+  {
+    "path": "experiments/adaptive-reuse-v2.graph.sqlite3",
+    "archive": "experiments/adaptive-reuse-v2.graph.sqlite3.gz",
+    "bytes": 8781824,
+    "sha256": "5998a23f2f1d039af14f064c4800cf2b90cde9084a983c5321d50583f55cac48"
+  },
+  {
+    "path": "experiments/adaptive-reuse.graph.sqlite3",
+    "archive": "experiments/adaptive-reuse.graph.sqlite3.gz",
+    "bytes": 8736768,
+    "sha256": "2ccb8d7addf2f9537ae33807a32224224d2d09650398ec4f0939a53daa9890d4"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/planning-7109-compositional.sqlite3",
+    "archive": "experiments/compositional-transfer-results/planning-7109-compositional.sqlite3.gz",
+    "bytes": 10350592,
+    "sha256": "ede25e5de720f04d630d6ab20850364d9bebf0f312b911132a9169b457f612b7"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/planning-7109-no_memory.sqlite3",
+    "archive": "experiments/compositional-transfer-results/planning-7109-no_memory.sqlite3.gz",
+    "bytes": 9748480,
+    "sha256": "fc7821a354d4bfb6b575c57c98c5815e585a5e5910aa6b67cb4ce50401e3290a"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/planning-7109-whole_program.sqlite3",
+    "archive": "experiments/compositional-transfer-results/planning-7109-whole_program.sqlite3.gz",
+    "bytes": 10354688,
+    "sha256": "e3fd7fcfcb8b43dbb3b63732e37461dc5ee06a2705587c9856edefef5699ff1a"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/planning-8111-compositional.sqlite3",
+    "archive": "experiments/compositional-transfer-results/planning-8111-compositional.sqlite3.gz",
+    "bytes": 10346496,
+    "sha256": "129a9bd9474950d9bfa59370e923b9efcfc2a7f890c397d20e84f9d33e64ce35"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/planning-8111-no_memory.sqlite3",
+    "archive": "experiments/compositional-transfer-results/planning-8111-no_memory.sqlite3.gz",
+    "bytes": 9760768,
+    "sha256": "9f88f6c6e02c7296f6439940c1b342cbbf1139e83adddbdbfc691a2644dc89fa"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/planning-8111-whole_program.sqlite3",
+    "archive": "experiments/compositional-transfer-results/planning-8111-whole_program.sqlite3.gz",
+    "bytes": 10383360,
+    "sha256": "735277c9e03269c01f100b32f2dc9bfea14076b185854749bd2089e0a0822871"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/text-7109-compositional.sqlite3",
+    "archive": "experiments/compositional-transfer-results/text-7109-compositional.sqlite3.gz",
+    "bytes": 9953280,
+    "sha256": "18bc9ad936e15f0b73a57cfa6cac2577cefba5540f9a59155e008f067d83e094"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/text-7109-no_memory.sqlite3",
+    "archive": "experiments/compositional-transfer-results/text-7109-no_memory.sqlite3.gz",
+    "bytes": 9748480,
+    "sha256": "3057b47bf6c8174e3c1407a84e1a6b655a1e5e6faac5176efd131c476fcdf987"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/text-7109-whole_program.sqlite3",
+    "archive": "experiments/compositional-transfer-results/text-7109-whole_program.sqlite3.gz",
+    "bytes": 9965568,
+    "sha256": "8f040c26525efc8e8d46ee31e64dcaca1d79371a02e6051dc6d928e56ce61a7c"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/text-8111-compositional.sqlite3",
+    "archive": "experiments/compositional-transfer-results/text-8111-compositional.sqlite3.gz",
+    "bytes": 9973760,
+    "sha256": "e4171cf25012e01e7e124ece7f49dcc5e2ad0a2519f58e5801d80848428c1f8b"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/text-8111-no_memory.sqlite3",
+    "archive": "experiments/compositional-transfer-results/text-8111-no_memory.sqlite3.gz",
+    "bytes": 9748480,
+    "sha256": "de16f53fe1f34336d58d5c3d58cf7ddf6b1e419903b38e86e415db20a43e7ec4"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/text-8111-whole_program.sqlite3",
+    "archive": "experiments/compositional-transfer-results/text-8111-whole_program.sqlite3.gz",
+    "bytes": 9965568,
+    "sha256": "4112c66c590edd3bf27c458294926bb841b4a3f974d86faca3782f127f574b78"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/tree-7109-compositional.sqlite3",
+    "archive": "experiments/compositional-transfer-results/tree-7109-compositional.sqlite3.gz",
+    "bytes": 9965568,
+    "sha256": "90b406d87793676c375b0ee15fe650b036cd9f9e389b09804b11f360aa062df1"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/tree-7109-no_memory.sqlite3",
+    "archive": "experiments/compositional-transfer-results/tree-7109-no_memory.sqlite3.gz",
+    "bytes": 9732096,
+    "sha256": "921dde6cc96b4dfde604246ed212b4d9bc3feb5ded244d1c1b12ebdd45a764b1"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/tree-7109-whole_program.sqlite3",
+    "archive": "experiments/compositional-transfer-results/tree-7109-whole_program.sqlite3.gz",
+    "bytes": 9977856,
+    "sha256": "cc34604c07d7eb7658caa3e5582e7a6ef7be440936396d0d8901f4f222d569c6"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/tree-8111-compositional.sqlite3",
+    "archive": "experiments/compositional-transfer-results/tree-8111-compositional.sqlite3.gz",
+    "bytes": 9940992,
+    "sha256": "70c0caeb4f90fbecdab8f62f6dd72229cd37d507ccdb26e6677d19947edf0698"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/tree-8111-no_memory.sqlite3",
+    "archive": "experiments/compositional-transfer-results/tree-8111-no_memory.sqlite3.gz",
+    "bytes": 9736192,
+    "sha256": "f6cd311840d65cef72f8c35854967010b2ac52aa270ad4723ae92dd6ae20791c"
+  },
+  {
+    "path": "experiments/compositional-transfer-results/tree-8111-whole_program.sqlite3",
+    "archive": "experiments/compositional-transfer-results/tree-8111-whole_program.sqlite3.gz",
+    "bytes": 9961472,
+    "sha256": "c98bdb327031d4061c62d173dbd3679b5fee55ff11e4563d13c7f5d29f725c9e"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-10211-managed_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-10211-managed_memory.sqlite3.gz",
+    "bytes": 11137024,
+    "sha256": "adca9f3a200a82e9005286a2925af59947a026bf34108a4f578f8ecd2f0ff307"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-10211-no_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-10211-no_memory.sqlite3.gz",
+    "bytes": 10637312,
+    "sha256": "835c585fcde88783401b7812940ae2eb76e697626fc18026066d32e2ddaefe07"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-11213-managed_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-11213-managed_memory.sqlite3.gz",
+    "bytes": 11108352,
+    "sha256": "36dc76f4945f6a1c9fc8b8bcffdde7715d19b95a397bfffdaa931d22285043c3"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-11213-no_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-11213-no_memory.sqlite3.gz",
+    "bytes": 10641408,
+    "sha256": "5e4dc051ec3c570ff56fdb7e919f4527f611c09e31153214cb04a686111143b1"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-12227-managed_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-12227-managed_memory.sqlite3.gz",
+    "bytes": 11288576,
+    "sha256": "7277b073f791019483b4c796982e94878e0254be8eb2d479c998ec46b9f7337e"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-12227-no_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-12227-no_memory.sqlite3.gz",
+    "bytes": 10665984,
+    "sha256": "7f41b5ab0b385add1f72ff9fc73a2ab61283fd971ad0f4b6c5e8ab9e9f1c05e6"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-13229-managed_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-13229-managed_memory.sqlite3.gz",
+    "bytes": 11296768,
+    "sha256": "c86dd08c984f78d972f4353cc47215dc4e11c6b9e8d0dea04bdad900c0e38115"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-13229-no_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-13229-no_memory.sqlite3.gz",
+    "bytes": 10641408,
+    "sha256": "67c1c98be5e54d44619444d797f2ceef3513245058419be36e36668ae12a3eef"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-14243-managed_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-14243-managed_memory.sqlite3.gz",
+    "bytes": 11259904,
+    "sha256": "a2bd63cf156fb5f64d104de6f13c1d65e9f70b7e10f50e15c27bc38684f5627c"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-14243-no_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-14243-no_memory.sqlite3.gz",
+    "bytes": 10641408,
+    "sha256": "d4937ea5d8937d659fc60cc4682ba1add921388f98c2820389e88f4adf81d83f"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-9209-managed_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-9209-managed_memory.sqlite3.gz",
+    "bytes": 11288576,
+    "sha256": "f768c8a0200c71047567cac736f2212eefacb4c1ef913bfe0cbf6ce54877ddd6"
+  },
+  {
+    "path": "experiments/fair-search-results/planning-9209-no_memory.sqlite3",
+    "archive": "experiments/fair-search-results/planning-9209-no_memory.sqlite3.gz",
+    "bytes": 10637312,
+    "sha256": "85ed8449190248ffe9ae292afbc1cfd60abb0d3d5e4879c6f7e3efd29f34fa37"
+  },
+  {
+    "path": "experiments/grounded-adapter-v2.graph.sqlite3",
+    "archive": "experiments/grounded-adapter-v2.graph.sqlite3.gz",
+    "bytes": 8400896,
+    "sha256": "a5b4cab63a2908619a0880e18e22045f2aa70b0504cd782c5d1a1f0ab9c548f4"
+  },
+  {
+    "path": "experiments/grounded-adapter.graph.sqlite3",
+    "archive": "experiments/grounded-adapter.graph.sqlite3.gz",
+    "bytes": 8372224,
+    "sha256": "1e46b0c6fd62112f9e739b54c8b0962befe90a21e6f19d2c266e13a162b25053"
+  },
+  {
+    "path": "experiments/learning-economics-results/1907-discard.sqlite3",
+    "archive": "experiments/learning-economics-results/1907-discard.sqlite3.gz",
+    "bytes": 9060352,
+    "sha256": "82afc8631c18b886dacd6b330e42de944dc30dc959fa10a5e691c460b4afd8b5"
+  },
+  {
+    "path": "experiments/learning-economics-results/1907-retain.sqlite3",
+    "archive": "experiments/learning-economics-results/1907-retain.sqlite3.gz",
+    "bytes": 10055680,
+    "sha256": "d67794716245cd219da18df21bbf58c72dd172d8e14e21197869afa10863afad"
+  },
+  {
+    "path": "experiments/learning-economics-results/2909-discard.sqlite3",
+    "archive": "experiments/learning-economics-results/2909-discard.sqlite3.gz",
+    "bytes": 9068544,
+    "sha256": "7f9728cb90040064a68d9ce8e49b2570e960efb02c3f45c1863f294b0ec9d950"
+  },
+  {
+    "path": "experiments/learning-economics-results/2909-retain.sqlite3",
+    "archive": "experiments/learning-economics-results/2909-retain.sqlite3.gz",
+    "bytes": 10219520,
+    "sha256": "47bdaaa1541b9da5007ce0d255f007df8e20268a90dda4712a94580ecd3871c6"
+  },
+  {
+    "path": "experiments/learning-economics-results/3911-discard.sqlite3",
+    "archive": "experiments/learning-economics-results/3911-discard.sqlite3.gz",
+    "bytes": 9080832,
+    "sha256": "04b97a4807aea8adcf82252cf2c2684725950ddf370cb73b746df28df899bb40"
+  },
+  {
+    "path": "experiments/learning-economics-results/3911-retain.sqlite3",
+    "archive": "experiments/learning-economics-results/3911-retain.sqlite3.gz",
+    "bytes": 9814016,
+    "sha256": "66c8eb08dad4dc7eb5b3f53241d8c2ff08f4c70f5944b01d50384920f894c903"
+  },
+  {
+    "path": "experiments/managed-memory-results/1907-discard.sqlite3",
+    "archive": "experiments/managed-memory-results/1907-discard.sqlite3.gz",
+    "bytes": 9498624,
+    "sha256": "a46c19c7b165876a0663d4cf218d50d2d74369ce969821b9ec4fee9a4baffa4c"
+  },
+  {
+    "path": "experiments/managed-memory-results/1907-managed.sqlite3",
+    "archive": "experiments/managed-memory-results/1907-managed.sqlite3.gz",
+    "bytes": 10874880,
+    "sha256": "220849b066bea36c20c485117de590ad589ee0e56dfe9db4aa0030fbda519545"
+  },
+  {
+    "path": "experiments/managed-memory-results/1907-manager_disabled.sqlite3",
+    "archive": "experiments/managed-memory-results/1907-manager_disabled.sqlite3.gz",
+    "bytes": 9338880,
+    "sha256": "633817517c844da70778243f201f8b767849ae52b52fae29becab9f58bf94621"
+  },
+  {
+    "path": "experiments/managed-memory-results/2909-discard.sqlite3",
+    "archive": "experiments/managed-memory-results/2909-discard.sqlite3.gz",
+    "bytes": 9482240,
+    "sha256": "2a76b901765acbb4908c9ef724eb339bb2ec9d2ca83528fc0be81a7722214ce5"
+  },
+  {
+    "path": "experiments/managed-memory-results/2909-managed.sqlite3",
+    "archive": "experiments/managed-memory-results/2909-managed.sqlite3.gz",
+    "bytes": 11026432,
+    "sha256": "e9737bd134664b3d1db7fb78db76e501df2ac91f3a2ab35139ee0722bd8f52cb"
+  },
+  {
+    "path": "experiments/managed-memory-results/2909-manager_disabled.sqlite3",
+    "archive": "experiments/managed-memory-results/2909-manager_disabled.sqlite3.gz",
+    "bytes": 9338880,
+    "sha256": "7d5daba8a0ece894c1ca0c0e5c85fa6283fc643008125ec996992a889d1ff3c4"
+  },
+  {
+    "path": "experiments/managed-memory-results/3911-discard.sqlite3",
+    "archive": "experiments/managed-memory-results/3911-discard.sqlite3.gz",
+    "bytes": 9498624,
+    "sha256": "cbc875853eea14a326657dbac126814cb3c8237523e018038175a8825ea897f8"
+  },
+  {
+    "path": "experiments/managed-memory-results/3911-managed.sqlite3",
+    "archive": "experiments/managed-memory-results/3911-managed.sqlite3.gz",
+    "bytes": 10825728,
+    "sha256": "03c0a948e3ff8d47745d55601f139271a60b6bd58e06c8e99431ca0cd0082cff"
+  },
+  {
+    "path": "experiments/managed-memory-results/3911-manager_disabled.sqlite3",
+    "archive": "experiments/managed-memory-results/3911-manager_disabled.sqlite3.gz",
+    "bytes": 9318400,
+    "sha256": "431aa843e0a830c58b5b98d5bcbd6eaeeeabfa65bff23cb3939ae54eebab946c"
+  },
+  {
+    "path": "experiments/managed-memory-results/4903-discard.sqlite3",
+    "archive": "experiments/managed-memory-results/4903-discard.sqlite3.gz",
+    "bytes": 9506816,
+    "sha256": "6682186fd6609af733f1b8266729e2544ddd85fd040e64f34915fc137e98564e"
+  },
+  {
+    "path": "experiments/managed-memory-results/4903-managed.sqlite3",
+    "archive": "experiments/managed-memory-results/4903-managed.sqlite3.gz",
+    "bytes": 11083776,
+    "sha256": "77c1b9f612e3ef230e87cd4043797d99149799be9bb779739e4b99a21d881fd0"
+  },
+  {
+    "path": "experiments/managed-memory-results/4903-manager_disabled.sqlite3",
+    "archive": "experiments/managed-memory-results/4903-manager_disabled.sqlite3.gz",
+    "bytes": 9330688,
+    "sha256": "6ac15b2d95bcd46aebde08ea31ea43ea762c072975c5032a0d119a0442181dbb"
+  },
+  {
+    "path": "experiments/managed-memory-results/5903-discard.sqlite3",
+    "archive": "experiments/managed-memory-results/5903-discard.sqlite3.gz",
+    "bytes": 9490432,
+    "sha256": "49585f3d61abbfc7abc85433daf9528b78326563199006068a51b8cf87312bdc"
+  },
+  {
+    "path": "experiments/managed-memory-results/5903-managed.sqlite3",
+    "archive": "experiments/managed-memory-results/5903-managed.sqlite3.gz",
+    "bytes": 11051008,
+    "sha256": "786fd300e68ab0d5e23dfb666ceffb6104b830bfe595bbef0771fe5c2beafcd4"
+  },
+  {
+    "path": "experiments/managed-memory-results/5903-manager_disabled.sqlite3",
+    "archive": "experiments/managed-memory-results/5903-manager_disabled.sqlite3.gz",
+    "bytes": 9326592,
+    "sha256": "5065ab062e4f716ea6e5b553c5e53201f5f96a2d01fcf85b7b668b19e9d2e8ad"
+  },
+  {
+    "path": "experiments/managed-memory-results/6907-discard.sqlite3",
+    "archive": "experiments/managed-memory-results/6907-discard.sqlite3.gz",
+    "bytes": 9494528,
+    "sha256": "a2dcdc3e5b2352ce07d3dea516e6a386105fd057b5bca280520444e95fdbb15e"
+  },
+  {
+    "path": "experiments/managed-memory-results/6907-managed.sqlite3",
+    "archive": "experiments/managed-memory-results/6907-managed.sqlite3.gz",
+    "bytes": 10997760,
+    "sha256": "8b8101d51c224bc23c046ae69e48299a1336906e1e3d76220b14e2f2420e9048"
+  },
+  {
+    "path": "experiments/managed-memory-results/6907-manager_disabled.sqlite3",
+    "archive": "experiments/managed-memory-results/6907-manager_disabled.sqlite3.gz",
+    "bytes": 9314304,
+    "sha256": "b929dcb55026bcc6f46be405f5fbdb39ef5f4d47423c3a6a70a849f9c4207a75"
+  },
+  {
+    "path": "experiments/prioritized-search-results/planning-7109-managed_memory.sqlite3",
+    "archive": "experiments/prioritized-search-results/planning-7109-managed_memory.sqlite3.gz",
+    "bytes": 11157504,
+    "sha256": "724a3d055d0edf6c9b57b255c792d2834e03da7b6136acfd53eac0e9879d9ecd"
+  },
+  {
+    "path": "experiments/prioritized-search-results/planning-7109-no_memory.sqlite3",
+    "archive": "experiments/prioritized-search-results/planning-7109-no_memory.sqlite3.gz",
+    "bytes": 10330112,
+    "sha256": "f198944dab1b81f3a68e8256b291fd6da81d15ec4e2ccb5d3bb08222cc473423"
+  },
+  {
+    "path": "experiments/prioritized-search-results/planning-8111-managed_memory.sqlite3",
+    "archive": "experiments/prioritized-search-results/planning-8111-managed_memory.sqlite3.gz",
+    "bytes": 11005952,
+    "sha256": "905602a0e8df693a58a71c8dcdf4c4192a13947010817521716742d7e6d699c5"
+  },
+  {
+    "path": "experiments/prioritized-search-results/planning-8111-no_memory.sqlite3",
+    "archive": "experiments/prioritized-search-results/planning-8111-no_memory.sqlite3.gz",
+    "bytes": 10330112,
+    "sha256": "c57cb84a033d507fbc1aa8d77fdb07d75c5f7c2d43dffdfca0b1971d82afad69"
+  },
+  {
+    "path": "experiments/program-synthesis.graph.sqlite3",
+    "archive": "experiments/program-synthesis.graph.sqlite3.gz",
+    "bytes": 8237056,
+    "sha256": "d0277b022f090c791080cdba648aa3dac83524eed00bb39c3b18a6378af7be21"
+  },
+  {
+    "path": "experiments/reuse-benchmark.graph.sqlite3",
+    "archive": "experiments/reuse-benchmark.graph.sqlite3.gz",
+    "bytes": 8531968,
+    "sha256": "0ccdf8f8aa18c46222fc43e36306e9081bf1f9d768c3ee89fbbaceca6976c4f2"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-15053-memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-15053-memory.sqlite3.gz",
+    "bytes": 11988992,
+    "sha256": "f4ab9b05ed39bf4e569e0b2761446f0e4e369baf141b55fbf48794e509574bcb"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-15053-no_memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-15053-no_memory.sqlite3.gz",
+    "bytes": 11526144,
+    "sha256": "dbed5e4ef612b41dc5eb140925d125ce594fa208558329ad0f864e68a03a3b95"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-16057-memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-16057-memory.sqlite3.gz",
+    "bytes": 12046336,
+    "sha256": "9d1b1f79d3bb041eb8d51c7dd435f0d3cb177f5624ddfbcc4f80737b99880f0f"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-16057-no_memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-16057-no_memory.sqlite3.gz",
+    "bytes": 11526144,
+    "sha256": "046f3bc4825b7bf8494642db2ee11b31b5c6d7709b90eb8c4fcbfecb88056e23"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-17077-memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-17077-memory.sqlite3.gz",
+    "bytes": 12054528,
+    "sha256": "cba1fa925057c1fc148ff11e07f361988967bc2636a6b8e3628587b17c3186b7"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-17077-no_memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-17077-no_memory.sqlite3.gz",
+    "bytes": 11517952,
+    "sha256": "8e37b645be0942c8d65452b77b83721c6fb022bc65aefdd5531f9097b05a940a"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-18089-memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-18089-memory.sqlite3.gz",
+    "bytes": 11964416,
+    "sha256": "364eff5747e1bd736a9dc203d18e2636c98681e41fc1f632b1dc698f778b23a9"
+  },
+  {
+    "path": "experiments/shortcut-search-results/planning-18089-no_memory.sqlite3",
+    "archive": "experiments/shortcut-search-results/planning-18089-no_memory.sqlite3.gz",
+    "bytes": 11538432,
+    "sha256": "fe36b3593e0c4b46f3c9b32f6e44db7edfdf93d62ab3c34215c3c661fdcfc4db"
+  },
+  {
+    "path": "experiments/sleep-memory-results/no_memory.sqlite3",
+    "archive": "experiments/sleep-memory-results/no_memory.sqlite3.gz",
+    "bytes": 12500992,
+    "sha256": "aa27ec9b62e6c08836f7dba8c7c8442b4d945115c9666682be9efaee6f13f59f"
+  },
+  {
+    "path": "experiments/sleep-memory-results/online.sqlite3",
+    "archive": "experiments/sleep-memory-results/online.sqlite3.gz",
+    "bytes": 14913536,
+    "sha256": "ff0ebc2555dcdbcc953fc39900b4028e2e5cd31e0f171ae45243124116922787"
+  },
+  {
+    "path": "experiments/sleep-memory-results/sleep.sqlite3",
+    "archive": "experiments/sleep-memory-results/sleep.sqlite3.gz",
+    "bytes": 32915456,
+    "sha256": "ef63b27daaef1dc18b76d0118b60c77c0f45a82b9a60bfd4f7fa3c0ed6bde1f3"
+  },
+  {
+    "path": "experiments/split-search-results/planning-15053-25-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-15053-25-managed_memory.sqlite3.gz",
+    "bytes": 11210752,
+    "sha256": "8d1b992df1906d8689be772d0d193f5327fb221a439a3651547917f7f9e5923f"
+  },
+  {
+    "path": "experiments/split-search-results/planning-15053-50-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-15053-50-managed_memory.sqlite3.gz",
+    "bytes": 11239424,
+    "sha256": "f3fe02dd87183cf764ff26c77be7e6b97251bf4c0dfab141d865aa91f012fc3d"
+  },
+  {
+    "path": "experiments/split-search-results/planning-15053-50-no_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-15053-50-no_memory.sqlite3.gz",
+    "bytes": 10723328,
+    "sha256": "fc6eb851a0b04cc2356124d4d3299882e1be577e32d84d33e6fc0ae57296d03c"
+  },
+  {
+    "path": "experiments/split-search-results/planning-15053-75-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-15053-75-managed_memory.sqlite3.gz",
+    "bytes": 11206656,
+    "sha256": "9829f0deb62a0a399cd047bc2abd9c2ca512511d6bbcf561bb837b5a0626ff7c"
+  },
+  {
+    "path": "experiments/split-search-results/planning-16057-25-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-16057-25-managed_memory.sqlite3.gz",
+    "bytes": 11382784,
+    "sha256": "d11d2a0ab1d65da9dd42ba7ece5011ec62f86c00e424f81ceab82ddafff638ed"
+  },
+  {
+    "path": "experiments/split-search-results/planning-16057-50-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-16057-50-managed_memory.sqlite3.gz",
+    "bytes": 11231232,
+    "sha256": "c768d6121d4556a9e21ef53c0f7f247b5cae40be9bedd04f67959e676977ff8c"
+  },
+  {
+    "path": "experiments/split-search-results/planning-16057-50-no_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-16057-50-no_memory.sqlite3.gz",
+    "bytes": 10735616,
+    "sha256": "7a97c92ae718953ff6ba1391262974273327170a927efbb40f2de1bcdbda13a9"
+  },
+  {
+    "path": "experiments/split-search-results/planning-16057-75-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-16057-75-managed_memory.sqlite3.gz",
+    "bytes": 11395072,
+    "sha256": "3835230a45a142d066f36081dde9e5092d2126f15945b4cf8e4c4c9792f6064a"
+  },
+  {
+    "path": "experiments/split-search-results/planning-17077-25-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-17077-25-managed_memory.sqlite3.gz",
+    "bytes": 11374592,
+    "sha256": "50243b4c84590a8f97b96b7d7dbde1a05b6b1bc425f25070a6b52c6866ae10f1"
+  },
+  {
+    "path": "experiments/split-search-results/planning-17077-50-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-17077-50-managed_memory.sqlite3.gz",
+    "bytes": 11194368,
+    "sha256": "14921236ecbf19a6f2ca9a48415fced8fb407aeb318f8977ac3bac6d973ccb75"
+  },
+  {
+    "path": "experiments/split-search-results/planning-17077-50-no_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-17077-50-no_memory.sqlite3.gz",
+    "bytes": 10731520,
+    "sha256": "b5aa620847dd74e36908c06c470ffb84f5cd4457bd55ffa3d25c073f88d7fe17"
+  },
+  {
+    "path": "experiments/split-search-results/planning-17077-75-managed_memory.sqlite3",
+    "archive": "experiments/split-search-results/planning-17077-75-managed_memory.sqlite3.gz",
+    "bytes": 11354112,
+    "sha256": "eb3e746d9da62a17abe6d0cbfbce6cb69b398dee5560baf0aa46ada5694e5c64"
+  },
+  {
+    "path": "experiments/trace-sleep-results/full.sqlite3",
+    "archive": "experiments/trace-sleep-results/full.sqlite3.gz",
+    "bytes": 32989184,
+    "sha256": "262b3fbf5f1123608bb36f85e5d5474696aac4ccd60b7a99703c696853a1e270"
+  },
+  {
+    "path": "experiments/trace-sleep-results/no_memory.sqlite3",
+    "archive": "experiments/trace-sleep-results/no_memory.sqlite3.gz",
+    "bytes": 12623872,
+    "sha256": "108f13ecea6f8698ab3e909567d13164daf7c8845c174e9fba0c16877e0640ee"
+  },
+  {
+    "path": "experiments/trace-sleep-results/trace.sqlite3",
+    "archive": "experiments/trace-sleep-results/trace.sqlite3.gz",
+    "bytes": 34623488,
+    "sha256": "2d31127c004fe23afb84e4d22faa51db67d739d9b9b1bdec3f9fbf268f444110"
+  },
+  {
+    "path": "experiments/transfer-results/planning-7109-disabled_no_memory.sqlite3",
+    "archive": "experiments/transfer-results/planning-7109-disabled_no_memory.sqlite3.gz",
+    "bytes": 9576448,
+    "sha256": "873dda3e3c6289eb4c5f6ff4f4b11f9330f9b68abb0570950190c883e889e8fd"
+  },
+  {
+    "path": "experiments/transfer-results/planning-7109-discard.sqlite3",
+    "archive": "experiments/transfer-results/planning-7109-discard.sqlite3.gz",
+    "bytes": 9461760,
+    "sha256": "c1722dd12330ea8ff8fa9ffae9e381e84b7b566b2308695cdd544396453e2c3f"
+  },
+  {
+    "path": "experiments/transfer-results/planning-7109-exact_frozen.sqlite3",
+    "archive": "experiments/transfer-results/planning-7109-exact_frozen.sqlite3.gz",
+    "bytes": 9551872,
+    "sha256": "da91b0a59688e6ebaeb0817207df5c486369ee62cbb71d9c22dc25355060aa29"
+  },
+  {
+    "path": "experiments/transfer-results/planning-7109-rules_disabled.sqlite3",
+    "archive": "experiments/transfer-results/planning-7109-rules_disabled.sqlite3.gz",
+    "bytes": 10100736,
+    "sha256": "4fae3c89a644d45b876e73178f5fbc1d13e2327b64c6019f9d58f33484991d35"
+  },
+  {
+    "path": "experiments/transfer-results/planning-8111-disabled_no_memory.sqlite3",
+    "archive": "experiments/transfer-results/planning-8111-disabled_no_memory.sqlite3.gz",
+    "bytes": 9568256,
+    "sha256": "58a096612f07a05f1ddab6c4b5467c43164063e1161721927df8cf1e7d6c6919"
+  },
+  {
+    "path": "experiments/transfer-results/planning-8111-discard.sqlite3",
+    "archive": "experiments/transfer-results/planning-8111-discard.sqlite3.gz",
+    "bytes": 9461760,
+    "sha256": "65be527ec5a316a66d0ca299af38f1c6292fd9edc8b554518ed7bd935cac3983"
+  },
+  {
+    "path": "experiments/transfer-results/planning-8111-exact_frozen.sqlite3",
+    "archive": "experiments/transfer-results/planning-8111-exact_frozen.sqlite3.gz",
+    "bytes": 9551872,
+    "sha256": "2d49283fd8cebe13f911ba28c820d81b3afbe7d28c2f2d64d407ab3792a82ce2"
+  },
+  {
+    "path": "experiments/transfer-results/planning-8111-rules_disabled.sqlite3",
+    "archive": "experiments/transfer-results/planning-8111-rules_disabled.sqlite3.gz",
+    "bytes": 10100736,
+    "sha256": "f763a7c26147d8dbb40491350e51ab8a96b599bf7c077334ffb8d05c3fc88360"
+  },
+  {
+    "path": "experiments/transfer-results/text-7109-disabled_no_memory.sqlite3",
+    "archive": "experiments/transfer-results/text-7109-disabled_no_memory.sqlite3.gz",
+    "bytes": 9568256,
+    "sha256": "0eaf12b83677af35703665ce1e12771a259274df4fb0161aa248dfca9b95b6de"
+  },
+  {
+    "path": "experiments/transfer-results/text-7109-discard.sqlite3",
+    "archive": "experiments/transfer-results/text-7109-discard.sqlite3.gz",
+    "bytes": 9461760,
+    "sha256": "bfc6232603005840eb7360867292ed8f308df8ff994ced6d998b759a51624110"
+  },
+  {
+    "path": "experiments/transfer-results/text-7109-exact_frozen.sqlite3",
+    "archive": "experiments/transfer-results/text-7109-exact_frozen.sqlite3.gz",
+    "bytes": 9551872,
+    "sha256": "23df957e2da45a4fbf8b373a9be3f3db020e20b4f0a93c6540c986b6ed1848f5"
+  },
+  {
+    "path": "experiments/transfer-results/text-7109-rules_disabled.sqlite3",
+    "archive": "experiments/transfer-results/text-7109-rules_disabled.sqlite3.gz",
+    "bytes": 9564160,
+    "sha256": "72d78691d8d89790fd785e0f3cd0881b73813528e5b0c9afedc80d1774d3950a"
+  },
+  {
+    "path": "experiments/transfer-results/text-8111-disabled_no_memory.sqlite3",
+    "archive": "experiments/transfer-results/text-8111-disabled_no_memory.sqlite3.gz",
+    "bytes": 9568256,
+    "sha256": "bcc9c336891087d82eaaf2599320cbaec7511e37e189dfa74fadb06871406fe3"
+  },
+  {
+    "path": "experiments/transfer-results/text-8111-discard.sqlite3",
+    "archive": "experiments/transfer-results/text-8111-discard.sqlite3.gz",
+    "bytes": 9461760,
+    "sha256": "e8ecb454aa9baf3e91320e7e8bb6baade2651c0be51a52fd803c23f6ec81b6dc"
+  },
+  {
+    "path": "experiments/transfer-results/text-8111-exact_frozen.sqlite3",
+    "archive": "experiments/transfer-results/text-8111-exact_frozen.sqlite3.gz",
+    "bytes": 9555968,
+    "sha256": "a7c5b5a1f213eb892136777c73c73521adeb41b1e8121bd6e34e421fb1b34ec7"
+  },
+  {
+    "path": "experiments/transfer-results/text-8111-rules_disabled.sqlite3",
+    "archive": "experiments/transfer-results/text-8111-rules_disabled.sqlite3.gz",
+    "bytes": 9576448,
+    "sha256": "feb924dfbd3e842353f512262c126a3a763e0bc83118b380b227e1f98086b811"
+  },
+  {
+    "path": "experiments/transfer-results/tree-7109-disabled_no_memory.sqlite3",
+    "archive": "experiments/transfer-results/tree-7109-disabled_no_memory.sqlite3.gz",
+    "bytes": 9543680,
+    "sha256": "f53dbd209202c6996ce7d165b99437b0257b6eb1b7217799b5e44c589acf45f5"
+  },
+  {
+    "path": "experiments/transfer-results/tree-7109-discard.sqlite3",
+    "archive": "experiments/transfer-results/tree-7109-discard.sqlite3.gz",
+    "bytes": 9461760,
+    "sha256": "23f992454cbba9698953c5e67c0085ad85fa8dad8426bd22b226ffe1ba693f99"
+  },
+  {
+    "path": "experiments/transfer-results/tree-7109-exact_frozen.sqlite3",
+    "archive": "experiments/transfer-results/tree-7109-exact_frozen.sqlite3.gz",
+    "bytes": 9543680,
+    "sha256": "eaa70c5beb9952399336e0ae2f03a71f6d432aa217841ed51aa32a38aa009993"
+  },
+  {
+    "path": "experiments/transfer-results/tree-7109-rules_disabled.sqlite3",
+    "archive": "experiments/transfer-results/tree-7109-rules_disabled.sqlite3.gz",
+    "bytes": 9592832,
+    "sha256": "41cb0ab86e770b57b72e8c3bd318cc1065e57405860920790da7d8e8677e86ae"
+  },
+  {
+    "path": "experiments/transfer-results/tree-8111-disabled_no_memory.sqlite3",
+    "archive": "experiments/transfer-results/tree-8111-disabled_no_memory.sqlite3.gz",
+    "bytes": 9547776,
+    "sha256": "c55e97544ecd3260b441f617d3473c23a446b998fa5816b87f221ddee2dc6966"
+  },
+  {
+    "path": "experiments/transfer-results/tree-8111-discard.sqlite3",
+    "archive": "experiments/transfer-results/tree-8111-discard.sqlite3.gz",
+    "bytes": 9461760,
+    "sha256": "0d6da276b63aefed8b18a26ff8ddcfb4c2e61929438bdb61a7772662dec08a12"
+  },
+  {
+    "path": "experiments/transfer-results/tree-8111-exact_frozen.sqlite3",
+    "archive": "experiments/transfer-results/tree-8111-exact_frozen.sqlite3.gz",
+    "bytes": 9564160,
+    "sha256": "1d6d70bf7345966d9fa42d1aa23ad52d1a1b322eb9a49e5ef54f6f6d50203b9f"
+  },
+  {
+    "path": "experiments/transfer-results/tree-8111-rules_disabled.sqlite3",
+    "archive": "experiments/transfer-results/tree-8111-rules_disabled.sqlite3.gz",
+    "bytes": 9584640,
+    "sha256": "463b260cb9cfa98454d64c93156c4eaa1cb5ea1572289c8e7a7593db644ca377"
+  },
+  {
+    "path": "experiments/utility-router-results/210011-fixed.sqlite3",
+    "archive": "experiments/utility-router-results/210011-fixed.sqlite3.gz",
+    "bytes": 12517376,
+    "sha256": "8aafa4351a2bdd6f493d89ec1abd0ad9f2854b76bfd3baef03ad8922a11df77b"
+  },
+  {
+    "path": "experiments/utility-router-results/210011-no_memory.sqlite3",
+    "archive": "experiments/utility-router-results/210011-no_memory.sqlite3.gz",
+    "bytes": 12058624,
+    "sha256": "398df1546c9df2c5440c8d939e007369b590b02a91d5a127c96b8acb604885be"
+  },
+  {
+    "path": "experiments/utility-router-results/210011-router.sqlite3",
+    "archive": "experiments/utility-router-results/210011-router.sqlite3.gz",
+    "bytes": 12713984,
+    "sha256": "470d93a69875fc24f171f568f1f57cde5559cca9185c86abc5c0fd372d4cbb37"
+  },
+  {
+    "path": "experiments/utility-router-results/220009-fixed.sqlite3",
+    "archive": "experiments/utility-router-results/220009-fixed.sqlite3.gz",
+    "bytes": 12599296,
+    "sha256": "1af2d973472c39a496da81515a70be481f5816d8da8f5ee96434dac93cdb1864"
+  },
+  {
+    "path": "experiments/utility-router-results/220009-no_memory.sqlite3",
+    "archive": "experiments/utility-router-results/220009-no_memory.sqlite3.gz",
+    "bytes": 12066816,
+    "sha256": "71149c7e9532ba05ea24e322dbdbd9f55a642a3b5e898fd15f8d899cfe9a05f3"
+  },
+  {
+    "path": "experiments/utility-router-results/220009-router.sqlite3",
+    "archive": "experiments/utility-router-results/220009-router.sqlite3.gz",
+    "bytes": 12857344,
+    "sha256": "5b6b5328e8377e635624a91007bb81e65bdec525a469628bfffdd1f4e89eb76d"
+  },
+  {
+    "path": "experiments/utility-router-results/230003-fixed.sqlite3",
+    "archive": "experiments/utility-router-results/230003-fixed.sqlite3.gz",
+    "bytes": 12636160,
+    "sha256": "b77607f27d0df4c1362130167c7250e1a6b008d433e070df0aa398786b4da9a4"
+  },
+  {
+    "path": "experiments/utility-router-results/230003-no_memory.sqlite3",
+    "archive": "experiments/utility-router-results/230003-no_memory.sqlite3.gz",
+    "bytes": 12091392,
+    "sha256": "d2e2f870030cbe220c1e9c29998a231fe49e1387e1fc9d23be0ccb5bdb274ef8"
+  },
+  {
+    "path": "experiments/utility-router-results/230003-router.sqlite3",
+    "archive": "experiments/utility-router-results/230003-router.sqlite3.gz",
+    "bytes": 12898304,
+    "sha256": "31798b420064b1afd85586cfe0c595aa2eadbd0969529c2500fed33fed1ec7af"
+  },
+  {
+    "path": "experiments/utility-router-results/240007-fixed.sqlite3",
+    "archive": "experiments/utility-router-results/240007-fixed.sqlite3.gz",
+    "bytes": 12529664,
+    "sha256": "cc65e2b9a3415f7556dd2b4b40cea2289250a6d2cf470444751e0a27e46c61a9"
+  },
+  {
+    "path": "experiments/utility-router-results/240007-no_memory.sqlite3",
+    "archive": "experiments/utility-router-results/240007-no_memory.sqlite3.gz",
+    "bytes": 12058624,
+    "sha256": "d94f3b0d0f1effda20b84307fb5796939298ef6c7b7cf30ab924b034a1de74c0"
+  },
+  {
+    "path": "experiments/utility-router-results/240007-router.sqlite3",
+    "archive": "experiments/utility-router-results/240007-router.sqlite3.gz",
+    "bytes": 12726272,
+    "sha256": "bc3b75135c58abc56b6f428d2d8d9b2fab2fc3974e44462039473e7329a2834d"
+  },
+  {
+    "path": "experiments/utility-router-results/training.sqlite3",
+    "archive": "experiments/utility-router-results/training.sqlite3.gz",
+    "bytes": 12386304,
+    "sha256": "e1e64569ffd60fc536e755d82d7450d27d75dd9273c8bc65d0f85a7937690e9b"
+  },
+  {
+    "path": "knowledge-expansion/live-before-expansion-20260907T142944Z.sqlite3",
+    "archive": "knowledge-expansion/live-before-expansion-20260907T142944Z.sqlite3.gz",
+    "bytes": 43237376,
+    "sha256": "3427ec408313524160196e6dc87093c2673a963406352f99eb6c9358c7571d8d"
+  },
+  {
+    "path": "knowledge-expansion/staging.sqlite3",
+    "archive": "knowledge-expansion/staging.sqlite3.gz",
+    "bytes": 49020928,
+    "sha256": "a5710a6067be52998a5b7751d80feee4c11a233791a57fd456e9ead42d4006e1"
+  },
+  {
+    "path": "preview-memory.before-behavior-20260907-205640.sqlite3",
+    "archive": "preview-memory.before-behavior-20260907-205640.sqlite3.gz",
+    "bytes": 125153280,
+    "sha256": "6a5abf161714f5cd90f6846386dcd7de58c8f25573012d8c6c825089efb80c21"
+  },
+  {
+    "path": "preview-memory.before-bilingual-20260907-233326.sqlite3",
+    "archive": "preview-memory.before-bilingual-20260907-233326.sqlite3.gz",
+    "bytes": 146874368,
+    "sha256": "c2e8f2717a5eda3b3dd92ac55665226eaf4332f42b50f192f1a30ea8c6e8fffb"
+  },
+  {
+    "path": "preview-memory.before-calendar-reasoning-20260907-181543.sqlite3",
+    "archive": "preview-memory.before-calendar-reasoning-20260907-181543.sqlite3.gz",
+    "bytes": 74002432,
+    "sha256": "be30171e6bd5fc4aba20890c4d78da08850a4264dbc10eda04a05cb45e01a431"
+  },
+  {
+    "path": "preview-memory.before-conversation-20260907-163016.sqlite3",
+    "archive": "preview-memory.before-conversation-20260907-163016.sqlite3.gz",
+    "bytes": 54181888,
+    "sha256": "2abcb0d0895f3dc1a56a03e44ef52b33e063f781452fde0ccf44c70cccc0f684"
+  },
+  {
+    "path": "preview-memory.before-dashboard-20260907-232254.sqlite3",
+    "archive": "preview-memory.before-dashboard-20260907-232254.sqlite3.gz",
+    "bytes": 145362944,
+    "sha256": "480fa2710380f0050958ca913ac86c566a32534a69ec12a7f215fd44dafb245f"
+  },
+  {
+    "path": "preview-memory.before-execution-cache-20260907T181402Z.sqlite3",
+    "archive": "preview-memory.before-execution-cache-20260907T181402Z.sqlite3.gz",
+    "bytes": 116506624,
+    "sha256": "463d1bd309cb671d9adf64474df50d3984a7d967614ee1681635fac18ff1dc99"
+  },
+  {
+    "path": "preview-memory.before-foundations-20260907-154642.sqlite3",
+    "archive": "preview-memory.before-foundations-20260907-154642.sqlite3.gz",
+    "bytes": 13201408,
+    "sha256": "db92cc85241dae7512c9a866a3290eb8f197a68671a3d57a3f74658b27cb43e5"
+  },
+  {
+    "path": "preview-memory.before-graph-source-20260907T174806Z.sqlite3",
+    "archive": "preview-memory.before-graph-source-20260907T174806Z.sqlite3.gz",
+    "bytes": 105865216,
+    "sha256": "a21650c27ff1c26f2cdcc464412a50733ff78a5de50a2cc5594bd2af30fe1f52"
+  },
+  {
+    "path": "preview-memory.before-graph-warm-1788805473.sqlite3",
+    "archive": "preview-memory.before-graph-warm-1788805473.sqlite3.gz",
+    "bytes": 116924416,
+    "sha256": "5922fbebf128f34c972f04b08b7b01bcfe0b8f86737bd145237285e11ce4c91e"
+  },
+  {
+    "path": "preview-memory.before-graph-warm-1788806567.sqlite3",
+    "archive": "preview-memory.before-graph-warm-1788806567.sqlite3.gz",
+    "bytes": 121061376,
+    "sha256": "5ebf00afba957c1c1faabfbb006c2e4dffdaf9a0602484e6d950d46a7be14457"
+  },
+  {
+    "path": "preview-memory.before-identity-20260907-190642.sqlite3",
+    "archive": "preview-memory.before-identity-20260907-190642.sqlite3.gz",
+    "bytes": 91414528,
+    "sha256": "07d5a41ff82fc587eb583ac3343095c562f71dcebb68a8ca790382925a9c6856"
+  },
+  {
+    "path": "preview-memory.before-learning-20260907-173104.sqlite3",
+    "archive": "preview-memory.before-learning-20260907-173104.sqlite3.gz",
+    "bytes": 65560576,
+    "sha256": "6289bf7dc530db6063926940737f337e429442547560bcf01db873e25189c68c"
+  },
+  {
+    "path": "preview-memory.before-lookup-20260907-170956.sqlite3",
+    "archive": "preview-memory.before-lookup-20260907-170956.sqlite3.gz",
+    "bytes": 61829120,
+    "sha256": "4105f058d35ccec11df4616b01363ddad8cb163b3d9def448ca10a083c1b3278"
+  },
+  {
+    "path": "preview-memory.before-meaning-20260907-175442.sqlite3",
+    "archive": "preview-memory.before-meaning-20260907-175442.sqlite3.gz",
+    "bytes": 69013504,
+    "sha256": "be325d0bd9307ddc2bb839df31a3c9360f14e172ad7ae7a5dc0f5e39a05fa35f"
+  },
+  {
+    "path": "preview-memory.before-natural-requests-20260908-000504.sqlite3",
+    "archive": "preview-memory.before-natural-requests-20260908-000504.sqlite3.gz",
+    "bytes": 153358336,
+    "sha256": "91c0860f06b103cee1417a86420135e572a52c643443a9f23d12fb8b368d48c5"
+  },
+  {
+    "path": "preview-memory.before-number-lessons-20260907-161255.sqlite3",
+    "archive": "preview-memory.before-number-lessons-20260907-161255.sqlite3.gz",
+    "bytes": 17018880,
+    "sha256": "17666c271eeccdf060325ed768d841bd796298e8ce16f8c7bfe30ed42d0f53cd"
+  },
+  {
+    "path": "preview-memory.before-programming-20260907T161321Z.sqlite3",
+    "archive": "preview-memory.before-programming-20260907T161321Z.sqlite3.gz",
+    "bytes": 72941568,
+    "sha256": "1f3a215b9399447c6b8e52658dab04de16ba740e159680dd5a0466df904175a2"
+  },
+  {
+    "path": "preview-memory.before-programming-20260907T162622Z.sqlite3",
+    "archive": "preview-memory.before-programming-20260907T162622Z.sqlite3.gz",
+    "bytes": 76255232,
+    "sha256": "e75e80a7378d319f5fed0d210a35a6e2212e573d93124b00da1ced8f7f640107"
+  },
+  {
+    "path": "preview-memory.before-programming-20260907T163604Z.sqlite3",
+    "archive": "preview-memory.before-programming-20260907T163604Z.sqlite3.gz",
+    "bytes": 76992512,
+    "sha256": "5939161c6ecc4d9e8e0a1d2a71907934fbfbc4b60d186a0cf7dfbb8f4ee5b59a"
+  },
+  {
+    "path": "preview-memory.before-programming-20260907T165646Z.sqlite3",
+    "archive": "preview-memory.before-programming-20260907T165646Z.sqlite3.gz",
+    "bytes": 85123072,
+    "sha256": "d494f8ceb59b12c5acda00f2ba654e7bc276fb24247acfd8686459db8469be90"
+  },
+  {
+    "path": "preview-memory.before-reference-correction-1788807965.sqlite3",
+    "archive": "preview-memory.before-reference-correction-1788807965.sqlite3.gz",
+    "bytes": 126459904,
+    "sha256": "c9f5bae5592222543545793f3ed9541705902142a54db556a9d82ee9f3031159"
+  },
+  {
+    "path": "preview-memory.before-rename-20260907-202443.sqlite3",
+    "archive": "preview-memory.before-rename-20260907-202443.sqlite3.gz",
+    "bytes": 117055488,
+    "sha256": "737a5fb9e4536bc1c4a720fc19e044bd769d1b5c00b1b51836d27b5da11838de"
+  },
+  {
+    "path": "preview-memory.before-sequences-20260907-193749.sqlite3",
+    "archive": "preview-memory.before-sequences-20260907-193749.sqlite3.gz",
+    "bytes": 104525824,
+    "sha256": "859caca3d2599b313ed8190603d69699d39e737d311df4b82f97e3f64701d2a0"
+  },
+  {
+    "path": "preview-memory.before-source-expansion-20260907T180522Z.sqlite3",
+    "archive": "preview-memory.before-source-expansion-20260907T180522Z.sqlite3.gz",
+    "bytes": 111247360,
+    "sha256": "1588521a7946ca2bba673b134d249a470f5e1f1e6bffdbb75b7b88d200321c0b"
+  },
+  {
+    "path": "preview-memory.before-tasks-20260907-234916.sqlite3",
+    "archive": "preview-memory.before-tasks-20260907-234916.sqlite3.gz",
+    "bytes": 148238336,
+    "sha256": "2faf70dc9c400880e07abff007bbf149331b166c9088e01bbcad817aa4fc7b79"
+  },
+  {
+    "path": "preview-memory.before-teaching-speed-20260907-165501.sqlite3",
+    "archive": "preview-memory.before-teaching-speed-20260907-165501.sqlite3.gz",
+    "bytes": 60723200,
+    "sha256": "d47afc340c51c7745fa4e46eb740e8cea51e1d46238ba57dbd8a46ece9eea65d"
+  },
+  {
+    "path": "preview-memory.before-web-20260907-231146.sqlite3",
+    "archive": "preview-memory.before-web-20260907-231146.sqlite3.gz",
+    "bytes": 131018752,
+    "sha256": "8baa05a0118a6fa46cc2d8aadf7b7f4cc3fa9f457d682ba4d6d1a76a751a7814"
+  },
+  {
+    "path": "preview-memory.graph.sqlite3",
+    "archive": "preview-memory.graph.sqlite3.gz",
+    "bytes": 175984640,
+    "sha256": "f63e7e9b301aaa16c45cacefd685bf027cd9d85944cf79b71981fb7d360ffd87"
+  },
+  {
+    "path": "react-learn-corpus/before-corpus-f3d9794fc31f.sqlite3",
+    "archive": "react-learn-corpus/before-corpus-f3d9794fc31f.sqlite3.gz",
+    "bytes": 92635136,
+    "sha256": "f0e361c5b6d5d9ee9ab62d507bb83ec99e6386613fb2e0025d4005b367f3f619"
+  },
+  {
+    "path": "wikipedia-starter/live-before-wikipedia-20260907T142121Z.sqlite3",
+    "archive": "wikipedia-starter/live-before-wikipedia-20260907T142121Z.sqlite3.gz",
+    "bytes": 19087360,
+    "sha256": "d4476016106d314ea33951e81bf9ac61108d28527f8e32c4f692eaa9fa76eaf4"
+  },
+  {
+    "path": "wikipedia-starter/seed-wikipedia.graph.sqlite3",
+    "archive": "wikipedia-starter/seed-wikipedia.graph.sqlite3.gz",
+    "bytes": 9232384,
+    "sha256": "70fd34b538e37606fffc1ecf27877260ca5d4d5ba0eb555967ecfc934076a616"
+  },
+  {
+    "path": "preview-memory.before-full-sudoku-20260907-093830.json",
+    "archive": "preview-memory.before-full-sudoku-20260907-093830.json.gz",
+    "bytes": 1051514,
+    "sha256": "4b1b6ecdac5cde528e4d16e4f7b7c1109c00426893d3b9cb08f7a972b1bed63f"
+  },
+  {
+    "path": "preview-memory.before-general-algebra-20260907-095303.json",
+    "archive": "preview-memory.before-general-algebra-20260907-095303.json.gz",
+    "bytes": 6745916,
+    "sha256": "1d9b8d065ca0bc35e81354c8cbe28d3bdd8eac1e1bfcabcc6ebce451af785f82"
+  },
+  {
+    "path": "preview-memory.before-unified-graph-20260907-111108.json",
+    "archive": "preview-memory.before-unified-graph-20260907-111108.json.gz",
+    "bytes": 11241572,
+    "sha256": "35b2d958d8a31b61e775f54a6934bfe39f488947475f2f23ae53bb3a6b5f2c68"
+  },
+  {
+    "path": "preview-memory.json",
+    "archive": "preview-memory.json.gz",
+    "bytes": 11241572,
+    "sha256": "35b2d958d8a31b61e775f54a6934bfe39f488947475f2f23ae53bb3a6b5f2c68"
+  }
+]

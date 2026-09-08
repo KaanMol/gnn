@@ -1,0 +1,52 @@
+{
+  "backup": "/Users/kaan/Documents/ChatGPT/Idk/preview-memory.before-programming-20260907T165646Z.sqlite3",
+  "procedures": [
+    "js_read_binding",
+    "js_is_nullish",
+    "js_to_boolean",
+    "js_typeof",
+    "programming_safe_integer",
+    "programming_require_number",
+    "programming_binary",
+    "programming_index",
+    "js_math_unary",
+    "js_math_binary",
+    "programming_expression",
+    "programming_execute",
+    "js_execute",
+    "js_choose_program",
+    "programming_overview",
+    "js_object_properties",
+    "js_object_get",
+    "js_object_put",
+    "js_object_spread",
+    "js_property_get",
+    "js_callback_environment",
+    "js_array_callback_start",
+    "js_array_callback_resume",
+    "react_explain",
+    "jsx_attribute_name"
+  ],
+  "examples_added": [
+    "toggle_todo",
+    "visible_todos",
+    "cart_total"
+  ],
+  "verified_result": -2,
+  "console_math_verified": true,
+  "scope_and_logical_semantics_verified": true,
+  "react_data_transform_verified": true,
+  "previous_facts_preserved": true,
+  "taught_at": "2026-09-07T16:57:18.870554+00:00",
+  "verification": {
+    "tests_passed": 29,
+    "node_differential_cases": 55,
+    "official_test262": false,
+    "browser_playground_todo_update": true,
+    "browser_map_filter_reduce": 18,
+    "browser_error_recovery": true,
+    "browser_html_lesson": true
+  },
+  "html_jsx_react_reference_lessons": 23,
+  "jsx_and_hooks_execution": false
+}

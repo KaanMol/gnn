@@ -1,0 +1,20 @@
+import fs from 'node:fs';import {G} from './graph.mjs';
+const suite={};const save=(name,g,x)=>suite[name]={graph:{...g.finish(x),execution_budget:10000000},source:'Generic behavioral shortcut proposals; frozen fair expansion.'};
+const call=(g,n,x)=>g.op('call',[x],{name:n});const put=(g,x,k,v)=>g.op('set_item',[x,g.data(k),v]);
+// Exactly the primitive fair-search state, without consulting retained memory.
+let g=new G(),enrich=new G();save('shortcut_init',g,g.rec({vocabulary:g.get(g.input,'base'),catalog:g.data([]),selected:g.data([]),examples:g.op('map',[g.get(g.input,'examples')],{body:enrich.finish(call(enrich,'priority_features',enrich.input))}),predicate:g.get(g.input,'predicate'),projector:g.get(g.input,'projector'),max_depth:g.data(5),beam:g.data(100),parent:g.data({ops:[],priority:0}),next_i:g.data(0),queue:g.data([]),seen:g.data([]),found:g.data(null),done:g.data(false),evaluated:g.data(0)}));
+g=new G();const active=new G();const catalog=g.op('act',[g.input,g.data({namespace:'knowledge.economics',key:'catalog'})],{surface:'workspace',action:'read'});
+save('shortcut_retrieve',g,g.op('slice',[g.op('filter',[catalog],{body:active.finish(active.bool(active.get(active.input,'active')),'Bool')})],{start:-3}));
+g=new G();const s=g.get(g.input,'state'),entry=g.get(g.input,'entry');
+const ev=call(g,'priority_evaluate',g.rec({ops:g.list(g.get(entry,'name')),examples:g.get(s,'examples'),predicate:g.get(s,'predicate'),projector:g.get(s,'projector')}));
+const same=new G();const identityMatches=call(g,'priority_sum',g.op('map',[g.get(s,'examples')],{body:same.finish(same.choose(same.eq(same.get(same.input,'input'),same.get(same.input,'expected')),same.data(1),same.data(0)))}));
+const gain=g.op('or',[g.lt(g.data(0),g.get(ev,'progress')),g.lt(identityMatches,g.get(ev,'matches'))],{},'Bool');
+const pass=g.and(g.bool(g.get(ev,'executable')),g.and(gain,g.not(g.lt(g.data(5),g.len(g.get(entry,'ops'))))));
+save('shortcut_probe',g,g.rec({evaluation:ev,eligible:g.datum(pass)}));
+g=new G();const st=g.get(g.input,'state'),e=g.get(g.input,'entry'),v=g.get(g.input,'probe','evaluation'),name=g.get(e,'name');
+const scaled=g.op('as_data',[g.op('floor',[g.num(g.calc('multiply',g.get(v,'progress'),g.data(1000)))],{},'Number')]);
+const priority=g.calc('subtract',g.len(g.get(e,'ops')),g.calc('add',g.calc('multiply',g.get(v,'matches'),g.data(1000000)),scaled));
+let updated=st;
+for(const [k,val] of [['catalog',g.push(g.get(st,'catalog'),e)],['selected',g.push(g.get(st,'selected'),name)],['vocabulary',g.push(g.get(st,'vocabulary'),name)],['queue',g.push(g.get(st,'queue'),g.rec({ops:g.list(name),priority,next_i:g.data(0)}))],['seen',g.push(g.get(st,'seen'),g.get(e,'ops'))],['found',g.choose(g.bool(g.get(v,'accepted')),g.list(name),g.get(st,'found'))],['done',g.choose(g.bool(g.get(v,'accepted')),g.data(true),g.get(st,'done'))]])updated=put(g,updated,k,val);
+save('shortcut_inject',g,updated);
+fs.writeFileSync(new URL('../curriculum/shortcut-search.json',import.meta.url),JSON.stringify(suite,null,2)+'\n');

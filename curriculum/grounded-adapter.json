@@ -1,0 +1,1314 @@
+{
+  "grounded_world_one": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "q7"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "as_bool",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n3",
+          "op": "bool_data",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n3",
+      "trace_mode": "explicit",
+      "execution_budget": 1000000
+    },
+    "source": "Supplied synthetic environment / generic field hypothesis learner."
+  },
+  "grounded_world_two": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "m3"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "as_bool",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n3",
+          "op": "bool_data",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n3",
+      "trace_mode": "explicit",
+      "execution_budget": 1000000
+    },
+    "source": "Supplied synthetic environment / generic field hypothesis learner."
+  },
+  "grounded_observe": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "items"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "world"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "map",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "invoke",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n4",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n3"
+                ],
+                "type": "Data",
+                "keys": [
+                  "features",
+                  "outcome"
+                ]
+              }
+            ],
+            "output": "n4",
+            "trace_mode": "explicit"
+          }
+        }
+      ],
+      "output": "n3",
+      "trace_mode": "explicit",
+      "execution_budget": 1000000
+    },
+    "source": "Supplied synthetic environment / generic field hypothesis learner."
+  },
+  "grounded_hypotheses": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "observations"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n3",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "features"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "keys",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "filter",
+          "inputs": [
+            "n5",
+            "n1"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "map",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item",
+                        "features"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "has_key",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Bool"
+                    },
+                    {
+                      "id": "n4",
+                      "op": "item",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n5",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item",
+                        "outcome"
+                      ]
+                    },
+                    {
+                      "id": "n6",
+                      "op": "data_equal",
+                      "inputs": [
+                        "n4",
+                        "n5"
+                      ],
+                      "type": "Bool"
+                    },
+                    {
+                      "id": "n7",
+                      "op": "bool_data",
+                      "inputs": [
+                        "n6"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n8",
+                      "op": "data_literal",
+                      "inputs": [],
+                      "type": "Data",
+                      "value": false
+                    },
+                    {
+                      "id": "n9",
+                      "op": "choose",
+                      "inputs": [
+                        "n3",
+                        "n7",
+                        "n8"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n9",
+                  "trace_mode": "explicit"
+                }
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": false
+              },
+              {
+                "id": "n5",
+                "op": "contains",
+                "inputs": [
+                  "n3",
+                  "n4"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n6",
+                "op": "not",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n6",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n8",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_data",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "less",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n14",
+          "op": "choose",
+          "inputs": [
+            "n12",
+            "n6",
+            "n13"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n14",
+      "trace_mode": "explicit",
+      "execution_budget": 1000000
+    },
+    "source": "Supplied synthetic environment / generic field hypothesis learner."
+  },
+  "grounded_choose_probe": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "grounded_hypotheses"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "pool"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "filter",
+          "inputs": [
+            "n2",
+            "n1"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "map",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "item",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n3",
+                  "trace_mode": "explicit"
+                }
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n5",
+                "op": "unique",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "size",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "less",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n10",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n5",
+          "op": "size",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_data",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "less",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n11",
+          "op": "item",
+          "inputs": [
+            "n3",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_list",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n14",
+          "op": "choose",
+          "inputs": [
+            "n9",
+            "n12",
+            "n13"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n14",
+      "trace_mode": "explicit",
+      "execution_budget": 1000000
+    },
+    "source": "Supplied synthetic environment / generic field hypothesis learner."
+  },
+  "grounded_learn": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "grounded_hypotheses"
+        },
+        {
+          "id": "n2",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n3",
+          "op": "as_data",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n5",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n7",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "explicit"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "id": "n0",
+            "op": "input",
+            "inputs": [],
+            "type": "Data"
+          }
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "n1"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "get"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "n0"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "data_list",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "record",
+          "inputs": [
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16"
+          ],
+          "type": "Data",
+          "keys": [
+            "id",
+            "op",
+            "inputs",
+            "type",
+            "path"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "data_list",
+          "inputs": [
+            "n11",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "n1"
+        },
+        {
+          "id": "n20",
+          "op": "record",
+          "inputs": [
+            "n8",
+            "n9",
+            "n10",
+            "n18",
+            "n19"
+          ],
+          "type": "Data",
+          "keys": [
+            "input_type",
+            "output_type",
+            "trace_mode",
+            "nodes",
+            "output"
+          ]
+        },
+        {
+          "id": "n21",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "name"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "namespace": "knowledge.procedures"
+          }
+        },
+        {
+          "id": "n23",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n22"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "keys"
+        },
+        {
+          "id": "n24",
+          "op": "contains",
+          "inputs": [
+            "n23",
+            "n21"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "not",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n26",
+          "op": "require",
+          "inputs": [
+            "n25",
+            "n21"
+          ],
+          "type": "Data",
+          "message": "Refusing to replace a learned predictor."
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "knowledge.procedures"
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Field predictor inferred from simulated action outcomes; not a semantic definition."
+        },
+        {
+          "id": "n29",
+          "op": "record",
+          "inputs": [
+            "n20",
+            "n28",
+            "n1",
+            "n7"
+          ],
+          "type": "Data",
+          "keys": [
+            "graph",
+            "source",
+            "observations",
+            "field"
+          ]
+        },
+        {
+          "id": "n30",
+          "op": "record",
+          "inputs": [
+            "n27",
+            "n26",
+            "n29"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "act",
+          "inputs": [
+            "n23",
+            "n30"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n32",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "learned"
+        },
+        {
+          "id": "n33",
+          "op": "record",
+          "inputs": [
+            "n32",
+            "n7",
+            "n31"
+          ],
+          "type": "Data",
+          "keys": [
+            "status",
+            "field",
+            "saved"
+          ]
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "insufficient_evidence"
+        },
+        {
+          "id": "n35",
+          "op": "record",
+          "inputs": [
+            "n34",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "status",
+            "candidates"
+          ]
+        },
+        {
+          "id": "n36",
+          "op": "choose",
+          "inputs": [
+            "n5",
+            "n33",
+            "n35"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n36",
+      "trace_mode": "explicit",
+      "execution_budget": 1000000
+    },
+    "source": "Supplied synthetic environment / generic field hypothesis learner."
+  },
+  "grounded_predict": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "attempt",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "name"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "features"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "invoke",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n3",
+            "trace_mode": "explicit"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "as_bool",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "result"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "known",
+            "outcome"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n9",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Data",
+          "keys": [
+            "known",
+            "outcome"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "choose",
+          "inputs": [
+            "n3",
+            "n6",
+            "n9"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n10",
+      "trace_mode": "explicit",
+      "execution_budget": 1000000
+    },
+    "source": "Supplied synthetic environment / generic field hypothesis learner."
+  }
+}

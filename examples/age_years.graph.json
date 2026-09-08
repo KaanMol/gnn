@@ -1,0 +1,189 @@
+{
+  "input_type": "List[Number]",
+  "output_type": "Number",
+  "input_fields": [
+    "birth.year",
+    "birth.month",
+    "birth.day"
+  ],
+  "nodes": [
+    {
+      "id": "birth",
+      "op": "input",
+      "inputs": [],
+      "type": "List[Number]"
+    },
+    {
+      "id": "today",
+      "op": "tool",
+      "inputs": [],
+      "type": "List[Number]",
+      "name": "current_date"
+    },
+    {
+      "id": "index0",
+      "op": "literal",
+      "inputs": [],
+      "type": "Number",
+      "value": "0"
+    },
+    {
+      "id": "index1",
+      "op": "literal",
+      "inputs": [],
+      "type": "Number",
+      "value": "1"
+    },
+    {
+      "id": "index2",
+      "op": "literal",
+      "inputs": [],
+      "type": "Number",
+      "value": "2"
+    },
+    {
+      "id": "birth_year",
+      "op": "at",
+      "inputs": [
+        "birth",
+        "index0"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "birth_month",
+      "op": "at",
+      "inputs": [
+        "birth",
+        "index1"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "birth_day",
+      "op": "at",
+      "inputs": [
+        "birth",
+        "index2"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "today_year",
+      "op": "at",
+      "inputs": [
+        "today",
+        "index0"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "today_month",
+      "op": "at",
+      "inputs": [
+        "today",
+        "index1"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "today_day",
+      "op": "at",
+      "inputs": [
+        "today",
+        "index2"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "one",
+      "op": "literal",
+      "inputs": [],
+      "type": "Number",
+      "value": "1"
+    },
+    {
+      "id": "zero",
+      "op": "literal",
+      "inputs": [],
+      "type": "Number",
+      "value": "0"
+    },
+    {
+      "id": "year_difference",
+      "op": "subtract",
+      "inputs": [
+        "today_year",
+        "birth_year"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "earlier_month",
+      "op": "less",
+      "inputs": [
+        "today_month",
+        "birth_month"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "same_month",
+      "op": "equal",
+      "inputs": [
+        "today_month",
+        "birth_month"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "earlier_day",
+      "op": "less",
+      "inputs": [
+        "today_day",
+        "birth_day"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "birthday_pending_in_month",
+      "op": "and",
+      "inputs": [
+        "same_month",
+        "earlier_day"
+      ],
+      "type": "Bool"
+    },
+    {
+      "id": "month_adjustment",
+      "op": "choose",
+      "inputs": [
+        "birthday_pending_in_month",
+        "one",
+        "zero"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "birthday_adjustment",
+      "op": "choose",
+      "inputs": [
+        "earlier_month",
+        "one",
+        "month_adjustment"
+      ],
+      "type": "Number"
+    },
+    {
+      "id": "completed_years",
+      "op": "subtract",
+      "inputs": [
+        "year_difference",
+        "birthday_adjustment"
+      ],
+      "type": "Number"
+    }
+  ],
+  "output": "completed_years",
+  "lesson": "Get today's date from the current_date tool. Subtract birth year from current year. Subtract one more if the birthday month/day is still ahead. For February 29 births, this lesson advances age on March 1 in non-leap years."
+}

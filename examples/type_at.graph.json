@@ -1,0 +1,131 @@
+{
+  "input_type": "Data",
+  "output_type": "Data",
+  "description": "Given x, y, key: move the pointer, click, press the key, then observe feedback. Coordinates are fractions of the canvas width and height.",
+  "nodes": [
+    {
+      "id": "request",
+      "op": "input",
+      "inputs": [],
+      "type": "Data"
+    },
+    {
+      "id": "x",
+      "op": "get",
+      "inputs": [
+        "request"
+      ],
+      "type": "Data",
+      "path": [
+        "x"
+      ]
+    },
+    {
+      "id": "y",
+      "op": "get",
+      "inputs": [
+        "request"
+      ],
+      "type": "Data",
+      "path": [
+        "y"
+      ]
+    },
+    {
+      "id": "position",
+      "op": "record",
+      "inputs": [
+        "x",
+        "y"
+      ],
+      "type": "Data",
+      "keys": [
+        "x",
+        "y"
+      ]
+    },
+    {
+      "id": "move",
+      "op": "act",
+      "inputs": [
+        "request",
+        "position"
+      ],
+      "type": "Data",
+      "surface": "canvas",
+      "action": "move"
+    },
+    {
+      "id": "empty",
+      "op": "data_literal",
+      "inputs": [],
+      "type": "Data",
+      "value": {}
+    },
+    {
+      "id": "click",
+      "op": "act",
+      "inputs": [
+        "move",
+        "empty"
+      ],
+      "type": "Data",
+      "surface": "canvas",
+      "action": "click"
+    },
+    {
+      "id": "key",
+      "op": "get",
+      "inputs": [
+        "request"
+      ],
+      "type": "Data",
+      "path": [
+        "key"
+      ]
+    },
+    {
+      "id": "keystroke",
+      "op": "record",
+      "inputs": [
+        "key"
+      ],
+      "type": "Data",
+      "keys": [
+        "key"
+      ]
+    },
+    {
+      "id": "type",
+      "op": "act",
+      "inputs": [
+        "click",
+        "keystroke"
+      ],
+      "type": "Data",
+      "surface": "canvas",
+      "action": "key"
+    },
+    {
+      "id": "after",
+      "op": "observe",
+      "inputs": [
+        "type"
+      ],
+      "type": "Data",
+      "surface": "canvas"
+    },
+    {
+      "id": "feedback",
+      "op": "get",
+      "inputs": [
+        "after"
+      ],
+      "type": "Data",
+      "path": [
+        "feedback"
+      ]
+    }
+  ],
+  "output": "feedback"
+}

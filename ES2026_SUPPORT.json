@@ -1,0 +1,64 @@
+{
+  "target": "ECMA-262, 17th edition (ECMAScript 2026)",
+  "claim": "Restricted experimental graph interpreter; NOT ES2026 conformant",
+  "execution": "Stored graph procedures; Python syntax adapter/compiler and generic graph interpreter",
+  "reference_engine": "Node is used in tests only; no execution fallback",
+  "official_test262_status": "Not integrated or passed; current checks are project tests and differential examples",
+  "features": {
+    "lexical_grammar_and_automatic_semicolon_insertion": "partial: explicit semicolons, selected tokens and comments",
+    "numbers": "partial: exact safe integers; IEEE-754 rounding, signed zero, NaN and infinities missing",
+    "strings": "partial: bounded literals, simple escapes, string-only concatenation; UTF-16 semantics missing",
+    "booleans_null_undefined": "partial: values and selected operations; tagged undefined result",
+    "bigint_and_symbol": "not implemented",
+    "coercion_and_abstract_operations": "partial: ToBoolean for the supported value domain, nullish detection and typeof values; numeric/string/object coercion missing",
+    "expressions": "partial: selected arithmetic/comparison/unary operations, lazy logical and conditional expressions, indexing, own property access, literal spreads and Math calls; typeof undeclared identifiers missing",
+    "lexical_environments_and_declarations": "partial: lowered lexical slots, block shadowing and temporal dead zone checks; environment objects, var, hoisting and captured per-iteration bindings missing",
+    "control_flow": "partial: if/else if/else, while, do/while, for, break, continue, return",
+    "functions": "partial: one function/parameter and one literal entry invocation; inline arrow callbacks for selected array methods, expression or single-return bodies",
+    "closures_recursion_and_calls": "partial: synchronous inline array callbacks read the enclosing environment, with up to eight continuation frames; first-class functions, persistent closures, general calls and recursion missing",
+    "objects_prototypes_descriptors_and_accessors": "partial: tagged plain-data object literals, own property reads, spreads, shallow declaration destructuring; identity, mutation, prototypes, accessors and descriptors missing",
+    "classes_private_fields_and_super": "not implemented",
+    "arrays": "partial: dense arrays, literals/spreads, indexing, length, shallow declaration destructuring, map/filter and reduce with explicit initial accumulator; identity, mutation, holes, generic receivers and other methods missing",
+    "math": "partial: abs/sign/min/max/pow and integer-domain floor/ceil/round/trunc",
+    "date_regexp_json_reflect_proxy": "not implemented",
+    "map_set_weak_collections": "not implemented",
+    "iterators_generators_and_iteration_protocols": "not implemented",
+    "exceptions_and_completion_records": "not implemented as JavaScript semantics; host reports bounded execution errors",
+    "promises_async_and_job_queues": "not implemented",
+    "modules_and_linking": "not implemented",
+    "arraybuffer_typedarrays_dataview": "not implemented",
+    "shared_memory_and_atomics": "not implemented",
+    "weakref_finalization_and_agents": "not implemented",
+    "eval_and_dynamic_function_construction": "not implemented",
+    "annex_b_legacy_behavior": "not implemented"
+  },
+  "host_features": {
+    "console.log": "Captured argument lists in graph execution results; no console formatting substitutions. Console is a host API, not ECMA-262.",
+    "dom_node_filesystem_network_timers": "not implemented"
+  },
+  "implementation_order": [
+    "Tagged value model and faithful IEEE-754/UTF-16/BigInt semantics",
+    "Abstract operations, coercion and completion records",
+    "Environments, closures, calls and object property model",
+    "Control-flow completion, exceptions and full syntax",
+    "Standard library algorithms and collection protocols",
+    "Generators, promises, jobs and modules",
+    "Agents, shared memory and remaining standard features",
+    "Pinned Test262 coverage and regression/conformance reporting"
+  ],
+  "source_pipeline": {
+    "mode": "graph_reader_compiler_executor",
+    "host_parser_fallback": false,
+    "source_limit": 1800,
+    "acceptance_suite": "test_graph_source_pipeline.py",
+    "migration_note": "Older coverage entries describe evaluator and former host parser capabilities. The graph compiler currently exposes a narrower subset; see PROGRAMMING.md.",
+    "executable_control_flow": [
+      "if",
+      "while",
+      "for",
+      "do",
+      "assignment"
+    ],
+    "learning": "bounded graph grammar-candidate selection; see SYNTAX_COVERAGE.json"
+  }
+}

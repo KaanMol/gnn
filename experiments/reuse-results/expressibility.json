@@ -1,0 +1,157 @@
+{
+  "purpose": "Post-search expressibility verification, not discovered programs or search input. Maximum controls intentionally excluded.",
+  "tasks_passed": 18,
+  "cases_passed": 828,
+  "results": [
+    {
+      "task": "numbers/selected_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "numbers/selected_double_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "numbers/selected_negative_double_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "numbers/plain_sum",
+      "ops": [
+        "synth_sum"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "numbers/selected_count",
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "numbers/plain_double_sum",
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "products/selected_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "products/selected_double_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "products/selected_negative_double_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "products/plain_sum",
+      "ops": [
+        "synth_sum"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "products/selected_count",
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "products/plain_double_sum",
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "readings/selected_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "readings/selected_double_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "readings/selected_negative_double_sum",
+      "ops": [
+        "synth_select",
+        "synth_sum",
+        "bench_double",
+        "bench_negate"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "readings/plain_sum",
+      "ops": [
+        "synth_sum"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "readings/selected_count",
+      "ops": [
+        "synth_select",
+        "synth_count"
+      ],
+      "cases_passed": 46
+    },
+    {
+      "task": "readings/plain_double_sum",
+      "ops": [
+        "synth_sum",
+        "bench_double"
+      ],
+      "cases_passed": 46
+    }
+  ]
+}

@@ -1,0 +1,8364 @@
+{
+  "algebra_policy": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "max_exponent": 12,
+            "trial_divisor_limit": 20000
+          }
+        }
+      ],
+      "output": "n1",
+      "description": "Bound expansion to exponent 12 and divisor trials to 20,000. An unresolved factor is not a proof of no roots.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Bound expansion to exponent 12 and divisor trials to 20,000. An unresolved factor is not a proof of no roots."
+  },
+  "poly_trim": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "while",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n2",
+                "op": "size",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n3",
+                "op": "as_data",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "less",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n7",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": -1
+              },
+              {
+                "id": "n8",
+                "op": "item",
+                "inputs": [
+                  "n0",
+                  "n7"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_number",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "equal",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n13",
+                "op": "and",
+                "inputs": [
+                  "n6",
+                  "n12"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n13"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "slice",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "stop": -1
+              }
+            ],
+            "output": "n1"
+          }
+        }
+      ],
+      "output": "n1",
+      "description": "Remove zero coefficients above the highest nonzero power; retain one coefficient for zero.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Remove zero coefficients above the highest nonzero power; retain one coefficient for zero."
+  },
+  "poly_coefficient": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "p"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "index"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "less",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "not",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_data",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "less",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "and",
+          "inputs": [
+            "n7",
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n16",
+          "op": "choose",
+          "inputs": [
+            "n13",
+            "n14",
+            "n15"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n16",
+      "description": "A missing power has coefficient zero.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: A missing power has coefficient zero."
+  },
+  "algebra_sum": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "items",
+            "i",
+            "value"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "while",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "items"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_data",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "less",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n7"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "items"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "add",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "value"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_number",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "add",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n13",
+                "op": "as_data",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n7",
+                  "n13"
+                ],
+                "type": "Data",
+                "keys": [
+                  "items",
+                  "i",
+                  "value"
+                ]
+              }
+            ],
+            "output": "n14"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        }
+      ],
+      "output": "n5",
+      "description": "Fold a sequence using add.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Fold a sequence using add."
+  },
+  "algebra_product": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "items",
+            "i",
+            "value"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "while",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "items"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_data",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "less",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n7"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "items"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "add",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "value"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_number",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "multiply",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n13",
+                "op": "as_data",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n7",
+                  "n13"
+                ],
+                "type": "Data",
+                "keys": [
+                  "items",
+                  "i",
+                  "value"
+                ]
+              }
+            ],
+            "output": "n14"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        }
+      ],
+      "output": "n5",
+      "description": "Fold a sequence using multiply.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Fold a sequence using multiply."
+  },
+  "poly_add": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "a"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "b"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "concat",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "indices",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "map",
+          "inputs": [
+            "n4",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "a"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "record",
+                "inputs": [
+                  "n3",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "index"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "call",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data",
+                "name": "poly_coefficient"
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "b"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "record",
+                "inputs": [
+                  "n6",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "index"
+                ]
+              },
+              {
+                "id": "n8",
+                "op": "call",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data",
+                "name": "poly_coefficient"
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "add",
+                "inputs": [
+                  "n9",
+                  "n10"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "as_data",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n12"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "call",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "name": "poly_trim"
+        },
+        {
+          "id": "n7",
+          "op": "emit",
+          "inputs": [
+            "n6",
+            "n6"
+          ],
+          "type": "Data",
+          "label": "collect_like_terms"
+        }
+      ],
+      "output": "n7",
+      "description": "Add coefficients of equal powers; missing terms contribute zero.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Add coefficients of equal powers; missing terms contribute zero."
+  },
+  "poly_scale": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "p"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "k"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "map",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "multiply",
+                "inputs": [
+                  "n3",
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_data",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n6"
+          }
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "poly_trim"
+        }
+      ],
+      "output": "n4",
+      "description": "Multiply every coefficient by the same scalar.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Multiply every coefficient by the same scalar."
+  },
+  "poly_multiply": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "a"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "b"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "concat",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "indices",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "map",
+          "inputs": [
+            "n4",
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "a"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "indices",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "a"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "b"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "record",
+                "inputs": [
+                  "n5",
+                  "n6",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "a",
+                  "b",
+                  "k"
+                ]
+              },
+              {
+                "id": "n8",
+                "op": "map",
+                "inputs": [
+                  "n4",
+                  "n7"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "context"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "item"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "a"
+                      ]
+                    },
+                    {
+                      "id": "n4",
+                      "op": "item",
+                      "inputs": [
+                        "n3",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n5",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "b"
+                      ]
+                    },
+                    {
+                      "id": "n6",
+                      "op": "get",
+                      "inputs": [
+                        "n1"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "k"
+                      ]
+                    },
+                    {
+                      "id": "n7",
+                      "op": "as_number",
+                      "inputs": [
+                        "n6"
+                      ],
+                      "type": "Number"
+                    },
+                    {
+                      "id": "n8",
+                      "op": "as_number",
+                      "inputs": [
+                        "n2"
+                      ],
+                      "type": "Number"
+                    },
+                    {
+                      "id": "n9",
+                      "op": "subtract",
+                      "inputs": [
+                        "n7",
+                        "n8"
+                      ],
+                      "type": "Number"
+                    },
+                    {
+                      "id": "n10",
+                      "op": "as_data",
+                      "inputs": [
+                        "n9"
+                      ],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n11",
+                      "op": "record",
+                      "inputs": [
+                        "n5",
+                        "n10"
+                      ],
+                      "type": "Data",
+                      "keys": [
+                        "p",
+                        "index"
+                      ]
+                    },
+                    {
+                      "id": "n12",
+                      "op": "call",
+                      "inputs": [
+                        "n11"
+                      ],
+                      "type": "Data",
+                      "name": "poly_coefficient"
+                    },
+                    {
+                      "id": "n13",
+                      "op": "as_number",
+                      "inputs": [
+                        "n4"
+                      ],
+                      "type": "Number"
+                    },
+                    {
+                      "id": "n14",
+                      "op": "as_number",
+                      "inputs": [
+                        "n12"
+                      ],
+                      "type": "Number"
+                    },
+                    {
+                      "id": "n15",
+                      "op": "multiply",
+                      "inputs": [
+                        "n13",
+                        "n14"
+                      ],
+                      "type": "Number"
+                    },
+                    {
+                      "id": "n16",
+                      "op": "as_data",
+                      "inputs": [
+                        "n15"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n16"
+                }
+              },
+              {
+                "id": "n9",
+                "op": "call",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Data",
+                "name": "algebra_sum"
+              }
+            ],
+            "output": "n9"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "call",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "name": "poly_trim"
+        },
+        {
+          "id": "n7",
+          "op": "emit",
+          "inputs": [
+            "n6",
+            "n6"
+          ],
+          "type": "Data",
+          "label": "distribute_and_collect"
+        }
+      ],
+      "output": "n7",
+      "description": "Distribute products: coefficient k is the sum of a[i] times b[k-i].",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Distribute products: coefficient k is the sum of a[i] times b[k-i]."
+  },
+  "poly_power": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "n"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "algebra_policy"
+        },
+        {
+          "id": "n3",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "is_integer",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "less",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "not",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            "max_exponent"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "less",
+          "inputs": [
+            "n11",
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "not",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "and",
+          "inputs": [
+            "n9",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "and",
+          "inputs": [
+            "n4",
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "require",
+          "inputs": [
+            "n16",
+            "n0"
+          ],
+          "type": "Data",
+          "message": "The taught polynomial power lesson supports nonnegative integer exponents up to its stored limit."
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "p"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "n"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            1
+          ]
+        },
+        {
+          "id": "n21",
+          "op": "record",
+          "inputs": [
+            "n18",
+            "n19",
+            "n20"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "n",
+            "value"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "while",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "n"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "less",
+                "inputs": [
+                  "n3",
+                  "n4"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n5"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "p"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "n"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "subtract",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "value"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "record",
+                "inputs": [
+                  "n8",
+                  "n1"
+                ],
+                "type": "Data",
+                "keys": [
+                  "a",
+                  "b"
+                ]
+              },
+              {
+                "id": "n10",
+                "op": "call",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Data",
+                "name": "poly_multiply"
+              },
+              {
+                "id": "n11",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n7",
+                  "n10"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "n",
+                  "value"
+                ]
+              }
+            ],
+            "output": "n11"
+          }
+        },
+        {
+          "id": "n23",
+          "op": "get",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        }
+      ],
+      "output": "n23",
+      "description": "Expand a nonnegative integer power by repeated polynomial multiplication.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Expand a nonnegative integer power by repeated polynomial multiplication."
+  },
+  "poly_divide_constant": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "b"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "a"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_data",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "equal",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n10",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "require",
+          "inputs": [
+            "n8",
+            "n10"
+          ],
+          "type": "Data",
+          "message": "Division by an expression containing the unknown needs rational-expression lessons; it is not cancelled automatically."
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "equal",
+          "inputs": [
+            "n13",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "not",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n18",
+          "op": "as_number",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "divide",
+          "inputs": [
+            "n18",
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_data",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "require",
+          "inputs": [
+            "n16",
+            "n21"
+          ],
+          "type": "Data",
+          "message": "Division by zero is undefined; this equation has an undefined expression."
+        },
+        {
+          "id": "n23",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n22"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "k"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "call",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data",
+          "name": "poly_scale"
+        }
+      ],
+      "output": "n24",
+      "description": "Divide all coefficients by a nonzero constant; refuse variable denominators.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Divide all coefficients by a nonzero constant; refuse variable denominators."
+  },
+  "algebra_token": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "token"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "op"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "args"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n6",
+          "op": "item",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "item",
+          "inputs": [
+            "n2",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n9",
+          "op": "item",
+          "inputs": [
+            "n4",
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "item",
+          "inputs": [
+            "n2",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n12",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n11"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "k"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "call",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "name": "poly_scale"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n15",
+          "op": "record",
+          "inputs": [
+            "n10",
+            "n14"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "k"
+          ]
+        },
+        {
+          "id": "n16",
+          "op": "call",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Data",
+          "name": "poly_scale"
+        },
+        {
+          "id": "n17",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n16"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "call",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "name": "poly_add"
+        },
+        {
+          "id": "n19",
+          "op": "size",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_data",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n22",
+          "op": "as_number",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "as_number",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n24",
+          "op": "equal",
+          "inputs": [
+            "n22",
+            "n23"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n26",
+          "op": "item",
+          "inputs": [
+            "n10",
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "require",
+          "inputs": [
+            "n24",
+            "n26"
+          ],
+          "type": "Data",
+          "message": "The exponent must be a nonnegative integer constant."
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "known"
+        },
+        {
+          "id": "n29",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "unknown"
+        },
+        {
+          "id": "n30",
+          "op": "data_equal",
+          "inputs": [
+            "n28",
+            "n29"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            0
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "require",
+          "inputs": [
+            "n30",
+            "n31"
+          ],
+          "type": "Data",
+          "message": "No taught polynomial meaning for this operator."
+        },
+        {
+          "id": "n33",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        },
+        {
+          "id": "n34",
+          "op": "as_number",
+          "inputs": [
+            "n33"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n35",
+          "op": "as_data",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "data_list",
+          "inputs": [
+            "n35"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "n38",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n10"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n39",
+          "op": "call",
+          "inputs": [
+            "n38"
+          ],
+          "type": "Data",
+          "name": "poly_add"
+        },
+        {
+          "id": "n40",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n10"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n41",
+          "op": "call",
+          "inputs": [
+            "n40"
+          ],
+          "type": "Data",
+          "name": "poly_multiply"
+        },
+        {
+          "id": "n42",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n10"
+          ],
+          "type": "Data",
+          "keys": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "id": "n43",
+          "op": "call",
+          "inputs": [
+            "n42"
+          ],
+          "type": "Data",
+          "name": "poly_divide_constant"
+        },
+        {
+          "id": "n44",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n27"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "n"
+          ]
+        },
+        {
+          "id": "n45",
+          "op": "call",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Data",
+          "name": "poly_power"
+        },
+        {
+          "id": "n46",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "^"
+        },
+        {
+          "id": "n47",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n46"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n48",
+          "op": "choose",
+          "inputs": [
+            "n47",
+            "n45",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n49",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "/"
+        },
+        {
+          "id": "n50",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n49"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n51",
+          "op": "choose",
+          "inputs": [
+            "n50",
+            "n43",
+            "n48"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n52",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "*"
+        },
+        {
+          "id": "n53",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n52"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n54",
+          "op": "choose",
+          "inputs": [
+            "n53",
+            "n41",
+            "n51"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n55",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "="
+        },
+        {
+          "id": "n56",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n55"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n57",
+          "op": "choose",
+          "inputs": [
+            "n56",
+            "n18",
+            "n54"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n58",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "-"
+        },
+        {
+          "id": "n59",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n58"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n60",
+          "op": "choose",
+          "inputs": [
+            "n59",
+            "n18",
+            "n57"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n61",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "+"
+        },
+        {
+          "id": "n62",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n61"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n63",
+          "op": "choose",
+          "inputs": [
+            "n62",
+            "n39",
+            "n60"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n64",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "negate"
+        },
+        {
+          "id": "n65",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n64"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n66",
+          "op": "choose",
+          "inputs": [
+            "n65",
+            "n13",
+            "n63"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n67",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "symbol"
+        },
+        {
+          "id": "n68",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n67"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n69",
+          "op": "choose",
+          "inputs": [
+            "n68",
+            "n37",
+            "n66"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n70",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "number"
+        },
+        {
+          "id": "n71",
+          "op": "data_equal",
+          "inputs": [
+            "n3",
+            "n70"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n72",
+          "op": "choose",
+          "inputs": [
+            "n71",
+            "n36",
+            "n69"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n72",
+      "description": "Interpret numbers, the unknown and arithmetic syntax as polynomials. Subtract equation sides to preserve equality with zero.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Interpret numbers, the unknown and arithmetic syntax as polynomials. Subtract equation sides to preserve equality with zero."
+  },
+  "algebra_normalize": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "tokens"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2",
+            "n3"
+          ],
+          "type": "Data",
+          "keys": [
+            "tokens",
+            "i",
+            "values"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "while",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "tokens"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_data",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "less",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n7"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "tokens"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "values"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "record",
+                "inputs": [
+                  "n4",
+                  "n3"
+                ],
+                "type": "Data",
+                "keys": [
+                  "token",
+                  "values"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "call",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data",
+                "name": "algebra_token"
+              },
+              {
+                "id": "n7",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "add",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_data",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n12",
+                "op": "data_list",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n13",
+                "op": "concat",
+                "inputs": [
+                  "n3",
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "record",
+                "inputs": [
+                  "n2",
+                  "n11",
+                  "n13"
+                ],
+                "type": "Data",
+                "keys": [
+                  "tokens",
+                  "i",
+                  "values"
+                ]
+              }
+            ],
+            "output": "n14"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "values"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n8",
+          "op": "item",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "emit",
+          "inputs": [
+            "n8",
+            "n8"
+          ],
+          "type": "Data",
+          "label": "polynomial_normal_form"
+        }
+      ],
+      "output": "n9",
+      "description": "Read syntax in postorder; execute taught operator meanings; return ascending coefficients.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Read syntax in postorder; execute taught operator meanings; return ascending coefficients."
+  },
+  "poly_evaluate": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "p"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "x"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "as_data",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "subtract",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_data",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n11",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2",
+            "n9",
+            "n10"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "x",
+            "i",
+            "value"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "while",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n3",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "less",
+                "inputs": [
+                  "n3",
+                  "n4"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n6",
+                "op": "not",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n6"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "p"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "x"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "value"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "multiply",
+                "inputs": [
+                  "n6",
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_data",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_number",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "add",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n13",
+                "op": "as_data",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n15",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n16",
+                "op": "as_number",
+                "inputs": [
+                  "n14"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n17",
+                "op": "subtract",
+                "inputs": [
+                  "n15",
+                  "n16"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n18",
+                "op": "as_data",
+                "inputs": [
+                  "n17"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n19",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n2",
+                  "n18",
+                  "n13"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "x",
+                  "i",
+                  "value"
+                ]
+              }
+            ],
+            "output": "n19"
+          }
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        }
+      ],
+      "output": "n13",
+      "description": "Horner evaluation: repeatedly multiply the accumulated value by x and add the next coefficient.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Horner evaluation: repeatedly multiply the accumulated value by x and add the next coefficient."
+  },
+  "poly_synthetic_divide": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "p"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "root"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n4",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "size",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_data",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "subtract",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_data",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_list",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n2",
+            "n11",
+            "n4",
+            "n12"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "root",
+            "i",
+            "carry",
+            "q"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "while",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "less",
+                "inputs": [
+                  "n3",
+                  "n4"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n5"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "p"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "root"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "carry"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "multiply",
+                "inputs": [
+                  "n6",
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_data",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_number",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "add",
+                "inputs": [
+                  "n10",
+                  "n11"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n13",
+                "op": "as_data",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n14",
+                "op": "data_list",
+                "inputs": [
+                  "n13"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n15",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "q"
+                ]
+              },
+              {
+                "id": "n16",
+                "op": "concat",
+                "inputs": [
+                  "n14",
+                  "n15"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n17",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n18",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n19",
+                "op": "as_number",
+                "inputs": [
+                  "n17"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n20",
+                "op": "subtract",
+                "inputs": [
+                  "n18",
+                  "n19"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n21",
+                "op": "as_data",
+                "inputs": [
+                  "n20"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n22",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n2",
+                  "n21",
+                  "n13",
+                  "n16"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "root",
+                  "i",
+                  "carry",
+                  "q"
+                ]
+              }
+            ],
+            "output": "n22"
+          }
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n16",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n15"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n17",
+          "op": "get",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data",
+          "path": [
+            "carry"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "as_number",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "multiply",
+          "inputs": [
+            "n18",
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_data",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "as_number",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "as_number",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n24",
+          "op": "add",
+          "inputs": [
+            "n22",
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n25",
+          "op": "as_data",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n26",
+          "op": "get",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data",
+          "path": [
+            "q"
+          ]
+        },
+        {
+          "id": "n27",
+          "op": "call",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Data",
+          "name": "poly_trim"
+        },
+        {
+          "id": "n28",
+          "op": "record",
+          "inputs": [
+            "n27",
+            "n25"
+          ],
+          "type": "Data",
+          "keys": [
+            "quotient",
+            "remainder"
+          ]
+        }
+      ],
+      "output": "n28",
+      "description": "Divide by (x-r) using synthetic division and return the exact remainder. A factor requires remainder zero.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Divide by (x-r) using synthetic division and return the exact remainder. A factor requires remainder zero."
+  },
+  "integer_sqrt": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "as_number",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n2",
+          "op": "is_integer",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "less",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "not",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "and",
+          "inputs": [
+            "n2",
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "require",
+          "inputs": [
+            "n8",
+            "n0"
+          ],
+          "type": "Data",
+          "message": "Integer square-root search requires a nonnegative integer."
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "add",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "as_data",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "record",
+          "inputs": [
+            "n9",
+            "n10",
+            "n15"
+          ],
+          "type": "Data",
+          "keys": [
+            "n",
+            "lo",
+            "hi"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "while",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "hi"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "lo"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "subtract",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "less",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n10"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "n"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "lo"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "hi"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "add",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 2
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "divide",
+                "inputs": [
+                  "n9",
+                  "n10"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n12",
+                "op": "as_data",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n13",
+                "op": "as_number",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n14",
+                "op": "floor",
+                "inputs": [
+                  "n13"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n15",
+                "op": "as_data",
+                "inputs": [
+                  "n14"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n16",
+                "op": "as_number",
+                "inputs": [
+                  "n15"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n17",
+                "op": "as_number",
+                "inputs": [
+                  "n15"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n18",
+                "op": "multiply",
+                "inputs": [
+                  "n16",
+                  "n17"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n19",
+                "op": "as_data",
+                "inputs": [
+                  "n18"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n20",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n21",
+                "op": "as_number",
+                "inputs": [
+                  "n19"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n22",
+                "op": "less",
+                "inputs": [
+                  "n20",
+                  "n21"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n23",
+                "op": "not",
+                "inputs": [
+                  "n22"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n24",
+                "op": "choose",
+                "inputs": [
+                  "n23",
+                  "n15",
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n25",
+                "op": "choose",
+                "inputs": [
+                  "n23",
+                  "n3",
+                  "n15"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n26",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n24",
+                  "n25"
+                ],
+                "type": "Data",
+                "keys": [
+                  "n",
+                  "lo",
+                  "hi"
+                ]
+              }
+            ],
+            "output": "n26"
+          }
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "lo"
+          ]
+        }
+      ],
+      "output": "n18",
+      "description": "Binary-search the greatest integer whose square is at most the input.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Binary-search the greatest integer whose square is at most the input."
+  },
+  "rational_sqrt": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "as_number",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n2",
+          "op": "numerator",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n3",
+          "op": "as_data",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "denominator",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_data",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "multiply",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "call",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data",
+          "name": "integer_sqrt"
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "multiply",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "as_data",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "equal",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "bool_data",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n20",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "divide",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "as_data",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "record",
+          "inputs": [
+            "n19",
+            "n23"
+          ],
+          "type": "Data",
+          "keys": [
+            "exact",
+            "value"
+          ]
+        }
+      ],
+      "output": "n24",
+      "description": "For nonnegative n/d, test whether n*d has an integer square root. When exact, sqrt(n/d)=sqrt(n*d)/d.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: For nonnegative n/d, test whether n*d has an integer square root. When exact, sqrt(n/d)=sqrt(n*d)/d."
+  },
+  "algebra_linear": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n2",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n4",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "negate",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "divide",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_data",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_list",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n14",
+          "op": "record",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Data",
+          "keys": [
+            "roots",
+            "complete"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "emit",
+          "inputs": [
+            "n14",
+            "n14"
+          ],
+          "type": "Data",
+          "label": "isolate_linear_variable"
+        }
+      ],
+      "output": "n15",
+      "description": "For a*x+b=0 with nonzero a, subtract b and divide by a.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: For a*x+b=0 with nonzero a, subtract b and divide by a."
+  },
+  "algebra_quadratic": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n2",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n4",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n6",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "multiply",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_data",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 4
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "multiply",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n15",
+          "op": "as_data",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "as_number",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "multiply",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n19",
+          "op": "as_data",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n20",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "subtract",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "as_data",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n25",
+          "op": "negate",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n26",
+          "op": "as_data",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n28",
+          "op": "as_number",
+          "inputs": [
+            "n27"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n30",
+          "op": "multiply",
+          "inputs": [
+            "n28",
+            "n29"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "as_data",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n32",
+          "op": "call",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data",
+          "name": "rational_sqrt"
+        },
+        {
+          "id": "n33",
+          "op": "get",
+          "inputs": [
+            "n32"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        },
+        {
+          "id": "n34",
+          "op": "as_number",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n35",
+          "op": "as_number",
+          "inputs": [
+            "n33"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n36",
+          "op": "add",
+          "inputs": [
+            "n34",
+            "n35"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n37",
+          "op": "as_data",
+          "inputs": [
+            "n36"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n38",
+          "op": "as_number",
+          "inputs": [
+            "n37"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n39",
+          "op": "as_number",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n40",
+          "op": "divide",
+          "inputs": [
+            "n38",
+            "n39"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n41",
+          "op": "as_data",
+          "inputs": [
+            "n40"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "get",
+          "inputs": [
+            "n32"
+          ],
+          "type": "Data",
+          "path": [
+            "value"
+          ]
+        },
+        {
+          "id": "n43",
+          "op": "as_number",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n44",
+          "op": "as_number",
+          "inputs": [
+            "n42"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n45",
+          "op": "subtract",
+          "inputs": [
+            "n43",
+            "n44"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n46",
+          "op": "as_data",
+          "inputs": [
+            "n45"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n47",
+          "op": "as_number",
+          "inputs": [
+            "n46"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n48",
+          "op": "as_number",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n49",
+          "op": "divide",
+          "inputs": [
+            "n47",
+            "n48"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n50",
+          "op": "as_data",
+          "inputs": [
+            "n49"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n51",
+          "op": "data_list",
+          "inputs": [
+            "n41",
+            "n50"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n52",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "radical"
+        },
+        {
+          "id": "n53",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n54",
+          "op": "record",
+          "inputs": [
+            "n52",
+            "n26",
+            "n23",
+            "n31",
+            "n53"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "numerator",
+            "radicand",
+            "denominator",
+            "sign"
+          ]
+        },
+        {
+          "id": "n55",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "radical"
+        },
+        {
+          "id": "n56",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n57",
+          "op": "record",
+          "inputs": [
+            "n55",
+            "n26",
+            "n23",
+            "n31",
+            "n56"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "numerator",
+            "radicand",
+            "denominator",
+            "sign"
+          ]
+        },
+        {
+          "id": "n58",
+          "op": "data_list",
+          "inputs": [
+            "n54",
+            "n57"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n59",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n60",
+          "op": "as_number",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n61",
+          "op": "as_number",
+          "inputs": [
+            "n59"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n62",
+          "op": "less",
+          "inputs": [
+            "n60",
+            "n61"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n63",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n64",
+          "op": "get",
+          "inputs": [
+            "n32"
+          ],
+          "type": "Data",
+          "path": [
+            "exact"
+          ]
+        },
+        {
+          "id": "n65",
+          "op": "as_bool",
+          "inputs": [
+            "n64"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n66",
+          "op": "choose",
+          "inputs": [
+            "n65",
+            "n51",
+            "n58"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n67",
+          "op": "choose",
+          "inputs": [
+            "n62",
+            "n63",
+            "n66"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n68",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n69",
+          "op": "record",
+          "inputs": [
+            "n67",
+            "n68",
+            "n23"
+          ],
+          "type": "Data",
+          "keys": [
+            "roots",
+            "complete",
+            "discriminant"
+          ]
+        },
+        {
+          "id": "n70",
+          "op": "emit",
+          "inputs": [
+            "n69",
+            "n69"
+          ],
+          "type": "Data",
+          "label": "quadratic_formula"
+        }
+      ],
+      "output": "n70",
+      "description": "For a*x^2+b*x+c=0 use (-b +/- sqrt(b^2-4ac))/(2a). Negative discriminant has no real roots; keep irrational roots symbolic.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: For a*x^2+b*x+c=0 use (-b +/- sqrt(b^2-4ac))/(2a). Negative discriminant has no real roots; keep irrational roots symbolic."
+  },
+  "poly_integerize": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "map",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "as_number",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n2",
+                "op": "denominator",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n3",
+                "op": "as_data",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "algebra_product"
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "k"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "poly_scale"
+        }
+      ],
+      "output": "n4",
+      "description": "Multiply coefficients by the product of their denominators; nonzero scaling preserves roots.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Multiply coefficients by the product of their denominators; nonzero scaling preserves roots."
+  },
+  "integer_divisors": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n2",
+          "op": "as_number",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n3",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n4",
+          "op": "less",
+          "inputs": [
+            "n2",
+            "n3"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "negate",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "choose",
+          "inputs": [
+            "n4",
+            "n7",
+            "n0"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "less",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "is_integer",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "and",
+          "inputs": [
+            "n12",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "require",
+          "inputs": [
+            "n15",
+            "n8"
+          ],
+          "type": "Data",
+          "message": "Divisor enumeration requires a nonzero integer."
+        },
+        {
+          "id": "n17",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "algebra_policy"
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "path": [
+            "trial_divisor_limit"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n21",
+          "op": "record",
+          "inputs": [
+            "n16",
+            "n18",
+            "n19",
+            "n20"
+          ],
+          "type": "Data",
+          "keys": [
+            "n",
+            "i",
+            "limit",
+            "factors"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "while",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "n"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "limit"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "multiply",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "less",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "not",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n13",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n14",
+                "op": "less",
+                "inputs": [
+                  "n12",
+                  "n13"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n15",
+                "op": "not",
+                "inputs": [
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "and",
+                "inputs": [
+                  "n11",
+                  "n15"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n16"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "n"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "i"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "factors"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "divide",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_data",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "is_integer",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "data_list",
+                "inputs": [
+                  "n2",
+                  "n7"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n11",
+                "op": "concat",
+                "inputs": [
+                  "n3",
+                  "n10"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n12",
+                "op": "unique",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n13",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n14",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n15",
+                "op": "as_number",
+                "inputs": [
+                  "n13"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n16",
+                "op": "add",
+                "inputs": [
+                  "n14",
+                  "n15"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n17",
+                "op": "as_data",
+                "inputs": [
+                  "n16"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n18",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "limit"
+                ]
+              },
+              {
+                "id": "n19",
+                "op": "choose",
+                "inputs": [
+                  "n9",
+                  "n12",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n20",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n17",
+                  "n18",
+                  "n19"
+                ],
+                "type": "Data",
+                "keys": [
+                  "n",
+                  "i",
+                  "limit",
+                  "factors"
+                ]
+              }
+            ],
+            "output": "n20"
+          }
+        },
+        {
+          "id": "n23",
+          "op": "get",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data",
+          "path": [
+            "factors"
+          ]
+        }
+      ],
+      "output": "n23",
+      "description": "Try integer divisors and paired quotients, within the taught trial budget.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Try integer divisors and paired quotients, within the taught trial budget."
+  },
+  "poly_rational_root": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "poly_integerize"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n3",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "integer_divisors"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n6",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "call",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "name": "integer_divisors"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n12",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n4",
+            "n7",
+            "n8",
+            "n9",
+            "n10",
+            "n11"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "ps",
+            "qs",
+            "pi",
+            "qi",
+            "found",
+            "root"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "while",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pi"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "ps"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_data",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "less",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "found"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "as_bool",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "not",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "and",
+                "inputs": [
+                  "n7",
+                  "n10"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n11"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "ps"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "qs"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "pi"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "qi"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "p"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "item",
+                "inputs": [
+                  "n1",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n7",
+                "op": "item",
+                "inputs": [
+                  "n2",
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "divide",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "as_data",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n12",
+                "op": "as_number",
+                "inputs": [
+                  "n11"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n13",
+                "op": "negate",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n14",
+                "op": "as_data",
+                "inputs": [
+                  "n13"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n15",
+                "op": "record",
+                "inputs": [
+                  "n5",
+                  "n11"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "x"
+                ]
+              },
+              {
+                "id": "n16",
+                "op": "call",
+                "inputs": [
+                  "n15"
+                ],
+                "type": "Data",
+                "name": "poly_evaluate"
+              },
+              {
+                "id": "n17",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n18",
+                "op": "as_number",
+                "inputs": [
+                  "n16"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n19",
+                "op": "as_number",
+                "inputs": [
+                  "n17"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n20",
+                "op": "equal",
+                "inputs": [
+                  "n18",
+                  "n19"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n21",
+                "op": "record",
+                "inputs": [
+                  "n5",
+                  "n14"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "x"
+                ]
+              },
+              {
+                "id": "n22",
+                "op": "call",
+                "inputs": [
+                  "n21"
+                ],
+                "type": "Data",
+                "name": "poly_evaluate"
+              },
+              {
+                "id": "n23",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n24",
+                "op": "as_number",
+                "inputs": [
+                  "n22"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n25",
+                "op": "as_number",
+                "inputs": [
+                  "n23"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n26",
+                "op": "equal",
+                "inputs": [
+                  "n24",
+                  "n25"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n27",
+                "op": "or",
+                "inputs": [
+                  "n20",
+                  "n26"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n28",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n29",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n30",
+                "op": "as_number",
+                "inputs": [
+                  "n28"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n31",
+                "op": "add",
+                "inputs": [
+                  "n29",
+                  "n30"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n32",
+                "op": "as_data",
+                "inputs": [
+                  "n31"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n33",
+                "op": "size",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n34",
+                "op": "as_data",
+                "inputs": [
+                  "n33"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n35",
+                "op": "as_number",
+                "inputs": [
+                  "n32"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n36",
+                "op": "as_number",
+                "inputs": [
+                  "n34"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n37",
+                "op": "equal",
+                "inputs": [
+                  "n35",
+                  "n36"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n38",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n39",
+                "op": "as_number",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n40",
+                "op": "as_number",
+                "inputs": [
+                  "n38"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n41",
+                "op": "add",
+                "inputs": [
+                  "n39",
+                  "n40"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n42",
+                "op": "as_data",
+                "inputs": [
+                  "n41"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n43",
+                "op": "choose",
+                "inputs": [
+                  "n37",
+                  "n42",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n44",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n45",
+                "op": "choose",
+                "inputs": [
+                  "n37",
+                  "n44",
+                  "n32"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n46",
+                "op": "bool_data",
+                "inputs": [
+                  "n27"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n47",
+                "op": "choose",
+                "inputs": [
+                  "n20",
+                  "n11",
+                  "n14"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n48",
+                "op": "record",
+                "inputs": [
+                  "n5",
+                  "n1",
+                  "n2",
+                  "n43",
+                  "n45",
+                  "n46",
+                  "n47"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "ps",
+                  "qs",
+                  "pi",
+                  "qi",
+                  "found",
+                  "root"
+                ]
+              }
+            ],
+            "output": "n48"
+          }
+        },
+        {
+          "id": "n14",
+          "op": "get",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "path": [
+            "found"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "get",
+          "inputs": [
+            "n13"
+          ],
+          "type": "Data",
+          "path": [
+            "root"
+          ]
+        },
+        {
+          "id": "n16",
+          "op": "record",
+          "inputs": [
+            "n14",
+            "n15"
+          ],
+          "type": "Data",
+          "keys": [
+            "found",
+            "root"
+          ]
+        }
+      ],
+      "output": "n16",
+      "description": "Test signed rational-root-theorem candidates by exact substitution. Failure only means no factor found within the search budget.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Test signed rational-root-theorem candidates by exact substitution. Failure only means no factor found within the search budget."
+  },
+  "poly_find_root": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "size",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n2",
+          "op": "as_data",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "subtract",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -2
+        },
+        {
+          "id": "n9",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "negate",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "as_data",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": -1
+        },
+        {
+          "id": "n14",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "multiply",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "as_data",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "as_number",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n20",
+          "op": "as_number",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "divide",
+          "inputs": [
+            "n19",
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "as_data",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n22"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "x"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "call",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Data",
+          "name": "poly_evaluate"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n26",
+          "op": "as_number",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n27",
+          "op": "as_number",
+          "inputs": [
+            "n25"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "equal",
+          "inputs": [
+            "n26",
+            "n27"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n29",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n30",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n32",
+          "op": "as_number",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n33",
+          "op": "as_number",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n34",
+          "op": "equal",
+          "inputs": [
+            "n32",
+            "n33"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n36",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n37",
+          "op": "record",
+          "inputs": [
+            "n35",
+            "n36"
+          ],
+          "type": "Data",
+          "keys": [
+            "found",
+            "root"
+          ]
+        },
+        {
+          "id": "n38",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n39",
+          "op": "record",
+          "inputs": [
+            "n38",
+            "n22"
+          ],
+          "type": "Data",
+          "keys": [
+            "found",
+            "root"
+          ]
+        },
+        {
+          "id": "n40",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "poly_rational_root"
+        },
+        {
+          "id": "n41",
+          "op": "choose",
+          "inputs": [
+            "n28",
+            "n39",
+            "n40"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "choose",
+          "inputs": [
+            "n34",
+            "n37",
+            "n41"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n42",
+      "description": "Try zero, then -a[n-1]/(n*a[n]) (the only possible root of a repeated linear power); verify exactly, then search rational candidates.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Try zero, then -a[n-1]/(n*a[n]) (the only possible root of a repeated linear power); verify exactly, then search rational candidates."
+  },
+  "algebra_solve_polynomial": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n0",
+            "n1",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "p",
+            "roots",
+            "progress"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "while",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "guard": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 3
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "p"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "size",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n4",
+                "op": "as_data",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n5",
+                "op": "as_number",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "less",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "progress"
+                ]
+              },
+              {
+                "id": "n9",
+                "op": "as_bool",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "and",
+                "inputs": [
+                  "n7",
+                  "n9"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n10"
+          },
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "p"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "roots"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "call",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "name": "poly_find_root"
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "root"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n4"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "root"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "call",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Data",
+                "name": "poly_synthetic_divide"
+              },
+              {
+                "id": "n7",
+                "op": "get",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data",
+                "path": [
+                  "remainder"
+                ]
+              },
+              {
+                "id": "n8",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "as_number",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n11",
+                "op": "equal",
+                "inputs": [
+                  "n9",
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "get",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data",
+                "path": [
+                  "quotient"
+                ]
+              },
+              {
+                "id": "n13",
+                "op": "require",
+                "inputs": [
+                  "n11",
+                  "n12"
+                ],
+                "type": "Data",
+                "message": "The proposed factor failed its exact remainder check."
+              },
+              {
+                "id": "n14",
+                "op": "data_list",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n15",
+                "op": "concat",
+                "inputs": [
+                  "n2",
+                  "n14"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n16",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": true
+              },
+              {
+                "id": "n17",
+                "op": "record",
+                "inputs": [
+                  "n13",
+                  "n15",
+                  "n16"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "roots",
+                  "progress"
+                ]
+              },
+              {
+                "id": "n18",
+                "op": "get",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Data",
+                "path": [
+                  "remainder"
+                ]
+              },
+              {
+                "id": "n19",
+                "op": "record",
+                "inputs": [
+                  "n4",
+                  "n13",
+                  "n18"
+                ],
+                "type": "Data",
+                "keys": [
+                  "root",
+                  "quotient",
+                  "remainder"
+                ]
+              },
+              {
+                "id": "n20",
+                "op": "emit",
+                "inputs": [
+                  "n17",
+                  "n19"
+                ],
+                "type": "Data",
+                "label": "factor_by_zero_remainder"
+              },
+              {
+                "id": "n21",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": false
+              },
+              {
+                "id": "n22",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n2",
+                  "n21"
+                ],
+                "type": "Data",
+                "keys": [
+                  "p",
+                  "roots",
+                  "progress"
+                ]
+              },
+              {
+                "id": "n23",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "found"
+                ]
+              },
+              {
+                "id": "n24",
+                "op": "as_bool",
+                "inputs": [
+                  "n23"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n25",
+                "op": "choose",
+                "inputs": [
+                  "n24",
+                  "n20",
+                  "n22"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n25"
+          }
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "p"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "size",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "as_data",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n9",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "equal",
+          "inputs": [
+            "n9",
+            "n10"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n14",
+          "op": "record",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Data",
+          "keys": [
+            "roots",
+            "complete"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "as_number",
+          "inputs": [
+            "n15"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n18",
+          "op": "equal",
+          "inputs": [
+            "n16",
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "call",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "name": "algebra_linear"
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 3
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "as_number",
+          "inputs": [
+            "n20"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "equal",
+          "inputs": [
+            "n21",
+            "n22"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n24",
+          "op": "call",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "name": "algebra_quadratic"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": false
+        },
+        {
+          "id": "n27",
+          "op": "record",
+          "inputs": [
+            "n25",
+            "n26"
+          ],
+          "type": "Data",
+          "keys": [
+            "roots",
+            "complete"
+          ]
+        },
+        {
+          "id": "n28",
+          "op": "choose",
+          "inputs": [
+            "n23",
+            "n24",
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n29",
+          "op": "choose",
+          "inputs": [
+            "n18",
+            "n19",
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "choose",
+          "inputs": [
+            "n11",
+            "n14",
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n31",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "roots"
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "get",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Data",
+          "path": [
+            "roots"
+          ]
+        },
+        {
+          "id": "n33",
+          "op": "concat",
+          "inputs": [
+            "n31",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "size",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n35",
+          "op": "as_data",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n37",
+          "op": "as_number",
+          "inputs": [
+            "n35"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n38",
+          "op": "as_number",
+          "inputs": [
+            "n36"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n39",
+          "op": "equal",
+          "inputs": [
+            "n37",
+            "n38"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n40",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n41",
+          "op": "item",
+          "inputs": [
+            "n0",
+            "n40"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n43",
+          "op": "as_number",
+          "inputs": [
+            "n41"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n44",
+          "op": "as_number",
+          "inputs": [
+            "n42"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n45",
+          "op": "equal",
+          "inputs": [
+            "n43",
+            "n44"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n46",
+          "op": "and",
+          "inputs": [
+            "n39",
+            "n45"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n47",
+          "op": "get",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Data",
+          "path": [
+            "complete"
+          ]
+        },
+        {
+          "id": "n48",
+          "op": "bool_data",
+          "inputs": [
+            "n46"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n49",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "real"
+        },
+        {
+          "id": "n50",
+          "op": "record",
+          "inputs": [
+            "n33",
+            "n47",
+            "n48",
+            "n5",
+            "n0",
+            "n49"
+          ],
+          "type": "Data",
+          "keys": [
+            "roots",
+            "complete",
+            "identity",
+            "residual",
+            "polynomial",
+            "domain"
+          ]
+        }
+      ],
+      "output": "n50",
+      "description": "Factor repeatedly with exact remainder checks, then solve the constant, linear or quadratic remainder. Preserve unsolved higher-degree factors.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Factor repeatedly with exact remainder checks, then solve the constant, linear or quadratic remainder. Preserve unsolved higher-degree factors."
+  },
+  "algebra_solve": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "algebra_normalize"
+        },
+        {
+          "id": "n2",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "algebra_solve_polynomial"
+        },
+        {
+          "id": "n3",
+          "op": "emit",
+          "inputs": [
+            "n2",
+            "n2"
+          ],
+          "type": "Data",
+          "label": "algebra_result"
+        }
+      ],
+      "output": "n3",
+      "description": "Normalize both equation sides, solve using stored polynomial lessons, and report complete or partial real solutions.",
+      "trace_mode": "explicit"
+    },
+    "source": "Teacher-supplied general algebra curriculum: Normalize both equation sides, solve using stored polynomial lessons, and report complete or partial real solutions."
+  }
+}

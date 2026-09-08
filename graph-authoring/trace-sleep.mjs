@@ -1,0 +1,16 @@
+import fs from 'node:fs';import {G} from './graph.mjs';
+const suite={};const save=(n,g,x)=>suite[n]={graph:{...g.finish(x),execution_budget:10000000},source:'Conservative completed-intervention evidence; UNKNOWN is not utility.'};
+const call=(g,n,x)=>g.op('call',[x],{name:n});
+let g=new G();save('trace_availability',g,g.op('act',[g.input,g.data({namespace:'knowledge.economics',key:'catalog'})],{surface:'workspace',action:'read'}));
+const match=new G();g=new G();const row=g.get(g.input,'row'),entry=g.get(g.input,'entry'),attempt=g.item(g.get(row,'attempts'),g.data(0));
+const selected=g.get(attempt,'selected');
+const same=g.choose(g.eq(selected,g.data(null)),g.data(false),g.datum(g.and(g.eq(g.get(selected,'name'),g.get(entry,'name')),g.eq(g.get(selected,'ops'),g.get(entry,'ops')))));
+const factual=g.and(g.eq(g.len(g.get(row,'attempts')),g.data(1)),g.and(g.bool(same),g.not(g.bool(g.get(row,'uncertified')))));
+const matches=g.op('filter',[g.get(g.input,'records'),g.get(entry,'ops')],{body:match.finish(match.and(match.eq(match.get(match.input,'item','expanded'),match.get(match.input,'context')),match.bool(match.get(match.input,'item','evaluation','executable'))),'Bool')});
+save('trace_evidence',g,g.rec({factual:g.datum(factual),partial_supported:g.datum(g.lt(g.data(0),g.len(matches)))}));
+const equal=new G();const sameKey=equal.and(equal.eq(equal.get(equal.input,'item','context'),equal.get(equal.input,'context','context')),equal.eq(equal.get(equal.input,'item','name'),equal.get(equal.input,'context','name')));
+g=new G();const prior=g.op('filter',[g.get(g.input,'schedule'),g.input],{body:equal.finish(sameKey,'Bool')});const count=g.choose(g.lt(g.data(0),g.len(prior)),g.get(g.item(prior,g.data(0)),'count'),g.data(0));
+const other=new G();const different=other.not(other.and(other.eq(other.get(other.input,'item','context'),other.get(other.input,'context','context')),other.eq(other.get(other.input,'item','name'),other.get(other.input,'context','name'))));
+save('trace_note_attempt',g,g.push(g.op('filter',[g.get(g.input,'schedule'),g.input],{body:other.finish(different,'Bool')}),g.rec({context:g.get(g.input,'context'),name:g.get(g.input,'name'),count:g.calc('add',count,g.data(1))})));
+g=new G();save('trace_schedule_persist',g,g.op('act',[g.input,g.rec({namespace:g.data('knowledge.trace_sleep'),key:g.data('schedule'),value:g.input})],{surface:'workspace',action:'write'}));
+fs.writeFileSync(new URL('../curriculum/trace-sleep.json',import.meta.url),JSON.stringify(suite,null,2)+'\n');

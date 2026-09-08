@@ -1,0 +1,140 @@
+Retrograde and prograde motion
+
+[template omitted: short description]
+[template omitted: about]
+
+Retrograde motion in astronomy is, in general, orbital or rotational motion of an object in the direction opposite the rotation of its primary, that is, the central object (right figure). It may also describe other motions such as precession or nutation of an object's rotational axis. Prograde or direct motion is more normal motion in the same direction as the primary rotates. However, "retrograde" and "prograde" can also refer to an object other than the primary if so described. The direction of rotation is determined by an inertial frame of reference, such as distant fixed stars.
+
+In the Solar System, the orbits around the Sun of all planets and dwarf planets and most small Solar System bodies, except many comets and few distant objects, are prograde. They orbit around the Sun in the same direction as the sun rotates about its axis, which is counterclockwise when observed from above the Sun's north pole. Except for Venus and Uranus, planetary rotations around their axis are also prograde. Most natural satellites have prograde orbits around their planets. Prograde satellites of Uranus orbit in the direction Uranus rotates, which is retrograde to the Sun. Nearly all regular satellites are tidally locked and thus have prograde rotation. Retrograde satellites are generally small and distant from their planets, except Neptune's satellite Triton, which is large and close. All retrograde satellites are thought to have formed separately before being captured by their planets.
+
+Most low-inclination artificial satellites of Earth have been placed in a prograde orbit, because in this situation less propellant is required to reach the orbit.
+
+Formation of celestial systems
+When a galaxy or a planetary system forms, its material takes a shape similar to that of a disk. Most of the material orbits and rotates in one direction. This uniformity of motion is due to the collapse of a gas cloud. The nature of the collapse is explained by conservation of angular momentum. In 2010 the discovery of several hot Jupiters with backward orbits called into question the theories about the formation of planetary systems. This can be explained by noting that stars and their planets do not form in isolation but in star clusters that contain molecular clouds. When a protoplanetary disk collides with or steals material from a cloud this can result in retrograde motion of a disk and the resulting planets.
+
+Orbital and rotational parameters
+
+Orbital inclination
+A celestial object's inclination indicates whether the object's orbit is prograde or retrograde. The inclination of a celestial object is the angle between its orbital plane and another reference frame such as the equatorial plane of the object's primary. In the Solar System, inclination of the planets is measured from the ecliptic plane, which is the plane of Earth's orbit around the Sun. The inclination of moons is measured from the equator of the planet they orbit. An object with an inclination between 0 and 90 degrees is orbiting or revolving in the same direction as the primary is rotating. An object with an inclination of exactly 90 degrees has a perpendicular orbit that is neither prograde nor retrograde. An object with an inclination between 90 degrees and 180 degrees is in a retrograde orbit.
+
+Axial tilt
+A celestial object's axial tilt indicates whether the object's rotation is prograde or retrograde. Axial tilt is the angle between an object's rotation axis and a line perpendicular to its orbital plane passing through the object's centre. An object with an axial tilt up to 90 degrees is rotating in the same direction as its primary. An object with an axial tilt of exactly 90 degrees, has a perpendicular rotation that is neither prograde nor retrograde. An object with an axial tilt between 90 degrees and 180 degrees is rotating in the opposite direction to its orbital direction. Regardless of inclination or axial tilt, the north pole of any planet or moon in the Solar System is defined as the pole that is in the same celestial hemisphere as Earth's north pole.
+
+Solar System bodies
+Planets
+All eight planets in the Solar System orbit the Sun in the direction of the Sun's rotation, which is counterclockwise when viewed from above the Sun's north pole. Six of the planets also rotate about their axis in this same direction. The exceptions – the planets with retrograde rotation – are Venus and Uranus. Venus's axial tilt is 177°, which means it is rotating almost exactly in the opposite direction to its orbit. Uranus has an axial tilt of 97.77°, so its axis of rotation is approximately parallel with the plane of the Solar System.
+
+The reason for Uranus's unusual axial tilt is not known with certainty, but the usual speculation is that it was caused by a collision with an Earth-sized protoplanet during the formation of the Solar System.
+
+It is unlikely that Venus was formed with its present slow retrograde rotation, which takes 243 days. Venus probably began with a fast prograde rotation with a period of several hours much like most of the planets in the Solar System. Venus is close enough to the Sun to experience significant gravitational tidal dissipation, and also has a thick enough atmosphere to create thermally driven atmospheric tides that create a retrograde torque. Venus's present slow retrograde rotation is an approximate equilibrium between gravitational tides trying to tidally lock Venus to the Sun and atmospheric tides trying to spin Venus in a retrograde direction. These effects are also sufficient to account for evolution of Venus's rotation from a primordial fast prograde direction to its present-day slow retrograde rotation, which is not completely stable. Venus's rotation period measured with Magellan spacecraft data over a 500-day period is smaller than the rotation period measured during the 16-year period between the Magellan spacecraft and Venus Express visits, with a difference of about 6.5[template omitted: spaces]minutes. In the past, various alternative hypotheses have been proposed to explain Venus's retrograde rotation, such as collisions or it having originally formed that way.[template omitted: fact]
+
+Despite being closer to the Sun than Venus, Mercury is not tidally locked because it has entered a 3:2 spin–orbit resonance due to the eccentricity of its orbit. Mercury's prograde rotation is slow enough that due to its eccentricity, its angular orbital velocity exceeds its angular rotational velocity near perihelion, causing the motion of the sun in Mercury's sky to temporarily reverse. The rotations of Earth and Mars are also affected by tidal forces with the Sun, but they have not reached an equilibrium state like Mercury and Venus because they are further out from the Sun where tidal forces are weaker. The gas giants of the Solar System are too massive and too far from the Sun for tidal forces to slow down their rotations.
+
+Dwarf planets
+All known dwarf planets and dwarf planet candidates have prograde orbits around the Sun, but some have retrograde rotation. Pluto has retrograde rotation; its axial tilt is approximately 120 degrees. Pluto and its moon Charon are tidally locked to each other. It is suspected that the Plutonian satellite system was created by a massive collision.
+
+Natural satellites and rings
+
+If formed in the gravity field of a planet as the planet is forming, a moon will orbit the planet in the same direction as the planet is rotating and is a regular moon. If an object is formed elsewhere and later captured into orbit by a planet's gravity, it can be captured into either a retrograde or prograde orbit depending on whether it first approaches the side of the planet that is rotating towards or away from it. This is an irregular moon.
+
+In the Solar System, many of the asteroid-sized moons have retrograde orbits, whereas all the large moons except Triton (the largest of Neptune's moons) have prograde orbits. The particles in Saturn's Phoebe ring are thought to have a retrograde orbit because they originate from the irregular moon Phoebe.
+
+All retrograde satellites experience tidal deceleration to some degree. The only satellite in the Solar System for which this effect is non-negligible is Neptune's moon Triton. All the other retrograde satellites are on distant orbits and tidal forces between them and the planet are negligible.
+
+Within the Hill sphere, the region of stability for retrograde orbits at a large distance from the primary is larger than that for prograde orbits. This has been suggested as an explanation for the preponderance of retrograde moons around Jupiter. Because Saturn has a more even mix of retrograde/prograde moons, however, the underlying causes appear to be more complex.
+
+With the exception of Hyperion, all the known regular planetary natural satellites in the Solar System are tidally locked to their host planet, so they have zero rotation relative to their host planet, but have the same type of rotation as their host planet relative to the Sun because they have prograde orbits around their host planet. That is, they all have prograde rotation relative to the Sun except those of Uranus.
+
+If there is a collision, material could be ejected in any direction and coalesce into either prograde or retrograde moons, which may be the case for the moons of dwarf planet Haumea, although Haumea's rotation direction is not known.
+
+Small Solar System bodies
+Asteroids
+Many asteroids have a prograde orbit around the Sun. Only approximately a hundred asteroids in retrograde orbits are known.
+
+Some asteroids with retrograde orbits may be burnt-out comets, but some may acquire their retrograde orbit due to gravitational interactions with Jupiter.
+
+Due to their small size and their large distance from Earth it is difficult to telescopically analyse the rotation of most asteroids. As of 2012, data is available for fewer than 200 asteroids and the different methods of determining the orientation of poles often result in large discrepancies. The asteroid spin vector catalog at Poznan Observatory avoids use of the phrases "retrograde rotation" or "prograde rotation" as it depends which reference plane is meant and asteroid coordinates are usually given with respect to the ecliptic plane rather than the asteroid's orbital plane.
+
+Asteroids with satellites, also known as binary asteroids, make up about 15% of all asteroids less than 10 km in diameter in the main belt and near-Earth population and most are thought to be formed by the YORP effect causing an asteroid to spin so fast that it breaks up. As of 2012, and where the rotation is known, all satellites of asteroids orbit the asteroid in the same direction as the asteroid is rotating.
+
+Most known objects that are in orbital resonance are orbiting in the same direction as the objects they are in resonance with, however a few retrograde asteroids have been found in resonance with Jupiter and Saturn.
+
+Comets
+Comets from the Oort cloud are much more likely than asteroids to be retrograde. Halley's Comet has a retrograde orbit around the Sun.
+
+Centaurs
+Most centaurs have a prograde orbit around the Sun. The first centaur with a retrograde orbit to be discovered was 20461 Dioretsa. Other known centaurs with retrograde orbits include [template omitted: mp], [template omitted: mp], [template omitted: mpl], [template omitted: mpl], and [template omitted: mpl]. All of these orbits are highly inclined, with inclinations in the range of 160 to 180°.
+
+Kuiper belt objects
+Most Kuiper belt objects have prograde orbits around the Sun. The first Kuiper belt object discovered to have a retrograde orbit was
+[template omitted: mpl]. Other Kuiper belt objects with retrograde orbits are 471325 Taowu, [template omitted: mpl], [template omitted: mpl] and 2011 MM4. All of these orbits are highly tilted, with inclinations in the 100°–125° range.
+
+Meteoroids
+Meteoroids in a retrograde orbit around the Sun hit the Earth with a faster relative speed than prograde meteoroids and tend to burn up in the atmosphere and are more likely to hit the side of the Earth facing away from the Sun (i.e. at night) whereas the prograde meteoroids have slower closing speeds and more often land as meteorites and tend to hit the Sun-facing side of the Earth. Most meteoroids are prograde.
+
+Sun
+The Sun's motion about the centre of mass of the Solar System is complicated by perturbations from the planets. Every few hundred years this motion switches between prograde and retrograde.
+
+Planetary atmospheres
+Retrograde motion, or retrogression, within the Earth's atmosphere is seen in weather systems whose motion is opposite the general regional direction of airflow, i.e. from east to west against the westerlies or from west to east through the trade wind easterlies. Prograde motion with respect to planetary rotation is seen in the atmospheric super-rotation of the thermosphere of Earth and in the upper troposphere of Venus. Simulations indicate that the atmosphere of Pluto should be dominated by winds retrograde to its rotation.
+
+Artificial satellites
+[template omitted: further]
+
+Artificial satellites destined for low inclination orbits are usually launched in the prograde direction, since this minimizes the amount of propellant required to reach orbit by taking advantage of the Earth's rotation (an equatorial launch site is optimal for this effect). However, Israeli Ofeq satellites are launched in a westward, retrograde direction over the Mediterranean to ensure that launch debris does not fall onto populated land areas.
+
+Exoplanets
+Stars and planetary systems tend to be born in star clusters rather than forming in isolation. Protoplanetary disks can collide with or steal material from molecular clouds within the cluster and this can lead to disks and their resulting planets having inclined or retrograde orbits around their stars. Retrograde motion may also result from gravitational interactions with other celestial bodies in the same system (See Kozai mechanism) or a near-collision with another planet, or it may be that the star itself flipped over early in their system's formation due to interactions between the star's magnetic field and the planet-forming disk.
+
+The accretion disk of the protostar IRAS 16293-2422 has parts rotating in opposite directions. This is the first known example of a counterrotating accretion disk. If this system forms planets, the inner planets will likely orbit in the opposite direction to the outer planets.
+
+WASP-17b was the first exoplanet that was discovered to be orbiting its star opposite to the direction the star is rotating. A second such planet was announced just a day later: HAT-P-7b.
+
+In one study more than half of all the known hot Jupiters had orbits that were misaligned with the rotation axis of their parent stars, with six having backwards orbits. One proposed explanation is that hot Jupiters tend to form in dense clusters, where perturbations are more common and gravitational capture of planets by neighboring stars is possible.
+
+The last few giant impacts during planetary formation tend to be the main determiner of a terrestrial planet's rotation rate. During the giant impact stage, the thickness of a protoplanetary disk is far larger than the size of planetary embryos so collisions are equally likely to come from any direction in three dimensions. This results in the axial tilt of accreted planets ranging from 0 to 180 degrees with any direction as likely as any other with both prograde and retrograde spins equally probable. Therefore, prograde spin with small axial tilt, common for the solar system's terrestrial planets except for Venus, is not common for terrestrial planets in general.
+
+Stars' galactic orbits
+The pattern of stars appears fixed in the sky, insofar as human vision is concerned; this is because their massive distances relative to the Earth result in motion imperceptible to the naked eye. In reality, stars orbit the center of their galaxy.
+
+Stars with an orbit retrograde relative to a disk galaxy's general rotation are more likely to be found in the galactic halo than in the galactic disk. The Milky Way's outer halo has many globular clusters with a retrograde orbit and with a retrograde or zero rotation. The structure of the halo is the topic of an ongoing debate. Several studies have claimed to find a halo consisting of two distinct components. These studies find a "dual" halo, with an inner, more metal-rich, prograde component (i.e. stars orbit the galaxy on average with the disk rotation), and a metal-poor, outer, retrograde (rotating against the disc) component. However, these findings have been challenged by other studies, arguing against such a duality. These studies demonstrate that the observational data can be explained without a duality, when employing an improved statistical analysis and accounting for measurement uncertainties.
+
+The nearby Kapteyn's Star is thought to have ended up with its high-velocity retrograde orbit around the galaxy as a result of being ripped from a dwarf galaxy that merged with the Milky Way.
+
+Galaxies
+
+Satellite galaxies
+Close-flybys and mergers of galaxies within galaxy clusters can pull material out of galaxies and create small satellite galaxies in either prograde or retrograde orbits around larger galaxies.
+
+A galaxy called Complex H, which was orbiting the Milky Way in a retrograde direction relative to the Milky Way's rotation, is colliding with the Milky Way.
+
+Counter-rotating bulges
+NGC 7331 is an example of a galaxy that has a bulge that is rotating in the opposite direction to the rest of the disk, probably as a result of infalling material.
+
+Central black holes
+The center of most large spiral galaxies contains at least one supermassive black hole. A retrograde black hole – one whose spin is opposite to that of its disk – spews jets much more powerful than those of a prograde black hole, which may have no jet at all. Scientists have produced a theoretical framework for the formation and evolution of retrograde black holes based on the gap between the inner edge of an accretion disk and the black hole.
+
+See also
+Artificial satellites in retrograde orbit
+Gravitomagnetic clock effect
+Yarkovsky effect
+Apparent retrograde motion
+Alaska yo-yo, a toy involving simultaneous circular motion of two balls in opposite directions
+
+References
+[template omitted: Reflist]
+
+Further reading
+[template omitted: Commons category]
+Retrograde-rotating exoplanets experience obliquity excitations in an eccentricity-enabled resonance, Steven M. Kreyche, Jason W. Barnes, Billy L. Quarles, Jack J. Lissauer, John E. Chambers, Matthew M. Hedman, 30 Mar 2020
+[template omitted: cite journal]
+[template omitted: cite journal]
+[template omitted: cite journal]
+How large is the retrograde annual wobble? [template omitted: Webarchive], N. E. King, Duncan Carr Agnew, 1991.
+[template omitted: cite journal]
+Dynamical Effects on the Habitable Zone for Earth-like Exomoons, Duncan Forgan, David Kipping, 16 April 2013
+What collisional debris can tell us about galaxies, Pierre-Alain Duc, 10 May 2012
+The Formation and Role of Vortices in Protoplanetary Disks, Patrick Godon, Mario Livio, 22 October 1999
+
+[template omitted: Exoplanet]
+[template omitted: Portal bar]

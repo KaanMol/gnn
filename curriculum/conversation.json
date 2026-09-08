@@ -1,0 +1,2506 @@
+{
+  "dialogue_say": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "dialogue",
+          "action": "say"
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Display supplied text through the dialogue port."
+    },
+    "source": "Explicit conversation teaching: Display supplied text through the dialogue port."
+  },
+  "dialogue_ask": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "dialogue",
+          "action": "ask"
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Ask supplied text and retain the taught continuation name and state for the next input."
+    },
+    "source": "Explicit conversation teaching: Ask supplied text and retain the taught continuation name and state for the next input."
+  },
+  "dialogue_wait": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "dialogue",
+          "action": "wait"
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Retain a continuation and state, without asking a question, until input arrives."
+    },
+    "source": "Explicit conversation teaching: Retain a continuation and state, without asking a question, until input arrives."
+  },
+  "course_algebra": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            {
+              "title": "Undo multiplication",
+              "explanation": "An equation says two expressions have the same value. To keep that equality, do the same operation to both sides. If a nonzero coefficient multiplies x, divide both sides by it.",
+              "hint": "Divide both sides by the coefficient multiplying x.",
+              "example": "5*x=20",
+              "example_input": {
+                "tokens": [
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "5"
+                  },
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "*",
+                    "args": [
+                      0,
+                      1
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "20"
+                  },
+                  {
+                    "op": "=",
+                    "args": [
+                      2,
+                      3
+                    ],
+                    "value": null
+                  }
+                ]
+              },
+              "quiz": "3*x=12",
+              "quiz_input": {
+                "tokens": [
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "3"
+                  },
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "*",
+                    "args": [
+                      0,
+                      1
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "12"
+                  },
+                  {
+                    "op": "=",
+                    "args": [
+                      2,
+                      3
+                    ],
+                    "value": null
+                  }
+                ]
+              },
+              "method": "algebra_solve"
+            },
+            {
+              "title": "Undo addition",
+              "explanation": "To isolate x when a number is added to it, subtract that number from both sides. Adding and subtracting the same number are inverse operations.",
+              "hint": "Subtract the number added to x from both sides.",
+              "example": "x+7=12",
+              "example_input": {
+                "tokens": [
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "7"
+                  },
+                  {
+                    "op": "+",
+                    "args": [
+                      0,
+                      1
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "12"
+                  },
+                  {
+                    "op": "=",
+                    "args": [
+                      2,
+                      3
+                    ],
+                    "value": null
+                  }
+                ]
+              },
+              "quiz": "x+9=15",
+              "quiz_input": {
+                "tokens": [
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "9"
+                  },
+                  {
+                    "op": "+",
+                    "args": [
+                      0,
+                      1
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "15"
+                  },
+                  {
+                    "op": "=",
+                    "args": [
+                      2,
+                      3
+                    ],
+                    "value": null
+                  }
+                ]
+              },
+              "method": "algebra_solve"
+            },
+            {
+              "title": "Collect terms",
+              "explanation": "Distribute multiplication across parentheses, collect like terms, and move variable terms to one side using the same operation on both sides. Then isolate x.",
+              "hint": "Expand the parentheses first, subtract x from both sides, then remove the constant.",
+              "example": "3*(2*x-5)=4*x+7",
+              "example_input": {
+                "tokens": [
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "3"
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "2"
+                  },
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "*",
+                    "args": [
+                      1,
+                      2
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "5"
+                  },
+                  {
+                    "op": "-",
+                    "args": [
+                      3,
+                      4
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "*",
+                    "args": [
+                      0,
+                      5
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "4"
+                  },
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "*",
+                    "args": [
+                      7,
+                      8
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "7"
+                  },
+                  {
+                    "op": "+",
+                    "args": [
+                      9,
+                      10
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "=",
+                    "args": [
+                      6,
+                      11
+                    ],
+                    "value": null
+                  }
+                ]
+              },
+              "quiz": "2*(x+3)=x+10",
+              "quiz_input": {
+                "tokens": [
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "2"
+                  },
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "3"
+                  },
+                  {
+                    "op": "+",
+                    "args": [
+                      1,
+                      2
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "*",
+                    "args": [
+                      0,
+                      3
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "symbol",
+                    "args": [],
+                    "value": "x"
+                  },
+                  {
+                    "op": "number",
+                    "args": [],
+                    "value": "10"
+                  },
+                  {
+                    "op": "+",
+                    "args": [
+                      5,
+                      6
+                    ],
+                    "value": null
+                  },
+                  {
+                    "op": "=",
+                    "args": [
+                      4,
+                      7
+                    ],
+                    "value": null
+                  }
+                ]
+              },
+              "method": "algebra_solve"
+            }
+          ]
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "A teacher-authored introduction to linear equations, with explanations and exercises. Answers are computed by the current stored solver, not supplied here."
+    },
+    "source": "Explicit conversation teaching: A teacher-authored introduction to linear equations, with explanations and exercises. Answers are computed by the current stored solver, not supplied here."
+  },
+  "tutor_catalog": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": {
+            "algebra": "course_algebra"
+          }
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Map a requested subject to its taught course."
+    },
+    "source": "Explicit conversation teaching: Map a requested subject to its taught course."
+  },
+  "tutor_solve": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "attempt",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "method"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "argument"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "invoke",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "roots"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n6",
+                "op": "data_equal",
+                "inputs": [
+                  "n4",
+                  "n5"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n7",
+                "op": "not",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n8",
+                "op": "slice",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Data",
+                "start": 1
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n10",
+                "op": "data_equal",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "and",
+                "inputs": [
+                  "n7",
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "complete"
+                ]
+              },
+              {
+                "id": "n13",
+                "op": "as_bool",
+                "inputs": [
+                  "n12"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n14",
+                "op": "and",
+                "inputs": [
+                  "n13",
+                  "n11"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n15",
+                "op": "require",
+                "inputs": [
+                  "n14",
+                  "n3"
+                ],
+                "type": "Data",
+                "message": "This course needs a complete solution with one root from its taught method."
+              },
+              {
+                "id": "n16",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "argument"
+                ]
+              },
+              {
+                "id": "n17",
+                "op": "record",
+                "inputs": [
+                  "n16",
+                  "n15"
+                ],
+                "type": "Data",
+                "keys": [
+                  "input",
+                  "result"
+                ]
+              },
+              {
+                "id": "n18",
+                "op": "emit",
+                "inputs": [
+                  "n15",
+                  "n17"
+                ],
+                "type": "Data",
+                "label": "tutor_worked_solution"
+              }
+            ],
+            "output": "n18"
+          }
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Execute the selected solver and retain its evidence. Return an explicit failure if the method is missing or cannot completely solve a course exercise."
+    },
+    "source": "Explicit conversation teaching: Execute the selected solver and retain its evidence. Return an explicit failure if the method is missing or cannot completely solve a course exercise."
+  },
+  "tutor_stuck": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "I am stuck: "
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "error"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nCan you supply or repair that lesson? Then reply retry. You can also say stop."
+        },
+        {
+          "id": "n4",
+          "op": "data_list",
+          "inputs": [
+            "n1",
+            "n2",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n6",
+          "op": "join_text",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "remaining"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "blocked"
+        },
+        {
+          "id": "n10",
+          "op": "record",
+          "inputs": [
+            "n7",
+            "n8",
+            "n9"
+          ],
+          "type": "Data",
+          "keys": [
+            "remaining",
+            "prefix",
+            "mode"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "tutor_reply"
+        },
+        {
+          "id": "n12",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n11",
+            "n10"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "resume",
+            "state"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "call",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "name": "dialogue_ask"
+        }
+      ],
+      "output": "n13",
+      "trace_mode": "explicit",
+      "description": "When a required method fails, ask for teaching and retain the unfinished course; never invent an answer."
+    },
+    "source": "Explicit conversation teaching: When a required method fails, ask for teaching and retain the unfinished course; never invent an answer."
+  },
+  "tutor_question": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "remaining"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n3",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "method"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "example_input"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "method",
+            "argument"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "call",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "name": "tutor_solve"
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            "result",
+            "roots"
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n10",
+          "op": "item",
+          "inputs": [
+            "n8",
+            "n9"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n11",
+          "op": "text",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "prefix"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "title"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\n"
+        },
+        {
+          "id": "n15",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "explanation"
+          ]
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nWorked example: "
+        },
+        {
+          "id": "n17",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "example"
+          ]
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " \u2192 x = "
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nThe example was executed with the current stored algebra lessons."
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nYour turn: "
+        },
+        {
+          "id": "n21",
+          "op": "get",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "path": [
+            "quiz"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nWhat is x? Reply with a number, x=number, help, or stop."
+        },
+        {
+          "id": "n23",
+          "op": "data_list",
+          "inputs": [
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n11",
+            "n19",
+            "n20",
+            "n21",
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n25",
+          "op": "join_text",
+          "inputs": [
+            "n23",
+            "n24"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "tutor_reply"
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n28",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "quiz"
+        },
+        {
+          "id": "n29",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n27",
+            "n28"
+          ],
+          "type": "Data",
+          "keys": [
+            "remaining",
+            "prefix",
+            "mode"
+          ]
+        },
+        {
+          "id": "n30",
+          "op": "record",
+          "inputs": [
+            "n25",
+            "n26",
+            "n29"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "resume",
+            "state"
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "call",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Data",
+          "name": "dialogue_ask"
+        },
+        {
+          "id": "n32",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            "error"
+          ]
+        },
+        {
+          "id": "n33",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n32"
+          ],
+          "type": "Data",
+          "keys": [
+            "remaining",
+            "error"
+          ]
+        },
+        {
+          "id": "n34",
+          "op": "call",
+          "inputs": [
+            "n33"
+          ],
+          "type": "Data",
+          "name": "tutor_stuck"
+        },
+        {
+          "id": "n35",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "prefix"
+          ]
+        },
+        {
+          "id": "n36",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "You finished this taught introduction: undo multiplication, undo addition, and collect terms. This is a short linear-equation course; more topics need more teaching lessons."
+        },
+        {
+          "id": "n37",
+          "op": "data_list",
+          "inputs": [
+            "n35",
+            "n36"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n38",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n39",
+          "op": "join_text",
+          "inputs": [
+            "n37",
+            "n38"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n40",
+          "op": "record",
+          "inputs": [
+            "n39"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        },
+        {
+          "id": "n41",
+          "op": "call",
+          "inputs": [
+            "n40"
+          ],
+          "type": "Data",
+          "name": "dialogue_say"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n43",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n42"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n44",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n45",
+          "op": "as_bool",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n46",
+          "op": "choose",
+          "inputs": [
+            "n45",
+            "n31",
+            "n34"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n47",
+          "op": "choose",
+          "inputs": [
+            "n43",
+            "n41",
+            "n46"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n47",
+      "trace_mode": "explicit",
+      "description": "Choose the next course example, execute its solver, explain the supplied principle and ask an exercise; stop at the end or ask for missing knowledge."
+    },
+    "source": "Explicit conversation teaching: Choose the next course example, execute its solver, explain the supplied principle and ask an exercise; stop at the end or ask for missing knowledge."
+  },
+  "tutor_check": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "attempt",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "input"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "lower",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n3",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": " "
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n5",
+                "op": "replace_text",
+                "inputs": [
+                  "n2",
+                  "n3",
+                  "n4"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n6",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "="
+              },
+              {
+                "id": "n7",
+                "op": "split_text",
+                "inputs": [
+                  "n5",
+                  "n6"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n8",
+                "op": "slice",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data",
+                "start": 1
+              },
+              {
+                "id": "n9",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n10",
+                "op": "data_equal",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "not",
+                "inputs": [
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "slice",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Data",
+                "start": 2
+              },
+              {
+                "id": "n13",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n14",
+                "op": "data_equal",
+                "inputs": [
+                  "n12",
+                  "n13"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n15",
+                "op": "and",
+                "inputs": [
+                  "n11",
+                  "n14"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n16",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n17",
+                "op": "item",
+                "inputs": [
+                  "n7",
+                  "n16"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n18",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "x"
+              },
+              {
+                "id": "n19",
+                "op": "data_equal",
+                "inputs": [
+                  "n17",
+                  "n18"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n20",
+                "op": "and",
+                "inputs": [
+                  "n15",
+                  "n19"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n21",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 1
+              },
+              {
+                "id": "n22",
+                "op": "item",
+                "inputs": [
+                  "n7",
+                  "n21"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n23",
+                "op": "choose",
+                "inputs": [
+                  "n20",
+                  "n22",
+                  "n5"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n24",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "number_parse"
+              },
+              {
+                "id": "n25",
+                "op": "invoke",
+                "inputs": [
+                  "n24",
+                  "n23"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n26",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "state"
+                ]
+              },
+              {
+                "id": "n27",
+                "op": "get",
+                "inputs": [
+                  "n26"
+                ],
+                "type": "Data",
+                "path": [
+                  "remaining"
+                ]
+              },
+              {
+                "id": "n28",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n29",
+                "op": "item",
+                "inputs": [
+                  "n27",
+                  "n28"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n30",
+                "op": "get",
+                "inputs": [
+                  "n29"
+                ],
+                "type": "Data",
+                "path": [
+                  "method"
+                ]
+              },
+              {
+                "id": "n31",
+                "op": "get",
+                "inputs": [
+                  "n29"
+                ],
+                "type": "Data",
+                "path": [
+                  "quiz_input"
+                ]
+              },
+              {
+                "id": "n32",
+                "op": "invoke",
+                "inputs": [
+                  "n30",
+                  "n31"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n33",
+                "op": "get",
+                "inputs": [
+                  "n32"
+                ],
+                "type": "Data",
+                "path": [
+                  "roots"
+                ]
+              },
+              {
+                "id": "n34",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n35",
+                "op": "data_equal",
+                "inputs": [
+                  "n33",
+                  "n34"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n36",
+                "op": "not",
+                "inputs": [
+                  "n35"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n37",
+                "op": "slice",
+                "inputs": [
+                  "n33"
+                ],
+                "type": "Data",
+                "start": 1
+              },
+              {
+                "id": "n38",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": []
+              },
+              {
+                "id": "n39",
+                "op": "data_equal",
+                "inputs": [
+                  "n37",
+                  "n38"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n40",
+                "op": "and",
+                "inputs": [
+                  "n36",
+                  "n39"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n41",
+                "op": "get",
+                "inputs": [
+                  "n32"
+                ],
+                "type": "Data",
+                "path": [
+                  "complete"
+                ]
+              },
+              {
+                "id": "n42",
+                "op": "as_bool",
+                "inputs": [
+                  "n41"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n43",
+                "op": "and",
+                "inputs": [
+                  "n42",
+                  "n40"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n44",
+                "op": "require",
+                "inputs": [
+                  "n43",
+                  "n32"
+                ],
+                "type": "Data",
+                "message": "The taught method did not produce one complete exercise answer."
+              },
+              {
+                "id": "n45",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "number_equal"
+              },
+              {
+                "id": "n46",
+                "op": "get",
+                "inputs": [
+                  "n44"
+                ],
+                "type": "Data",
+                "path": [
+                  "roots"
+                ]
+              },
+              {
+                "id": "n47",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n48",
+                "op": "item",
+                "inputs": [
+                  "n46",
+                  "n47"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n49",
+                "op": "text",
+                "inputs": [
+                  "n48"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n50",
+                "op": "record",
+                "inputs": [
+                  "n25",
+                  "n49"
+                ],
+                "type": "Data",
+                "keys": [
+                  "a",
+                  "b"
+                ]
+              },
+              {
+                "id": "n51",
+                "op": "invoke",
+                "inputs": [
+                  "n45",
+                  "n50"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n52",
+                "op": "record",
+                "inputs": [
+                  "n51",
+                  "n44",
+                  "n25"
+                ],
+                "type": "Data",
+                "keys": [
+                  "correct",
+                  "solution",
+                  "answer"
+                ]
+              },
+              {
+                "id": "n53",
+                "op": "emit",
+                "inputs": [
+                  "n52",
+                  "n52"
+                ],
+                "type": "Data",
+                "label": "tutor_check_answer"
+              }
+            ],
+            "output": "n53"
+          }
+        }
+      ],
+      "output": "n1",
+      "trace_mode": "explicit",
+      "description": "Interpret the reply using taught numeric parsing, solve the current exercise, and compare through taught equality; retain the actual check evidence."
+    },
+    "source": "Explicit conversation teaching: Interpret the reply using taught numeric parsing, solve the current exercise, and compare through taught equality; retain the actual check evidence."
+  },
+  "tutor_reply": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "state"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "remaining"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n4",
+          "op": "item",
+          "inputs": [
+            "n2",
+            "n3"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "input"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n8",
+          "op": "replace_text",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "lower",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "stop",
+            "cancel",
+            "quit"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "contains",
+          "inputs": [
+            "n10",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "help",
+            "why",
+            "hint"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "contains",
+          "inputs": [
+            "n12",
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "tutor_check"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Try again. "
+        },
+        {
+          "id": "n16",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "hint"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\n"
+        },
+        {
+          "id": "n18",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "quiz"
+          ]
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nWhat is x? You can also say help or stop."
+        },
+        {
+          "id": "n20",
+          "op": "data_list",
+          "inputs": [
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n22",
+          "op": "join_text",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "tutor_reply"
+        },
+        {
+          "id": "n24",
+          "op": "record",
+          "inputs": [
+            "n22",
+            "n23",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "resume",
+            "state"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "call",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Data",
+          "name": "dialogue_ask"
+        },
+        {
+          "id": "n26",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "explanation"
+          ]
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\n"
+        },
+        {
+          "id": "n28",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "hint"
+          ]
+        },
+        {
+          "id": "n29",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nYour turn: "
+        },
+        {
+          "id": "n30",
+          "op": "get",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data",
+          "path": [
+            "quiz"
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "data_list",
+          "inputs": [
+            "n26",
+            "n27",
+            "n28",
+            "n29",
+            "n30"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n32",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n33",
+          "op": "join_text",
+          "inputs": [
+            "n31",
+            "n32"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "tutor_reply"
+        },
+        {
+          "id": "n35",
+          "op": "record",
+          "inputs": [
+            "n33",
+            "n34",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "resume",
+            "state"
+          ]
+        },
+        {
+          "id": "n36",
+          "op": "call",
+          "inputs": [
+            "n35"
+          ],
+          "type": "Data",
+          "name": "dialogue_ask"
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "I could not check that reply: "
+        },
+        {
+          "id": "n38",
+          "op": "get",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data",
+          "path": [
+            "error"
+          ]
+        },
+        {
+          "id": "n39",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\nGive a number or x=number. If a lesson is missing, teach it and retry. You can also say stop."
+        },
+        {
+          "id": "n40",
+          "op": "data_list",
+          "inputs": [
+            "n37",
+            "n38",
+            "n39"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n41",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n42",
+          "op": "join_text",
+          "inputs": [
+            "n40",
+            "n41"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n43",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "tutor_reply"
+        },
+        {
+          "id": "n44",
+          "op": "record",
+          "inputs": [
+            "n42",
+            "n43",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "resume",
+            "state"
+          ]
+        },
+        {
+          "id": "n45",
+          "op": "call",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Data",
+          "name": "dialogue_ask"
+        },
+        {
+          "id": "n46",
+          "op": "slice",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "start": 1
+        },
+        {
+          "id": "n47",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Correct.\n\n"
+        },
+        {
+          "id": "n48",
+          "op": "record",
+          "inputs": [
+            "n46",
+            "n47"
+          ],
+          "type": "Data",
+          "keys": [
+            "remaining",
+            "prefix"
+          ]
+        },
+        {
+          "id": "n49",
+          "op": "call",
+          "inputs": [
+            "n48"
+          ],
+          "type": "Data",
+          "name": "tutor_question"
+        },
+        {
+          "id": "n50",
+          "op": "get",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n51",
+          "op": "as_bool",
+          "inputs": [
+            "n50"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n52",
+          "op": "get",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Data",
+          "path": [
+            "result",
+            "correct"
+          ]
+        },
+        {
+          "id": "n53",
+          "op": "as_bool",
+          "inputs": [
+            "n52"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n54",
+          "op": "choose",
+          "inputs": [
+            "n53",
+            "n49",
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n55",
+          "op": "choose",
+          "inputs": [
+            "n51",
+            "n54",
+            "n45"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n56",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "mode"
+          ]
+        },
+        {
+          "id": "n57",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "blocked"
+        },
+        {
+          "id": "n58",
+          "op": "data_equal",
+          "inputs": [
+            "n56",
+            "n57"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n59",
+          "op": "call",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "name": "tutor_question"
+        },
+        {
+          "id": "n60",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Stopped the lesson. Ask \u201cteach me algebra\u201d to start again."
+        },
+        {
+          "id": "n61",
+          "op": "record",
+          "inputs": [
+            "n60"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        },
+        {
+          "id": "n62",
+          "op": "call",
+          "inputs": [
+            "n61"
+          ],
+          "type": "Data",
+          "name": "dialogue_say"
+        },
+        {
+          "id": "n63",
+          "op": "choose",
+          "inputs": [
+            "n13",
+            "n36",
+            "n55"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n64",
+          "op": "choose",
+          "inputs": [
+            "n58",
+            "n59",
+            "n63"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n65",
+          "op": "choose",
+          "inputs": [
+            "n11",
+            "n62",
+            "n64"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n65",
+      "trace_mode": "explicit",
+      "description": "Interpret stop/help/retry, check an answer, choose feedback and advance or ask again. All these choices and the next continuation are taught instructions."
+    },
+    "source": "Explicit conversation teaching: Interpret stop/help/retry, check an answer, choose feedback and advance or ask again. All these choices and the next continuation are taught instructions."
+  },
+  "tutor_start": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "tutor_catalog"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "topic"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "item",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n5",
+          "op": "invoke",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n7",
+          "op": "record",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Data",
+          "keys": [
+            "remaining",
+            "prefix"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "call",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "name": "tutor_question"
+        }
+      ],
+      "output": "n8",
+      "trace_mode": "explicit",
+      "description": "Find the requested taught course and start its question/answer policy. New courses can reuse this behavior."
+    },
+    "source": "Explicit conversation teaching: Find the requested taught course and start its question/answer policy. New courses can reuse this behavior."
+  }
+}

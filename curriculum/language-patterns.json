@@ -1,0 +1,805 @@
+{
+  "patterns": {
+    "en_type": {
+      "prefix": "",
+      "separator": " is a ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_not_type": {
+      "prefix": "",
+      "separator": " is not a ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": true,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_type_question": {
+      "prefix": "is ",
+      "separator": " a ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "query",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_who": {
+      "prefix": "who is ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "describe",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_name": {
+      "prefix": "my name is ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "identify",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_type": {
+      "prefix": "",
+      "separator": " is een ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_not_type": {
+      "prefix": "",
+      "separator": " is geen ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": true,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_type_question": {
+      "prefix": "is ",
+      "separator": " een ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "query",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_who": {
+      "prefix": "wie is ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "describe",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_name": {
+      "prefix": "ik heet ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "identify",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_type_an": {
+      "prefix": "",
+      "separator": " is an ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_type_question_an": {
+      "prefix": "is ",
+      "separator": " an ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "query",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_relation_0": {
+      "prefix": "",
+      "separator": " lives in ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "live in",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_forget_0": {
+      "prefix": "forget that ",
+      "separator": " lives in ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "live in",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_relation_1": {
+      "prefix": "",
+      "separator": " likes ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "like",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_forget_1": {
+      "prefix": "forget that ",
+      "separator": " likes ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "like",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_relation_2": {
+      "prefix": "",
+      "separator": " created ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "created",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_forget_2": {
+      "prefix": "forget that ",
+      "separator": " created ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "created",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_relation_3": {
+      "prefix": "",
+      "separator": " is dating ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "is dating",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_forget_3": {
+      "prefix": "forget that ",
+      "separator": " is dating ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "is dating",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_relation_0": {
+      "prefix": "",
+      "separator": " woont in ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "live in",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_forget_0": {
+      "prefix": "vergeet dat ",
+      "separator": " woont in ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "live in",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_relation_1": {
+      "prefix": "",
+      "separator": " houdt van ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "like",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_forget_1": {
+      "prefix": "vergeet dat ",
+      "separator": " houdt van ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "like",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_relation_2": {
+      "prefix": "",
+      "separator": " heeft gemaakt ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "created",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_forget_2": {
+      "prefix": "vergeet dat ",
+      "separator": " heeft gemaakt ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "created",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_relation_3": {
+      "prefix": "",
+      "separator": " heeft een relatie met ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "assert",
+        "subject": "{subject}",
+        "relation": "is dating",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_forget_3": {
+      "prefix": "vergeet dat ",
+      "separator": " heeft een relatie met ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "is dating",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_where": {
+      "prefix": "where does ",
+      "separator": "",
+      "suffix": " live",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "describe",
+        "subject": "{subject}",
+        "relation": "live in",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_where": {
+      "prefix": "waar woont ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "describe",
+        "subject": "{subject}",
+        "relation": "live in",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_incoming_location": {
+      "prefix": "who lives in ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "object"
+      ],
+      "operation": {
+        "op": "find",
+        "subject": "",
+        "relation": "live in",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_incoming_location": {
+      "prefix": "wie woont in ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "object"
+      ],
+      "operation": {
+        "op": "find",
+        "subject": "",
+        "relation": "live in",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_self": {
+      "prefix": "who are you",
+      "separator": "",
+      "suffix": "",
+      "slots": [],
+      "operation": {
+        "op": "describe",
+        "subject": "assistant",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_me": {
+      "prefix": "who am i",
+      "separator": "",
+      "suffix": "",
+      "slots": [],
+      "operation": {
+        "op": "describe",
+        "subject": "speaker",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_self": {
+      "prefix": "wie ben jij",
+      "separator": "",
+      "suffix": "",
+      "slots": [],
+      "operation": {
+        "op": "describe",
+        "subject": "assistant",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_self2": {
+      "prefix": "wie ben je",
+      "separator": "",
+      "suffix": "",
+      "slots": [],
+      "operation": {
+        "op": "describe",
+        "subject": "assistant",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_me": {
+      "prefix": "wie ben ik",
+      "separator": "",
+      "suffix": "",
+      "slots": [],
+      "operation": {
+        "op": "describe",
+        "subject": "speaker",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_date": {
+      "prefix": "what is today's date",
+      "separator": "",
+      "suffix": "",
+      "slots": [],
+      "operation": {
+        "op": "current_date",
+        "subject": "",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_date": {
+      "prefix": "wat is de datum vandaag",
+      "separator": "",
+      "suffix": "",
+      "slots": [],
+      "operation": {
+        "op": "current_date",
+        "subject": "",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_rename": {
+      "prefix": "your name is ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "rename_assistant",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_rename2": {
+      "prefix": "your new name is ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "rename_assistant",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_rename": {
+      "prefix": "jouw naam is ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "rename_assistant",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_rename2": {
+      "prefix": "je nieuwe naam is ",
+      "separator": "",
+      "suffix": "",
+      "slots": [
+        "subject"
+      ],
+      "operation": {
+        "op": "rename_assistant",
+        "subject": "{subject}",
+        "relation": "",
+        "object": "",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "en_forget_type": {
+      "prefix": "forget that ",
+      "separator": " is a ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    },
+    "nl_forget_type": {
+      "prefix": "vergeet dat ",
+      "separator": " is een ",
+      "suffix": "",
+      "slots": [
+        "subject",
+        "object"
+      ],
+      "operation": {
+        "op": "retract",
+        "subject": "{subject}",
+        "relation": "is",
+        "object": "{object}",
+        "negative": false,
+        "conditions": [],
+        "text": ""
+      }
+    }
+  },
+  "words": {
+    "ik": "speaker",
+    "mij": "speaker",
+    "me": "speaker",
+    "i": "speaker",
+    "jij": "assistant",
+    "jou": "assistant",
+    "je": "assistant",
+    "u": "assistant",
+    "you": "assistant",
+    "mens": "human",
+    "mensen": "human",
+    "humans": "human",
+    "persoon": "person",
+    "personen": "person",
+    "stad": "city",
+    "dorp": "town",
+    "land": "country",
+    "planeet": "planet",
+    "dier": "animal",
+    "kat": "cat",
+    "hond": "dog",
+    "nederland": "the netherlands"
+  }
+}

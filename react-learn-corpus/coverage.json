@@ -1,0 +1,77 @@
+{
+  "revision": "f3d9794fc31f4a3faf7e863984d37f4ae86b3290",
+  "scope": "All Markdown files under the repository Learn directory, including ancillary setup/compiler pages.",
+  "documents": 52,
+  "code_fences": 1684,
+  "parser_counts": {
+    "not_applicable": 401,
+    "unsupported": 1266,
+    "accepted": 17
+  },
+  "execution_verified": 0,
+  "understanding_claim": false,
+  "common_parser_blockers": [
+    [
+      "Expected a supported JavaScript identifier.",
+      340
+    ],
+    [
+      "Assignment to an undeclared variable.",
+      65
+    ],
+    [
+      "Unsupported JavaScript syntax near /button>\n  );\n}\n",
+      25
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n  );\n}\n",
+      24
+    ],
+    [
+      "Unsupported JavaScript syntax near /h1>;\n}\n",
+      24
+    ],
+    [
+      "Unknown variable or unsupported expression: useState",
+      19
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n      </label>\n  ",
+      19
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n      <button onC",
+      18
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n        </li>\n   ",
+      17
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n  );\n}\n\nexport de",
+      13
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n      <br />\n    ",
+      13
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n",
+      13
+    ],
+    [
+      "Unsupported JavaScript syntax near 's Todos</h1>\n      ",
+      11
+    ],
+    [
+      "Unsupported JavaScript syntax near /option>\n          <",
+      10
+    ],
+    [
+      "Unsupported JavaScript syntax near />\n      <Chat\n     ",
+      9
+    ]
+  ],
+  "coverage_note": "Fences include fragments, CSS, terminal commands, broken teaching examples and multi-file app pieces. Counts are not a React conformance percentage.",
+  "loaded_into": "/Users/kaan/Documents/ChatGPT/Idk/preview-memory.graph.sqlite3"
+}

@@ -1,0 +1,4894 @@
+{
+  "dashboard_add": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "id"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "is_integer",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 60
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n9",
+          "op": "less",
+          "inputs": [
+            "n7",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n10",
+          "op": "not",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 31536000
+        },
+        {
+          "id": "n12",
+          "op": "as_number",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n13",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n14",
+          "op": "less",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "not",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "and",
+          "inputs": [
+            "n10",
+            "n15"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n17",
+          "op": "and",
+          "inputs": [
+            "n5",
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "require",
+          "inputs": [
+            "n17",
+            "n3"
+          ],
+          "type": "Data",
+          "message": "Choose a whole refresh interval between 60 seconds and one year."
+        },
+        {
+          "id": "n19",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "method"
+          ]
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "knowledge.procedures"
+        },
+        {
+          "id": "n21",
+          "op": "record",
+          "inputs": [
+            "n20",
+            "n19"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key"
+          ]
+        },
+        {
+          "id": "n22",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n21"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n23",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "graph"
+        },
+        {
+          "id": "n24",
+          "op": "has_key",
+          "inputs": [
+            "n22",
+            "n23"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n25",
+          "op": "require",
+          "inputs": [
+            "n24",
+            "n19"
+          ],
+          "type": "Data",
+          "message": "Teach that procedure before adding it to the dashboard."
+        },
+        {
+          "id": "n26",
+          "op": "attempt",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "skills.dashboard"
+              },
+              {
+                "id": "n2",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n0"
+                ],
+                "type": "Data",
+                "keys": [
+                  "namespace",
+                  "key"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "act",
+                "inputs": [
+                  "n0",
+                  "n2"
+                ],
+                "type": "Data",
+                "surface": "workspace",
+                "action": "read"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n28",
+          "op": "get",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n29",
+          "op": "as_bool",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n30",
+          "op": "get",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Data",
+          "path": [
+            "result"
+          ]
+        },
+        {
+          "id": "n31",
+          "op": "choose",
+          "inputs": [
+            "n29",
+            "n30",
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n32",
+          "op": "data_equal",
+          "inputs": [
+            "n31",
+            "n27"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "data_equal",
+          "inputs": [
+            "n2",
+            "n27"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n34",
+          "op": "get",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Data",
+          "path": [
+            "method"
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "data_equal",
+          "inputs": [
+            "n34",
+            "n25"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Data",
+          "path": [
+            "argument"
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "argument"
+          ]
+        },
+        {
+          "id": "n38",
+          "op": "data_equal",
+          "inputs": [
+            "n36",
+            "n37"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n39",
+          "op": "and",
+          "inputs": [
+            "n35",
+            "n38"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n40",
+          "op": "choose",
+          "inputs": [
+            "n32",
+            "n33",
+            "n39"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n41",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "clock"
+        },
+        {
+          "id": "n42",
+          "op": "get",
+          "inputs": [
+            "n41"
+          ],
+          "type": "Data",
+          "path": [
+            "unix_seconds"
+          ]
+        },
+        {
+          "id": "n43",
+          "op": "characters",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n44",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n45",
+          "op": "size",
+          "inputs": [
+            "n43"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n46",
+          "op": "less",
+          "inputs": [
+            "n44",
+            "n45"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n47",
+          "op": "require",
+          "inputs": [
+            "n46",
+            "n2"
+          ],
+          "type": "Data",
+          "message": "Give the card a nonempty name."
+        },
+        {
+          "id": "n48",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "title"
+          ]
+        },
+        {
+          "id": "n49",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "argument"
+          ]
+        },
+        {
+          "id": "n50",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": true
+        },
+        {
+          "id": "n51",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n52",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n53",
+          "op": "get",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Data",
+          "path": [
+            "result"
+          ]
+        },
+        {
+          "id": "n54",
+          "op": "choose",
+          "inputs": [
+            "n40",
+            "n53",
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n55",
+          "op": "get",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Data",
+          "path": [
+            "last_success"
+          ]
+        },
+        {
+          "id": "n56",
+          "op": "choose",
+          "inputs": [
+            "n40",
+            "n55",
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n57",
+          "op": "record",
+          "inputs": [
+            "n47",
+            "n48",
+            "n25",
+            "n49",
+            "n18",
+            "n50",
+            "n42",
+            "n51",
+            "n52",
+            "n54",
+            "n56"
+          ],
+          "type": "Data",
+          "keys": [
+            "id",
+            "title",
+            "method",
+            "argument",
+            "refresh_seconds",
+            "enabled",
+            "next_at",
+            "last_attempt",
+            "error",
+            "result",
+            "last_success"
+          ]
+        },
+        {
+          "id": "n58",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n59",
+          "op": "record",
+          "inputs": [
+            "n58",
+            "n47",
+            "n57"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n60",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n59"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n61",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "last_id"
+        },
+        {
+          "id": "n62",
+          "op": "get",
+          "inputs": [
+            "n60"
+          ],
+          "type": "Data",
+          "path": [
+            "after",
+            "id"
+          ]
+        },
+        {
+          "id": "n63",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard_state"
+        },
+        {
+          "id": "n64",
+          "op": "record",
+          "inputs": [
+            "n63",
+            "n61",
+            "n62"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n65",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n64"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n66",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Added "
+        },
+        {
+          "id": "n67",
+          "op": "get",
+          "inputs": [
+            "n60"
+          ],
+          "type": "Data",
+          "path": [
+            "after",
+            "title"
+          ]
+        },
+        {
+          "id": "n68",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " to the Dashboard. It refreshes while the server is running."
+        },
+        {
+          "id": "n69",
+          "op": "data_list",
+          "inputs": [
+            "n66",
+            "n67",
+            "n68"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n70",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n71",
+          "op": "join_text",
+          "inputs": [
+            "n69",
+            "n70"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n72",
+          "op": "get",
+          "inputs": [
+            "n65"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        },
+        {
+          "id": "n73",
+          "op": "record",
+          "inputs": [
+            "n71",
+            "n72"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "id"
+          ]
+        }
+      ],
+      "output": "n73",
+      "trace_mode": "explicit",
+      "description": "Persist a card invoking an existing taught procedure. Store its input and refresh interval; preserve matching successful content when reconfiguring it. First refresh is due immediately."
+    },
+    "source": "Explicit dashboard teaching: Persist a card invoking an existing taught procedure. Store its input and refresh interval; preserve matching successful content when reconfiguring it. First refresh is due immediately."
+  },
+  "dashboard_refresh": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "id"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n4"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n6",
+          "op": "attempt",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "method"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "argument"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "invoke",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "as_bool",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "observe",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "surface": "clock"
+        },
+        {
+          "id": "n10",
+          "op": "get",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "path": [
+            "unix_seconds"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "result"
+          ]
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "result"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "choose",
+          "inputs": [
+            "n8",
+            "n11",
+            "n12"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "result"
+        },
+        {
+          "id": "n15",
+          "op": "set_item",
+          "inputs": [
+            "n5",
+            "n14",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n16",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "last_success"
+          ]
+        },
+        {
+          "id": "n17",
+          "op": "choose",
+          "inputs": [
+            "n8",
+            "n10",
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "last_success"
+        },
+        {
+          "id": "n19",
+          "op": "set_item",
+          "inputs": [
+            "n15",
+            "n18",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "last_attempt"
+        },
+        {
+          "id": "n21",
+          "op": "set_item",
+          "inputs": [
+            "n19",
+            "n20",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n23",
+          "op": "get",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "path": [
+            "error"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "choose",
+          "inputs": [
+            "n8",
+            "n22",
+            "n23"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "error"
+        },
+        {
+          "id": "n26",
+          "op": "set_item",
+          "inputs": [
+            "n21",
+            "n25",
+            "n24"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "get",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "path": [
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n28",
+          "op": "not",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n29",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 300
+        },
+        {
+          "id": "n30",
+          "op": "as_number",
+          "inputs": [
+            "n27"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "as_number",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n32",
+          "op": "less",
+          "inputs": [
+            "n30",
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "and",
+          "inputs": [
+            "n28",
+            "n32"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n34",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 300
+        },
+        {
+          "id": "n35",
+          "op": "choose",
+          "inputs": [
+            "n33",
+            "n34",
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n36",
+          "op": "as_number",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n37",
+          "op": "as_number",
+          "inputs": [
+            "n35"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n38",
+          "op": "add",
+          "inputs": [
+            "n36",
+            "n37"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n39",
+          "op": "as_data",
+          "inputs": [
+            "n38"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n40",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "next_at"
+        },
+        {
+          "id": "n41",
+          "op": "set_item",
+          "inputs": [
+            "n26",
+            "n40",
+            "n39"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n43",
+          "op": "record",
+          "inputs": [
+            "n42",
+            "n2",
+            "n41"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n44",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n43"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n45",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n46",
+          "op": "get",
+          "inputs": [
+            "n44"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        },
+        {
+          "id": "n47",
+          "op": "record",
+          "inputs": [
+            "n45",
+            "n46"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "card"
+          ]
+        }
+      ],
+      "output": "n47",
+      "trace_mode": "explicit",
+      "description": "Invoke the stored card procedure and save its result. On failure keep the last successful content with an error and retry no faster than five minutes. Refreshes are silent in chat."
+    },
+    "source": "Explicit dashboard teaching: Invoke the stored card procedure and save its result. On failure keep the last successful content with an error and retry no faster than five minutes. Refreshes are silent in chat."
+  },
+  "dashboard_interval": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "id"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n4"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n8",
+          "op": "is_integer",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 60
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "less",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "not",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 31536000
+        },
+        {
+          "id": "n15",
+          "op": "as_number",
+          "inputs": [
+            "n14"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n16",
+          "op": "as_number",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "less",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "not",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n19",
+          "op": "and",
+          "inputs": [
+            "n13",
+            "n18"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n20",
+          "op": "and",
+          "inputs": [
+            "n8",
+            "n19"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n21",
+          "op": "require",
+          "inputs": [
+            "n20",
+            "n6"
+          ],
+          "type": "Data",
+          "message": "Choose a whole refresh interval between 60 seconds and one year."
+        },
+        {
+          "id": "n22",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "clock"
+        },
+        {
+          "id": "n23",
+          "op": "get",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data",
+          "path": [
+            "unix_seconds"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "refresh_seconds"
+        },
+        {
+          "id": "n25",
+          "op": "set_item",
+          "inputs": [
+            "n5",
+            "n24",
+            "n21"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n26",
+          "op": "as_number",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n27",
+          "op": "as_number",
+          "inputs": [
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "add",
+          "inputs": [
+            "n26",
+            "n27"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "as_data",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n30",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "next_at"
+        },
+        {
+          "id": "n31",
+          "op": "set_item",
+          "inputs": [
+            "n25",
+            "n30",
+            "n29"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n32",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n33",
+          "op": "record",
+          "inputs": [
+            "n32",
+            "n2",
+            "n31"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n34",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n33"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n35",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Updated the refresh schedule for "
+        },
+        {
+          "id": "n36",
+          "op": "get",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Data",
+          "path": [
+            "after",
+            "title"
+          ]
+        },
+        {
+          "id": "n37",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "."
+        },
+        {
+          "id": "n38",
+          "op": "data_list",
+          "inputs": [
+            "n35",
+            "n36",
+            "n37"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n39",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n40",
+          "op": "join_text",
+          "inputs": [
+            "n38",
+            "n39"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n41",
+          "op": "get",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        },
+        {
+          "id": "n42",
+          "op": "record",
+          "inputs": [
+            "n40",
+            "n41"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "card"
+          ]
+        }
+      ],
+      "output": "n42",
+      "trace_mode": "explicit",
+      "description": "Change a card schedule without discarding its content or resuming a paused card."
+    },
+    "source": "Explicit dashboard teaching: Change a card schedule without discarding its content or resuming a paused card."
+  },
+  "dashboard_interval_last": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "last_id"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard_state"
+        },
+        {
+          "id": "n3",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key"
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n3"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n5",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "record",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "id",
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "call",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "name": "dashboard_interval"
+        }
+      ],
+      "output": "n7",
+      "trace_mode": "explicit",
+      "description": "Resolve \u201cit\u201d in a refresh request to the most recently added dashboard card."
+    },
+    "source": "Explicit dashboard teaching: Resolve \u201cit\u201d in a refresh request to the most recently added dashboard card."
+  },
+  "dashboard_enabled": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "id"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n3",
+            "n2"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n4"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "read"
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "enabled"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "enabled"
+        },
+        {
+          "id": "n8",
+          "op": "set_item",
+          "inputs": [
+            "n5",
+            "n7",
+            "n6"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n10",
+          "op": "record",
+          "inputs": [
+            "n9",
+            "n2",
+            "n8"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key",
+            "value"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n10"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "write"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Updated dashboard refresh setting."
+        },
+        {
+          "id": "n13",
+          "op": "get",
+          "inputs": [
+            "n11"
+          ],
+          "type": "Data",
+          "path": [
+            "after"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "record",
+          "inputs": [
+            "n12",
+            "n13"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "card"
+          ]
+        }
+      ],
+      "output": "n14",
+      "trace_mode": "explicit",
+      "description": "Pause or resume automatic refresh without deleting the last result."
+    },
+    "source": "Explicit dashboard teaching: Pause or resume automatic refresh without deleting the last result."
+  },
+  "dashboard_remove": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "id"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "lower",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "record",
+          "inputs": [
+            "n1",
+            "n3"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace",
+            "key"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n4"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "delete"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Removed that dashboard card."
+        },
+        {
+          "id": "n7",
+          "op": "record",
+          "inputs": [
+            "n6",
+            "n5"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "change"
+          ]
+        }
+      ],
+      "output": "n7",
+      "trace_mode": "explicit",
+      "description": "Remove a card and its refresh schedule. The underlying skill stays in memory."
+    },
+    "source": "Explicit dashboard teaching: Remove a card and its refresh schedule. The underlying skill stays in memory."
+  },
+  "dashboard_tick": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.dashboard"
+        },
+        {
+          "id": "n2",
+          "op": "record",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n2"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "entries"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "now"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "filter",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item",
+                  "value"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "enabled"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "as_bool",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "next_at"
+                ]
+              },
+              {
+                "id": "n6",
+                "op": "as_number",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n5"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "less",
+                "inputs": [
+                  "n6",
+                  "n7"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n9",
+                "op": "not",
+                "inputs": [
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "and",
+                "inputs": [
+                  "n3",
+                  "n9"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n10"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "map",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "value",
+                  "next_at"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "value",
+                  "id"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n2"
+                ],
+                "type": "Data",
+                "keys": [
+                  "next_at",
+                  "id"
+                ]
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n7",
+          "op": "sort",
+          "inputs": [
+            "n6"
+          ],
+          "type": "Data",
+          "key": "next_at"
+        },
+        {
+          "id": "n8",
+          "op": "get",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n8"
+          ],
+          "type": "Data",
+          "path": [
+            "id"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "record",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Data",
+          "keys": [
+            "id"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "call",
+          "inputs": [
+            "n10"
+          ],
+          "type": "Data",
+          "name": "dashboard_refresh"
+        },
+        {
+          "id": "n12",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "waiting"
+          ]
+        },
+        {
+          "id": "n13",
+          "op": "as_bool",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n15",
+          "op": "literal",
+          "inputs": [],
+          "type": "Number",
+          "value": "0"
+        },
+        {
+          "id": "n16",
+          "op": "size",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n17",
+          "op": "less",
+          "inputs": [
+            "n15",
+            "n16"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n19",
+          "op": "choose",
+          "inputs": [
+            "n17",
+            "n11",
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n20",
+          "op": "choose",
+          "inputs": [
+            "n13",
+            "n14",
+            "n19"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n20",
+      "trace_mode": "explicit",
+      "description": "On each timer signal refresh at most one due card, oldest deadline first. Defer during a pending dialogue. Deadlines remain in graph memory across restarts."
+    },
+    "source": "Explicit dashboard teaching: On each timer signal refresh at most one due card, oldest deadline first. Defer during a pending dialogue. Deadlines remain in graph memory across restarts."
+  },
+  "background_tick_before_dashboard": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "skills.subroutines"
+        },
+        {
+          "id": "n2",
+          "op": "record",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "namespace"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "act",
+          "inputs": [
+            "n0",
+            "n2"
+          ],
+          "type": "Data",
+          "surface": "workspace",
+          "action": "entries"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "now"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "filter",
+          "inputs": [
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Bool",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item",
+                  "value"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "status"
+                ]
+              },
+              {
+                "id": "n4",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "scheduled"
+              },
+              {
+                "id": "n5",
+                "op": "data_equal",
+                "inputs": [
+                  "n3",
+                  "n4"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n6",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "next_at"
+                ]
+              },
+              {
+                "id": "n7",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "less",
+                "inputs": [
+                  "n7",
+                  "n8"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n10",
+                "op": "not",
+                "inputs": [
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "and",
+                "inputs": [
+                  "n5",
+                  "n10"
+                ],
+                "type": "Bool"
+              }
+            ],
+            "output": "n11"
+          }
+        },
+        {
+          "id": "n6",
+          "op": "slice",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Data",
+          "stop": 1
+        },
+        {
+          "id": "n7",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "now"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "map",
+          "inputs": [
+            "n6",
+            "n7"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "item",
+                  "value"
+                ]
+              },
+              {
+                "id": "n2",
+                "op": "get",
+                "inputs": [
+                  "n0"
+                ],
+                "type": "Data",
+                "path": [
+                  "context"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "attempt",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "body": {
+                  "input_type": "Data",
+                  "output_type": "Data",
+                  "nodes": [
+                    {
+                      "id": "n0",
+                      "op": "input",
+                      "inputs": [],
+                      "type": "Data"
+                    },
+                    {
+                      "id": "n1",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "method"
+                      ]
+                    },
+                    {
+                      "id": "n2",
+                      "op": "get",
+                      "inputs": [
+                        "n0"
+                      ],
+                      "type": "Data",
+                      "path": [
+                        "argument"
+                      ]
+                    },
+                    {
+                      "id": "n3",
+                      "op": "invoke",
+                      "inputs": [
+                        "n1",
+                        "n2"
+                      ],
+                      "type": "Data"
+                    }
+                  ],
+                  "output": "n3"
+                }
+              },
+              {
+                "id": "n4",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "ok"
+                ]
+              },
+              {
+                "id": "n5",
+                "op": "as_bool",
+                "inputs": [
+                  "n4"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n6",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": 0
+              },
+              {
+                "id": "n7",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "repeat_seconds"
+                ]
+              },
+              {
+                "id": "n8",
+                "op": "as_number",
+                "inputs": [
+                  "n6"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n9",
+                "op": "as_number",
+                "inputs": [
+                  "n7"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n10",
+                "op": "less",
+                "inputs": [
+                  "n8",
+                  "n9"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n11",
+                "op": "and",
+                "inputs": [
+                  "n5",
+                  "n10"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n12",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "scheduled"
+              },
+              {
+                "id": "n13",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "completed"
+              },
+              {
+                "id": "n14",
+                "op": "choose",
+                "inputs": [
+                  "n11",
+                  "n12",
+                  "n13"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n15",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "failed"
+              },
+              {
+                "id": "n16",
+                "op": "choose",
+                "inputs": [
+                  "n5",
+                  "n14",
+                  "n15"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n17",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "status"
+              },
+              {
+                "id": "n18",
+                "op": "set_item",
+                "inputs": [
+                  "n1",
+                  "n17",
+                  "n16"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n19",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "repeat_seconds"
+                ]
+              },
+              {
+                "id": "n20",
+                "op": "as_number",
+                "inputs": [
+                  "n2"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n21",
+                "op": "as_number",
+                "inputs": [
+                  "n19"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n22",
+                "op": "add",
+                "inputs": [
+                  "n20",
+                  "n21"
+                ],
+                "type": "Number"
+              },
+              {
+                "id": "n23",
+                "op": "as_data",
+                "inputs": [
+                  "n22"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n24",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "next_at"
+                ]
+              },
+              {
+                "id": "n25",
+                "op": "choose",
+                "inputs": [
+                  "n11",
+                  "n23",
+                  "n24"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n26",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "next_at"
+              },
+              {
+                "id": "n27",
+                "op": "set_item",
+                "inputs": [
+                  "n18",
+                  "n26",
+                  "n25"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n28",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "last_result"
+              },
+              {
+                "id": "n29",
+                "op": "set_item",
+                "inputs": [
+                  "n27",
+                  "n28",
+                  "n3"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n30",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "skills.subroutines"
+              },
+              {
+                "id": "n31",
+                "op": "get",
+                "inputs": [
+                  "n1"
+                ],
+                "type": "Data",
+                "path": [
+                  "id"
+                ]
+              },
+              {
+                "id": "n32",
+                "op": "record",
+                "inputs": [
+                  "n30",
+                  "n31",
+                  "n29"
+                ],
+                "type": "Data",
+                "keys": [
+                  "namespace",
+                  "key",
+                  "value"
+                ]
+              },
+              {
+                "id": "n33",
+                "op": "act",
+                "inputs": [
+                  "n0",
+                  "n32"
+                ],
+                "type": "Data",
+                "surface": "workspace",
+                "action": "write"
+              },
+              {
+                "id": "n34",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "result"
+                ]
+              },
+              {
+                "id": "n35",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "text"
+              },
+              {
+                "id": "n36",
+                "op": "has_key",
+                "inputs": [
+                  "n34",
+                  "n35"
+                ],
+                "type": "Bool"
+              },
+              {
+                "id": "n37",
+                "op": "get",
+                "inputs": [
+                  "n34"
+                ],
+                "type": "Data",
+                "path": [
+                  "text"
+                ]
+              },
+              {
+                "id": "n38",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n39",
+                "op": "choose",
+                "inputs": [
+                  "n36",
+                  "n37",
+                  "n38"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n40",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "A background routine stopped: "
+              },
+              {
+                "id": "n41",
+                "op": "get",
+                "inputs": [
+                  "n3"
+                ],
+                "type": "Data",
+                "path": [
+                  "error"
+                ]
+              },
+              {
+                "id": "n42",
+                "op": "data_list",
+                "inputs": [
+                  "n40",
+                  "n41"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n43",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": ""
+              },
+              {
+                "id": "n44",
+                "op": "join_text",
+                "inputs": [
+                  "n42",
+                  "n43"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n45",
+                "op": "choose",
+                "inputs": [
+                  "n5",
+                  "n39",
+                  "n44"
+                ],
+                "type": "Data"
+              },
+              {
+                "id": "n46",
+                "op": "get",
+                "inputs": [
+                  "n33"
+                ],
+                "type": "Data",
+                "path": [
+                  "after",
+                  "id"
+                ]
+              },
+              {
+                "id": "n47",
+                "op": "record",
+                "inputs": [
+                  "n46",
+                  "n45"
+                ],
+                "type": "Data",
+                "keys": [
+                  "id",
+                  "text"
+                ]
+              }
+            ],
+            "output": "n47"
+          }
+        },
+        {
+          "id": "n9",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "waiting"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "as_bool",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": []
+        },
+        {
+          "id": "n12",
+          "op": "choose",
+          "inputs": [
+            "n10",
+            "n11",
+            "n8"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n12",
+      "trace_mode": "explicit",
+      "description": "On a timer signal, run at most one due subroutine. Defer while a conversation continuation is waiting, persist its outcome, and do not repeatedly retry failures."
+    },
+    "source": "Explicit background routine teaching: On a timer signal, run at most one due subroutine. Defer while a conversation continuation is waiting, persist its outcome, and do not repeatedly retry failures."
+  },
+  "background_tick": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "background_tick_before_dashboard"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "previous"
+        },
+        {
+          "id": "n3",
+          "op": "set_item",
+          "inputs": [
+            "n0",
+            "n2",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Data",
+          "name": "dashboard_tick"
+        },
+        {
+          "id": "n5",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n6",
+          "op": "data_equal",
+          "inputs": [
+            "n4",
+            "n5"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n7",
+          "op": "choose",
+          "inputs": [
+            "n6",
+            "n1",
+            "n1"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n7",
+      "trace_mode": "explicit",
+      "description": "Run existing background routines and one due dashboard card. Dashboard results are stored in cards, not announced on every refresh."
+    },
+    "source": "Explicit dashboard teaching: Run existing background routines and one due dashboard card. Dashboard results are stored in cards, not announced on every refresh."
+  },
+  "dashboard_date": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "observe",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "surface": "clock"
+        },
+        {
+          "id": "n2",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "date"
+          ]
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Local date"
+        },
+        {
+          "id": "n4",
+          "op": "get",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "path": [
+            "timezone"
+          ]
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4"
+          ],
+          "type": "Data",
+          "keys": [
+            "value",
+            "text",
+            "unit"
+          ]
+        }
+      ],
+      "output": "n5",
+      "trace_mode": "explicit",
+      "description": "Read the date and timezone from the generic clock interface for a dashboard card."
+    },
+    "source": "Explicit dashboard teaching: Read the date and timezone from the generic clock interface for a dashboard card."
+  },
+  "dashboard_weather": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n3",
+          "op": "is_integer",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 60
+        },
+        {
+          "id": "n5",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n6",
+          "op": "as_number",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n7",
+          "op": "less",
+          "inputs": [
+            "n5",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n8",
+          "op": "not",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 31536000
+        },
+        {
+          "id": "n10",
+          "op": "as_number",
+          "inputs": [
+            "n9"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n11",
+          "op": "as_number",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n12",
+          "op": "less",
+          "inputs": [
+            "n10",
+            "n11"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n13",
+          "op": "not",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n14",
+          "op": "and",
+          "inputs": [
+            "n8",
+            "n13"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "and",
+          "inputs": [
+            "n3",
+            "n14"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n16",
+          "op": "require",
+          "inputs": [
+            "n15",
+            "n1"
+          ],
+          "type": "Data",
+          "message": "Choose a whole refresh interval between 60 seconds and one year."
+        },
+        {
+          "id": "n17",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "weather"
+        },
+        {
+          "id": "n18",
+          "op": "attempt",
+          "inputs": [
+            "n17"
+          ],
+          "type": "Data",
+          "body": {
+            "input_type": "Data",
+            "output_type": "Data",
+            "nodes": [
+              {
+                "id": "n0",
+                "op": "input",
+                "inputs": [],
+                "type": "Data"
+              },
+              {
+                "id": "n1",
+                "op": "data_literal",
+                "inputs": [],
+                "type": "Data",
+                "value": "skills.web_favorites"
+              },
+              {
+                "id": "n2",
+                "op": "record",
+                "inputs": [
+                  "n1",
+                  "n0"
+                ],
+                "type": "Data",
+                "keys": [
+                  "namespace",
+                  "key"
+                ]
+              },
+              {
+                "id": "n3",
+                "op": "act",
+                "inputs": [
+                  "n0",
+                  "n2"
+                ],
+                "type": "Data",
+                "surface": "workspace",
+                "action": "read"
+              }
+            ],
+            "output": "n3"
+          }
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "weather"
+        },
+        {
+          "id": "n20",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Today's weather"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "web_weather_read"
+        },
+        {
+          "id": "n22",
+          "op": "get",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Data",
+          "path": [
+            "result",
+            "url"
+          ]
+        },
+        {
+          "id": "n23",
+          "op": "record",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data",
+          "keys": [
+            "url"
+          ]
+        },
+        {
+          "id": "n24",
+          "op": "record",
+          "inputs": [
+            "n19",
+            "n20",
+            "n21",
+            "n23",
+            "n16"
+          ],
+          "type": "Data",
+          "keys": [
+            "id",
+            "title",
+            "method",
+            "argument",
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n25",
+          "op": "call",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Data",
+          "name": "dashboard_add"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Which weather page should this card refresh? Paste its public URL. The current reader understands wttr.in pages. Reply cancel to stop."
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "dashboard_weather_reply"
+        },
+        {
+          "id": "n28",
+          "op": "record",
+          "inputs": [
+            "n16"
+          ],
+          "type": "Data",
+          "keys": [
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n29",
+          "op": "record",
+          "inputs": [
+            "n26",
+            "n27",
+            "n28"
+          ],
+          "type": "Data",
+          "keys": [
+            "text",
+            "resume",
+            "state"
+          ]
+        },
+        {
+          "id": "n30",
+          "op": "call",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Data",
+          "name": "dialogue_ask"
+        },
+        {
+          "id": "n31",
+          "op": "get",
+          "inputs": [
+            "n18"
+          ],
+          "type": "Data",
+          "path": [
+            "ok"
+          ]
+        },
+        {
+          "id": "n32",
+          "op": "as_bool",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n33",
+          "op": "choose",
+          "inputs": [
+            "n32",
+            "n25",
+            "n30"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n33",
+      "trace_mode": "explicit",
+      "description": "Create a weather card from the explicitly saved weather favorite, or ask for a page. Carry the requested refresh interval through the clarification."
+    },
+    "source": "Explicit dashboard teaching: Create a weather card from the explicitly saved weather favorite, or ask for a page. Carry the requested refresh interval through the clarification."
+  },
+  "dashboard_weather_reply": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "input"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "weather"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Today's weather"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "web_weather_read"
+        },
+        {
+          "id": "n5",
+          "op": "record",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data",
+          "keys": [
+            "url"
+          ]
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "state",
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "record",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4",
+            "n5",
+            "n6"
+          ],
+          "type": "Data",
+          "keys": [
+            "id",
+            "title",
+            "method",
+            "argument",
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "call",
+          "inputs": [
+            "n7"
+          ],
+          "type": "Data",
+          "name": "dashboard_add"
+        },
+        {
+          "id": "n9",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "cancel"
+        },
+        {
+          "id": "n11",
+          "op": "data_equal",
+          "inputs": [
+            "n9",
+            "n10"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "Cancelled adding the weather card."
+        },
+        {
+          "id": "n13",
+          "op": "record",
+          "inputs": [
+            "n12"
+          ],
+          "type": "Data",
+          "keys": [
+            "text"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "choose",
+          "inputs": [
+            "n11",
+            "n13",
+            "n8"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n14",
+      "trace_mode": "explicit",
+      "description": "Bind the supplied page URL to the card. If its layout cannot be read, the card shows an error rather than inventing weather."
+    },
+    "source": "Explicit dashboard teaching: Bind the supplied page URL to the card. If its layout cannot be read, the card shows an error rather than inventing weather."
+  },
+  "dashboard_duration": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " "
+        },
+        {
+          "id": "n2",
+          "op": "split_text",
+          "inputs": [
+            "n0",
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n4",
+          "op": "as_number",
+          "inputs": [
+            "n3"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n5",
+          "op": "as_data",
+          "inputs": [
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "get",
+          "inputs": [
+            "n2"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "second",
+            "seconds"
+          ]
+        },
+        {
+          "id": "n8",
+          "op": "contains",
+          "inputs": [
+            "n7",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 1
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "minute",
+            "minutes"
+          ]
+        },
+        {
+          "id": "n11",
+          "op": "contains",
+          "inputs": [
+            "n10",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 60
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "hour",
+            "hours"
+          ]
+        },
+        {
+          "id": "n14",
+          "op": "contains",
+          "inputs": [
+            "n13",
+            "n6"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 3600
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 0
+        },
+        {
+          "id": "n17",
+          "op": "choose",
+          "inputs": [
+            "n14",
+            "n15",
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "choose",
+          "inputs": [
+            "n11",
+            "n12",
+            "n17"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n19",
+          "op": "choose",
+          "inputs": [
+            "n8",
+            "n9",
+            "n18"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n20",
+          "op": "as_number",
+          "inputs": [
+            "n5"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n21",
+          "op": "as_number",
+          "inputs": [
+            "n19"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n22",
+          "op": "multiply",
+          "inputs": [
+            "n20",
+            "n21"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n23",
+          "op": "as_data",
+          "inputs": [
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "as_number",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n25",
+          "op": "is_integer",
+          "inputs": [
+            "n24"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n26",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 60
+        },
+        {
+          "id": "n27",
+          "op": "as_number",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n28",
+          "op": "as_number",
+          "inputs": [
+            "n26"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n29",
+          "op": "less",
+          "inputs": [
+            "n27",
+            "n28"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n30",
+          "op": "not",
+          "inputs": [
+            "n29"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n31",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 31536000
+        },
+        {
+          "id": "n32",
+          "op": "as_number",
+          "inputs": [
+            "n31"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n33",
+          "op": "as_number",
+          "inputs": [
+            "n23"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n34",
+          "op": "less",
+          "inputs": [
+            "n32",
+            "n33"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n35",
+          "op": "not",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n36",
+          "op": "and",
+          "inputs": [
+            "n30",
+            "n35"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n37",
+          "op": "and",
+          "inputs": [
+            "n25",
+            "n36"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n38",
+          "op": "require",
+          "inputs": [
+            "n37",
+            "n23"
+          ],
+          "type": "Data",
+          "message": "Choose a whole refresh interval between 60 seconds and one year."
+        }
+      ],
+      "output": "n38",
+      "trace_mode": "explicit",
+      "description": "Interpret N seconds, N minutes or N hours using taught arithmetic and constrain automatic refresh intervals."
+    },
+    "source": "Explicit dashboard teaching: Interpret N seconds, N minutes or N hours using taught arithmetic and constrain automatic refresh intervals."
+  },
+  "dashboard_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\u2019"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "'"
+        },
+        {
+          "id": "n5",
+          "op": "replace_text",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "?"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n8",
+          "op": "replace_text",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "."
+        },
+        {
+          "id": "n10",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n11",
+          "op": "replace_text",
+          "inputs": [
+            "n8",
+            "n9",
+            "n10"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " to my dashboard"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n14",
+          "op": "replace_text",
+          "inputs": [
+            "n11",
+            "n12",
+            "n13"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n15",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " to the dashboard"
+        },
+        {
+          "id": "n16",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n17",
+          "op": "replace_text",
+          "inputs": [
+            "n14",
+            "n15",
+            "n16"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n18",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " and refresh it"
+        },
+        {
+          "id": "n19",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n20",
+          "op": "replace_text",
+          "inputs": [
+            "n17",
+            "n18",
+            "n19"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n21",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ", refresh it"
+        },
+        {
+          "id": "n22",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n23",
+          "op": "replace_text",
+          "inputs": [
+            "n20",
+            "n21",
+            "n22"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n24",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " refresh it"
+        },
+        {
+          "id": "n25",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n26",
+          "op": "replace_text",
+          "inputs": [
+            "n23",
+            "n24",
+            "n25"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n27",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": " every "
+        },
+        {
+          "id": "n28",
+          "op": "split_text",
+          "inputs": [
+            "n26",
+            "n27"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n29",
+          "op": "get",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Data",
+          "path": [
+            0
+          ]
+        },
+        {
+          "id": "n30",
+          "op": "size",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n31",
+          "op": "as_data",
+          "inputs": [
+            "n30"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n32",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n33",
+          "op": "data_equal",
+          "inputs": [
+            "n31",
+            "n32"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n34",
+          "op": "get",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Data",
+          "path": [
+            1
+          ]
+        },
+        {
+          "id": "n35",
+          "op": "call",
+          "inputs": [
+            "n34"
+          ],
+          "type": "Data",
+          "name": "dashboard_duration"
+        },
+        {
+          "id": "n36",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 3600
+        },
+        {
+          "id": "n37",
+          "op": "choose",
+          "inputs": [
+            "n33",
+            "n35",
+            "n36"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n38",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "add today's weather",
+            "add todays weather",
+            "add weather",
+            "show weather on my dashboard"
+          ]
+        },
+        {
+          "id": "n39",
+          "op": "contains",
+          "inputs": [
+            "n38",
+            "n29"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n40",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "refresh it",
+            "refresh weather",
+            "refresh the weather"
+          ]
+        },
+        {
+          "id": "n41",
+          "op": "contains",
+          "inputs": [
+            "n40",
+            "n29"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n42",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "graph_run"
+        },
+        {
+          "id": "n43",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "dashboard_weather"
+        },
+        {
+          "id": "n44",
+          "op": "record",
+          "inputs": [
+            "n37"
+          ],
+          "type": "Data",
+          "keys": [
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n45",
+          "op": "record",
+          "inputs": [
+            "n42",
+            "n43",
+            "n44"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "name",
+            "argument"
+          ]
+        },
+        {
+          "id": "n46",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "graph_run"
+        },
+        {
+          "id": "n47",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "refresh it"
+        },
+        {
+          "id": "n48",
+          "op": "data_equal",
+          "inputs": [
+            "n29",
+            "n47"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n49",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "dashboard_interval_last"
+        },
+        {
+          "id": "n50",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "dashboard_interval"
+        },
+        {
+          "id": "n51",
+          "op": "choose",
+          "inputs": [
+            "n48",
+            "n49",
+            "n50"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n52",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "weather"
+        },
+        {
+          "id": "n53",
+          "op": "record",
+          "inputs": [
+            "n52",
+            "n37"
+          ],
+          "type": "Data",
+          "keys": [
+            "id",
+            "refresh_seconds"
+          ]
+        },
+        {
+          "id": "n54",
+          "op": "record",
+          "inputs": [
+            "n46",
+            "n51",
+            "n53"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "name",
+            "argument"
+          ]
+        },
+        {
+          "id": "n55",
+          "op": "size",
+          "inputs": [
+            "n28"
+          ],
+          "type": "Number"
+        },
+        {
+          "id": "n56",
+          "op": "as_data",
+          "inputs": [
+            "n55"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n57",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": 2
+        },
+        {
+          "id": "n58",
+          "op": "data_equal",
+          "inputs": [
+            "n56",
+            "n57"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n59",
+          "op": "and",
+          "inputs": [
+            "n41",
+            "n58"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n60",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n61",
+          "op": "choose",
+          "inputs": [
+            "n59",
+            "n54",
+            "n60"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n62",
+          "op": "choose",
+          "inputs": [
+            "n39",
+            "n45",
+            "n61"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n62",
+      "trace_mode": "explicit",
+      "description": "Recognize adding weather to the dashboard with an optional refresh interval, and follow-up refresh requests. Other skills can be added using the generic card interface."
+    },
+    "source": "Explicit dashboard teaching: Recognize adding weather to the dashboard with an optional refresh interval, and follow-up refresh requests. Other skills can be added using the generic card interface."
+  },
+  "behavior_interpret_before_dashboard": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "get",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "path": [
+            "text"
+          ]
+        },
+        {
+          "id": "n2",
+          "op": "lower",
+          "inputs": [
+            "n1"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n3",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "?"
+        },
+        {
+          "id": "n4",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": ""
+        },
+        {
+          "id": "n5",
+          "op": "replace_text",
+          "inputs": [
+            "n2",
+            "n3",
+            "n4"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n6",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "\u2019"
+        },
+        {
+          "id": "n7",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "'"
+        },
+        {
+          "id": "n8",
+          "op": "replace_text",
+          "inputs": [
+            "n5",
+            "n6",
+            "n7"
+          ],
+          "type": "Data"
+        },
+        {
+          "id": "n9",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": [
+            "what is the weather",
+            "what's the weather",
+            "show me the weather",
+            "give me the weather",
+            "weather"
+          ]
+        },
+        {
+          "id": "n10",
+          "op": "contains",
+          "inputs": [
+            "n9",
+            "n8"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n11",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "graph_run"
+        },
+        {
+          "id": "n12",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": "web_weather"
+        },
+        {
+          "id": "n13",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n14",
+          "op": "record",
+          "inputs": [
+            "n11",
+            "n12",
+            "n13"
+          ],
+          "type": "Data",
+          "keys": [
+            "kind",
+            "name",
+            "argument"
+          ]
+        },
+        {
+          "id": "n15",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "behavior_interpret_before_web"
+        },
+        {
+          "id": "n16",
+          "op": "choose",
+          "inputs": [
+            "n10",
+            "n14",
+            "n15"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n16",
+      "trace_mode": "explicit",
+      "description": "Map taught weather requests to the page-reading skill, preserving the existing behavior interpreter."
+    },
+    "source": "Explicit HTML browser teaching: Map taught weather requests to the page-reading skill, preserving the existing behavior interpreter."
+  },
+  "behavior_interpret": {
+    "graph": {
+      "input_type": "Data",
+      "output_type": "Data",
+      "nodes": [
+        {
+          "id": "n0",
+          "op": "input",
+          "inputs": [],
+          "type": "Data"
+        },
+        {
+          "id": "n1",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "dashboard_interpret"
+        },
+        {
+          "id": "n2",
+          "op": "data_literal",
+          "inputs": [],
+          "type": "Data",
+          "value": null
+        },
+        {
+          "id": "n3",
+          "op": "data_equal",
+          "inputs": [
+            "n1",
+            "n2"
+          ],
+          "type": "Bool"
+        },
+        {
+          "id": "n4",
+          "op": "call",
+          "inputs": [
+            "n0"
+          ],
+          "type": "Data",
+          "name": "behavior_interpret_before_dashboard"
+        },
+        {
+          "id": "n5",
+          "op": "choose",
+          "inputs": [
+            "n3",
+            "n4",
+            "n1"
+          ],
+          "type": "Data"
+        }
+      ],
+      "output": "n5",
+      "trace_mode": "explicit",
+      "description": "Try taught dashboard language patterns, then preserve the previous conversation interpreter."
+    },
+    "source": "Explicit dashboard teaching: Try taught dashboard language patterns, then preserve the previous conversation interpreter."
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "checked": [
+    {
+      "seed": 15053,
+      "task": 0,
+      "candidates": 32,
+      "probes": 0
+    },
+    {
+      "seed": 15053,
+      "task": 1,
+      "candidates": 15,
+      "probes": 0
+    },
+    {
+      "seed": 15053,
+      "task": 2,
+      "candidates": 8,
+      "probes": 0
+    },
+    {
+      "seed": 15053,
+      "task": 4,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 5,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 8,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 9,
+      "candidates": 17,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 10,
+      "candidates": 32,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 11,
+      "candidates": 14,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 14,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 15,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 16,
+      "candidates": 32,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 17,
+      "candidates": 15,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 18,
+      "candidates": 33,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 19,
+      "candidates": 15,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 20,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 21,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 25,
+      "candidates": 32,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 26,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 27,
+      "candidates": 15,
+      "probes": 1
+    },
+    {
+      "seed": 15053,
+      "task": 29,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 16057,
+      "task": 0,
+      "candidates": 17,
+      "probes": 0
+    },
+    {
+      "seed": 16057,
+      "task": 1,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 16057,
+      "task": 2,
+      "candidates": 32,
+      "probes": 1
+    },
+    {
+      "seed": 16057,
+      "task": 3,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 16057,
+      "task": 4,
+      "candidates": 8,
+      "probes": 1
+    },
+    {
+      "seed": 16057,
+      "task": 5,
+      "candidates": 14,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 6,
+      "candidates": 16,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 8,
+      "candidates": 14,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 10,
+      "candidates": 37,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 11,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 12,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 13,
+      "candidates": 15,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 16,
+      "candidates": 16,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 17,
+      "candidates": 32,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 18,
+      "candidates": 16,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 19,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 21,
+      "candidates": 31,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 22,
+      "candidates": 15,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 24,
+      "candidates": 16,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 25,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 26,
+      "candidates": 34,
+      "probes": 2
+    },
+    {
+      "seed": 16057,
+      "task": 29,
+      "candidates": 14,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 0,
+      "candidates": 17,
+      "probes": 0
+    },
+    {
+      "seed": 17077,
+      "task": 1,
+      "candidates": 32,
+      "probes": 1
+    },
+    {
+      "seed": 17077,
+      "task": 2,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 17077,
+      "task": 3,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 17077,
+      "task": 4,
+      "candidates": 14,
+      "probes": 1
+    },
+    {
+      "seed": 17077,
+      "task": 5,
+      "candidates": 8,
+      "probes": 1
+    },
+    {
+      "seed": 17077,
+      "task": 6,
+      "candidates": 14,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 7,
+      "candidates": 32,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 9,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 10,
+      "candidates": 17,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 13,
+      "candidates": 15,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 14,
+      "candidates": 32,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 15,
+      "candidates": 15,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 17,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 20,
+      "candidates": 14,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 21,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 22,
+      "candidates": 33,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 23,
+      "candidates": 16,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 24,
+      "candidates": 31,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 25,
+      "candidates": 5,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 26,
+      "candidates": 16,
+      "probes": 2
+    },
+    {
+      "seed": 17077,
+      "task": 28,
+      "candidates": 15,
+      "probes": 2
+    },
+    {
+      "seed": 18089,
+      "task": 0,
+      "candidates": 33,
+      "probes": 0
+    },
+    {
+      "seed": 18089,
+      "task": 1,
+      "candidates": 15,
+      "probes": 0
+    },
+    {
+      "seed": 18089,
+      "task": 2,
+      "candidates": 16,
+      "probes": 0
+    },
+    {
+      "seed": 18089,
+      "task": 3,
+      "candidates": 8,
+      "probes": 0
+    },
+    {
+      "seed": 18089,
+      "task": 4,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 6,
+      "candidates": 15,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 9,
+      "candidates": 37,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 10,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 11,
+      "candidates": 17,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 12,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 13,
+      "candidates": 32,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 16,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 17,
+      "candidates": 17,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 18,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 20,
+      "candidates": 32,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 21,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 23,
+      "candidates": 16,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 24,
+      "candidates": 5,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 25,
+      "candidates": 35,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 26,
+      "candidates": 15,
+      "probes": 1
+    },
+    {
+      "seed": 18089,
+      "task": 27,
+      "candidates": 17,
+      "probes": 1
+    }
+  ],
+  "policy_unchanged": true
+}

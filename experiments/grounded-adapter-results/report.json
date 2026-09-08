@@ -1,0 +1,148 @@
+{
+  "scenarios": [
+    {
+      "world": "grounded_world_one",
+      "ambiguous_result": {
+        "status": "insufficient_evidence",
+        "candidates": [
+          "q7",
+          "r2"
+        ]
+      },
+      "chosen_probe": [
+        {
+          "serial": 110,
+          "q7": false,
+          "r2": true
+        }
+      ],
+      "learned_field": "q7",
+      "observations": [
+        {
+          "features": {
+            "serial": 100,
+            "q7": false,
+            "r2": false
+          },
+          "outcome": false
+        },
+        {
+          "features": {
+            "serial": 101,
+            "q7": true,
+            "r2": true
+          },
+          "outcome": true
+        },
+        {
+          "features": {
+            "serial": 102,
+            "q7": false,
+            "r2": false
+          },
+          "outcome": false
+        },
+        {
+          "features": {
+            "serial": 103,
+            "q7": true,
+            "r2": true
+          },
+          "outcome": true
+        },
+        {
+          "features": {
+            "serial": 110,
+            "q7": false,
+            "r2": true
+          },
+          "outcome": false
+        }
+      ],
+      "held_out_passed": 40,
+      "held_out_total": 40,
+      "failures": []
+    },
+    {
+      "world": "grounded_world_two",
+      "ambiguous_result": {
+        "status": "insufficient_evidence",
+        "candidates": [
+          "m3",
+          "z9"
+        ]
+      },
+      "chosen_probe": [
+        {
+          "serial": 110,
+          "m3": false,
+          "z9": true
+        }
+      ],
+      "learned_field": "m3",
+      "observations": [
+        {
+          "features": {
+            "serial": 100,
+            "m3": false,
+            "z9": false
+          },
+          "outcome": false
+        },
+        {
+          "features": {
+            "serial": 101,
+            "m3": true,
+            "z9": true
+          },
+          "outcome": true
+        },
+        {
+          "features": {
+            "serial": 102,
+            "m3": false,
+            "z9": false
+          },
+          "outcome": false
+        },
+        {
+          "features": {
+            "serial": 103,
+            "m3": true,
+            "z9": true
+          },
+          "outcome": true
+        },
+        {
+          "features": {
+            "serial": 110,
+            "m3": false,
+            "z9": true
+          },
+          "outcome": false
+        }
+      ],
+      "held_out_passed": 40,
+      "held_out_total": 40,
+      "failures": []
+    }
+  ],
+  "unseen_rename_prediction": {
+    "known": false,
+    "outcome": null
+  },
+  "contradictory_evidence": {
+    "status": "insufficient_evidence",
+    "candidates": []
+  },
+  "total_graph_steps": 17537,
+  "model_calls": 0,
+  "limitations": [
+    "Synthetic environment, with supplied graph action rules.",
+    "Graph chooses an informative probe from a supplied finite pool using a supplied disagreement policy.",
+    "Candidate language is a single observed field, not arbitrary causal rules.",
+    "Renamed fields require new feedback; there is no zero-shot semantic transfer.",
+    "Forty tests per world vary identifiers; there are only four boolean feature combinations.",
+    "No claim of human-like meaning or real-world causal understanding."
+  ]
+}
